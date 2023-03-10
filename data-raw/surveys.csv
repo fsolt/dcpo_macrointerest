@@ -1,8 +1,0 @@
-﻿survey,item,variable,values,question_text, response_categories
-evs_combo,int4,e023,c(4:1),How interested would you say you are in politics?,1  Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
-evs_combo,int4a,e024,c(4:1),How interested would you say you are in politics?,1 I take an active interest in politics / 2 I am interested in politics but don't t / 3 My interest in politics is not greater / 4 I'm not interested in politics at all
-evs1999fin,int4,o17,c(4:1),How interested would you say you are in politics?,1  Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
-evs2017,int4,v97,c(4:1),How interested would you say you are in politics?,1  Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
-evs2017ukr,int4,v97,c(4:1),How interested would you say you are in politics?,1  Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
-wvs_combo,int4,e023,c(4:1),How interested would you say you are in politics?,1  Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
-wvs2017,int4,q199,c(4:1),How interested would you say you are in politics?,1  Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
