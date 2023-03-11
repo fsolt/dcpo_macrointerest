@@ -1,4 +1,10 @@
 ﻿survey,item,variable,values,question_text, response_categories
+afrob1,int4_afrob,scint,c(4:1),How interested are you in politics and government? ,1 Very interested / 2 Somewhat interested / 3 Now and then / 4 Not interested
+afrob2,int3_afrob,q27,c(0:2),How interested are you in public affairs?,0 Not interested / 1 Somewhat interested / 2 Very interested
+afrob3,int4_afrob,q16,c(0:3),How interested are you in public affairs?,0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
+afrob4,int4_afrob,q13,c(0:3),How interested are you in public affairs?,0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
+afrob5,int4_afrob,q14,c(0:3),How interested are you in public affairs?,0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
+afrob6,int4_afrob,q13,c(0:3),How interested are you in public affairs?,0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
 allbus,int5_allbus,pa02a,c(5:1),How interested in politics are you? ,1 Very strongly / 2 Strongly / 3 Middling / 4 Very little / 5 Not at all 
 allbus2021,int5_allbus,pa02a,c(5:1),How interested in politics are you? ,1 Very strongly / 2 Strongly / 3 Middling / 4 Very little / 5 Not at all 
 cceb20023,int2a_eb,q2_2,c(2:1),Please tell me if you are fairly interested or not in each of the following topics? Politics,1 Interested / 2 Not interested
