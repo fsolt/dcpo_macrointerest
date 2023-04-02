@@ -1,4 +1,16 @@
 ﻿survey,item,variable,values,question_text, response_categories
+aes1987,int4_aes,q14,c(4:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much / 4 None
+aes1990,int4_aes,a4,c(4:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much / 4 None
+aes1993,int4_aes,a3,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes1996,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes1998,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes2001,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes2004,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes2007,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes2010,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes2013,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes2016,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
+aes2019,int4_aes,a1,c(4:1),"Generally speaking, how much interest do you usually have in what's going on in politics? ",1 A good deal / 2 Some / 3 Not much / 4 None
 afrob1,int4_afrob,scint,c(4:1),How interested are you in politics and government? ,1 Very interested / 2 Somewhat interested / 3 Now and then / 4 Not interested
 afrob2,int3_afrob,q27,c(0:2),How interested are you in public affairs?,0 Not interested / 1 Somewhat interested / 2 Very interested
 afrob3,int4_afrob,q16,c(0:3),How interested are you in public affairs?,0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
@@ -7,8 +19,167 @@ afrob5,int4_afrob,q14,c(0:3),How interested are you in public affairs?,0 Not at 
 afrob6,int4_afrob,q13,c(0:3),How interested are you in public affairs?,0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
 allbus,int5_allbus,pa02a,c(5:1),How interested in politics are you? ,1 Very strongly / 2 Strongly / 3 Middling / 4 Very little / 5 Not at all 
 allbus2021,int5_allbus,pa02a,c(5:1),How interested in politics are you? ,1 Very strongly / 2 Strongly / 3 Middling / 4 Very little / 5 Not at all 
+anes_combo,int4_anes,vcf0313,c(1:4),"Some people seem to follow (1964: think about) what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Hardly at all / 2 Now and then / 3 Some of the time / 4 Most of the time
+anes2020,int4a_eb,v202406,c(1:4),How interested are you in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+amb_combo,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_antigua2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_argentina2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_argentina2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_argentina2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_argentina2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_argentina2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_bolivia2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_bolivia2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_bolivia2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_bolivia2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_bolivia2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_brazil2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_brazil2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_canada2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_canada2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_canada2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_canada2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_canada2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_chile2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_chile2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_chile2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_chile2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_chile2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_colombia2009,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_colombia2011,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_colombia2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_costarica2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_costarica2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_dominica2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_ecuador2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_ecuador2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_grenada2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_guyana2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_panama2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_panama2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_stkittsnevis2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_stlucia2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_stvincent2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_suriname2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_suriname2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_trinidad2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_trinidad2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_uruguay2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_uruguay2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_us2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_us2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_us2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_us2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_us2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_us2021,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_venezuela2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_venezuela2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_venezuela2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_venezuela2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+arabb1,int4_arabb,q215,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Little interested / 4 Not interested
+arabb2,int4_arabb,q404,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Little interested / 4 Not interested
+arabb3,int4_arabb,q404,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Little interested / 4 Not interested
+arabb4,int4_arabb,q404,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Little interested / 4 Not interested
+arabb5,int4a_arabb,q404,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Uninterested / 4 Very uninterested
+arabb7,int4a_arabb,q404,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Uninterested / 4 Very uninterested
+ases2000,int4a_ases,v0162,c(1:4),How interested are you in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+asianb1,int4_asianb,q056,c(1:4),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb2,int4_asianb,q49,c(1:4),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb3,int4_asianb,q43,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb4,int4_asianb,q44,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_australia,int4_asianb,q44,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_india,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_indonesia,int4_asianb,v_46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_japan,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_korea,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_malaysia,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_mongolia,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_myanmar,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_philippines,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_taiwan,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_thailand,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+asianb5_vietnam,int4_asianb,q46,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+autnes2017,int4a_eb,w1_q1,c(4:1),"Generally speaking, when it comes to politics are you... ",1 Very interested / 2 Fairly interested / 3 A little interested / 4 Not at all interested
+belgiumes1999,int5_issp,r53,c(5:1),"Some people are very interested in politics. Others are not interested at all. Are you very interested in politics, or are you not at all interested? ",1 Very interested / 2 A lot / 3 More or less / 4 A little / 5 None
+belgiumes2003,int5_issp,q43,c(5:1),"Some people are very interested in politics. Others are not interested at all. Are you very interested in politics, or are you not at all interested? ",1 Very interested / 2 A lot / 3 More or less / 4 A little / 5 None
+belgiumes2007,int5_issp,q76,c(1:5),"Some people are very interested in politics. Others are not interested at all. Are you very interested in politics, or are you not at all interested? ",1 None / 2 A little / 3 Some / 4 Much / 5 Very much
+bes1997,int5_issp,politics,c(5:1),How much interest do you generally have in what is going on in politics ,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 Not at all
+bes2001,int5_issp,bq1,c(5:1),How much interest do you generally have in what is going on in politics ,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 Not at all
+bes2005_post,int5_issp,bq1,c(5:1),How much interest do you generally have in what is going on in politics ,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 Not at all
+bes2005_pre,int5_issp,bq1,c(5:1),How much interest do you generally have in what is going on in politics ,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 Not at all
+bes2010,int5_issp,bq1,c(5:1),How much interest do you generally have in what is going on in politics ,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 Not at all
+bes2015,int4_wvs,a03,c(4:1),How interested would you say you are in politics?,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+bes2017,int4_wvs,a03,c(4:1),How interested would you say you are in politics?,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+bes2019,int4_wvs,a03,c(4:1),How interested would you say you are in politics?,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+bsa_combo,int5a_bsa,polinrst,c(5:1),How interested are you in politics?,1 Very interested / 2 Fairly interested / 3 Somewhat interested / 4 Not very interested / 5 Not at all interested
+bsa_combo,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 Not at all
+bsa1994,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa1995,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa1996,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa1997,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa1998,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa1999,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2000,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2001,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2002,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2003,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2004,int4_bsa,politsc,c(4:1),How much interest do you personally have in politics?,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+bsa2004,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2005,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2006,int5a_bsa,polinrst,c(5:1),How interested are you in politics?,1 Very interested / 2 Fairly interested / 3 Somewhat interested / 4 Not very interested / 5 Not at all interested
+bsa2006,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2007,int4_bsa,polinrs2,c(4:1),How much interest do you have in politics?,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+bsa2007,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2008,int5_bsa,politics,c(5:1),How much interest do you have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2009,int5_bsa,politics,c(5:1),How much interest do you generally have in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2010,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2011,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2012,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2013,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2014,int4_bsa,politsc,c(4:1),How much interest do you personally have in politics?,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+bsa2015,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2016,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2016,int5a_bsa,polinrst,c(5:1),How interested are you in politics?,1 Very interested / 2 Fairly interested / 3 Somewhat interested / 4 Not very interested / 5 Not at all interested
+bsa2017,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2018,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2019,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+bsa2020,int5_bsa,politics,c(5:1),How much interest do you generally have in what is going on in politics?,1 A great deal / 2 Quite a lot / 3 Some / 4 Not very much / 5 None at all
+canadianes2004,int11_ces,ces04_cps_a6,c(0:10),How interested are you in politics generally?,0 No interest at all / 123456789 / 10 A great deal of interest
+canadianes2006,int11_ces,ces06_cps_a8,c(0:10),How interested are you in politics generally?,0 No interest at all / 123456789 / 10 A great deal of interest
+canadianes2008,int11_ces,ces08_cps_a4,c(0:10),How interested are you in politics generally?,0 No interest at all / 123456789 / 10 A great deal of interest
+canadianes2011,int11_ces,pes11_60,c(0:10),How interested are you in politics generally?,0 No interest at all / 123456789 / 10 A great deal of interest
+canadianes2015,int11_ces,p_intpol,c(0:10),How interested are you in politics generally?,0 No interest at all / 123456789 / 10 A great deal of interest
+canadianes2019,int11_ces,cps19_interest_gen_1,c(0:10),How interested are you in politics generally?,0 No interest at all / 123456789 / 10 A great deal of interest
+canadianes2021,int11_ces,cps21_interest_gen_1,c(0:10),How interested are you in politics generally?,0 No interest at all / 123456789 / 10 A great deal of interest
 cceb20023,int2a_eb,q2_2,c(2:1),Please tell me if you are fairly interested or not in each of the following topics? Politics,1 Interested / 2 Not interested
 cceb20035,int4a_eb,q7_1,c(4:1),"To what extent do the following topics interest you? Would you say you are very interested, fairly interested, not very interested or not at all interested in ...? Politics and economics in (Our Country)",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+cces2009,int4_cces,v244,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2012,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2014,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2015,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2016,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2017,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2018,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2019,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2020,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+cces2021,int4_cces,newsint,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly any of the time
+chcep199109,int4_chcep,p12,c(4:1),"According to the following scale, what is your degree of interest in politics? ",1 Very interested / 2 Interested / 3 Not very interested / 4 Very little or not interested
+cid_combo,int4_cid,v235,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2  Fairly interested / 3 Not very interested / 4 Not at all interested
+cispol1989,int4_cis,p1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Somewhat interested  / 3 A little interested  / 4 Not at all interested
+cisbar199005,int4_cis,p1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Somewhat interested  / 3 A little interested  / 4 Not at all interested
+cisbar201912,int4_cis,b1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Somewhat interested  / 3 A little interested  / 4 Not at all interested
+cnep_combo,int4_cnep,h.interest,c(0:3),"Would you say that you are very, somewhat, not very or not at all interested in politics? ",0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
+cnes1997,int11_cnes,cpsb5,c(0:10),And your interest in politics generally? , 0 None at all / 123456789 / 10 A great deal
+dkes1984,int4_dkes,v219,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes1987,int4_dkes,v62,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes1990,int4_dkes,v142,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes1994,int4_dkes,v79,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes1998,int4_dkes,v15,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes2001,int4_dkes,v21,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes2005,int4_dkes,v19,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes2007,int4_dkes,v27,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+dkes2011,int4_dkes,v38,c(4:1),How interested are you in politics?,1 Very / 2 Somewhat / 3 Only a little / 4 Not at all
+eass2012,int7_eass,v67,c(7:1),I am personally interested in politics. ,1 Strongly agree / 2 Agree / 3 Somewhat agree / 4 Neither agree nor disagree / 5 Somewhat disagree / 6 Disagree / 7 Strongly disagree
 eb17,int2_eb,v44,c(2:1),What sort of things in life interest you a lot? I am going to show you a list of things. which of these really interest you? Politics in [country],1 Mentioned / 2 Not mentioned
 eb19,int4_eb,v102,c(4:1),To what extent would you say you are interested in politics?,1 A great deal / 2 To some extent / 3 Not much / 4 Not at all
 eb26,int2_eb,v51,c(0:1),What sort of things in life interest you a lot? I am going to show you a list of things. which of these really interest you? Politics in [country],0 Not mentioned / 1 Mentioned
@@ -31,10 +202,20 @@ eb58,int3a_eb,v114,c(3:1),"In everyday life, we have to deal with many different
 eb601,int4a_eb,v392,c(4:1),"To what extent do the following topics interest you? Would you say you are very interested, fairly interested, not very interested or not at all interested in ...? Politics and economics in (Our Country)",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
 eb631,int3_eb,v72,c(3:1),"Let us talk about those issues in the news which interest you. For each issue I read out, tell me if you are very interested, moderately interested or not at all interested in it. Politics",1 Very interested / 2 Moderately interested / 3 Not at all interested
 eb643,int4b_eb,v621,c(4:1),"For each of the following statements, please tell me if it applies to you often, sometimes, rarely or never. I am interested in what is going on in politics",1 Often / 2 Sometimes / 3 Rarely / 4 Never
+eb651,dom4_eb,v207,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+eb651,eu4_eb,v208,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+eb661,dom4_eb,v370,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+eb661,eu4_eb,v371,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
 eb672,int2b_eb,v445,c(0:1),In which of the following news related issues are you most interested in...? Politics,0 Not mentioned / 1 Mentioned
 eb713,int2c_eb,v655,c(2:1),"For each of the following propositions, please tell me if it rather corresponds or rather does not correspond to your attitude or your opinion. You are very interested in politics","1 Yes, rather / 2 No, rather does not"
 eb731,int3_eb,v290,c(3:1),"Let us talk about those issues in the news which interest you. For each issue I read out, tell me if you are very interested, moderately interested or not at all interested in it. Politics",1 Very interested / 2 Moderately interested / 3 Not at all interested
+eb782,eu4_eb,qp13a,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+eb795,eu4_eb,qp10,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+eb841,eu4_eb,qp4,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+eb871,eu4_eb,qa5,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+eb892,eu4_eb,qa1,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
 eb952,int3_eb,qa2_5,c(3:1),"Let us talk about those issues in the news which interest you. For each issue I read out, tell me if you are very interested, moderately interested or not at all interested in it. Politics",1 Very interested / 2 Moderately interested / 3 Not at all interested
+eb973,eu4a_eb,qa1,c(4:1),"Some people follow what's going on in European Union politics, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in European Union politics: ",1 Most of the time / 2 From time to time / 3 Rarely / 4 Never or almost never
 ees1989,int4_ess,var213,c(4:1),To what extent would you say you are interested in politics?,1 A great deal / 2 To some extent / 3 Not much / 4 Not at all
 ees1994,int4_ess,v134,c(4:1),To what extent would you say you are interested in politics?,1 A great deal / 2 To some extent / 3 Not much / 4 Not at all
 ees1999,int4_ess,var076,c(1:4),To what extent would you say you are interested in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
@@ -64,6 +245,40 @@ evs1999fin,int4_evs,o17,c(4:1),How interested would you say you are in politics?
 evs2017,int4_evs,v97,c(4:1),How interested would you say you are in politics?,1 Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
 evs2017ukr,int4_evs,v97,c(4:1),How interested would you say you are in politics?,1 Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
 feb162,int2c_eb,q6_9,c(2:1),"For each of the following propositions, please tell me if it rather corresponds or rather does not correspond to your attitude or your opinion. You are very interested in politics and current affairs","1 Yes, rather / 2 No, rather not"
+fsdeva1996,int5_fsdeva,q38,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva1998,int5_fsdeva,q1_39,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2000,int5_fsdeva,k1_39,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2002,int5_fsdeva,q1_39,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2004,int5_fsdeva,q1_39,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2006,int5_fsdeva,q1_39,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2009,int5_fsdeva,q1_39,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2011,int5_fsdeva,q1_36,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2014,int5_fsdeva,q1b_13,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2015,int5_fsdeva,q1_36,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2016,int5_fsdeva,q1c_10,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2017,int5_fsdeva,q1b_12,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2018,int5_fsdeva,q1a_6,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2019win,int5_fsdeva,q1a_13,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+fsdeva2020fall,int5_fsdeva,q1b_5,c(5:1),I am interested in politics and follow it actively ,1 Strongly agree / 2 Agree to some extent / 3 Difficult to say / 4 Disagree to some extent / 5 Strongly disagree
+ges1983,int5_gles,v8,c(5:1),"Generally speaking, you are interested in politics","1 Yes, very strongly / 2 Yes, strongly / 3 Yes, not so strongly / 4 No, not especially / 5 No, not at all"
+ges1983,int5_gles,v129,c(5:1),"Generally speaking, you are interested in politics","1 Yes, very strongly / 2 Yes, strongly / 3 Yes, not so strongly / 4 No, not especially / 5 No, not at all"
+ges1983,int5_gles,v271,c(5:1),"Generally speaking, you are interested in politics","1 Yes, very strongly / 2 Yes, strongly / 3 Yes, not so strongly / 4 No, not especially / 5 No, not at all"
+ges1990,int5_gles,v213,c(5:1),"Generally speaking, you are interested in politics","1 Yes, very strongly / 2 Yes, strongly / 3 Yes, not so strongly / 4 No, not especially / 5 No, not at all"
+gles1994,int5_gles,v50,c(5:1),"Generally speaking, you are interested in politics",1 Very strongly / 2 Fairly strongly / 3 Moderately / 4 Less strongly / 5 Not at all
+gles1998,int5_gles,v50,c(5:1),"Generally speaking, you are interested in politics",1 Very strongly / 2 Fairly strongly / 3 Moderately / 4 Less strongly / 5 Not at all
+gles2002,int5_gles,v50,c(5:1),"Generally speaking, you are interested in politics",1 Very strongly / 2 Fairly strongly / 3 Moderately / 4 Less strongly / 5 Not at all
+gles2009,int5_gles,kp2_010,c(5:1),"Generally speaking, you are interested in politics",1 Extremely interested / 2 Very interested / 3 Moderately interested / 4 Slightly interested / 5 Not interested at all
+gles2013,int5_gles,kp1_010,c(5:1),"Generally speaking, you are interested in politics",1 Extremely interested / 2 Interested / 3 Moderately interested / 4 Slightly interested / 5 Not interested at all
+gles2017,int5_gles,kp1_010,c(5:1),"Generally speaking, you are interested in politics",1 Extremely interested / 2 Interested / 3 Moderately interested / 4 Slightly interested / 5 Not interested at all
+icenes1983,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes1987,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes1991,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes1995,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes1999,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes2003,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes2007,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes2009,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes2013,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
 issp1990,int5_issp,v58,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
 issp1996,int5_issp,v46,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
 issp2004,int4_issp,v42,c(4:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
@@ -72,6 +287,87 @@ issp2007,int4_issp,v58,c(4:1),How interested would you say you personally are i
 issp2014,int4_issp,v47,c(4:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
 issp2016,int5_issp,v46,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
 issp2016,int4_issp,nz_v46,c(4:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
+itanes1985,int4_itanes,v47,c(4:1),How interested  are you in politics?,1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+itanes1990,int4_itanes,q11,c(1:4),How interested  are you in politics?,1 Not at all / 2 A little / 3 Somewhat / 4 Very much
+itanes1996,int4_itanes,q5,c(4:1),How interested  are you in politics?,1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+itanes2001,int4_itanes,c1,c(4:1),How interested  are you in politics?,1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+itanes2001_2006_04,int4_itanes,q1,c(4:1),How interested  are you in politics?,1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+itanes2001_2006_06,int4_itanes,b14_06,c(4:1),"In general, how interested are you in politics?",1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+itanes2008,int4_itanes,d001,c(4:1),"In general, how interested are you in politics?",1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+itanes2011_2013,int4_itanes,q01_w1,c(1:4),"In general, how interested are you in politics?",1 Not at all / 2 A little / 3 Somewhat / 4 Very much
+itanes2013capi,int4_itanes,d27,c(4:1),"In general, how interested are you in politics?",1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+itanes2018,int4_itanes,pol1,c(4:1),"In general, how interested are you in politics?",1 Very much / 2 Somewhat / 3 A little / 4 Not at all
+kobar1994,int4_kobar,q2,c(4:1),How interested are you in politics these days? ,1 A lot / 2 Some / 3 Not much / 4 Not at all
+kobar1996,int4_kobar,q2,c(4:1),How interested are you in politics these days? ,1 A lot / 2 Some / 3 Not much / 4 Not at all
+kobar1998,int4_kobar,q26,c(4:1),How much are you interested in politics?,1 Very interested / 2 Somewhat interested / 3 Not very interested / 4 Not at all interested
+kobar1999,int4_kobar,q29,c(4:1),How much are you interested in politics?,1 Very interested / 2 Somewhat interested / 3 Not very interested / 4 Not at all interested
+kobar2001,int4_kobar,q17,c(4:1),How much are you interested in politics?,1 Very interested / 2 Somewhat interested / 3 Not very interested / 4 Not at all interested
+kobar2004,int4_kobar,q31,c(4:1),How much are you interested in politics?,1 Very interested / 2 Somewhat interested / 3 Not very interested / 4 Not at all interested
+kobar2010,int4_kobar,q29,c(4:1),How much are you interested in politics?,1 Very interested / 2 Somewhat interested / 3 Not very interested / 4 Not at all interested
+lb1995,int4_lb,p62,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb1996,int4_lb,p64,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb1997,int4_lb,sp41,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb1998,int4_lb,sp36,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2000,int4_lb,p63st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2001,int4_lb,p56st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2003,int4_lb,p61st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2004,int4_lb,p29st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2005,int4_lb,p37st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2007,int4_lb,p59st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2009,int4_lb,p32st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2010,int4_lb,p23st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2013,int4_lb,p20stgbs,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2020,int4_lb,p46stgbs,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+neb_combo,int4_neb,a15,c(4:1),How interested are you in politics? ,1 Very interested / 2 Somewhat interested  / 3 Not very interested  / 4 Not at all interested
+npes_combo,int3_npes,v1_4,c(3:1),How interested  are you in politics?,1 Very interested / 2 Fairly interested / 3 Not interested
+nores_combo1,int4_nores,polint1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+nores_combo2,int4_nores,polint1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+nores2013,int4_nores,spm1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+nsss1984,int3_nsss,intpol,c(3:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much
+nsss1987,int3_nsss,intpol,c(3:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much
+nsss1989,int4_aes,intpol,c(4:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much / 4 None
+nsss1993,int4_aes,intpol3,c(4:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much / 4 None
+nsss1994,int4_aes,p4q4,c(4:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much / 4 None
+nsss1995,int4_aes,p67q1,c(4:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much / 4 None
+nzes1993,int4_nzes,nintrst,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Somewhat interested  / 3 Slightly / 4 Not at all
+nzes1996,int4_nzes,pintrst,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Somewhat interested  / 3 Slightly / 4 Not at all
+nzes2005,int4_nzes,yintrst,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly  / 3 Slightly / 4 Not at all
+nzes2008,int4_nzes,zintrst,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly  / 3 Slightly / 4 Not at all
+nzes2011,int4_nzes,jinterest,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Slightly interested / 4 Not at all interested
+nzes2014,int4_nzes,dinterest,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Slightly interested / 4 Not at all interested
+nzes2017,int4_nzes,rinterest,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Somewhat interested / 3 Not very interested / 4 Not at all interested
+nzes2020,int4_nzes,a1,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Somewhat interested / 3 Not very interested / 4 Not at all interested
+pgss,int5_pgss,q112,c(5:1),How interested would you say you personally are in politics?,1 Extremely interested / 2 Very much interested / 3 Fairly interested / 4 A little interested / 5 Not at all interested
+politbarometer_combo,int5_polit,vf79,c(5:1),How interested are you in politics?,1 Very strong / 2 Strong / 3 Somewhat / 4 Hardly / 5 Not at all
+ptvs2008,int4_evs,evs_l37,c(1:4),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+ptvs2012,int4_evs,l.35,c(1:4),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+ptvs2016,int4_evs,evs_l34,c(1:4),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
 ress2014,int4_ess,polintr,c(4:1),How interested  are you in politics?,1 Very interested / 2 Quite interested / 3 Hardly interested / 4 Not at all interested
-wvs_combo,int4_wvs,e023,c(4:1),How interested would you say you are in politics?,1 Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
-wvs7,int4_wvs,q199,c(4:1),How interested would you say you are in politics?,1 Very interested  / 2  Somewhat interested  / 3  Not very interested  / 4  Not at all interested
+sasianb2,int4_asianb,gb13,c(4:1),How interested would you say you are in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+snes1988,int4_snes,v25,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes1991,int4_snes,v24,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes1994,int4_snes,v22,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes1998,int4_snes,v22,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes2002,int4_snes,v23,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes2006,int4_snes,v11,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes2010,int4_snes,vu10_v10,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes2014,int4_snes,f3,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+snes2018,int4_snes,q300,c(4:1),How interested would you say you personally are in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
+uspew_valcombo,int4_uspew,folgov,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs ",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2004_typo,int4_uspew,q19,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs ",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2007_rls,int4_uspew,q8,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs ",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2012_10late,int4_uspew,folgov,c(4:1),"Some people seem to follow what's going on in government and public affairs most of the time, whether there's an election or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs ",1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2014_9rel,int4_uspew,q5,c(4:1),Would you say you follow what’s going on in government and public affairs ,1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2015_gov,int4_uspew,q10,c(4:1),Would you say you follow what’s going on in government and public affairs ,1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2016_3pol,int4_uspew,q9,c(4:1),Would you say you follow what’s going on in government and public affairs ,1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2017_6typo,int4_uspew,q40,c(4:1),Would you say you follow what’s going on in government and public affairs ,1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2018_02amtr,int4_uspew,folgov_w,c(4:1),Would you say you follow what’s going on in government and public affairs ,1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+uspew2019_05amtr,int4_uspew,folgov_w,c(4:1),Would you say you follow what’s going on in government and public affairs ,1 Most of the time / 2 Some of the time / 3 Only now and then / 4 Hardly at all
+vpcpce_czechpublic,int4_vpcpce,q53,c(4:1),How interested are you in politics? ,1 Very interested / 2 Quite interested / 3 Only a little interested / 4 Not at all interested
+vpcpce_hungarianpublic,int4_vpcpce,q53,c(4:1),How interested are you in politics? ,
+vpcpce_russianpublic,int4_vpcpce,q53,c(4:1),How interested are you in politics? ,
+vpcpce_slovakianpublic,int4_vpcpce,q53,c(4:1),How interested are you in politics? ,
+vpcpce_ukrainianpublic,int4_vpcpce,q53,c(4:1),How interested are you in politics? ,
+wvs_combo,int4_wvs,e023,c(4:1),How interested would you say you are in politics?,1 Very interested / 2 Somewhat interested  / 3 Not very interested  / 4 Not at all interested
+wvs7,int4_wvs,q199,c(4:1),How interested would you say you are in politics?,1 Very interested / 2 Somewhat interested  / 3 Not very interested  / 4 Not at all interested
+,int4_ibope,p2,c(4:1),How would you classify your degree of interest in what the FEDERAL GOVERNMENT does? Do you have:.,1 A lot of interest / 2 Some interest / 3 Little interest / 4 No interest
