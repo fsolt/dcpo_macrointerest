@@ -216,12 +216,12 @@ eb871,eu4_eb,qa5,c(4:1),"Would you say that you are very interested, fairly inte
 eb892,eu4_eb,qa1,c(4:1),"Would you say that you are very interested, fairly interested, not very interested or not at all interested in European affairs? ",1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
 eb952,int3_eb,qa2_5,c(3:1),"Let us talk about those issues in the news which interest you. For each issue I read out, tell me if you are very interested, moderately interested or not at all interested in it. Politics",1 Very interested / 2 Moderately interested / 3 Not at all interested
 eb973,eu4a_eb,qa1,c(4:1),"Some people follow what's going on in European Union politics, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in European Union politics: ",1 Most of the time / 2 From time to time / 3 Rarely / 4 Never or almost never
-ees1989,int4_ess,var213,c(4:1),To what extent would you say you are interested in politics?,1 A great deal / 2 To some extent / 3 Not much / 4 Not at all
-ees1994,int4_ess,v134,c(4:1),To what extent would you say you are interested in politics?,1 A great deal / 2 To some extent / 3 Not much / 4 Not at all
-ees1999,int4_ess,var076,c(1:4),To what extent would you say you are interested in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
-ees2004,int4_ess,v110,c(4:1),To what extent would you say you are interested in politics?,1 Very / 2 Somewhat / 3 A little / 4 Not at all
-ees2009,int4_ess,q78,c(4:1),To what extent would you say you are interested in politics?,1 Very / 2 Somewhat / 3 A little / 4 Not at all
-ees2019,int4_ess,q21,c(4:1),To what extent would you say you are interested in politics?,1 Very / 2 Somewhat / 3 A little / 4 Not at all
+ees1989,int4_ees,var213,c(4:1),To what extent would you say you are interested in politics?,1 A great deal / 2 To some extent / 3 Not much / 4 Not at all
+ees1994,int4_ees,v134,c(4:1),To what extent would you say you are interested in politics?,1 A great deal / 2 To some extent / 3 Not much / 4 Not at all
+ees1999,int4_ees,var076,c(1:4),To what extent would you say you are interested in politics?,1 Not at all interested / 2 A little interested / 3 Somewhat interested / 4 Very interested
+ees2004,int4_ees,v110,c(4:1),To what extent would you say you are interested in politics?,1 Very / 2 Somewhat / 3 A little / 4 Not at all
+ees2009,int4_ees,q78,c(4:1),To what extent would you say you are interested in politics?,1 Very / 2 Somewhat / 3 A little / 4 Not at all
+ees2019,int4_ees,q21,c(4:1),To what extent would you say you are interested in politics?,1 Very / 2 Somewhat / 3 A little / 4 Not at all
 ess1,int4_ess,polintr,c(4:1),How interested  are you in politics?,1 Very interested / 2 Quite interested / 3 Hardly interested / 4 Not at all interested
 ess2,int4_ess,polintr,c(4:1),How interested  are you in politics?,1 Very interested / 2 Quite interested / 3 Hardly interested / 4 Not at all interested
 ess2_it,int4_ess,polintr,c(4:1),How interested  are you in politics?,1 Very interested / 2 Quite interested / 3 Hardly interested / 4 Not at all interested
@@ -370,4 +370,3 @@ vpcpce_slovakianpublic,int4_vpcpce,q53,c(4:1),How interested are you in politics
 vpcpce_ukrainianpublic,int4_vpcpce,q53,c(4:1),How interested are you in politics? ,
 wvs_combo,int4_wvs,e023,c(4:1),How interested would you say you are in politics?,1 Very interested / 2 Somewhat interested  / 3 Not very interested  / 4 Not at all interested
 wvs7,int4_wvs,q199,c(4:1),How interested would you say you are in politics?,1 Very interested / 2 Somewhat interested  / 3 Not very interested  / 4 Not at all interested
-,int4_ibope,p2,c(4:1),How would you classify your degree of interest in what the FEDERAL GOVERNMENT does? Do you have:.,1 A lot of interest / 2 Some interest / 3 Little interest / 4 No interest
