@@ -1,0 +1,8 @@
+﻿survey,item,variable,values,question_text, response_categories
+evs_combo,disc3,a062,c(3:1),"When you get together with your friends, would you say you discuss political matters frequently, occasionally or never?",1 Frequently / 2 Occasionally / 3 Never
+evs_combo,imp4,a004,c(4:1),"For each of the following aspects, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all  Politics",1 Very important / 2 Rather important / 3 Not very important / 4 Not at all important
+evs_combo,news5,e150,c(5:1),How often do you follow politics in the news on television or on the radio or in the daily papers?,1 Every day / 2 Several times a week / 3 Once or twice a week / 4 Less often / 5 Never
+evs2017,imp4,v5,c(4:1),"For each of the following aspects, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all  Politics",1 Very important / 2 Rather important / 3 Not very important / 4 Not at all important
+wvs_combo,disc3,a062,c(3:1),"When you get together with your friends, would you say you discuss political matters frequently, occasionally or never?",1 Frequently / 2 Occasionally / 3 Never
+wvs_combo,imp4,a004,c(4:1),"For each of the following aspects, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all  Politics",1 Very important / 2 Rather important / 3 Not very important / 4 Not at all important
+wvs_combo,news5,e150,c(5:1),How often do you follow politics in the news on television or on the radio or in the daily papers?,1 Every day / 2 Several times a week / 3 Once or twice a week / 4 Less often / 5 Never
