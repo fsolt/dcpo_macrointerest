@@ -565,6 +565,7 @@ The bottom panel counts the countries observed in each year.
 Country coverage reached its peak in `r y_peak_year`, when respondents in `r y_peak_nn` countries were asked items about their interest in politics.
 The next section describes how all of this sparse and incomparable survey data was used to generate complete, comparable time-series macrointerest scores using a latent variable model.
 
+
 # Estimating Macrointerest
 
 A number of recent studies have developed latent variable models of public opinion based on cross-national survey data [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
@@ -584,7 +585,7 @@ Second, the DCPO model accounts for each question's _dispersion_, its noisiness 
 The lower the dispersion, the better that changes in responses to the question map onto changes in macrointerest.
 Together, the model's difficulty and dispersion estimates work to generate comparable estimates of the latent variable of macrointerest from the available but incomparable source data.
 
-To address the sparsity of the source data---the fact that there are gaps in the time series of each country, and even many observed country-years have only one or few observed items---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
+To address the sparsity of the source data---the fact that there are gaps in the time series of each country, and even many observed country-years have only one or two observed items---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of macrointerest over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
 
@@ -887,28 +888,29 @@ Building on @Lijphart1999 and @Powell2000, @Kittilson2010 [, 992] argues that po
 Macrointerest should be higher in countries with parliamentary and federal systems than in those without those features, and it should decline as the disproportionality between votes cast and seats won increases.
 
 A third claim deals with the public's demand for accountability.
-@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong or the electorate feels that the government is not trustworthy or is performing poorly, then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success \ldots voters should not waste their energies focusing on the activities of their representatives."
+@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success \ldots voters should not waste their energies focusing on the activities of their representatives."
 If democracy is a principal-agent problem with elected officials acting as self-interested agents and the public as their lazy but vengeful principal, then macrointerest should rise when times are bad and decline as conditions improve.
 
 A final set of theories---each well established---contradicts the third.
 Modernization theory holds that the public's interest in politics will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
-Unemployment has long been argued to not to motivate but rather to depress political interest.
-[@Rosenstone1982, 26], for example, argued that "it causes a preoccupation with personal economic well-being, and as a result, the citizen withdraws from such external matters as politics."
+Unemployment has long been argued to not to motivate but rather to depress political interest; [@Rosenstone1982, 26], for example, argued that "it causes a preoccupation with personal economic well-being, and as a result, the citizen withdraws from such external matters as politics."
 And the relative power theory holds that greater income inequality, by increasingly concentrating political power in the hands of the wealthy, shapes the political agenda in ways that discourage the broader public from taking interest [see, e.g., @Solt2008].
-In each of these circumstances, macrointerest is argued to grow in _good_ times and shrink as the context worsens.
+In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens.
 
-_Data_ Elections
-institutions:
-  parliamentary, 
-  federal, 
-  disproportionality
-bad/good times:
-  GDPpc
-  GDP growth
-  Unemployment
-  SWIID
+Data to test these hypotheses regarding the causes of macrointerest are drawn from several sources.
+The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides information about the timing of elections, a dichotomous variable coded one in election years and zero when no election was held.
+The three institutional variables are measured as in @Kittilson2010.
+Data on parliamentarism, a dichotomous variable coded one in pure parliamentary systems and zero otherwise, is also sourced from the DES.
+Federalism is a third dichotomous variable, coded one in countries with strong federal systems and zero in all others [see @Lijphart1999].
+The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
+The context of good times and bad was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat  [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database  [@Solt2020].
 
-_Methods_ @Shor2007 @Fairbrother2014
+The resulting dataset comprises the thirty-seven OECD democracies, each observed in eleven (Colombia) to forty (Ireland and the United States) consecutive years (mean: 30.86 years, median: 31 years).
+@Shor2007 demonstrates that such pooled time series are best analyzed using a Bayesian multilevel model including varying intercepts for each country and each year. 
+The former help account for heteroskedasticity across space due to, e.g., omitted variable bias while permitting the inclusion of time-invariant predictors such as, in this dataset, parliamentarism and federalism, and the latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
+Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors are decomposed into its time-invariant country mean and the difference between each the country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
+The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
+
 
 ```{r des_download}
 if (!exists(here("data-raw", "es_data-v41", "es_data-v4_1.csv"))) {
@@ -1161,7 +1163,8 @@ if (!file.exists(here::here("data", "results.rda"))) {
             seed = 324)
   
   doubled_sd <- m1$data %>% 
-    select(-`mean * 100`, -mean, -sd, -country, -year, -ends_with("_se")) %>% 
+    select(-`mean * 100`, -mean, -sd,
+           -country, -year, -ends_with("_se")) %>% 
     summarize(across(everything(), by2sd)) %>% 
     pivot_longer(everything()) %>% 
     transmute(`.variable` = case_when(name == "gini_mean" ~ 
@@ -1218,9 +1221,8 @@ coef_data0 %>%
   theme_light() +
   xlab(NULL) +
   ylab(NULL) +
-  plot_annotation("Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%, 90%, and 95% credible intervals; shading depicts the posterior probability density function.")
+  plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%, 90%, and 95% credible intervals; shading depicts the posterior probability density function.")
 ```
-
 
 Figure\nobreakspace{}\ref{model} displays the results.
 Consistent with the argument that campaigns bring attention-grabbing information to the public, macrointerest in election years is found to be `r get_coef("election", type = "std_coef")` points higher (95% credible interval: `r get_coef("election", type = "ci")` points) than in years without elections.
@@ -1229,7 +1231,7 @@ This is in line with previous research finding small but well-estimated increase
 The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
 Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
 The difference between countries with and without federalism is estimated to be even larger, `r get_coef("federal")` points, though only its 90% credible interval (`r get_coef("federal", type = "ci", width = "0.9")`) is bounded away from zero.
-And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate effect: a two-standard-deviation increase in the Gallegher index yields a `r get_coef("lsq_diff")` in the posterior mean.
+And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate effect: a two-standard-deviation increase in the Gallagher index yields a `r get_coef("lsq_diff")` in the posterior mean.
 
 On the debate on whether macrointerest is invigorated by bad times or instead is discouraged, the evidence from this cross-national analysis falls heavily on the side of the latter.
 Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
@@ -1238,7 +1240,7 @@ The posterior means for growth in the national economy are positive as well, but
 The findings with regard to unemployment, another circumstance typically closely followed by the media, are similar.
 As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
 Year-to-year changes in income inequality are found to make little difference---the influence of the wealthy over the political agenda, it would seem, does not change on such a short time scale, from one perspective, and there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions, from the other.
-Taken as a whole, though, this evidence indicates that it is good times, not bad, that yield higher macrointerest.
+Taken as a whole, this evidence indicates that it is good times, not bad ones, that yield higher macrointerest.
 
 # Conclusions
 "the electorate becomes more interested and attentive to government when times are bad" [@Peterson2022, 219]
