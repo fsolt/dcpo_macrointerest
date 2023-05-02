@@ -369,10 +369,7 @@ back_to_numeric <- function(string_number) {
 covered_share <- covered_share_of_spanned(dcpo_input_raw1)
 ```
 
-<!-- In this letter, we present the trust in civil servants/(bureaucracy/public administration) (TCS) dataset, which is based on the host of national and cross-national survey data available and recent advances in latent variable modeling of public opinion that allow us to make use of this sparse and incomparable data. -->
-<!-- It provides comparable estimates of the trust and confidence the public puts in civil servants and public administrators/administration across countries and over time. -->
-<!-- We validate the data by showing that these TCS scores are strongly correlated with responses to single survey items as well as with measures of [perceived corruption, unemployment, income inequality, and internal and external efficacy, the rule of law, government effectiveness]. -->
-<!-- We expect that the TCS data will become an invaluable source for broadly cross-national and longitudinal research on the causes and effects of trust in the civil service. -->
+
 
 
 # Cross-National Macrointerest: The Source Data
@@ -404,13 +401,13 @@ items_plot <- dcpo_input_raw1 %>%
   ylab("Country-Years\nObserved") +
   ggtitle("Items")
 
-trust4_cy <- dcpo_input_raw1 %>% 
-  filter(item == "trust4") %>%
+int4_ess_cy <- dcpo_input_raw1 %>% 
+  filter(item == "int4_ess") %>%
   distinct(country, year) %>%
   nrow()
 
-trust4_surveys <- dcpo_input_raw1 %>%
-  filter(item == "trust4") %>%
+int4_ess_surveys <- dcpo_input_raw1 %>%
+  filter(item == "int4_ess") %>%
   distinct(survey) %>%
   pull(survey) %>% 
   str_split(", ") %>% 
@@ -551,11 +548,6 @@ if(n_data_poor < 20) {
 
 (countries_plot + cby_plot) / (ybc_plot)
 ```
-
-
-<!-- Consider the most frequently asked item in the data we collected, which asks respondents whether they strongly agree, agree, disagree, or strongly disagree with the statement "I am going to name a number of institutions. For each one, could you tell me how much trust you have in them. Is it a great deal of trust, some trust, not very much trust or none at all? Civil service." -->
-<!-- Employed by the Arab Barometer,the Asia Europe Survey, the Asian Barometer, the British Social Attitudes Survey, the Latino Barometer, the East Asian Social Survey, the European Values Survey, the Italian National Election Study, the South Asian Barometer, and the World Values Survey, this question was asked in a total of `r trust4_cy` different country-years. -->
-<!-- That this constitutes only `r {trust4_cy*100/(spanned_cy %>% str_replace(",", "") %>% as.numeric())} %>% round()`% of the country-years spanned by our data---and again, this is the _most common_ survey item---again underscores just how sparse and incomparable the available public opinion data is on this topic. -->
 
 The upper left panel of Figure\nobreakspace{}\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
 The Germany, with `r de_obs` observations, is far and away the best represented country in the source data, followed by `r others`.
