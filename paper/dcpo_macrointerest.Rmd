@@ -569,10 +569,8 @@ The DCPO model is a population-level two-parameter ordinal logistic item respons
 For a detailed description of the DCPO model, see Appendix B and @Solt2020c [, 3-8]; here, I focus on how it deals with the principal issues raised by our source data, incomparability and sparsity.
 
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
-First, it incorporates the _difficulty_ of each question's responses, that is, how much interest in politics is indicated by a given response. 
-<!-- That each response evinces more or less of our latent trait is most easily seen with regard to the ordinal responses to the same question: strongly agreeing with the statement "you can generally trust the people who run our government to do what is right," exhibits more trust in civil servants than responding "agree," which in turn is more trusting than responding "disagree," which is a more trusting response than "strongly disagree." -->
-<!-- But this is also true across questions. -->
-<!-- For example, expressing "great trust" in civil servants "to look after your interests" likely expresses even more trust than just strongly agreeing that civil servants can be trusted to do what is right. -->
+First, it incorporates the _difficulty_ of each question's responses, that is, how much interest in politics is indicated by a given response. To say that one is "very interested" in politics, for example, is to exhibit more interest than to say that one is "somewhat interested" or "not very interested."
+Here, difficulty is permitted to vary with question wording and the survey project as well.
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
 The lower the dispersion, the better that changes in responses to the question map onto changes in macrointerest.
 Together, the model's difficulty and dispersion estimates work to generate comparable estimates of the latent variable of macrointerest from the available but incomparable source data.
@@ -671,14 +669,14 @@ theta_results <- extract_dcpo_results(dcpo_input,
 
 
 The model was estimated using the `DCPOtools` package for R [@Solt2019], running four chains for 1,000 iterations each and discarding the first half as warmup, which left us with 2,000 samples.
-The $\hat{R}$ diagnostic had a maximum value of 1.01, indicating that the model converged. <!-- Rhat confirmed -->
+The $\hat{R}$ diagnostic had a maximum value of 1.01, indicating that the model converged. <!-- macrointerest Rhat confirmed -->
 The dispersion parameters of the survey items indicate that all of them load well on the latent variable (see Appendix A).
 The result is estimates, in all `r res_cy` country-years spanned by the source data, of the mean political interest of the public, that is, macrointerest.
 
 
 # Validating Cross-National Macrointerest
 
-Simply being able to generate estimates of macrointerest or any other latent variable, however, does not automatically mean that they are suitable for use. 
+That estimates can be generated for macrointerest or any other latent variable, however, does not automatically mean that they are suitable for use. 
 As is the case for any new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{external_val} provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
@@ -896,13 +894,6 @@ Data on parliamentarism, a dichotomous variable coded one in pure parliamentary 
 Federalism is a third dichotomous variable, coded one in countries with strong federal systems and zero in all others [see @Lijphart1999].
 The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
 The context of good times and bad was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat  [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database  [@Solt2020].
-
-The resulting dataset comprises the thirty-seven OECD democracies, each observed in eleven (Colombia) to forty (Ireland and the United States) consecutive years (mean: 30.86 years, median: 31 years).
-@Shor2007 demonstrates that such pooled time series are best analyzed using a Bayesian multilevel model including varying intercepts for each country and each year. 
-The former help account for heteroskedasticity across space due to, e.g., omitted variable bias while permitting the inclusion of time-invariant predictors such as, in this dataset, parliamentarism and federalism, and the latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
-Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors are decomposed into its time-invariant country mean and the difference between each the country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
-The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
-The model was estimated using the `brms` R package [@Burkner2017].
 
 ```{r des_download}
 if (!exists(here("data-raw", "es_data-v41", "es_data-v4_1.csv"))) {
@@ -1188,13 +1179,25 @@ if (!file.exists(here::here("data", "results.rda"))) {
     filter(!`.variable`=="b_Intercept") %>% 
     left_join(doubled_sd, by = join_by(.variable))
   
-  save(doubled_sd, coef_data0, file = here::here("data", "results.rda"))
+  cy_summary <- m1$data %>%
+    count(country) %>%
+    pull(n) %>%
+    summary()
+  
+  save(doubled_sd, coef_data0, cy_summary, file = here::here("data", "results.rda"))
 } else {
   load(file = here::here("data", "results.rda"))
 }
 ```
 
-```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 6, fig.width = 7.5}
+The resulting dataset comprises the thirty-seven OECD democracies, each observed in twenty-one (Mexico) to forty (Ireland, Italy, the United Kingdom, and the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years).
+@Shor2007 demonstrates that such pooled time series are best analyzed using a Bayesian multilevel model including varying intercepts for each country and each year. 
+The former help account for heteroskedasticity across space due to, e.g., omitted variable bias while permitting the inclusion of time-invariant predictors such as, in this dataset, parliamentarism and federalism, and the latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
+Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
+The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
+The model was estimated using the `brms` R package [@Burkner2017].
+
+```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 4.5, fig.width = 7.5}
 
 ordered <- doubled_sd %>%
   pull(var_names) %>% 
@@ -1217,7 +1220,7 @@ coef_data0 %>%
   theme_light() +
   xlab(NULL) +
   ylab(NULL) +
-  plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%, 90%, and 95% credible intervals; shading depicts the posterior probability density function.")
+  plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
 ```
 
 Figure\nobreakspace{}\ref{model} displays the results.
@@ -1226,13 +1229,13 @@ This is in line with previous research finding small but well-estimated increase
 
 The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
 Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
-The difference between countries with and without federalism is estimated to be even larger, `r get_coef("federal")` points, though only its 90% credible interval (`r get_coef("federal", type = "ci", width = "0.9")`) is bounded away from zero.
-And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate effect: a two-standard-deviation increase in the Gallagher index yields a `r get_coef("lsq_diff")` in the posterior mean.
+The difference between countries with and without federalism is estimated to be even larger, `r get_coef("federal", type = "std_coef")` points, though only its 90% credible interval (`r get_coef("federal", type = "ci", width = "0.9")`) is bounded away from zero.
+And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index yields a `r get_coef("lsq_diff")` point posterior mean.
 
-On the debate on whether macrointerest is invigorated by bad times or instead is discouraged, the evidence from this cross-national analysis falls heavily on the side of the latter.
+On the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence from this cross-national analysis falls heavily on the side of the latter.
 Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
-The long-term effect evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean")`, but only its 80% credible interval excludes zero.
-The posterior means for growth in the national economy are positive as well, but despite this topic's frequent coverage in media, the posterior distributions do not suggest the relationships are statistically defensible.
+The long-term, historical effect evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean")`, but only its 80% credible interval excludes zero.
+The posterior means for growth in the national economy are positive as well, but despite this topic's frequent coverage in media, the posterior distributions do not suggest relationships that are statistically defensible.
 The findings with regard to unemployment, another circumstance typically closely followed by the media, are similar.
 As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
 Year-to-year changes in income inequality are found to make little difference---the influence of the wealthy over the political agenda, it would seem, does not change on such a short time scale, from one perspective, and there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions, from the other.
