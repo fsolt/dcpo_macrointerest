@@ -67,7 +67,7 @@ Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Profes
 
 ```{=tex}
 \begin{abstract}
-blah blah blah
+The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of public opinion and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good times, not bad, that spur greater public interest in politics. 
 \end{abstract}
 ```
 \pagebreak
@@ -287,6 +287,10 @@ set.seed(324)
 
 
 # Introduction
+
+The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963].
+In light of the growing threats to democracy seen in many countries, measuring the levels and trends of political interest and understanding their sources is therefore crucially important [@Peterson2023].
+Such data, however, are scarce.
 
 
 ```{r dcpo_input_raw, include=FALSE}
@@ -777,7 +781,7 @@ ext_wvs_imp_dat <- ext_dat %>%
            neg = FALSE)
 ```
 
-```{r extval1, fig.cap="External Convergent Validation: Correlations Between Macrointerest and Unused Political-Interest Survey Items \\label{external_val}", fig.height=4}
+```{r extval1, fig.cap="Construct Validation: Correlations Between Macrointerest and  \\label{external_val}", fig.height=4}
 ext_wvs_news_plot <- validation_plot(ext_wvs_news_dat,
                                      lab_x = .15,
                                      lab_y = 95) +
