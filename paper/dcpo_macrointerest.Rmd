@@ -47,6 +47,13 @@ header-includes:
       - \titleformat*{\section}{\normalsize\bfseries}
       - \titleformat*{\subsection}{\normalsize\itshape}
       - \usepackage{titling} #use \maketitle repeatedly  
+      - \renewcommand{\topfraction}{.85} # Adjust LaTeX placement rules per 
+      - \renewcommand{\bottomfraction}{.7} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
+      - \renewcommand{\textfraction}{.15}
+      - \renewcommand{\floatpagefraction}{.66}
+      - \setcounter{topnumber}{3}
+      - \setcounter{bottomnumber}{3}
+      - \setcounter{totalnumber}{4}
 ---
 
 \pagenumbering{gobble}
@@ -289,7 +296,7 @@ set.seed(324)
 # Introduction
 
 The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963].
-In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [@Peterson2023].
+In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [@Peterson2022].
 Data to allow such assessments, however, have been unavailable.
 Although many surveys ask respondents across countries how interested they are in politics, differences in question wording and in response categories have limited scholars' ability to pool the data together, and even in the absence of these issues, in most cases, the questions have not been asked sufficiently frequently to provide annual time series.
 This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of aggregate political interest for over a hundred countries over the past four decades.
@@ -709,7 +716,7 @@ internal_ts_dat <- dcpo_input_raw1 %>%
          neg = FALSE)
 ```
 
-```{r internalval, fig.height = 4, fig.cap = "Internal Convergent Validation: Correlations Between Macrointerest and Individual Source-Data Survey Items \\label{internal_val}"}
+```{r internalval, fig.height = 3.5, fig.cap = "Internal Convergent Validation: Correlations Between Macrointerest and Individual Source-Data Survey Items \\label{internal_val}"}
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
                                 lab_x = .1,
                                 lab_y = 95) +
@@ -783,7 +790,7 @@ ext_wvs_imp_dat <- ext_dat %>%
            neg = FALSE)
 ```
 
-```{r extval1, fig.cap="Construct Validation: Correlations Between Macrointerest and Other Aspects of Political Engagement \\label{external_val}", fig.height=4}
+```{r extval1, fig.cap="Construct Validation: Correlations Between Macrointerest and Other Aspects of Political Engagement \\label{external_val}", fig.height=3.5}
 ext_wvs_news_plot <- validation_plot(ext_wvs_news_dat,
                                      lab_x = .15,
                                      lab_y = 95) +
@@ -1203,9 +1210,9 @@ The latter take into account 'time shocks' that operate on all countries simulta
 Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
 The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
 The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis as well [see @Tai2022].
-The model was estimated using the `brms` R package [@Burkner2017].
+The model was estimated using the `bmrs` R package [@Burkner2017].
 
-```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 4.5, fig.width = 7.5}
+```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5.5, fig.width = 7.5}
 
 ordered <- doubled_sd %>%
   pull(var_names) %>% 
