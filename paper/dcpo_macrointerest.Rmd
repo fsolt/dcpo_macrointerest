@@ -298,7 +298,7 @@ set.seed(324)
 The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963].
 In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [@Peterson2022].
 Data to allow such assessments, however, have been unavailable.
-Although many surveys ask respondents across countries how interested they are in politics, differences in question wording and in response categories have limited scholars' ability to pool the data together, and even in the absence of these issues, in most cases, the questions have not been asked sufficiently frequently to provide annual time series.
+Although many surveys ask respondents across countries how interested they are in politics, differences in question wording and in response categories have limited scholars' ability to pool the data together, and even in the absence of these issues, in most countries the questions have not been asked sufficiently frequently to provide annual time series.
 This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of aggregate political interest for over a hundred countries over the past four decades.
 It shows that these cross-national macrointerest scores perform impressively well in validation tests.
 Finally, as a demonstration of their utility, the letter presents a new test of theories on the circumstances that induce the publics of advanced democracies to take more interest in politics.
@@ -396,7 +396,7 @@ Together, the survey items in the source data were asked in `r n_countries` diff
 Observations for every year in each country surveyed would number `r total_cy`, and a complete set of country-year-items would encompass `r {n_countries * n_years * n_items} %>% scales::comma()` observations.
 Compared to this hypothetical complete set of country-year-items, the available data are very, very sparse.
 More optimistically, there are `r n_cy` country-years in which there is at least _some_ information about the public's interest in politics, that is, some `r round(covered_share)`% of the `r spanned_cy` country-years spanned by these data.
-But there can be no denying that the many different survey items employed renders these data incomparable and difficult to use together.
+Still, the multitude of different survey items makes these data incomparable and difficult to use together.
 
 ```{r itemcountry, fig.cap="Countries and Years with the Most Observations in the Source Data \\label{item_country_plots}", fig.height=3.5, fig.pos='h', cache=FALSE}
 items_plot <- dcpo_input_raw1 %>%
@@ -562,24 +562,24 @@ if(n_data_poor < 20) {
 (countries_plot + cby_plot) / (ybc_plot)
 ```
 
-The upper left panel of Figure\nobreakspace{}\ref{item_country_plots} shows the dozen countries with the highest count of country-year-item observations.
-Germany, with `r de_obs` observations, is far and away the best represented country in the source data, followed by `r others`.
-At the other end of the spectrum, `r n_data_poorest` countries`r data_poorest`have only the minimum three observations required to be included in the source dataset at all.
-The upper right panel shows the twelve countries with the most years observed; this group is similar to that on the left, but with `r adding` joining the list and `r dropping` dropping off.
-The bottom panel counts the countries observed in each year.
-Country coverage reached its peak in `r y_peak_year`, when respondents in `r y_peak_nn` countries were asked items about their interest in politics.
-The next section describes how all of this sparse and incomparable survey data was used with a latent variable model to generate complete, comparable time-series macrointerest scores.
+In the top left panel of Figure\nobreakspace{}\ref{item_country_plots}, the twelve countries with the most country-year-item observations is displayed.
+Germany, with `r de_obs` observations, is the best represented country in these source data, followed by `r others`.
+At the other end of the scale, there are `r n_data_poorest` countries`r data_poorest`that have only the bare minimum three observations needed to be included in the source dataset at all.
+In the top right panel are the dozen countries with the most observed years; this group is similar to that on the left, but with `r adding` adding to the list and `r dropping` dropping off.
+The bottom panel shows the number of countries observed in each year.
+Coverage across countries reached its apex in `r y_peak_year`, when respondents in `r y_peak_nn` countries were asked at least one item about their interest in politics.
+The next section describes how this sparse and incomparable survey data was used together with a latent variable model to generate complete time series of macrointerest scores that are comparable across countries.
 
 
 # Estimating Cross-National Macrointerest
 
-A number of recent studies have developed latent variable models of aggregate survey responses based on cross-national survey data [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
-To estimate the public's interest in politics across countries and over time, I employ the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model elaborated in @Solt2020c.^[
+Several recent studies have developed latent variable models of aggregate survey responses based on cross-national survey data [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
+To estimate the public's interest in politics across countries and over time, this work employs the latest of these methods that is appropriate for data that are both incomparable and sparse, the Dynamic Comparative Public Opinion (DCPO) model elaborated in @Solt2020c.^[
 @Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
 The @McGann2019 model depends on dense survey data unlike the sparse data on interest in politics described in the preceding section.
 @Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.]
-The DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms.
-For a detailed description of the DCPO model, see Appendix B and @Solt2020c [, 3-8]; the focus here is on how it deals with the principal issues raised by the source data, incomparability and sparsity.
+The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.
+For a comprehensive description of the DCPO model, see Appendix B and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
 
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
 First, it incorporates the _difficulty_ of each question's responses, that is, how much interest in politics is indicated by a given response. 
@@ -644,7 +644,7 @@ dcpo_output$save_output_files(dir = results_path,
    # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
    if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
      dir.create(results_path, showWarnings = FALSE, recursive = TRUE)
-     osf_retrieve_node("XXXXX") %>% 
+     osf_retrieve_node("9uvdk") %>% 
        osf_ls_files() %>% 
        filter(name == latest) %>% 
        osf_download(path = here::here("data", "1000"))
@@ -1249,7 +1249,7 @@ And although disproportionality is not estimated to have long-run effects that c
 
 On the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence from this cross-national analysis falls heavily on the side of the latter.
 Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
-The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "std_coef")` points, but only its 80% credible interval excludes zero (`r get_coef("federal", type = "ci", width = "0.8")`).
+The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "std_coef")` points, but only its 80% credible interval (`r get_coef("federal", type = "ci", width = "0.8")` points) excludes zero.
 The posterior means for growth in the national economy are positive as well, but despite this topic's frequent coverage in media, the posterior distributions do not suggest relationships that are statistically defensible.
 The findings with regard to unemployment, another circumstance typically closely followed by the media, are similar.
 As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
