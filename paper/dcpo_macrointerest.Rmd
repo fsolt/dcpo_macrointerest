@@ -577,17 +577,19 @@ Several recent studies have developed latent variable models of aggregate survey
 To estimate the public's interest in politics across countries and over time, this work employs the latest of these methods that is appropriate for data that are both incomparable and sparse, the Dynamic Comparative Public Opinion (DCPO) model elaborated in @Solt2020c.^[
 @Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
 The @McGann2019 model depends on dense survey data unlike the sparse data on interest in politics described in the preceding section.
-@Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.]
+@Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.
+It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country and so makes a poor choice for cross-national data [see @Caughey2019, 686].]
 The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.
 For a comprehensive description of the DCPO model, see Appendix B and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
 
-The DCPO model accounts for the incomparability of different survey questions with two parameters.
+The DCPO model accounts for incomparability using three sets of parameters.
 First, it incorporates the _difficulty_ of each question's responses, that is, how much interest in politics is indicated by a given response. 
 This is most evident with respect to response categories: to say that one is "very interested" in politics, for example, is to exhibit more interest than to say that one is "somewhat interested" or "not very interested."
 Here, difficulty is permitted to vary with question wording and the survey project as well.
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
 The lower the dispersion, the better that changes in responses to the question map onto changes in macrointerest.
-Together, the model's difficulty and dispersion estimates work to generate comparable estimates of the latent variable of macrointerest from the available but incomparable source data.
+Third, to provide for the possibility that translation issues or cultural differences result in the same question being interpreted differently in different countries, the model estimates _country-specific bias_ parameters that shift the difficulty of all responses for a particular question in a particular country.
+Together, the model's difficulty, dispersion, and country-specific bias parameters work to generate comparable estimates of the latent variable of macrointerest from the available but incomparable source data.
 
 To address the sparsity of the source data---the fact that there are gaps in the time series of each country, and that even many observed country-years have only one or two observed items---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
@@ -694,7 +696,7 @@ As is the case for any new measure, validation tests of cross-national latent va
 Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{external_val} provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
 In Figure\nobreakspace{}\ref{internal_val}, the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
-In the left panel, macrointerest scores are plotted against the percentage of respondents offering the two most interested responses on the most common question in the source data across all country-years: the European Social Survey's four-point item, "How interested are you in politics?"
+In the left panel, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
 The middle panel shows responses to the question with the most data-rich cross-section, "How interested would you say you personally are in politics?" in the International Social Survey Program's 2004 module on Citizenship.
 Finally, the right panel evaluates how well the macrointerest scores capture change over time by focusing on the item with the largest number of observations for a single country in the source data, which asked respondents to Germany's ALLBUS, "How interested in politics are you?"
 In all three cases, the correlations, estimated taking into account the uncertainty in the measures, are very strong.
@@ -898,7 +900,7 @@ A final set of theories---each well established---contradicts the third.
 Modernization theory holds that the public's interest in politics will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
 Unemployment has long been argued to not to motivate but rather to depress political interest; @Rosenstone1982 [, 26], for example, argued that "it causes a preoccupation with personal economic well-being, and as a result, the citizen withdraws from such external matters as politics."
 And the relative power theory holds that greater income inequality, by increasingly concentrating political power in the hands of the wealthy, allows them greater power to shape the political agenda in ways that discourage the broader public from taking interest [see, e.g., @Solt2008].
-In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens.
+In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens [see also @Stimson2015; @Peterson, 206].
 
 Data to test these hypotheses regarding the causes of macrointerest are drawn from several sources.
 The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides information about the timing of elections, yielding a dichotomous variable coded one in election years and zero when no election was held.
@@ -1250,8 +1252,8 @@ And although disproportionality is not estimated to have long-run effects that c
 On the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence from this cross-national analysis falls heavily on the side of the latter.
 Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
 The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "std_coef")` points, but only its 80% credible interval (`r get_coef("federal", type = "ci", width = "0.8")` points) excludes zero.
-The posterior means for growth in the national economy are positive as well, but despite this topic's frequent coverage in media, the posterior distributions do not suggest relationships that are statistically defensible.
-The findings with regard to unemployment, another circumstance typically closely followed by the media, are similar.
+The posterior means for growth in the national economy are positive as well, but the posterior distributions do not suggest relationships that are statistically defensible.
+The findings with regard to unemployment are similar.
 As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
 Year-to-year changes in income inequality are found to make little difference---the influence of the wealthy over the political agenda, it would seem, does not change on such a short time scale, from one perspective, and there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions, from the other.
 Taken as a whole, this evidence indicates that it is good times, not bad ones, that yield higher macrointerest.
@@ -1389,7 +1391,10 @@ items_summary %>%
 \pagebreak
 ```{r obs, fig.cap = "Source Data Observations by Country and Year \\label{obs_by_cy}", fig.height = 9}
 dcpo_input_raw1 %>% 
-  mutate(country = str_replace(country, "’", "'")) %>% 
+  mutate(country = str_replace(country, "’", "'"),
+         country = if_else(country %in% oecd_countries & country!="Turkey",
+                           paste0(country, "*"),
+                           country)) %>% 
   distinct(country, year, item, cc_rank) %>% 
   group_by(country, year) %>% 
   summarize(n = n(),
@@ -1411,7 +1416,8 @@ dcpo_input_raw1 %>%
   scale_y_discrete(position = "right") +
   theme(legend.justification=c(0, 0), 
         legend.position=c(0.01, 0.01),
-        axis.text.y  = element_text(size = 7)) 
+        axis.text.y  = element_text(size = 7)) +
+  plot_annotation(caption = "Starred countries are OECD democracies, the sample employed in the analysis of macrointerest presented in the main text.")
 ```
 
 \clearpage
