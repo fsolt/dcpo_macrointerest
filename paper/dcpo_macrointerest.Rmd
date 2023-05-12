@@ -900,7 +900,7 @@ A final set of theories---each well established---contradicts the third.
 Modernization theory holds that the public's interest in politics will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
 Unemployment has long been argued to not to motivate but rather to depress political interest; @Rosenstone1982 [, 26], for example, argued that "it causes a preoccupation with personal economic well-being, and as a result, the citizen withdraws from such external matters as politics."
 And the relative power theory holds that greater income inequality, by increasingly concentrating political power in the hands of the wealthy, allows them greater power to shape the political agenda in ways that discourage the broader public from taking interest [see, e.g., @Solt2008].
-In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens [see also @Stimson2015; @Peterson, 206].
+In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens [see also @Stimson2015; @Peterson2022, 206].
 
 Data to test these hypotheses regarding the causes of macrointerest are drawn from several sources.
 The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides information about the timing of elections, yielding a dichotomous variable coded one in election years and zero when no election was held.
