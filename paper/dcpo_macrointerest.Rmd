@@ -60,6 +60,8 @@ header-includes:
 
 # Authors {.unnumbered}
 
+Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Department of Political Science, Tsinghua University, [yuehu\@tsinghua.edu.cn](mailto:yuehu@tsinghua.edu.cn){.email}
+
 Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
 
 \pagebreak
@@ -309,18 +311,18 @@ surveys_interest <- read_csv(here::here("data-raw",
                                         "surveys_interest.csv"),
                              col_types = "cccccc")
 
-dcpo_input_raw <- DCPOtools::dcpo_setup(vars = surveys_interest,
-                                        datapath = here("..",
-                                                        "data",
-                                                        "dcpo_surveys"),
-                                        file = here("data",
-                                                    "dcpo_input_raw.csv"))
+# dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
+#                                         datapath = here("..",
+#                                                         "data",
+#                                                         "dcpo_surveys"),
+#                                         file = here("data",
+#                                                     "dcpo_input_raw.csv"))
+
+dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
+                                  col_types = "cdcddcd")
 ```
 
 ```{r tb_summary_stats}
-dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
-                                  col_types = "cdcddcd")
-
 process_dcpo_input_raw <- function(dcpo_input_raw_df) {
   dcpo_input_raw_df %>% 
     with_min_yrs(3) %>% 
@@ -604,8 +606,9 @@ save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
 
 ```{r dcpo, eval=FALSE, include=FALSE, results=FALSE}
 iter <- 1000
- 
-dcpo <- cmdstan_model("~/Documents/Projects/DCPO/inst/stan/dcpo.stan")
+
+dcpo <- paste0(.libPaths(), "/DCPO/stan/dcpo.stan")[1] |> 
+  cmdstan_model()
 
 dcpo_output <- dcpo$sample(
    data = dcpo_input[1:13], 
@@ -639,9 +642,12 @@ dcpo_output$save_output_files(dir = results_path,
 ```
 
 ```{r dcpo_results}
+#| eval=FALSE
+
  if (!exists("results_path")) {
    latest <- "202304201035"
-   results_path <- here::here("data", "1000", latest)
+   # results_path <- here::here("data", "1000", latest)
+   results_path <- here("data", "dcpo_surveys")
    
    # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
    if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
@@ -655,11 +661,14 @@ dcpo_output$save_output_files(dir = results_path,
  
 dcpo_output <- as_cmdstan_fit(here(results_path,
                                    list.files(results_path,
-                                              pattern="csv$")))
+                                              pattern = "csv$")))
 
 ```
 
 ```{r dcpo_summary}
+#| eval=FALSE
+
+
 load(file = here::here("data", "dcpo_input.rda"))
 theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
                                                    dcpo_output,
@@ -678,6 +687,8 @@ save(theta_summary, file = here::here("data",
 ```
 
 ```{r theta_results}
+#| eval=FALSE
+
 theta_results <- extract_dcpo_results(dcpo_input,
                                       dcpo_output,
                                       par = "theta")
@@ -719,6 +730,9 @@ internal_ts_dat <- dcpo_input_raw1 %>%
 ```
 
 ```{r internalval, fig.height = 3.5, fig.cap = "Internal Convergent Validation: Correlations Between Macrointerest and Individual Source-Data Survey Items \\label{internal_val}"}
+
+# Can't run through
+
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
                                 lab_x = .1,
                                 lab_y = 95) +
@@ -768,6 +782,8 @@ internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
 ```
 
 ```{r ext_val_dat, include=FALSE}
+# Can't run through
+
 ext_dat <- read_csv(here("data-raw",
                          "surveys_ext.csv"),
                     col_types = "cccccc") %>% 
@@ -793,6 +809,8 @@ ext_wvs_imp_dat <- ext_dat %>%
 ```
 
 ```{r extval1, fig.cap="Construct Validation: Correlations Between Macrointerest and Other Aspects of Political Engagement \\label{external_val}", fig.height=3.5}
+# Can't run through
+
 ext_wvs_news_plot <- validation_plot(ext_wvs_news_dat,
                                      lab_x = .15,
                                      lab_y = 95) +
@@ -854,14 +872,18 @@ There are considerable differences in the extent to which the public professes i
 
 ```{r ts, fig.cap="Macrointerest Scores Over Time Within OECD Democracies \\label{ts_plots}", fig.height=9}
 
-oecd_countries <- rvest::session("https://en.wikipedia.org/wiki/OECD") %>% 
-  rvest::html_table() %>% 
-  nth(6) %>% 
-  mutate(country = countrycode::countrycode(Country,
-                                            "country.name",
-                                            "country.name")) %>% 
-  pull(country) %>% 
-  setdiff("Turkey")
+load(here("data", "theta_summary.rda"))
+
+# oecd_countries <- rvest::session("https://en.wikipedia.org/wiki/OECD") %>% 
+#   rvest::html_table() %>% 
+#   nth(6) %>% 
+#   mutate(country = countrycode::countrycode(Country,
+#                                             "country.name",
+#                                             "country.name")) %>% 
+#   pull(country) %>% 
+#   setdiff("Turkey")
+
+oecd_countries <- readRDS(here("data", "oecd.rds"))
 
 c_res <- theta_summary %>% 
   filter(country %in% oecd_countries) %>%
@@ -950,7 +972,7 @@ des_data <- vroom::vroom(here("data-raw",
 
 ```{r disp}
 if (!file.exists(here("data-raw", "ElectionIndices.pdf"))) {
-  download.file("https://www.tcd.ie/Political_Science/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf", 
+  download.file("https://www.tcd.ie/Political_Science/about/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf",
                 here("data-raw", "ElectionIndices.pdf"))
 }
 
@@ -971,7 +993,9 @@ gallegher_uk <- extract_text(here("data-raw", "ElectionIndices.pdf"),
          seats = as.numeric(seats)) %>% 
   filter(!is.na(year))
 
-disp_add <- repmis::source_data(url = "https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv") %>% 
+# disp_add <- repmis::source_data(url = "https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
+
+disp_add <- rio::import(here("data-raw", "Disproportionality.csv")) %>% 
   filter((country == "Korea, Republic of" & year < 2004) | (country == "Colombia")) %>% 
   select(country, year, lsq = disproportionality) %>% 
   mutate(country = countrycode(country, "country.name", "country.name"))
