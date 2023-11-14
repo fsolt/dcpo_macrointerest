@@ -790,9 +790,12 @@ ext_dat <- read_csv(here("data-raw",
                     col_types = "cccccc") %>% 
   DCPOtools::dcpo_setup(datapath = here("..",
                                         "data",
-                                        "dcpo_surveys"))
+                                        "dcpo_surveys"),
+                        file = here("data",
+                                    "ext_dat.csv"))
+```
 
-save(ext_dat, )
+```{}
 
 ext_wvs_disc_dat <- ext_dat %>%
   filter(str_detect(item, "disc3")) %>% 
