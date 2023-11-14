@@ -144,8 +144,9 @@ validation_plot <- function(v_data_raw,
                             vectorize.args = "x")
     
     v_vars <- v_data_raw %>% 
-      select(item0 = item) %>% 
-      unique() %>% 
+      select(item0 = item,
+             title = title) %>% 
+      distinct() %>% 
       mutate(v_val = str_extract(item0, "\\d+") %>% 
                as.numeric() %>% 
                median_val(.) %>%
@@ -156,18 +157,19 @@ validation_plot <- function(v_data_raw,
       DCPOtools::format_dcpo(scale_q = v_vars$item0[[1]], # these arguments are required
                              scale_cp = 1) %>% # but they don't matter
       pluck("data") %>% 
-      mutate(item0 = str_remove(item, " \\d or higher"),
-             title = factor(title, 
+      mutate(item0 = str_remove(item, " \\d or higher")) %>% 
+      right_join(v_vars, by = "item0") %>%
+      arrange(title) %>% 
+      mutate(title = factor(title, 
                             levels = v_data_raw %>%
                               pull(title) %>%
                               unique())) %>% 
-      right_join(v_vars, by = "item0") %>%
-      arrange(title) %>% 
       filter(str_detect(item, paste(v_val, "or higher"))) %>%
       mutate(iso2c = countrycode::countrycode(country,
                                               origin = "country.name",
-                                              destination = "iso2c"),
-             prop = if_else(neg, 1-y_r/n_r, y_r/n_r),
+                                              destination = "iso2c",
+                                              warn = FALSE),
+             prop = y_r/n_r,
              se = sqrt((prop*(1-prop))/n),
              prop_90 = prop + qnorm(.9)*se,
              prop_10 = prop - qnorm(.9)*se) %>%
@@ -311,18 +313,22 @@ surveys_interest <- read_csv(here::here("data-raw",
                                         "surveys_interest.csv"),
                              col_types = "cccccc")
 
-# dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
-#                                         datapath = here("..",
-#                                                         "data",
-#                                                         "dcpo_surveys"),
-#                                         file = here("data",
-#                                                     "dcpo_input_raw.csv"))
-
-dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
-                                  col_types = "cdcddcd")
+dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
+                                        datapath = here("..",
+                                                        "data",
+                                                        "dcpo_surveys"),
+                                        file = here("data",
+                                                    "dcpo_input_raw.csv"))
 ```
 
 ```{r tb_summary_stats}
+surveys_interest <- read_csv(here::here("data-raw",
+                                        "surveys_interest.csv"),
+                             col_types = "cccccc")
+
+dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
+                                  col_types = "cdcddcd")
+
 process_dcpo_input_raw <- function(dcpo_input_raw_df) {
   dcpo_input_raw_df %>% 
     with_min_yrs(3) %>% 
@@ -641,12 +647,10 @@ dcpo_output$save_output_files(dir = results_path,
 ```
 
 ```{r dcpo_results}
-#| eval=FALSE
-
  if (!exists("results_path")) {
    latest <- "202304201035"
-   # results_path <- here::here("data", "1000", latest)
-   results_path <- here("data", "dcpo_surveys")
+   results_path <- here::here("data", "1000", latest)
+   # results_path <- here("data", "dcpo_surveys")
    
    # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
    if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
@@ -666,8 +670,6 @@ dcpo_output <- as_cmdstan_fit(here(results_path,
 
 ```{r dcpo_summary}
 #| eval=FALSE
-
-
 load(file = here::here("data", "dcpo_input.rda"))
 theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
                                                    dcpo_output,
@@ -687,10 +689,12 @@ save(theta_summary, file = here::here("data",
 
 ```{r theta_results}
 #| eval=FALSE
-
 theta_results <- extract_dcpo_results(dcpo_input,
                                       dcpo_output,
                                       par = "theta")
+
+save(theta_results, file = here::here("data",
+                                      "theta_results.rda"))
 ```
 
 The model was estimated using the `DCPOtools` package for R [@Solt2019], running four chains for 1,000 iterations each and discarding the first half as warmup, leaving 2,000 samples.
@@ -711,7 +715,7 @@ The middle panel shows responses to the question with the most data-rich cross-s
 Finally, the right panel evaluates how well the macrointerest scores capture change over time by focusing on the item with the largest number of observations for a single country in the source data, which asked respondents to Germany's ALLBUS, "How interested in politics are you?"
 In all three cases, the correlations, estimated taking into account the uncertainty in the measures, are very strong.
 
-```{r internal_val_dat, include=FALSE}
+```{r internal_val_dat}
 internal_tscs_dat <- dcpo_input_raw1 %>% 
   filter(item == "int4_ess") %>%  
   mutate(title = "European Social Survey",
@@ -729,8 +733,8 @@ internal_ts_dat <- dcpo_input_raw1 %>%
 ```
 
 ```{r internalval, fig.height = 3.5, fig.cap = "Internal Convergent Validation: Correlations Between Macrointerest and Individual Source-Data Survey Items \\label{internal_val}"}
-
-# Can't run through
+load(here("data", "theta_summary.rda"))
+load(here("data", "theta_results.rda"))
 
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
                                 lab_x = .1,
@@ -781,8 +785,6 @@ internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
 ```
 
 ```{r ext_val_dat, include=FALSE}
-# Can't run through
-
 ext_dat <- read_csv(here("data-raw",
                          "surveys_ext.csv"),
                     col_types = "cccccc") %>% 
@@ -790,6 +792,7 @@ ext_dat <- read_csv(here("data-raw",
                                         "data",
                                         "dcpo_surveys"))
 
+save(ext_dat, )
 
 ext_wvs_disc_dat <- ext_dat %>%
   filter(str_detect(item, "disc3")) %>% 
