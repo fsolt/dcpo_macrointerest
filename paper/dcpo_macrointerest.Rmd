@@ -795,7 +795,10 @@ ext_dat <- read_csv(here("data-raw",
                                     "ext_dat.csv"))
 ```
 
-```{}
+```{r ext_dat, include=FALSE}
+ext_dat <- read_csv(here("data",
+                         "ext_dat.csv"),
+                    col_types = "cdcddcd")
 
 ext_wvs_disc_dat <- ext_dat %>%
   filter(str_detect(item, "disc3")) %>% 
