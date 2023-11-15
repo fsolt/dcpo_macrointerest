@@ -1,0 +1,3122 @@
+country,year,item,r,n,survey,cc_rank
+Spain,1981,disc3,1,687.1541301214,evs_combo,65
+Spain,1981,disc3,2,1215.60177327753,evs_combo,65
+Spain,1981,disc3,3,355.824639613041,evs_combo,65
+Spain,1990,disc3,1,1979.59028553985,"evs_combo, wvs_combo",65
+Spain,1990,disc3,2,1722.07403562819,"evs_combo, wvs_combo",65
+Spain,1990,disc3,3,395.234915392964,"evs_combo, wvs_combo",65
+Spain,1990,imp4,1,1859.41696766636,"evs_combo, wvs_combo",65
+Spain,1990,imp4,2,1328.72676189889,"evs_combo, wvs_combo",65
+Spain,1990,imp4,3,637.841471479616,"evs_combo, wvs_combo",65
+Spain,1990,imp4,4,228.527644860685,"evs_combo, wvs_combo",65
+Spain,1995,disc3,1,554.092063376549,wvs_combo,65
+Spain,1995,disc3,2,495.493860964388,wvs_combo,65
+Spain,1995,disc3,3,146.334898701787,wvs_combo,65
+Spain,1995,imp4,1,517.038605519568,wvs_combo,65
+Spain,1995,imp4,2,389.090450642676,wvs_combo,65
+Spain,1995,imp4,3,185.057006596599,wvs_combo,65
+Spain,1995,imp4,4,94.8318918207971,wvs_combo,65
+Spain,1999,disc3,1,560,evs_combo,65
+Spain,1999,disc3,2,549,evs_combo,65
+Spain,1999,disc3,3,79,evs_combo,65
+Spain,1999,imp4,1,492,evs_combo,65
+Spain,1999,imp4,2,463,evs_combo,65
+Spain,1999,imp4,3,177,evs_combo,65
+Spain,1999,imp4,4,52,evs_combo,65
+Spain,1999,news5,1,136,evs_combo,65
+Spain,1999,news5,2,228,evs_combo,65
+Spain,1999,news5,3,164,evs_combo,65
+Spain,1999,news5,4,246,evs_combo,65
+Spain,1999,news5,5,414,evs_combo,65
+Spain,2000,disc3,1,515.414109040875,wvs_combo,65
+Spain,2000,disc3,2,538.057908587971,wvs_combo,65
+Spain,2000,disc3,3,145.85779755839,wvs_combo,65
+Spain,2000,imp4,1,427.348436868089,wvs_combo,65
+Spain,2000,imp4,2,478.628513340308,wvs_combo,65
+Spain,2000,imp4,3,202.001138604679,wvs_combo,65
+Spain,2000,imp4,4,88.3781641250475,wvs_combo,65
+Spain,2000,news5,1,98.6706317303777,wvs_combo,65
+Spain,2000,news5,2,142.620569380771,wvs_combo,65
+Spain,2000,news5,3,110.970726548452,wvs_combo,65
+Spain,2000,news5,4,224.223313676155,wvs_combo,65
+Spain,2000,news5,5,625.77740141221,wvs_combo,65
+Spain,2007,imp4,1,330.936315898882,wvs_combo,65
+Spain,2007,imp4,2,516.984696130739,wvs_combo,65
+Spain,2007,imp4,3,255.765584087906,wvs_combo,65
+Spain,2007,imp4,4,91.5687856617054,wvs_combo,65
+Spain,2008,disc3,1,640.51250000642,evs_combo,65
+Spain,2008,disc3,2,712.759001142769,evs_combo,65
+Spain,2008,disc3,3,144.687657776232,evs_combo,65
+Spain,2008,imp4,1,550.130109331206,evs_combo,65
+Spain,2008,imp4,2,548.100717375891,evs_combo,65
+Spain,2008,imp4,3,315.918753811534,evs_combo,65
+Spain,2008,imp4,4,80.2546764484228,evs_combo,65
+Spain,2008,news5,1,117.227465336936,evs_combo,65
+Spain,2008,news5,2,203.554162854996,evs_combo,65
+Spain,2008,news5,3,198.435800463231,evs_combo,65
+Spain,2008,news5,4,317.949001205711,evs_combo,65
+Spain,2008,news5,5,658.850767426586,evs_combo,65
+Spain,2011,imp4,1,434.128132792011,wvs_combo,65
+Spain,2011,imp4,2,487.745583438355,wvs_combo,65
+Spain,2011,imp4,3,188.018257157979,wvs_combo,65
+Spain,2011,imp4,4,70.2544721524445,wvs_combo,65
+Spain,2017,imp4,1,290.389002051432,evs2017,65
+Spain,2017,imp4,2,432.223053405435,evs2017,65
+Spain,2017,imp4,3,317.830727033959,evs2017,65
+Spain,2017,imp4,4,166.661616523255,evs2017,65
+Germany,1981,disc3,1,265.862573917228,evs_combo,60
+Germany,1981,disc3,2,728.078094600259,evs_combo,60
+Germany,1981,disc3,3,291.464436589229,evs_combo,60
+Germany,1990,disc3,1,483.365522164293,evs_combo,60
+Germany,1990,disc3,2,1902.57835707973,evs_combo,60
+Germany,1990,disc3,3,1015.11561267758,evs_combo,60
+Germany,1990,imp4,1,440.906676234369,evs_combo,60
+Germany,1990,imp4,2,1398.50779587181,evs_combo,60
+Germany,1990,imp4,3,1153.79560595234,evs_combo,60
+Germany,1990,imp4,4,346.773135220113,evs_combo,60
+Germany,1997,disc3,1,221,wvs_combo,60
+Germany,1997,disc3,2,1236,wvs_combo,60
+Germany,1997,disc3,3,559,wvs_combo,60
+Germany,1997,imp4,1,193,wvs_combo,60
+Germany,1997,imp4,2,790,wvs_combo,60
+Germany,1997,imp4,3,804,wvs_combo,60
+Germany,1997,imp4,4,221,wvs_combo,60
+Germany,1999,disc3,1,323.576392883132,evs_combo,60
+Germany,1999,disc3,2,1228.28259073832,evs_combo,60
+Germany,1999,disc3,3,462.210490739252,evs_combo,60
+Germany,1999,imp4,1,391.915809710033,evs_combo,60
+Germany,1999,imp4,2,828.480098450166,evs_combo,60
+Germany,1999,imp4,3,605.72404983985,evs_combo,60
+Germany,1999,imp4,4,188.743372368384,evs_combo,60
+Germany,1999,news5,1,26.3837037793736,evs_combo,60
+Germany,1999,news5,2,116.281397716158,evs_combo,60
+Germany,1999,news5,3,140.801508512553,evs_combo,60
+Germany,1999,news5,4,507.87121202594,evs_combo,60
+Germany,1999,news5,5,1244.66217796596,evs_combo,60
+Germany,2006,imp4,1,355.121594774807,wvs_combo,60
+Germany,2006,imp4,2,827.242962440596,wvs_combo,60
+Germany,2006,imp4,3,674.966217677944,wvs_combo,60
+Germany,2006,imp4,4,194.623411809009,wvs_combo,60
+Germany,2008,disc3,1,349.546792216673,evs_combo,60
+Germany,2008,disc3,2,1286.49341717343,evs_combo,60
+Germany,2008,disc3,3,424.637726858422,evs_combo,60
+Germany,2008,imp4,1,364.105103363152,evs_combo,60
+Germany,2008,imp4,2,842.639211444053,evs_combo,60
+Germany,2008,imp4,3,705.636938490063,evs_combo,60
+Germany,2008,imp4,4,152.772162337532,evs_combo,60
+Germany,2008,news5,1,62.5266574650886,evs_combo,60
+Germany,2008,news5,2,151.667817492254,evs_combo,60
+Germany,2008,news5,3,142.193849185857,evs_combo,60
+Germany,2008,news5,4,530.972814098435,evs_combo,60
+Germany,2008,news5,5,1184.11964203333,evs_combo,60
+Germany,2013,imp4,1,267.836623361305,wvs_combo,60
+Germany,2013,imp4,2,870.355345231441,wvs_combo,60
+Germany,2013,imp4,3,699.910518942674,wvs_combo,60
+Germany,2013,imp4,4,207.449643781181,wvs_combo,60
+Germany,2017,imp4,1,120,evs2017,60
+Germany,2017,imp4,2,562,evs2017,60
+Germany,2017,imp4,3,1119,evs2017,60
+Germany,2017,imp4,4,308,evs2017,60
+Germany,2018,disc3,1,192,wvs_combo,60
+Germany,2018,disc3,2,956,wvs_combo,60
+Germany,2018,disc3,3,380,wvs_combo,60
+Germany,2018,imp4,1,74,wvs_combo,60
+Germany,2018,imp4,2,385,wvs_combo,60
+Germany,2018,imp4,3,827,wvs_combo,60
+Germany,2018,imp4,4,241,wvs_combo,60
+Poland,1989,disc3,1,160,wvs_combo,57
+Poland,1989,disc3,2,530,wvs_combo,57
+Poland,1989,disc3,3,233,wvs_combo,57
+Poland,1989,imp4,1,170,wvs_combo,57
+Poland,1989,imp4,2,334,wvs_combo,57
+Poland,1989,imp4,3,257,wvs_combo,57
+Poland,1989,imp4,4,113,wvs_combo,57
+Poland,1990,disc3,1,159,evs_combo,57
+Poland,1990,disc3,2,579,evs_combo,57
+Poland,1990,disc3,3,220,evs_combo,57
+Poland,1990,imp4,1,186,evs_combo,57
+Poland,1990,imp4,2,400,evs_combo,57
+Poland,1990,imp4,3,263,evs_combo,57
+Poland,1990,imp4,4,74,evs_combo,57
+Poland,1997,disc3,1,369,wvs_combo,57
+Poland,1997,disc3,2,576,wvs_combo,57
+Poland,1997,disc3,3,203,wvs_combo,57
+Poland,1997,imp4,1,351,wvs_combo,57
+Poland,1997,imp4,2,431,wvs_combo,57
+Poland,1997,imp4,3,268,wvs_combo,57
+Poland,1997,imp4,4,79,wvs_combo,57
+Poland,1999,disc3,1,255.926962179383,evs_combo,57
+Poland,1999,disc3,2,606.783755796208,evs_combo,57
+Poland,1999,disc3,3,221.734561956164,evs_combo,57
+Poland,1999,imp4,1,255.186109581671,evs_combo,57
+Poland,1999,imp4,2,496.316056931654,evs_combo,57
+Poland,1999,imp4,3,254.833432153491,evs_combo,57
+Poland,1999,imp4,4,73.564244087543,evs_combo,57
+Poland,1999,news5,1,33.7612167186207,evs_combo,57
+Poland,1999,news5,2,128.89113111139,evs_combo,57
+Poland,1999,news5,3,118.424765170607,evs_combo,57
+Poland,1999,news5,4,234.33578855492,evs_combo,57
+Poland,1999,news5,5,578.245358192886,evs_combo,57
+Poland,2005,imp4,1,273.971958041122,wvs_combo,57
+Poland,2005,imp4,2,423.97451304102,wvs_combo,57
+Poland,2005,imp4,3,234.933371602665,wvs_combo,57
+Poland,2005,imp4,4,51.8164109273436,wvs_combo,57
+Poland,2008,disc3,1,393.375624124802,evs_combo,57
+Poland,2008,disc3,2,880.512449416573,evs_combo,57
+Poland,2008,disc3,3,210.861560345055,evs_combo,57
+Poland,2008,imp4,1,443.883534268206,evs_combo,57
+Poland,2008,imp4,2,616.728042068182,evs_combo,57
+Poland,2008,imp4,3,317.147090666605,evs_combo,57
+Poland,2008,imp4,4,109.952364958494,evs_combo,57
+Poland,2008,news5,1,59.3410135903824,evs_combo,57
+Poland,2008,news5,2,260.487479593351,evs_combo,57
+Poland,2008,news5,3,239.329786539597,evs_combo,57
+Poland,2008,news5,4,409.648507145104,evs_combo,57
+Poland,2008,news5,5,519.990235281593,evs_combo,57
+Poland,2012,imp4,1,210.48172226646,wvs_combo,57
+Poland,2012,imp4,2,433.438268372307,wvs_combo,57
+Poland,2012,imp4,3,265.975106080797,wvs_combo,57
+Poland,2012,imp4,4,50.918239953042,wvs_combo,57
+Poland,2017,imp4,1,291.036992005134,evs2017,57
+Poland,2017,imp4,2,455.530578063031,evs2017,57
+Poland,2017,imp4,3,486.548471900172,evs2017,57
+Poland,2017,imp4,4,106.135506218041,evs2017,57
+Romania,1993,disc3,1,374,evs_combo,53
+Romania,1993,disc3,2,621,evs_combo,53
+Romania,1993,disc3,3,104,evs_combo,53
+Romania,1993,imp4,1,440,evs_combo,53
+Romania,1993,imp4,2,412,evs_combo,53
+Romania,1993,imp4,3,181,evs_combo,53
+Romania,1993,imp4,4,46,evs_combo,53
+Romania,1998,disc3,1,299,wvs_combo,53
+Romania,1998,disc3,2,723,wvs_combo,53
+Romania,1998,disc3,3,206,wvs_combo,53
+Romania,1998,imp4,1,452,wvs_combo,53
+Romania,1998,imp4,2,462,wvs_combo,53
+Romania,1998,imp4,3,218,wvs_combo,53
+Romania,1998,imp4,4,86,wvs_combo,53
+Romania,1999,disc3,1,421,evs_combo,53
+Romania,1999,disc3,2,576,evs_combo,53
+Romania,1999,disc3,3,121,evs_combo,53
+Romania,1999,imp4,1,466,evs_combo,53
+Romania,1999,imp4,2,378,evs_combo,53
+Romania,1999,imp4,3,227,evs_combo,53
+Romania,1999,imp4,4,57,evs_combo,53
+Romania,1999,news5,1,73,evs_combo,53
+Romania,1999,news5,2,230,evs_combo,53
+Romania,1999,news5,3,105,evs_combo,53
+Romania,1999,news5,4,238,evs_combo,53
+Romania,1999,news5,5,491,evs_combo,53
+Romania,2005,imp4,1,644,wvs_combo,53
+Romania,2005,imp4,2,703,wvs_combo,53
+Romania,2005,imp4,3,308,wvs_combo,53
+Romania,2005,imp4,4,72,wvs_combo,53
+Romania,2008,disc3,1,625.825145506048,evs_combo,53
+Romania,2008,disc3,2,754.006897028296,evs_combo,53
+Romania,2008,disc3,3,94.7160737303074,evs_combo,53
+Romania,2008,imp4,1,596.631630854569,evs_combo,53
+Romania,2008,imp4,2,497.78284887548,evs_combo,53
+Romania,2008,imp4,3,272.858329017251,evs_combo,53
+Romania,2008,imp4,4,93.5432127300734,evs_combo,53
+Romania,2008,news5,1,125.731203985553,evs_combo,53
+Romania,2008,news5,2,401.956790911668,evs_combo,53
+Romania,2008,news5,3,134.933686409747,evs_combo,53
+Romania,2008,news5,4,289.259229713213,evs_combo,53
+Romania,2008,news5,5,518.810448000774,evs_combo,53
+Romania,2012,imp4,1,572.077359073586,wvs_combo,53
+Romania,2012,imp4,2,571.0553054328,wvs_combo,53
+Romania,2012,imp4,3,255.913317411765,wvs_combo,53
+Romania,2012,imp4,4,85.3994839039283,wvs_combo,53
+Romania,2018,disc3,1,532.752832563152,wvs_combo,53
+Romania,2018,disc3,2,610.059124346029,wvs_combo,53
+Romania,2018,disc3,3,90.9941525728552,wvs_combo,53
+Romania,2018,imp4,1,1204.57731270756,"evs2017, wvs_combo",53
+Romania,2018,imp4,2,946.393531411842,"evs2017, wvs_combo",53
+Romania,2018,imp4,3,391.241147933103,"evs2017, wvs_combo",53
+Romania,2018,imp4,4,291.85924829107,"evs2017, wvs_combo",53
+Russia,1990,disc3,1,322,wvs_combo,53
+Russia,1990,disc3,2,977,wvs_combo,53
+Russia,1990,disc3,3,621,wvs_combo,53
+Russia,1990,imp4,1,380,wvs_combo,53
+Russia,1990,imp4,2,791,wvs_combo,53
+Russia,1990,imp4,3,484,wvs_combo,53
+Russia,1990,imp4,4,215,wvs_combo,53
+Russia,1995,disc3,1,476,wvs_combo,53
+Russia,1995,disc3,2,1142,wvs_combo,53
+Russia,1995,disc3,3,403,wvs_combo,53
+Russia,1995,imp4,1,589,wvs_combo,53
+Russia,1995,imp4,2,871,wvs_combo,53
+Russia,1995,imp4,3,397,wvs_combo,53
+Russia,1995,imp4,4,166,wvs_combo,53
+Russia,1999,disc3,1,615.734934432768,evs_combo,53
+Russia,1999,disc3,2,1349.47607080332,evs_combo,53
+Russia,1999,disc3,3,492.971564307464,evs_combo,53
+Russia,1999,imp4,1,517.272965349556,evs_combo,53
+Russia,1999,imp4,2,1000.52196706502,evs_combo,53
+Russia,1999,imp4,3,742.7829594071,evs_combo,53
+Russia,1999,imp4,4,195.53142534049,evs_combo,53
+Russia,1999,news5,1,66.7725416892912,evs_combo,53
+Russia,1999,news5,2,137.021860549301,evs_combo,53
+Russia,1999,news5,3,188.748055887917,evs_combo,53
+Russia,1999,news5,4,425.677455988186,evs_combo,53
+Russia,1999,news5,5,1674.938653353,evs_combo,53
+Russia,2006,imp4,1,461.505645778834,wvs_combo,53
+Russia,2006,imp4,2,809.876611837599,wvs_combo,53
+Russia,2006,imp4,3,539.34340289823,wvs_combo,53
+Russia,2006,imp4,4,161.095522177473,wvs_combo,53
+Russia,2008,disc3,1,508.186807061134,evs_combo,53
+Russia,2008,disc3,2,802.009037048853,evs_combo,53
+Russia,2008,disc3,3,176.020547781692,evs_combo,53
+Russia,2008,imp4,1,319.26791439475,evs_combo,53
+Russia,2008,imp4,2,612.632356607761,evs_combo,53
+Russia,2008,imp4,3,410.564504302992,evs_combo,53
+Russia,2008,imp4,4,119.232502590345,evs_combo,53
+Russia,2008,news5,1,49.9348264959453,evs_combo,53
+Russia,2008,news5,2,111.966515357451,evs_combo,53
+Russia,2008,news5,3,133.545607344674,evs_combo,53
+Russia,2008,news5,4,246.934531322384,evs_combo,53
+Russia,2008,news5,5,945.206461134721,evs_combo,53
+Russia,2011,imp4,1,757.97245,wvs_combo,53
+Russia,2011,imp4,2,1002.67877,wvs_combo,53
+Russia,2011,imp4,3,504.12072,wvs_combo,53
+Russia,2011,imp4,4,173.37497,wvs_combo,53
+Russia,2017,disc3,1,569.35853741069,wvs_combo,53
+Russia,2017,disc3,2,1013.8430134016,wvs_combo,53
+Russia,2017,disc3,3,188.882234293197,wvs_combo,53
+Russia,2017,imp4,1,838.65977228016,"evs2017, wvs_combo",53
+Russia,2017,imp4,2,1379.40349285635,"evs2017, wvs_combo",53
+Russia,2017,imp4,3,968.59596658315,"evs2017, wvs_combo",53
+Russia,2017,imp4,4,402.348980858274,"evs2017, wvs_combo",53
+Sweden,1982,disc3,1,455.255090012249,"evs_combo, wvs_combo",53
+Sweden,1982,disc3,2,1239.64242365385,"evs_combo, wvs_combo",53
+Sweden,1982,disc3,3,202.826350863741,"evs_combo, wvs_combo",53
+Sweden,1990,disc3,1,220,evs_combo,53
+Sweden,1990,disc3,2,640,evs_combo,53
+Sweden,1990,disc3,3,186,evs_combo,53
+Sweden,1990,imp4,1,156,evs_combo,53
+Sweden,1990,imp4,2,410,evs_combo,53
+Sweden,1990,imp4,3,361,evs_combo,53
+Sweden,1990,imp4,4,110,evs_combo,53
+Sweden,1996,disc3,1,183,wvs_combo,53
+Sweden,1996,disc3,2,627,wvs_combo,53
+Sweden,1996,disc3,3,178,wvs_combo,53
+Sweden,1996,imp4,1,117,wvs_combo,53
+Sweden,1996,imp4,2,414,wvs_combo,53
+Sweden,1996,imp4,3,365,wvs_combo,53
+Sweden,1996,imp4,4,111,wvs_combo,53
+Sweden,1999,disc3,1,202.316624917325,evs_combo,53
+Sweden,1999,disc3,2,612.266793976023,evs_combo,53
+Sweden,1999,disc3,3,196.599775502358,evs_combo,53
+Sweden,1999,imp4,1,79.2502467185886,evs_combo,53
+Sweden,1999,imp4,2,377.058288413093,evs_combo,53
+Sweden,1999,imp4,3,440.75140086647,evs_combo,53
+Sweden,1999,imp4,4,115.798460353709,evs_combo,53
+Sweden,1999,news5,1,6.16292924744075,evs_combo,53
+Sweden,1999,news5,2,61.1830124265689,evs_combo,53
+Sweden,1999,news5,3,81.4116716878314,evs_combo,53
+Sweden,1999,news5,4,134.346611951654,evs_combo,53
+Sweden,1999,news5,5,731.112331964571,evs_combo,53
+Sweden,2006,imp4,1,81.1997020947485,wvs_combo,53
+Sweden,2006,imp4,2,294.248907729432,wvs_combo,53
+Sweden,2006,imp4,3,472.130534220978,wvs_combo,53
+Sweden,2006,imp4,4,155.420855954841,wvs_combo,53
+Sweden,2009,disc3,1,214.14041638515,evs_combo,53
+Sweden,2009,disc3,2,786.723478117612,evs_combo,53
+Sweden,2009,disc3,3,128.770785282258,evs_combo,53
+Sweden,2009,imp4,1,111.367209255529,evs_combo,53
+Sweden,2009,imp4,2,523.221053147171,evs_combo,53
+Sweden,2009,imp4,3,423.631366425557,evs_combo,53
+Sweden,2009,imp4,4,81.4343366185587,evs_combo,53
+Sweden,2009,news5,1,19.9054548994711,evs_combo,53
+Sweden,2009,news5,2,95.9599653189149,evs_combo,53
+Sweden,2009,news5,3,160.302059492095,evs_combo,53
+Sweden,2009,news5,4,144.138546352096,evs_combo,53
+Sweden,2009,news5,5,751.193013126511,evs_combo,53
+Sweden,2011,imp4,1,107.366244780344,wvs_combo,53
+Sweden,2011,imp4,2,335.142321679288,wvs_combo,53
+Sweden,2011,imp4,3,546.117402872389,wvs_combo,53
+Sweden,2011,imp4,4,208.377396227809,wvs_combo,53
+Sweden,2017,imp4,1,59.2761116793282,evs2017,53
+Sweden,2017,imp4,2,237.766851072927,evs2017,53
+Sweden,2017,imp4,3,645.448997965581,evs2017,53
+Sweden,2017,imp4,4,248.749543312566,evs2017,53
+Turkey,1990,disc3,1,444,wvs_combo,53
+Turkey,1990,disc3,2,481,wvs_combo,53
+Turkey,1990,disc3,3,91,wvs_combo,53
+Turkey,1990,imp4,1,388,wvs_combo,53
+Turkey,1990,imp4,2,343,wvs_combo,53
+Turkey,1990,imp4,3,163,wvs_combo,53
+Turkey,1990,imp4,4,114,wvs_combo,53
+Turkey,1996,disc3,1,616.675896092118,wvs_combo,53
+Turkey,1996,disc3,2,985.874024353376,wvs_combo,53
+Turkey,1996,disc3,3,291.798632811174,wvs_combo,53
+Turkey,1996,imp4,1,461.739264275543,wvs_combo,53
+Turkey,1996,imp4,2,446.515481068119,wvs_combo,53
+Turkey,1996,imp4,3,522.321913133248,wvs_combo,53
+Turkey,1996,imp4,4,461.775626592168,wvs_combo,53
+Turkey,2001,disc3,1,2115.52346842828,"evs_combo, wvs_combo",53
+Turkey,2001,disc3,2,1924.71056404984,"evs_combo, wvs_combo",53
+Turkey,2001,disc3,3,544.90985199499,"evs_combo, wvs_combo",53
+Turkey,2001,imp4,1,1556.24201966593,"evs_combo, wvs_combo",53
+Turkey,2001,imp4,2,1155.81686055644,"evs_combo, wvs_combo",53
+Turkey,2001,imp4,3,1005.2232038127,"evs_combo, wvs_combo",53
+Turkey,2001,imp4,4,838.686155430375,"evs_combo, wvs_combo",53
+Turkey,2001,news5,1,174,evs_combo,53
+Turkey,2001,news5,2,93,evs_combo,53
+Turkey,2001,news5,3,89,evs_combo,53
+Turkey,2001,news5,4,226,evs_combo,53
+Turkey,2001,news5,5,562,evs_combo,53
+Turkey,2007,imp4,1,431.206251963874,wvs_combo,53
+Turkey,2007,imp4,2,409.372900585966,wvs_combo,53
+Turkey,2007,imp4,3,330.408639452553,wvs_combo,53
+Turkey,2007,imp4,4,170.485452333919,wvs_combo,53
+Turkey,2009,disc3,1,980.576363710947,evs_combo,53
+Turkey,2009,disc3,2,1132.83214511529,evs_combo,53
+Turkey,2009,disc3,3,258.862730033419,evs_combo,53
+Turkey,2009,imp4,1,653.295593424897,evs_combo,53
+Turkey,2009,imp4,2,503.034622898003,evs_combo,53
+Turkey,2009,imp4,3,723.669009714963,evs_combo,53
+Turkey,2009,imp4,4,478.456190612984,evs_combo,53
+Turkey,2009,news5,1,388.245817486907,evs_combo,53
+Turkey,2009,news5,2,434.400755070909,evs_combo,53
+Turkey,2009,news5,3,329.460302466344,evs_combo,53
+Turkey,2009,news5,4,553.312801929406,evs_combo,53
+Turkey,2009,news5,5,671.0265192508,evs_combo,53
+Turkey,2011,imp4,1,307.684552815109,wvs_combo,53
+Turkey,2011,imp4,2,517.914277453466,wvs_combo,53
+Turkey,2011,imp4,3,503.07683639721,wvs_combo,53
+Turkey,2011,imp4,4,258.536628528287,wvs_combo,53
+Turkey,2018,disc3,1,726,wvs_combo,53
+Turkey,2018,disc3,2,1450,wvs_combo,53
+Turkey,2018,disc3,3,197,wvs_combo,53
+Turkey,2018,imp4,1,317,wvs_combo,53
+Turkey,2018,imp4,2,718,wvs_combo,53
+Turkey,2018,imp4,3,853,wvs_combo,53
+Turkey,2018,imp4,4,505,wvs_combo,53
+Slovenia,1992,disc3,1,186,evs_combo,50
+Slovenia,1992,disc3,2,617,evs_combo,50
+Slovenia,1992,disc3,3,228,evs_combo,50
+Slovenia,1992,imp4,1,258,evs_combo,50
+Slovenia,1992,imp4,2,487,evs_combo,50
+Slovenia,1992,imp4,3,181,evs_combo,50
+Slovenia,1992,imp4,4,68,evs_combo,50
+Slovenia,1995,disc3,1,248,wvs_combo,50
+Slovenia,1995,disc3,2,666,wvs_combo,50
+Slovenia,1995,disc3,3,92,wvs_combo,50
+Slovenia,1995,imp4,1,378,wvs_combo,50
+Slovenia,1995,imp4,2,475,wvs_combo,50
+Slovenia,1995,imp4,3,120,wvs_combo,50
+Slovenia,1995,imp4,4,29,wvs_combo,50
+Slovenia,1999,disc3,1,279,evs_combo,50
+Slovenia,1999,disc3,2,646,evs_combo,50
+Slovenia,1999,disc3,3,78,evs_combo,50
+Slovenia,1999,imp4,1,407,evs_combo,50
+Slovenia,1999,imp4,2,448,evs_combo,50
+Slovenia,1999,imp4,3,120,evs_combo,50
+Slovenia,1999,imp4,4,25,evs_combo,50
+Slovenia,1999,news5,1,51,evs_combo,50
+Slovenia,1999,news5,2,160,evs_combo,50
+Slovenia,1999,news5,3,156,evs_combo,50
+Slovenia,1999,news5,4,198,evs_combo,50
+Slovenia,1999,news5,5,437,evs_combo,50
+Slovenia,2005,imp4,1,397,wvs_combo,50
+Slovenia,2005,imp4,2,470,wvs_combo,50
+Slovenia,2005,imp4,3,123,wvs_combo,50
+Slovenia,2005,imp4,4,40,wvs_combo,50
+Slovenia,2008,disc3,1,473.678142099971,evs_combo,50
+Slovenia,2008,disc3,2,797.814483667072,evs_combo,50
+Slovenia,2008,disc3,3,91.4694625923606,evs_combo,50
+Slovenia,2008,imp4,1,428.5649733991,evs_combo,50
+Slovenia,2008,imp4,2,706.302885764702,evs_combo,50
+Slovenia,2008,imp4,3,186.372712222811,evs_combo,50
+Slovenia,2008,imp4,4,36.5485768147484,evs_combo,50
+Slovenia,2008,news5,1,82.3740205748453,evs_combo,50
+Slovenia,2008,news5,2,235.522614718785,evs_combo,50
+Slovenia,2008,news5,3,189.526487967675,evs_combo,50
+Slovenia,2008,news5,4,285.121832406749,evs_combo,50
+Slovenia,2008,news5,5,567.816561389102,evs_combo,50
+Slovenia,2011,imp4,1,436,wvs_combo,50
+Slovenia,2011,imp4,2,502,wvs_combo,50
+Slovenia,2011,imp4,3,106,wvs_combo,50
+Slovenia,2011,imp4,4,21,wvs_combo,50
+Slovenia,2017,imp4,1,393.034208935741,evs2017,50
+Slovenia,2017,imp4,2,493.687038825476,evs2017,50
+Slovenia,2017,imp4,3,138.53507152405,evs2017,50
+Slovenia,2017,imp4,4,38.8860947434486,evs2017,50
+Finland,1981,disc3,1,315,wvs_combo,49
+Finland,1981,disc3,2,627,wvs_combo,49
+Finland,1981,disc3,3,51,wvs_combo,49
+Finland,1990,disc3,1,106,evs_combo,49
+Finland,1990,disc3,2,415,evs_combo,49
+Finland,1990,disc3,3,56,evs_combo,49
+Finland,1990,imp4,1,128,evs_combo,49
+Finland,1990,imp4,2,296,evs_combo,49
+Finland,1990,imp4,3,130,evs_combo,49
+Finland,1990,imp4,4,18,evs_combo,49
+Finland,1996,disc3,1,282,wvs_combo,49
+Finland,1996,disc3,2,621,wvs_combo,49
+Finland,1996,disc3,3,72,wvs_combo,49
+Finland,1996,imp4,1,285,wvs_combo,49
+Finland,1996,imp4,2,497,wvs_combo,49
+Finland,1996,imp4,3,160,wvs_combo,49
+Finland,1996,imp4,4,31,wvs_combo,49
+Finland,2000,disc3,1,271.789088023118,evs_combo,49
+Finland,2000,disc3,2,683.929824781125,evs_combo,49
+Finland,2000,disc3,3,76.8691814605969,evs_combo,49
+Finland,2000,imp4,1,263.046378758205,evs_combo,49
+Finland,2000,imp4,2,564.624998350191,evs_combo,49
+Finland,2000,imp4,3,165.75277565323,evs_combo,49
+Finland,2000,imp4,4,38.0620403354955,evs_combo,49
+Finland,2000,news5,1,59.8462634208957,evs_combo,49
+Finland,2000,news5,2,246.876961622984,evs_combo,49
+Finland,2000,news5,3,137.179545373314,evs_combo,49
+Finland,2000,news5,4,184.833895874071,evs_combo,49
+Finland,2000,news5,5,405.026229218547,evs_combo,49
+Finland,2005,imp4,1,229.339938122386,wvs_combo,49
+Finland,2005,imp4,2,497.129315575045,wvs_combo,49
+Finland,2005,imp4,3,260.337589210905,wvs_combo,49
+Finland,2005,imp4,4,25.927459088822,wvs_combo,49
+Finland,2009,disc3,1,233.002467246098,evs_combo,49
+Finland,2009,disc3,2,758.467097343551,evs_combo,49
+Finland,2009,disc3,3,136.871604459808,evs_combo,49
+Finland,2009,imp4,1,295.176733380115,evs_combo,49
+Finland,2009,imp4,2,497.846459801998,evs_combo,49
+Finland,2009,imp4,3,289.122742538221,evs_combo,49
+Finland,2009,imp4,4,45.2681798977567,evs_combo,49
+Finland,2009,news5,1,80.8378804898643,evs_combo,49
+Finland,2009,news5,2,234.529462350174,evs_combo,49
+Finland,2009,news5,3,141.779360195096,evs_combo,49
+Finland,2009,news5,4,179.720122057743,evs_combo,49
+Finland,2009,news5,5,467.156269633692,evs_combo,49
+Finland,2017,imp4,1,111.693887681447,evs2017,49
+Finland,2017,imp4,2,540.641756579721,evs2017,49
+Finland,2017,imp4,3,457.194374783252,evs2017,49
+Finland,2017,imp4,4,75.642306755446,evs2017,49
+Hungary,1982,disc3,1,463.293697094694,wvs_combo,49
+Hungary,1982,disc3,2,756.131985062858,wvs_combo,49
+Hungary,1982,disc3,3,221.750501265166,wvs_combo,49
+Hungary,1991,disc3,1,240,evs_combo,49
+Hungary,1991,disc3,2,533,evs_combo,49
+Hungary,1991,disc3,3,221,evs_combo,49
+Hungary,1991,imp4,1,366,evs_combo,49
+Hungary,1991,imp4,2,372,evs_combo,49
+Hungary,1991,imp4,3,200,evs_combo,49
+Hungary,1991,imp4,4,57,evs_combo,49
+Hungary,1998,disc3,1,175,wvs_combo,49
+Hungary,1998,disc3,2,361,wvs_combo,49
+Hungary,1998,disc3,3,110,wvs_combo,49
+Hungary,1998,imp4,1,226,wvs_combo,49
+Hungary,1998,imp4,2,245,wvs_combo,49
+Hungary,1998,imp4,3,133,wvs_combo,49
+Hungary,1998,imp4,4,43,wvs_combo,49
+Hungary,1999,disc3,1,455.807609062824,evs_combo,49
+Hungary,1999,disc3,2,432.994774871545,evs_combo,49
+Hungary,1999,disc3,3,100.496310593057,evs_combo,49
+Hungary,1999,imp4,1,398.765252933316,evs_combo,49
+Hungary,1999,imp4,2,417.514072665728,evs_combo,49
+Hungary,1999,imp4,3,130.140051934035,evs_combo,49
+Hungary,1999,imp4,4,52.0340655248886,evs_combo,49
+Hungary,1999,news5,1,61.0671206062735,evs_combo,49
+Hungary,1999,news5,2,158.385697378808,evs_combo,49
+Hungary,1999,news5,3,133.905358653894,evs_combo,49
+Hungary,1999,news5,4,163.662812088523,evs_combo,49
+Hungary,1999,news5,5,482.979011272502,evs_combo,49
+Hungary,2008,disc3,1,552.225129798798,evs_combo,49
+Hungary,2008,disc3,2,846.359762860818,evs_combo,49
+Hungary,2008,disc3,3,113.079858449373,evs_combo,49
+Hungary,2008,imp4,1,488.098820941023,evs_combo,49
+Hungary,2008,imp4,2,660.706329152537,evs_combo,49
+Hungary,2008,imp4,3,283.266659842759,evs_combo,49
+Hungary,2008,imp4,4,78.836560702331,evs_combo,49
+Hungary,2008,news5,1,115.629615118801,evs_combo,49
+Hungary,2008,news5,2,308.047013468945,evs_combo,49
+Hungary,2008,news5,3,197.92068056302,evs_combo,49
+Hungary,2008,news5,4,304.734672811715,evs_combo,49
+Hungary,2008,news5,5,586.668018037519,evs_combo,49
+Hungary,2009,imp4,1,385.80826778561,wvs_combo,49
+Hungary,2009,imp4,2,369.681467961772,wvs_combo,49
+Hungary,2009,imp4,3,163.640480212467,wvs_combo,49
+Hungary,2009,imp4,4,87.1683510478134,wvs_combo,49
+Hungary,2018,imp4,1,397.305767020867,evs2017,49
+Hungary,2018,imp4,2,652.06662114372,evs2017,49
+Hungary,2018,imp4,3,337.518404896993,evs2017,49
+Hungary,2018,imp4,4,111.616018533152,evs2017,49
+Slovakia,1990,disc3,1,57,wvs_combo,49
+Slovakia,1990,disc3,2,278,wvs_combo,49
+Slovakia,1990,disc3,3,130,wvs_combo,49
+Slovakia,1990,imp4,1,111,wvs_combo,49
+Slovakia,1990,imp4,2,205,wvs_combo,49
+Slovakia,1990,imp4,3,114,wvs_combo,49
+Slovakia,1990,imp4,4,33,wvs_combo,49
+Slovakia,1991,disc3,1,193,evs_combo,49
+Slovakia,1991,disc3,2,713,evs_combo,49
+Slovakia,1991,disc3,3,218,evs_combo,49
+Slovakia,1991,imp4,1,258,evs_combo,49
+Slovakia,1991,imp4,2,480,evs_combo,49
+Slovakia,1991,imp4,3,307,evs_combo,49
+Slovakia,1991,imp4,4,66,evs_combo,49
+Slovakia,1998,disc3,1,214,wvs_combo,49
+Slovakia,1998,disc3,2,729,wvs_combo,49
+Slovakia,1998,disc3,3,145,wvs_combo,49
+Slovakia,1998,imp4,1,275,wvs_combo,49
+Slovakia,1998,imp4,2,495,wvs_combo,49
+Slovakia,1998,imp4,3,267,wvs_combo,49
+Slovakia,1998,imp4,4,40,wvs_combo,49
+Slovakia,1999,disc3,1,178.342308507358,evs_combo,49
+Slovakia,1999,disc3,2,875.834400061714,evs_combo,49
+Slovakia,1999,disc3,3,264.423636499497,evs_combo,49
+Slovakia,1999,imp4,1,376.72066737546,evs_combo,49
+Slovakia,1999,imp4,2,553.447930745745,evs_combo,49
+Slovakia,1999,imp4,3,317.450354554617,evs_combo,49
+Slovakia,1999,imp4,4,66.8211597678219,evs_combo,49
+Slovakia,1999,news5,1,27.7484027929157,evs_combo,49
+Slovakia,1999,news5,2,174.611306301712,evs_combo,49
+Slovakia,1999,news5,3,171.810111857055,evs_combo,49
+Slovakia,1999,news5,4,407.53916460136,evs_combo,49
+Slovakia,1999,news5,5,544.482490891814,evs_combo,49
+Slovakia,2008,disc3,1,472.030910665332,evs_combo,49
+Slovakia,2008,disc3,2,916.924987384009,evs_combo,49
+Slovakia,2008,disc3,3,106.223224463747,evs_combo,49
+Slovakia,2008,imp4,1,447.92039455572,evs_combo,49
+Slovakia,2008,imp4,2,696.075162368781,evs_combo,49
+Slovakia,2008,imp4,3,279.503009414689,evs_combo,49
+Slovakia,2008,imp4,4,61.5368094149706,evs_combo,49
+Slovakia,2008,news5,1,67.8195023385494,evs_combo,49
+Slovakia,2008,news5,2,238.820339524097,evs_combo,49
+Slovakia,2008,news5,3,187.713624269143,evs_combo,49
+Slovakia,2008,news5,4,393.608536812966,evs_combo,49
+Slovakia,2008,news5,5,613.131000022654,evs_combo,49
+Slovakia,2017,imp4,1,446.716156605316,evs2017,49
+Slovakia,2017,imp4,2,587.605220852403,evs2017,49
+Slovakia,2017,imp4,3,249.487766714638,evs2017,49
+Slovakia,2017,imp4,4,143.620721997564,evs2017,49
+Belarus,1990,disc3,1,94,wvs_combo,46
+Belarus,1990,disc3,2,582,wvs_combo,46
+Belarus,1990,disc3,3,332,wvs_combo,46
+Belarus,1990,imp4,1,126,wvs_combo,46
+Belarus,1990,imp4,2,492,wvs_combo,46
+Belarus,1990,imp4,3,227,wvs_combo,46
+Belarus,1990,imp4,4,138,wvs_combo,46
+Belarus,1996,disc3,1,405,wvs_combo,46
+Belarus,1996,disc3,2,1183,wvs_combo,46
+Belarus,1996,disc3,3,478,wvs_combo,46
+Belarus,1996,imp4,1,463,wvs_combo,46
+Belarus,1996,imp4,2,732,wvs_combo,46
+Belarus,1996,imp4,3,639,wvs_combo,46
+Belarus,1996,imp4,4,204,wvs_combo,46
+Belarus,2000,disc3,1,197,evs_combo,46
+Belarus,2000,disc3,2,607,evs_combo,46
+Belarus,2000,disc3,3,178,evs_combo,46
+Belarus,2000,imp4,1,256,evs_combo,46
+Belarus,2000,imp4,2,433,evs_combo,46
+Belarus,2000,imp4,3,232,evs_combo,46
+Belarus,2000,imp4,4,57,evs_combo,46
+Belarus,2000,news5,1,48,evs_combo,46
+Belarus,2000,news5,2,157,evs_combo,46
+Belarus,2000,news5,3,253,evs_combo,46
+Belarus,2000,news5,4,188,evs_combo,46
+Belarus,2000,news5,5,338,evs_combo,46
+Belarus,2008,disc3,1,378.086867141878,evs_combo,46
+Belarus,2008,disc3,2,900.252098752518,evs_combo,46
+Belarus,2008,disc3,3,212.551213158619,evs_combo,46
+Belarus,2008,imp4,1,286.442287494022,evs_combo,46
+Belarus,2008,imp4,2,626.519788141962,evs_combo,46
+Belarus,2008,imp4,3,465.775875660307,evs_combo,46
+Belarus,2008,imp4,4,94.036545691454,evs_combo,46
+Belarus,2008,news5,1,83.2715233979552,evs_combo,46
+Belarus,2008,news5,2,238.243215545366,evs_combo,46
+Belarus,2008,news5,3,424.916453992423,evs_combo,46
+Belarus,2008,news5,4,305.673615482933,evs_combo,46
+Belarus,2008,news5,5,439.20934794374,evs_combo,46
+Belarus,2011,imp4,1,314.635881070773,wvs_combo,46
+Belarus,2011,imp4,2,722.007567187314,wvs_combo,46
+Belarus,2011,imp4,3,354.915144282414,wvs_combo,46
+Belarus,2011,imp4,4,123.527965966565,wvs_combo,46
+Belarus,2018,imp4,1,310.612886416973,evs2017,46
+Belarus,2018,imp4,2,610.51885841412,evs2017,46
+Belarus,2018,imp4,3,441.528855774839,evs2017,46
+Belarus,2018,imp4,4,168.888598957313,evs2017,46
+Bulgaria,1991,disc3,1,119,evs_combo,46
+Bulgaria,1991,disc3,2,469,evs_combo,46
+Bulgaria,1991,disc3,3,431,evs_combo,46
+Bulgaria,1991,imp4,1,130,evs_combo,46
+Bulgaria,1991,imp4,2,403,evs_combo,46
+Bulgaria,1991,imp4,3,308,evs_combo,46
+Bulgaria,1991,imp4,4,151,evs_combo,46
+Bulgaria,1997,disc3,1,303,wvs_combo,46
+Bulgaria,1997,disc3,2,614,wvs_combo,46
+Bulgaria,1997,disc3,3,136,wvs_combo,46
+Bulgaria,1997,imp4,1,333,wvs_combo,46
+Bulgaria,1997,imp4,2,441,wvs_combo,46
+Bulgaria,1997,imp4,3,191,wvs_combo,46
+Bulgaria,1997,imp4,4,74,wvs_combo,46
+Bulgaria,1999,disc3,1,254.346111715751,evs_combo,46
+Bulgaria,1999,disc3,2,566.01539719683,evs_combo,46
+Bulgaria,1999,disc3,3,150.457002822835,evs_combo,46
+Bulgaria,1999,imp4,1,202.603898183586,evs_combo,46
+Bulgaria,1999,imp4,2,454.057077491168,evs_combo,46
+Bulgaria,1999,imp4,3,224.852041451665,evs_combo,46
+Bulgaria,1999,imp4,4,74.2539493172125,evs_combo,46
+Bulgaria,1999,news5,1,66.2398831035198,evs_combo,46
+Bulgaria,1999,news5,2,139.429634957906,evs_combo,46
+Bulgaria,1999,news5,3,148.432993214969,evs_combo,46
+Bulgaria,1999,news5,4,231.332589017286,evs_combo,46
+Bulgaria,1999,news5,5,409.837832092475,evs_combo,46
+Bulgaria,2006,imp4,1,361.038978213566,wvs_combo,46
+Bulgaria,2006,imp4,2,398.648541965006,wvs_combo,46
+Bulgaria,2006,imp4,3,153.096889058879,wvs_combo,46
+Bulgaria,2006,imp4,4,69.5380083893708,wvs_combo,46
+Bulgaria,2008,disc3,1,434.344702132026,evs_combo,46
+Bulgaria,2008,disc3,2,819.868110061166,evs_combo,46
+Bulgaria,2008,disc3,3,225.967291186782,evs_combo,46
+Bulgaria,2008,imp4,1,365.639640061335,evs_combo,46
+Bulgaria,2008,imp4,2,616.453577796954,evs_combo,46
+Bulgaria,2008,imp4,3,363.689275309836,evs_combo,46
+Bulgaria,2008,imp4,4,110.600462682447,evs_combo,46
+Bulgaria,2008,news5,1,59.2631922770064,evs_combo,46
+Bulgaria,2008,news5,2,176.477961052191,evs_combo,46
+Bulgaria,2008,news5,3,173.511761493212,evs_combo,46
+Bulgaria,2008,news5,4,337.029128247452,evs_combo,46
+Bulgaria,2008,news5,5,721.84486212984,evs_combo,46
+Bulgaria,2017,imp4,1,415.623303865222,evs2017,46
+Bulgaria,2017,imp4,2,547.251534180096,evs2017,46
+Bulgaria,2017,imp4,3,371.199214532581,evs2017,46
+Bulgaria,2017,imp4,4,185.818831454722,evs2017,46
+Estonia,1990,disc3,1,54,evs_combo,46
+Estonia,1990,disc3,2,524,evs_combo,46
+Estonia,1990,disc3,3,423,evs_combo,46
+Estonia,1990,imp4,1,128,evs_combo,46
+Estonia,1990,imp4,2,449,evs_combo,46
+Estonia,1990,imp4,3,325,evs_combo,46
+Estonia,1990,imp4,4,87,evs_combo,46
+Estonia,1996,disc3,1,207,wvs_combo,46
+Estonia,1996,disc3,2,654,wvs_combo,46
+Estonia,1996,disc3,3,154,wvs_combo,46
+Estonia,1996,imp4,1,249,wvs_combo,46
+Estonia,1996,imp4,2,474,wvs_combo,46
+Estonia,1996,imp4,3,239,wvs_combo,46
+Estonia,1996,imp4,4,47,wvs_combo,46
+Estonia,1999,disc3,1,174.987377290902,evs_combo,46
+Estonia,1999,disc3,2,659.567748758652,evs_combo,46
+Estonia,1999,disc3,3,143.539206214251,evs_combo,46
+Estonia,1999,imp4,1,247.55525498205,evs_combo,46
+Estonia,1999,imp4,2,532.666684647,evs_combo,46
+Estonia,1999,imp4,3,179.110706522015,evs_combo,46
+Estonia,1999,imp4,4,23.7886759889438,evs_combo,46
+Estonia,1999,news5,1,43.4541100970741,evs_combo,46
+Estonia,1999,news5,2,114.739194289196,evs_combo,46
+Estonia,1999,news5,3,135.150690920239,evs_combo,46
+Estonia,1999,news5,4,225.659450953799,evs_combo,46
+Estonia,1999,news5,5,474.469499761772,evs_combo,46
+Estonia,2008,disc3,1,320.324160312142,evs_combo,46
+Estonia,2008,disc3,2,1014.51967998928,evs_combo,46
+Estonia,2008,disc3,3,177.505183981512,evs_combo,46
+Estonia,2008,imp4,1,362.127049109509,evs_combo,46
+Estonia,2008,imp4,2,799.539159041222,evs_combo,46
+Estonia,2008,imp4,3,304.352319737497,evs_combo,46
+Estonia,2008,imp4,4,44.2112917611069,evs_combo,46
+Estonia,2008,news5,1,51.5371457583357,evs_combo,46
+Estonia,2008,news5,2,197.026366197497,evs_combo,46
+Estonia,2008,news5,3,209.16015821614,evs_combo,46
+Estonia,2008,news5,4,360.787754804944,evs_combo,46
+Estonia,2008,news5,5,695.739985313692,evs_combo,46
+Estonia,2011,imp4,1,347.479380430191,wvs_combo,46
+Estonia,2011,imp4,2,735.980149417192,wvs_combo,46
+Estonia,2011,imp4,3,357.256697057893,wvs_combo,46
+Estonia,2011,imp4,4,85.0748812241222,wvs_combo,46
+Estonia,2018,imp4,1,303.617497138425,evs2017,46
+Estonia,2018,imp4,2,609.909211477377,evs2017,46
+Estonia,2018,imp4,3,325.933123991248,evs2017,46
+Estonia,2018,imp4,4,55.6307638986913,evs2017,46
+Netherlands,1981,disc3,1,321.461676802652,evs_combo,46
+Netherlands,1981,disc3,2,689.615982644616,evs_combo,46
+Netherlands,1981,disc3,3,186.049552766362,evs_combo,46
+Netherlands,1990,disc3,1,257.824362745581,evs_combo,46
+Netherlands,1990,disc3,2,604.575068619831,evs_combo,46
+Netherlands,1990,disc3,3,151.368884472734,evs_combo,46
+Netherlands,1990,imp4,1,136.000875579211,evs_combo,46
+Netherlands,1990,imp4,2,337.97613308804,evs_combo,46
+Netherlands,1990,imp4,3,418.568132851929,evs_combo,46
+Netherlands,1990,imp4,4,119.252147136659,evs_combo,46
+Netherlands,1999,disc3,1,203.598680642423,evs_combo,46
+Netherlands,1999,disc3,2,637.342044025688,evs_combo,46
+Netherlands,1999,disc3,3,162.05927533189,evs_combo,46
+Netherlands,1999,imp4,1,70.8135086847313,evs_combo,46
+Netherlands,1999,imp4,2,364.528907150037,evs_combo,46
+Netherlands,1999,imp4,3,463.054480965591,evs_combo,46
+Netherlands,1999,imp4,4,103.119714992517,evs_combo,46
+Netherlands,1999,news5,1,39.3873937460001,evs_combo,46
+Netherlands,1999,news5,2,132.121485421442,evs_combo,46
+Netherlands,1999,news5,3,119.899356220664,evs_combo,46
+Netherlands,1999,news5,4,201.582556634929,evs_combo,46
+Netherlands,1999,news5,5,510.009207976965,evs_combo,46
+Netherlands,2006,imp4,1,175.76799451536,wvs_combo,46
+Netherlands,2006,imp4,2,382.022816640456,wvs_combo,46
+Netherlands,2006,imp4,3,403.517698070354,wvs_combo,46
+Netherlands,2006,imp4,4,73.4755784695116,wvs_combo,46
+Netherlands,2008,disc3,1,331.508577813247,evs_combo,46
+Netherlands,2008,disc3,2,979.524819023288,evs_combo,46
+Netherlands,2008,disc3,3,240.171768495892,evs_combo,46
+Netherlands,2008,imp4,1,137.271681656008,evs_combo,46
+Netherlands,2008,imp4,2,504.854141108412,evs_combo,46
+Netherlands,2008,imp4,3,745.10395891909,evs_combo,46
+Netherlands,2008,imp4,4,163.623263456668,evs_combo,46
+Netherlands,2008,news5,1,102.493437098159,evs_combo,46
+Netherlands,2008,news5,2,220.962917419224,evs_combo,46
+Netherlands,2008,news5,3,189.268720555439,evs_combo,46
+Netherlands,2008,news5,4,295.856937233291,evs_combo,46
+Netherlands,2008,news5,5,745.417987693887,evs_combo,46
+Netherlands,2012,imp4,1,236,wvs_combo,46
+Netherlands,2012,imp4,2,880,wvs_combo,46
+Netherlands,2012,imp4,3,695,wvs_combo,46
+Netherlands,2012,imp4,4,63,wvs_combo,46
+Netherlands,2017,imp4,1,191.086785523573,evs2017,46
+Netherlands,2017,imp4,2,898.155683508159,evs2017,46
+Netherlands,2017,imp4,3,1156.37662261749,evs2017,46
+Netherlands,2017,imp4,4,142.973793924169,evs2017,46
+Serbia,1996,disc3,1,374,wvs_combo,46
+Serbia,1996,disc3,2,733,wvs_combo,46
+Serbia,1996,disc3,3,167,wvs_combo,46
+Serbia,1996,imp4,1,411,wvs_combo,46
+Serbia,1996,imp4,2,537,wvs_combo,46
+Serbia,1996,imp4,3,213,wvs_combo,46
+Serbia,1996,imp4,4,93,wvs_combo,46
+Serbia,2001,disc3,1,273,wvs_combo,46
+Serbia,2001,disc3,2,686,wvs_combo,46
+Serbia,2001,disc3,3,210,wvs_combo,46
+Serbia,2001,imp4,1,350,wvs_combo,46
+Serbia,2001,imp4,2,539,wvs_combo,46
+Serbia,2001,imp4,3,237,wvs_combo,46
+Serbia,2001,imp4,4,55,wvs_combo,46
+Serbia,2001,news5,1,46,wvs_combo,46
+Serbia,2001,news5,2,151,wvs_combo,46
+Serbia,2001,news5,3,170,wvs_combo,46
+Serbia,2001,news5,4,278,wvs_combo,46
+Serbia,2001,news5,5,536,wvs_combo,46
+Serbia,2006,imp4,1,399,wvs_combo,46
+Serbia,2006,imp4,2,539,wvs_combo,46
+Serbia,2006,imp4,3,209,wvs_combo,46
+Serbia,2006,imp4,4,57,wvs_combo,46
+Serbia,2008,disc3,1,480.908738707506,evs_combo,46
+Serbia,2008,disc3,2,816.899772263629,evs_combo,46
+Serbia,2008,disc3,3,197.274982361173,evs_combo,46
+Serbia,2008,imp4,1,394.95553617047,evs_combo,46
+Serbia,2008,imp4,2,650.038285282627,evs_combo,46
+Serbia,2008,imp4,3,340.254451084449,evs_combo,46
+Serbia,2008,imp4,4,95.3090662489226,evs_combo,46
+Serbia,2008,news5,1,148.371666479988,evs_combo,46
+Serbia,2008,news5,2,422.905540168331,evs_combo,46
+Serbia,2008,news5,3,188.649614868027,evs_combo,46
+Serbia,2008,news5,4,299.979308353577,evs_combo,46
+Serbia,2008,news5,5,438.273289587165,evs_combo,46
+Serbia,2017,disc3,1,393,wvs_combo,46
+Serbia,2017,disc3,2,560,wvs_combo,46
+Serbia,2017,disc3,3,89,wvs_combo,46
+Serbia,2017,imp4,1,399,wvs_combo,46
+Serbia,2017,imp4,2,453,wvs_combo,46
+Serbia,2017,imp4,3,138,wvs_combo,46
+Serbia,2017,imp4,4,46,wvs_combo,46
+Serbia,2018,imp4,1,467.063140109397,evs2017,46
+Serbia,2018,imp4,2,569.950585953477,evs2017,46
+Serbia,2018,imp4,3,333.548112339397,evs2017,46
+Serbia,2018,imp4,4,109.981719671402,evs2017,46
+Ukraine,1996,disc3,1,795,wvs_combo,46
+Ukraine,1996,disc3,2,1498,wvs_combo,46
+Ukraine,1996,disc3,3,328,wvs_combo,46
+Ukraine,1996,imp4,1,755,wvs_combo,46
+Ukraine,1996,imp4,2,1102,wvs_combo,46
+Ukraine,1996,imp4,3,617,wvs_combo,46
+Ukraine,1996,imp4,4,179,wvs_combo,46
+Ukraine,1999,disc3,1,256.153878939497,evs_combo,46
+Ukraine,1999,disc3,2,676.436496049955,evs_combo,46
+Ukraine,1999,disc3,3,227.497316172839,evs_combo,46
+Ukraine,1999,imp4,1,270.264511242547,evs_combo,46
+Ukraine,1999,imp4,2,431.841513869457,evs_combo,46
+Ukraine,1999,imp4,3,305.650671664522,evs_combo,46
+Ukraine,1999,imp4,4,127.213790406433,evs_combo,46
+Ukraine,1999,news5,1,36.7340942778219,evs_combo,46
+Ukraine,1999,news5,2,96.0046899309882,evs_combo,46
+Ukraine,1999,news5,3,109.624991611227,evs_combo,46
+Ukraine,1999,news5,4,211.770292215366,evs_combo,46
+Ukraine,1999,news5,5,728.302051532896,evs_combo,46
+Ukraine,2006,imp4,1,239.96690511957,wvs_combo,46
+Ukraine,2006,imp4,2,351.980863575751,wvs_combo,46
+Ukraine,2006,imp4,3,294.69310483101,wvs_combo,46
+Ukraine,2006,imp4,4,89.287924160743,wvs_combo,46
+Ukraine,2008,disc3,1,356.413985549721,evs_combo,46
+Ukraine,2008,disc3,2,864.959206376173,evs_combo,46
+Ukraine,2008,disc3,3,274.13136237518,evs_combo,46
+Ukraine,2008,imp4,1,422.946898367222,evs_combo,46
+Ukraine,2008,imp4,2,515.056623893683,evs_combo,46
+Ukraine,2008,imp4,3,374.654448061261,evs_combo,46
+Ukraine,2008,imp4,4,165.773988529677,evs_combo,46
+Ukraine,2008,news5,1,31.8147379142794,evs_combo,46
+Ukraine,2008,news5,2,68.063512722741,evs_combo,46
+Ukraine,2008,news5,3,90.2774067350986,evs_combo,46
+Ukraine,2008,news5,4,215.645210697224,evs_combo,46
+Ukraine,2008,news5,5,1096.41742769427,evs_combo,46
+Ukraine,2011,imp4,1,442.576915719578,wvs_combo,46
+Ukraine,2011,imp4,2,630.571015423627,wvs_combo,46
+Ukraine,2011,imp4,3,316.550066446997,wvs_combo,46
+Ukraine,2011,imp4,4,110.302002409798,wvs_combo,46
+Ukraine,2020,disc3,1,375.851642597454,wvs_combo,46
+Ukraine,2020,disc3,2,759.131400975213,wvs_combo,46
+Ukraine,2020,disc3,3,100.461341777131,wvs_combo,46
+Ukraine,2020,imp4,1,448.928436050459,wvs_combo,46
+Ukraine,2020,imp4,2,404.774193973643,wvs_combo,46
+Ukraine,2020,imp4,3,275.175946935314,wvs_combo,46
+Ukraine,2020,imp4,4,108.032353761442,wvs_combo,46
+United Kingdom,1981,disc3,1,421.758613514636,evs_combo,45
+United Kingdom,1981,disc3,2,599.166156467682,evs_combo,45
+United Kingdom,1981,disc3,3,139.515979432202,evs_combo,45
+United Kingdom,1990,disc3,1,503.066317253181,evs_combo,45
+United Kingdom,1990,disc3,2,762.466707669271,evs_combo,45
+United Kingdom,1990,disc3,3,215.173253823938,evs_combo,45
+United Kingdom,1990,imp4,1,298.121456840304,evs_combo,45
+United Kingdom,1990,imp4,2,543.900524120227,evs_combo,45
+United Kingdom,1990,imp4,3,490.814071023639,evs_combo,45
+United Kingdom,1990,imp4,4,144.893972617392,evs_combo,45
+United Kingdom,1998,disc3,1,354.111531857933,wvs_combo,45
+United Kingdom,1998,disc3,2,599.448093167234,wvs_combo,45
+United Kingdom,1998,disc3,3,136.521533086192,wvs_combo,45
+United Kingdom,1999,disc3,1,502.508269893826,evs_combo,45
+United Kingdom,1999,disc3,2,379.119743481749,evs_combo,45
+United Kingdom,1999,disc3,3,94.5363016298089,evs_combo,45
+United Kingdom,1999,imp4,1,290.970412899345,evs_combo,45
+United Kingdom,1999,imp4,2,361.544767537627,evs_combo,45
+United Kingdom,1999,imp4,3,287.406088190271,evs_combo,45
+United Kingdom,1999,imp4,4,52.3919644305457,evs_combo,45
+United Kingdom,1999,news5,1,176.455492670725,evs_combo,45
+United Kingdom,1999,news5,2,230.768980157006,evs_combo,45
+United Kingdom,1999,news5,3,155.601847643608,evs_combo,45
+United Kingdom,1999,news5,4,187.338224805374,evs_combo,45
+United Kingdom,1999,news5,5,232.686859125354,evs_combo,45
+United Kingdom,2005,imp4,1,211.108739258678,wvs_combo,45
+United Kingdom,2005,imp4,2,408.296758236534,wvs_combo,45
+United Kingdom,2005,imp4,3,322.685493509506,wvs_combo,45
+United Kingdom,2005,imp4,4,95.8930709344424,wvs_combo,45
+United Kingdom,2009,disc3,1,648.407357508867,evs_combo,45
+United Kingdom,2009,disc3,2,703.477341536333,evs_combo,45
+United Kingdom,2009,disc3,3,200.662707914742,evs_combo,45
+United Kingdom,2009,imp4,1,403.175104579463,evs_combo,45
+United Kingdom,2009,imp4,2,478.819199006544,evs_combo,45
+United Kingdom,2009,imp4,3,529.719383117098,evs_combo,45
+United Kingdom,2009,imp4,4,133.601380745558,evs_combo,45
+United Kingdom,2009,news5,1,296.966740840198,evs_combo,45
+United Kingdom,2009,news5,2,287.885398037655,evs_combo,45
+United Kingdom,2009,news5,3,241.021372806782,evs_combo,45
+United Kingdom,2009,news5,4,220.404658317223,evs_combo,45
+United Kingdom,2009,news5,5,506.631867080936,evs_combo,45
+United Kingdom,2018,imp4,1,289.40870557859,evs2017,45
+United Kingdom,2018,imp4,2,530.901398572424,evs2017,45
+United Kingdom,2018,imp4,3,743.412343247127,evs2017,45
+United Kingdom,2018,imp4,4,216.057109346881,evs2017,45
+Argentina,1984,disc3,1,205.451511220409,wvs_combo,44
+Argentina,1984,disc3,2,536.238451721832,wvs_combo,44
+Argentina,1984,disc3,3,241.571391653899,wvs_combo,44
+Argentina,1991,disc3,1,330,wvs_combo,44
+Argentina,1991,disc3,2,382,wvs_combo,44
+Argentina,1991,disc3,3,282,wvs_combo,44
+Argentina,1991,imp4,1,410,wvs_combo,44
+Argentina,1991,imp4,2,277,wvs_combo,44
+Argentina,1991,imp4,3,160,wvs_combo,44
+Argentina,1991,imp4,4,149,wvs_combo,44
+Argentina,1995,disc3,1,389.036035854102,wvs_combo,44
+Argentina,1995,disc3,2,430.205993405706,wvs_combo,44
+Argentina,1995,disc3,3,250.530176806192,wvs_combo,44
+Argentina,1995,imp4,1,396.333678965238,wvs_combo,44
+Argentina,1995,imp4,2,341.920375767723,wvs_combo,44
+Argentina,1995,imp4,3,221.458254412231,wvs_combo,44
+Argentina,1995,imp4,4,109.447646659794,wvs_combo,44
+Argentina,1999,disc3,1,610.416237659486,wvs_combo,44
+Argentina,1999,disc3,2,408.413743506248,wvs_combo,44
+Argentina,1999,disc3,3,233.044947559849,wvs_combo,44
+Argentina,1999,imp4,1,590.270419746628,wvs_combo,44
+Argentina,1999,imp4,2,379.088649177454,wvs_combo,44
+Argentina,1999,imp4,3,190.349317625203,wvs_combo,44
+Argentina,1999,imp4,4,113.826980157785,wvs_combo,44
+Argentina,1999,news5,1,163.644445415139,wvs_combo,44
+Argentina,1999,news5,2,195.03073583733,wvs_combo,44
+Argentina,1999,news5,3,128.968517843886,wvs_combo,44
+Argentina,1999,news5,4,177.80392205674,wvs_combo,44
+Argentina,1999,news5,5,607.034162506235,wvs_combo,44
+Argentina,2006,imp4,1,361.808755550354,wvs_combo,44
+Argentina,2006,imp4,2,327.608907314458,wvs_combo,44
+Argentina,2006,imp4,3,218.775652287862,wvs_combo,44
+Argentina,2006,imp4,4,84.3762608520628,wvs_combo,44
+Argentina,2013,imp4,1,339.058215066325,wvs_combo,44
+Argentina,2013,imp4,2,359.634817230868,wvs_combo,44
+Argentina,2013,imp4,3,231.160021816694,wvs_combo,44
+Argentina,2013,imp4,4,85.5029447508827,wvs_combo,44
+Argentina,2017,disc3,1,394.956584498046,wvs_combo,44
+Argentina,2017,disc3,2,492.014965421658,wvs_combo,44
+Argentina,2017,disc3,3,103.214844211159,wvs_combo,44
+Argentina,2017,imp4,1,296.315343037293,wvs_combo,44
+Argentina,2017,imp4,2,409.413667743329,wvs_combo,44
+Argentina,2017,imp4,3,217.72831928432,wvs_combo,44
+Argentina,2017,imp4,4,75.5000375696994,wvs_combo,44
+Japan,1981,disc3,1,605.943954511638,wvs_combo,44
+Japan,1981,disc3,2,507.089429210585,wvs_combo,44
+Japan,1981,disc3,3,39.7664603365143,wvs_combo,44
+Japan,1990,disc3,1,335,wvs_combo,44
+Japan,1990,disc3,2,597,wvs_combo,44
+Japan,1990,disc3,3,61,wvs_combo,44
+Japan,1990,imp4,1,34,wvs_combo,44
+Japan,1990,imp4,2,385,wvs_combo,44
+Japan,1990,imp4,3,365,wvs_combo,44
+Japan,1990,imp4,4,131,wvs_combo,44
+Japan,1995,disc3,1,465,wvs_combo,44
+Japan,1995,disc3,2,512,wvs_combo,44
+Japan,1995,disc3,3,61,wvs_combo,44
+Japan,1995,imp4,1,36,wvs_combo,44
+Japan,1995,imp4,2,309,wvs_combo,44
+Japan,1995,imp4,3,451,wvs_combo,44
+Japan,1995,imp4,4,193,wvs_combo,44
+Japan,2000,disc3,1,471,wvs_combo,44
+Japan,2000,disc3,2,756,wvs_combo,44
+Japan,2000,disc3,3,98,wvs_combo,44
+Japan,2000,imp4,1,54,wvs_combo,44
+Japan,2000,imp4,2,342,wvs_combo,44
+Japan,2000,imp4,3,577,wvs_combo,44
+Japan,2000,imp4,4,276,wvs_combo,44
+Japan,2000,news5,1,41,wvs_combo,44
+Japan,2000,news5,2,245,wvs_combo,44
+Japan,2000,news5,3,267,wvs_combo,44
+Japan,2000,news5,4,261,wvs_combo,44
+Japan,2000,news5,5,486,wvs_combo,44
+Japan,2005,imp4,1,39,wvs_combo,44
+Japan,2005,imp4,2,303,wvs_combo,44
+Japan,2005,imp4,3,457,wvs_combo,44
+Japan,2005,imp4,4,216,wvs_combo,44
+Japan,2010,imp4,1,66,wvs_combo,44
+Japan,2010,imp4,2,584,wvs_combo,44
+Japan,2010,imp4,3,1041,wvs_combo,44
+Japan,2010,imp4,4,575,wvs_combo,44
+Japan,2019,disc3,1,626,wvs_combo,44
+Japan,2019,disc3,2,645,wvs_combo,44
+Japan,2019,disc3,3,47,wvs_combo,44
+Japan,2019,imp4,1,55,wvs_combo,44
+Japan,2019,imp4,2,366,wvs_combo,44
+Japan,2019,imp4,3,667,wvs_combo,44
+Japan,2019,imp4,4,203,wvs_combo,44
+Mexico,1981,disc3,1,688.8749999675,wvs_combo,44
+Mexico,1981,disc3,2,913.948463839247,wvs_combo,44
+Mexico,1981,disc3,3,149.517963353243,wvs_combo,44
+Mexico,1990,disc3,1,388,wvs_combo,44
+Mexico,1990,disc3,2,860,wvs_combo,44
+Mexico,1990,disc3,3,241,wvs_combo,44
+Mexico,1990,imp4,1,294,wvs_combo,44
+Mexico,1990,imp4,2,585,wvs_combo,44
+Mexico,1990,imp4,3,434,wvs_combo,44
+Mexico,1990,imp4,4,173,wvs_combo,44
+Mexico,1996,disc3,1,492,wvs_combo,44
+Mexico,1996,disc3,2,689,wvs_combo,44
+Mexico,1996,disc3,3,226,wvs_combo,44
+Mexico,1996,imp4,1,276,wvs_combo,44
+Mexico,1996,imp4,2,534,wvs_combo,44
+Mexico,1996,imp4,3,412,wvs_combo,44
+Mexico,1996,imp4,4,259,wvs_combo,44
+Mexico,2000,disc3,1,669.634794227191,wvs_combo,44
+Mexico,2000,disc3,2,616.60264156201,wvs_combo,44
+Mexico,2000,disc3,3,196.452066218127,wvs_combo,44
+Mexico,2000,imp4,1,411.199471678896,wvs_combo,44
+Mexico,2000,imp4,2,403.372192941757,wvs_combo,44
+Mexico,2000,imp4,3,420.696764190995,wvs_combo,44
+Mexico,2000,imp4,4,274.846827223606,wvs_combo,44
+Mexico,2000,news5,1,156.436069822345,wvs_combo,44
+Mexico,2000,news5,2,346.757021283214,wvs_combo,44
+Mexico,2000,news5,3,233.356244218015,wvs_combo,44
+Mexico,2000,news5,4,322.17276521897,wvs_combo,44
+Mexico,2000,news5,5,457.149512968003,wvs_combo,44
+Mexico,2005,imp4,1,376,wvs_combo,44
+Mexico,2005,imp4,2,426,wvs_combo,44
+Mexico,2005,imp4,3,418,wvs_combo,44
+Mexico,2005,imp4,4,308,wvs_combo,44
+Mexico,2012,imp4,1,466,wvs_combo,44
+Mexico,2012,imp4,2,635,wvs_combo,44
+Mexico,2012,imp4,3,559,wvs_combo,44
+Mexico,2012,imp4,4,339,wvs_combo,44
+Mexico,2018,disc3,1,830.308636048651,wvs_combo,44
+Mexico,2018,disc3,2,779.333371353704,wvs_combo,44
+Mexico,2018,disc3,3,131.357992597645,wvs_combo,44
+Mexico,2018,imp4,1,584.741252896327,wvs_combo,44
+Mexico,2018,imp4,2,573.947405096363,wvs_combo,44
+Mexico,2018,imp4,3,292.665314836732,wvs_combo,44
+Mexico,2018,imp4,4,286.21828805543,wvs_combo,44
+South Korea,1982,disc3,1,408,wvs_combo,44
+South Korea,1982,disc3,2,457,wvs_combo,44
+South Korea,1982,disc3,3,45,wvs_combo,44
+South Korea,1990,disc3,1,145,wvs_combo,44
+South Korea,1990,disc3,2,867,wvs_combo,44
+South Korea,1990,disc3,3,238,wvs_combo,44
+South Korea,1990,imp4,1,45,wvs_combo,44
+South Korea,1990,imp4,2,312,wvs_combo,44
+South Korea,1990,imp4,3,500,wvs_combo,44
+South Korea,1990,imp4,4,383,wvs_combo,44
+South Korea,1996,disc3,1,209,wvs_combo,44
+South Korea,1996,disc3,2,871,wvs_combo,44
+South Korea,1996,disc3,3,168,wvs_combo,44
+South Korea,1996,imp4,1,72,wvs_combo,44
+South Korea,1996,imp4,2,352,wvs_combo,44
+South Korea,1996,imp4,3,570,wvs_combo,44
+South Korea,1996,imp4,4,240,wvs_combo,44
+South Korea,2001,disc3,1,306,wvs_combo,44
+South Korea,2001,disc3,2,776,wvs_combo,44
+South Korea,2001,disc3,3,118,wvs_combo,44
+South Korea,2001,imp4,1,118,wvs_combo,44
+South Korea,2001,imp4,2,465,wvs_combo,44
+South Korea,2001,imp4,3,436,wvs_combo,44
+South Korea,2001,imp4,4,180,wvs_combo,44
+South Korea,2001,news5,1,9,wvs_combo,44
+South Korea,2001,news5,2,107,wvs_combo,44
+South Korea,2001,news5,3,176,wvs_combo,44
+South Korea,2001,news5,4,278,wvs_combo,44
+South Korea,2001,news5,5,622,wvs_combo,44
+South Korea,2005,imp4,1,136.948085537826,wvs_combo,44
+South Korea,2005,imp4,2,411.920405641277,wvs_combo,44
+South Korea,2005,imp4,3,437.809864310088,wvs_combo,44
+South Korea,2005,imp4,4,212.67637849414,wvs_combo,44
+South Korea,2010,imp4,1,119.282034924844,wvs_combo,44
+South Korea,2010,imp4,2,402.750847874789,wvs_combo,44
+South Korea,2010,imp4,3,503.199660541584,wvs_combo,44
+South Korea,2010,imp4,4,159.708701077764,wvs_combo,44
+South Korea,2018,disc3,1,296,wvs_combo,44
+South Korea,2018,disc3,2,830,wvs_combo,44
+South Korea,2018,disc3,3,119,wvs_combo,44
+South Korea,2018,imp4,1,43,wvs_combo,44
+South Korea,2018,imp4,2,454,wvs_combo,44
+South Korea,2018,imp4,3,649,wvs_combo,44
+South Korea,2018,imp4,4,99,wvs_combo,44
+United States,1982,disc3,1,1529.33850965239,"evs_combo, wvs_combo",44
+United States,1982,disc3,2,2569.17469789146,"evs_combo, wvs_combo",44
+United States,1982,disc3,3,514.538690497888,"evs_combo, wvs_combo",44
+United States,1990,disc3,1,1021.58133371987,"evs_combo, wvs_combo",44
+United States,1990,disc3,2,2109.3453908011,"evs_combo, wvs_combo",44
+United States,1990,disc3,3,542.119595382492,"evs_combo, wvs_combo",44
+United States,1990,imp4,1,433.918792869483,"evs_combo, wvs_combo",44
+United States,1990,imp4,2,1315.67334704279,"evs_combo, wvs_combo",44
+United States,1990,imp4,3,1262.92343399949,"evs_combo, wvs_combo",44
+United States,1990,imp4,4,627.044168475881,"evs_combo, wvs_combo",44
+United States,1995,disc3,1,416.041677130353,wvs_combo,44
+United States,1995,disc3,2,871.680293505127,wvs_combo,44
+United States,1995,disc3,3,231.333294007773,wvs_combo,44
+United States,1995,imp4,1,136.002761751618,wvs_combo,44
+United States,1995,imp4,2,491.728864800513,wvs_combo,44
+United States,1995,imp4,3,623.399735540794,wvs_combo,44
+United States,1995,imp4,4,275.196984248323,wvs_combo,44
+United States,1999,disc3,1,303.752115363462,wvs_combo,44
+United States,1999,disc3,2,691.570293456232,wvs_combo,44
+United States,1999,disc3,3,199.374804437639,wvs_combo,44
+United States,1999,imp4,1,94.6912469917967,wvs_combo,44
+United States,1999,imp4,2,421.296016672931,wvs_combo,44
+United States,1999,imp4,3,492.041424769277,wvs_combo,44
+United States,1999,imp4,4,188.433717764854,wvs_combo,44
+United States,1999,news5,1,70.2314409367262,wvs_combo,44
+United States,1999,news5,2,198.238680347796,wvs_combo,44
+United States,1999,news5,3,238.80085542628,wvs_combo,44
+United States,1999,news5,4,280.037136844668,wvs_combo,44
+United States,1999,news5,5,410.154117282047,wvs_combo,44
+United States,2006,imp4,1,106.398519533365,wvs_combo,44
+United States,2006,imp4,2,496.129728149988,wvs_combo,44
+United States,2006,imp4,3,498.439899183281,wvs_combo,44
+United States,2006,imp4,4,135.420842951621,wvs_combo,44
+United States,2011,imp4,1,245.51230024148,wvs_combo,44
+United States,2011,imp4,2,778.745576975633,wvs_combo,44
+United States,2011,imp4,3,932.430757099912,wvs_combo,44
+United States,2011,imp4,4,250.472144690803,wvs_combo,44
+United States,2017,disc3,1,245.858013648889,wvs_combo,44
+United States,2017,disc3,2,540.687538850967,wvs_combo,44
+United States,2017,disc3,3,1770.0862496304,wvs_combo,44
+United States,2017,imp4,1,184.733588381397,wvs_combo,44
+United States,2017,imp4,2,914.830516518493,wvs_combo,44
+United States,2017,imp4,3,1079.67438806303,wvs_combo,44
+United States,2017,imp4,4,385.91529088685,wvs_combo,44
+Czechia,1991,disc3,1,331,"evs_combo, wvs_combo",42
+Czechia,1991,disc3,2,1819,"evs_combo, wvs_combo",42
+Czechia,1991,disc3,3,879,"evs_combo, wvs_combo",42
+Czechia,1991,imp4,1,652,"evs_combo, wvs_combo",42
+Czechia,1991,imp4,2,1236,"evs_combo, wvs_combo",42
+Czechia,1991,imp4,3,848,"evs_combo, wvs_combo",42
+Czechia,1991,imp4,4,271,"evs_combo, wvs_combo",42
+Czechia,1998,disc3,1,215,wvs_combo,42
+Czechia,1998,disc3,2,736,wvs_combo,42
+Czechia,1998,disc3,3,191,wvs_combo,42
+Czechia,1998,imp4,1,328,wvs_combo,42
+Czechia,1998,imp4,2,513,wvs_combo,42
+Czechia,1998,imp4,3,256,wvs_combo,42
+Czechia,1998,imp4,4,37,wvs_combo,42
+Czechia,1999,disc3,1,242.797342461611,evs_combo,42
+Czechia,1999,disc3,2,1256.35710176077,evs_combo,42
+Czechia,1999,disc3,3,406.937815559492,evs_combo,42
+Czechia,1999,imp4,1,369.872016372486,evs_combo,42
+Czechia,1999,imp4,2,924.988720869787,evs_combo,42
+Czechia,1999,imp4,3,469.285485974019,evs_combo,42
+Czechia,1999,imp4,4,122.608720411646,evs_combo,42
+Czechia,1999,news5,1,23.8048531419956,evs_combo,42
+Czechia,1999,news5,2,166.809977415554,evs_combo,42
+Czechia,1999,news5,3,174.306246197329,evs_combo,42
+Czechia,1999,news5,4,398.652037002097,evs_combo,42
+Czechia,1999,news5,5,1129.01871959926,evs_combo,42
+Czechia,2008,disc3,1,471.200111811496,evs_combo,42
+Czechia,2008,disc3,2,1143.89305904793,evs_combo,42
+Czechia,2008,disc3,3,179.103696577795,evs_combo,42
+Czechia,2008,imp4,1,633.562612685186,evs_combo,42
+Czechia,2008,imp4,2,766.315640661294,evs_combo,42
+Czechia,2008,imp4,3,299.931511384866,evs_combo,42
+Czechia,2008,imp4,4,83.4137184697511,evs_combo,42
+Czechia,2008,news5,1,101.490954098047,evs_combo,42
+Czechia,2008,news5,2,438.073964212476,evs_combo,42
+Czechia,2008,news5,3,305.591735127348,evs_combo,42
+Czechia,2008,news5,4,493.903122143845,evs_combo,42
+Czechia,2008,news5,5,469.113959709565,evs_combo,42
+Czechia,2017,imp4,1,524.882363902832,evs2017,42
+Czechia,2017,imp4,2,790.390442308521,evs2017,42
+Czechia,2017,imp4,3,349.028378554814,evs2017,42
+Czechia,2017,imp4,4,106.574898654089,evs2017,42
+France,1981,disc3,1,454.435579969435,evs_combo,42
+France,1981,disc3,2,600.10699589849,evs_combo,42
+France,1981,disc3,3,140.601610271606,evs_combo,42
+France,1990,disc3,1,343,evs_combo,42
+France,1990,disc3,2,532,evs_combo,42
+France,1990,disc3,3,117,evs_combo,42
+France,1990,imp4,1,332,evs_combo,42
+France,1990,imp4,2,328,evs_combo,42
+France,1990,imp4,3,242,evs_combo,42
+France,1990,imp4,4,77,evs_combo,42
+France,1999,disc3,1,566.575403282733,evs_combo,42
+France,1999,disc3,2,853.693514411181,evs_combo,42
+France,1999,disc3,3,187.720664942823,evs_combo,42
+France,1999,imp4,1,471.535567889951,evs_combo,42
+France,1999,imp4,2,560.527888304367,evs_combo,42
+France,1999,imp4,3,433.673274113372,evs_combo,42
+France,1999,imp4,4,131.801626443657,evs_combo,42
+France,1999,news5,1,142.46505285462,evs_combo,42
+France,1999,news5,2,157.168889272791,evs_combo,42
+France,1999,news5,3,146.821163643749,evs_combo,42
+France,1999,news5,4,238.292990199357,evs_combo,42
+France,1999,news5,5,927.923898263525,evs_combo,42
+France,2006,imp4,1,230.186221609694,wvs_combo,42
+France,2006,imp4,2,295.577128066973,wvs_combo,42
+France,2006,imp4,3,355.850980488468,wvs_combo,42
+France,2006,imp4,4,119.385669834865,wvs_combo,42
+France,2008,disc3,1,391.265762619157,evs_combo,42
+France,2008,disc3,2,838.693264590787,evs_combo,42
+France,2008,disc3,3,269.193049527764,evs_combo,42
+France,2008,imp4,1,290.215863874792,evs_combo,42
+France,2008,imp4,2,466.702450153897,evs_combo,42
+France,2008,imp4,3,562.841051442534,evs_combo,42
+France,2008,imp4,4,179.380469956764,evs_combo,42
+France,2008,news5,1,76.8480253608976,evs_combo,42
+France,2008,news5,2,163.755155933063,evs_combo,42
+France,2008,news5,3,165.400548306212,evs_combo,42
+France,2008,news5,4,238.859678221247,evs_combo,42
+France,2008,news5,5,856.136592178581,evs_combo,42
+France,2018,imp4,1,504.926755127207,evs2017,42
+France,2018,imp4,2,632.431561297222,evs2017,42
+France,2018,imp4,3,554.692786355269,evs2017,42
+France,2018,imp4,4,172.864255388129,evs2017,42
+Italy,1981,disc3,1,660.362630353196,evs_combo,42
+Italy,1981,disc3,2,526.336481094151,evs_combo,42
+Italy,1981,disc3,3,155.365033450522,evs_combo,42
+Italy,1990,disc3,1,847.616216696796,evs_combo,42
+Italy,1990,disc3,2,915.355342836539,evs_combo,42
+Italy,1990,disc3,3,251.759100652975,evs_combo,42
+Italy,1990,imp4,1,681.946408637841,evs_combo,42
+Italy,1990,imp4,2,696.768080293197,evs_combo,42
+Italy,1990,imp4,3,469.130328265615,evs_combo,42
+Italy,1990,imp4,4,145.156694227939,evs_combo,42
+Italy,1999,disc3,1,645,evs_combo,42
+Italy,1999,disc3,2,1089,evs_combo,42
+Italy,1999,disc3,3,256,evs_combo,42
+Italy,1999,imp4,1,473,evs_combo,42
+Italy,1999,imp4,2,836,evs_combo,42
+Italy,1999,imp4,3,511,evs_combo,42
+Italy,1999,imp4,4,158,evs_combo,42
+Italy,1999,news5,1,208,evs_combo,42
+Italy,1999,news5,2,251,evs_combo,42
+Italy,1999,news5,3,235,evs_combo,42
+Italy,1999,news5,4,300,evs_combo,42
+Italy,1999,news5,5,994,evs_combo,42
+Italy,2005,imp4,1,253,wvs_combo,42
+Italy,2005,imp4,2,368,wvs_combo,42
+Italy,2005,imp4,3,280,wvs_combo,42
+Italy,2005,imp4,4,94,wvs_combo,42
+Italy,2009,disc3,1,431.124420203122,evs_combo,42
+Italy,2009,disc3,2,785.711124816525,evs_combo,42
+Italy,2009,disc3,3,291.433149470388,evs_combo,42
+Italy,2009,imp4,1,318.535233668903,evs_combo,42
+Italy,2009,imp4,2,490.703185490135,evs_combo,42
+Italy,2009,imp4,3,522.000264405408,evs_combo,42
+Italy,2009,imp4,4,155.442028521674,evs_combo,42
+Italy,2009,news5,1,133.833808708692,evs_combo,42
+Italy,2009,news5,2,181.802616704469,evs_combo,42
+Italy,2009,news5,3,124.198120840398,evs_combo,42
+Italy,2009,news5,4,246.353453355287,evs_combo,42
+Italy,2009,news5,5,805.714887839019,evs_combo,42
+Italy,2018,imp4,1,413.61418094521,evs2017,42
+Italy,2018,imp4,2,792.650491129686,evs2017,42
+Italy,2018,imp4,3,789.649237937568,evs2017,42
+Italy,2018,imp4,4,259.467621318108,evs2017,42
+Lithuania,1990,disc3,1,56,evs_combo,42
+Lithuania,1990,disc3,2,495,evs_combo,42
+Lithuania,1990,disc3,3,446,evs_combo,42
+Lithuania,1990,imp4,1,108,evs_combo,42
+Lithuania,1990,imp4,2,376,evs_combo,42
+Lithuania,1990,imp4,3,377,evs_combo,42
+Lithuania,1990,imp4,4,126,evs_combo,42
+Lithuania,1997,disc3,1,213,wvs_combo,42
+Lithuania,1997,disc3,2,639,wvs_combo,42
+Lithuania,1997,disc3,3,147,wvs_combo,42
+Lithuania,1997,imp4,1,229,wvs_combo,42
+Lithuania,1997,imp4,2,482,wvs_combo,42
+Lithuania,1997,imp4,3,244,wvs_combo,42
+Lithuania,1997,imp4,4,39,wvs_combo,42
+Lithuania,1999,disc3,1,147.322466706242,evs_combo,42
+Lithuania,1999,disc3,2,651.061306811717,evs_combo,42
+Lithuania,1999,disc3,3,195.372250992241,evs_combo,42
+Lithuania,1999,imp4,1,110.558486454465,evs_combo,42
+Lithuania,1999,imp4,2,463.209341553467,evs_combo,42
+Lithuania,1999,imp4,3,350.136433308322,evs_combo,42
+Lithuania,1999,imp4,4,44.678533231991,evs_combo,42
+Lithuania,1999,news5,1,17.1832928409271,evs_combo,42
+Lithuania,1999,news5,2,67.0238671492626,evs_combo,42
+Lithuania,1999,news5,3,65.8416527653096,evs_combo,42
+Lithuania,1999,news5,4,171.776288387433,evs_combo,42
+Lithuania,1999,news5,5,691.022311263575,evs_combo,42
+Lithuania,2008,disc3,1,348.101301338591,evs_combo,42
+Lithuania,2008,disc3,2,996.717938649379,evs_combo,42
+Lithuania,2008,disc3,3,133.34765152828,evs_combo,42
+Lithuania,2008,imp4,1,418.296736958924,evs_combo,42
+Lithuania,2008,imp4,2,757.274551023353,evs_combo,42
+Lithuania,2008,imp4,3,264.272231848634,evs_combo,42
+Lithuania,2008,imp4,4,38.465312169619,evs_combo,42
+Lithuania,2008,news5,1,60.0060321083335,evs_combo,42
+Lithuania,2008,news5,2,184.055355517107,evs_combo,42
+Lithuania,2008,news5,3,118.678767293698,evs_combo,42
+Lithuania,2008,news5,4,268.976721901657,evs_combo,42
+Lithuania,2008,news5,5,853.199412145198,evs_combo,42
+Lithuania,2018,imp4,1,365.446154347612,evs2017,42
+Lithuania,2018,imp4,2,706.802862606463,evs2017,42
+Lithuania,2018,imp4,3,267.054261709514,evs2017,42
+Lithuania,2018,imp4,4,80.394672579439,evs2017,42
+Chile,1990,disc3,1,594,wvs_combo,41
+Chile,1990,disc3,2,604,wvs_combo,41
+Chile,1990,disc3,3,283,wvs_combo,41
+Chile,1990,imp4,1,533,wvs_combo,41
+Chile,1990,imp4,2,482,wvs_combo,41
+Chile,1990,imp4,3,247,wvs_combo,41
+Chile,1990,imp4,4,207,wvs_combo,41
+Chile,1996,disc3,1,535.41,wvs_combo,41
+Chile,1996,disc3,2,390.166,wvs_combo,41
+Chile,1996,disc3,3,69.53,wvs_combo,41
+Chile,1996,imp4,1,427.668,wvs_combo,41
+Chile,1996,imp4,2,349.926,wvs_combo,41
+Chile,1996,imp4,3,130.332,wvs_combo,41
+Chile,1996,imp4,4,68.802,wvs_combo,41
+Chile,2000,disc3,1,507.73332,wvs_combo,41
+Chile,2000,disc3,2,515.026673,wvs_combo,41
+Chile,2000,disc3,3,155.960003,wvs_combo,41
+Chile,2000,imp4,1,504.373322,wvs_combo,41
+Chile,2000,imp4,2,307.320001,wvs_combo,41
+Chile,2000,imp4,3,251.666675,wvs_combo,41
+Chile,2000,imp4,4,108.813339,wvs_combo,41
+Chile,2000,news5,1,170.386671,wvs_combo,41
+Chile,2000,news5,2,219.093318,wvs_combo,41
+Chile,2000,news5,3,208.586656,wvs_combo,41
+Chile,2000,news5,4,277.240007,wvs_combo,41
+Chile,2000,news5,5,321.800015,wvs_combo,41
+Chile,2006,imp4,1,458.413231212728,wvs_combo,41
+Chile,2006,imp4,2,323.134535772399,wvs_combo,41
+Chile,2006,imp4,3,144.559318950763,wvs_combo,41
+Chile,2006,imp4,4,56.3645431000499,wvs_combo,41
+Chile,2012,imp4,1,359,wvs_combo,41
+Chile,2012,imp4,2,408,wvs_combo,41
+Chile,2012,imp4,3,147,wvs_combo,41
+Chile,2012,imp4,4,74,wvs_combo,41
+Chile,2018,disc3,1,515.49567794946,wvs_combo,41
+Chile,2018,disc3,2,423.620828121959,wvs_combo,41
+Chile,2018,disc3,3,43.3176723751353,wvs_combo,41
+Chile,2018,imp4,1,368.34434079083,wvs_combo,41
+Chile,2018,imp4,2,263.908898364537,wvs_combo,41
+Chile,2018,imp4,3,261.24202319139,wvs_combo,41
+Chile,2018,imp4,4,101.28972191615,wvs_combo,41
+China,1990,disc3,1,113,wvs_combo,41
+China,1990,disc3,2,610,wvs_combo,41
+China,1990,disc3,3,274,wvs_combo,41
+China,1990,imp4,1,82,wvs_combo,41
+China,1990,imp4,2,323,wvs_combo,41
+China,1990,imp4,3,294,wvs_combo,41
+China,1990,imp4,4,287,wvs_combo,41
+China,1995,disc3,1,426,wvs_combo,41
+China,1995,disc3,2,815,wvs_combo,41
+China,1995,disc3,3,224,wvs_combo,41
+China,1995,imp4,1,111,wvs_combo,41
+China,1995,imp4,2,411,wvs_combo,41
+China,1995,imp4,3,529,wvs_combo,41
+China,1995,imp4,4,356,wvs_combo,41
+China,2001,disc3,1,289,wvs_combo,41
+China,2001,disc3,2,439,wvs_combo,41
+China,2001,disc3,3,235,wvs_combo,41
+China,2001,imp4,1,35,wvs_combo,41
+China,2001,imp4,2,266,wvs_combo,41
+China,2001,imp4,3,477,wvs_combo,41
+China,2001,imp4,4,151,wvs_combo,41
+China,2001,news5,1,51,wvs_combo,41
+China,2001,news5,2,199,wvs_combo,41
+China,2001,news5,3,97,wvs_combo,41
+China,2001,news5,4,174,wvs_combo,41
+China,2001,news5,5,438,wvs_combo,41
+China,2007,imp4,1,111.226387670375,wvs_combo,41
+China,2007,imp4,2,557.833817362132,wvs_combo,41
+China,2007,imp4,3,694.859587188003,wvs_combo,41
+China,2007,imp4,4,264.338231593199,wvs_combo,41
+China,2013,imp4,1,164.830229468938,wvs_combo,41
+China,2013,imp4,2,1069.88664053154,wvs_combo,41
+China,2013,imp4,3,650.738116965018,wvs_combo,41
+China,2013,imp4,4,238.686938040324,wvs_combo,41
+China,2018,disc3,1,1106.41165497699,wvs_combo,41
+China,2018,disc3,2,1707.03478688847,wvs_combo,41
+China,2018,disc3,3,217.885304735742,wvs_combo,41
+China,2018,imp4,1,212.183906280984,wvs_combo,41
+China,2018,imp4,2,1170.38344137527,wvs_combo,41
+China,2018,imp4,3,1170.29317573127,wvs_combo,41
+China,2018,imp4,4,459.454691940478,wvs_combo,41
+Denmark,1981,disc3,1,240.401813046693,evs_combo,38
+Denmark,1981,disc3,2,663.07243894886,evs_combo,38
+Denmark,1981,disc3,3,266.343490614091,evs_combo,38
+Denmark,1990,disc3,1,220,evs_combo,38
+Denmark,1990,disc3,2,561,evs_combo,38
+Denmark,1990,disc3,3,248,evs_combo,38
+Denmark,1990,imp4,1,155,evs_combo,38
+Denmark,1990,imp4,2,427,evs_combo,38
+Denmark,1990,imp4,3,357,evs_combo,38
+Denmark,1990,imp4,4,86,evs_combo,38
+Denmark,1999,disc3,1,203,evs_combo,38
+Denmark,1999,disc3,2,564,evs_combo,38
+Denmark,1999,disc3,3,254,evs_combo,38
+Denmark,1999,imp4,1,141,evs_combo,38
+Denmark,1999,imp4,2,454,evs_combo,38
+Denmark,1999,imp4,3,341,evs_combo,38
+Denmark,1999,imp4,4,82,evs_combo,38
+Denmark,1999,news5,1,37,evs_combo,38
+Denmark,1999,news5,2,105,evs_combo,38
+Denmark,1999,news5,3,85,evs_combo,38
+Denmark,1999,news5,4,142,evs_combo,38
+Denmark,1999,news5,5,646,evs_combo,38
+Denmark,2008,disc3,1,262.533445236092,evs_combo,38
+Denmark,2008,disc3,2,843.376530339743,evs_combo,38
+Denmark,2008,disc3,3,400.123279304623,evs_combo,38
+Denmark,2008,imp4,1,92.3888760510023,evs_combo,38
+Denmark,2008,imp4,2,585.217304268772,evs_combo,38
+Denmark,2008,imp4,3,649.972593912718,evs_combo,38
+Denmark,2008,imp4,4,177.506348820846,evs_combo,38
+Denmark,2008,news5,1,27.6250625080892,evs_combo,38
+Denmark,2008,news5,2,101.585028278446,evs_combo,38
+Denmark,2008,news5,3,154.102177905238,evs_combo,38
+Denmark,2008,news5,4,212.627801091003,evs_combo,38
+Denmark,2008,news5,5,1002.27647048421,evs_combo,38
+Denmark,2017,imp4,1,256.464864536292,evs2017,38
+Denmark,2017,imp4,2,1510.71395784151,evs2017,38
+Denmark,2017,imp4,3,1292.96173662105,evs2017,38
+Denmark,2017,imp4,4,276.374976320158,evs2017,38
+Iceland,1984,disc3,1,235.707779886148,evs_combo,38
+Iceland,1984,disc3,2,598.064516129032,evs_combo,38
+Iceland,1984,disc3,3,87.3643263757115,evs_combo,38
+Iceland,1990,disc3,1,156,evs_combo,38
+Iceland,1990,disc3,2,444,evs_combo,38
+Iceland,1990,disc3,3,100,evs_combo,38
+Iceland,1990,imp4,1,209,evs_combo,38
+Iceland,1990,imp4,2,308,evs_combo,38
+Iceland,1990,imp4,3,122,evs_combo,38
+Iceland,1990,imp4,4,61,evs_combo,38
+Iceland,1999,disc3,1,209,evs_combo,38
+Iceland,1999,disc3,2,623,evs_combo,38
+Iceland,1999,disc3,3,132,evs_combo,38
+Iceland,1999,imp4,1,172,evs_combo,38
+Iceland,1999,imp4,2,444,evs_combo,38
+Iceland,1999,imp4,3,282,evs_combo,38
+Iceland,1999,imp4,4,65,evs_combo,38
+Iceland,1999,news5,1,29,evs_combo,38
+Iceland,1999,news5,2,153,evs_combo,38
+Iceland,1999,news5,3,117,evs_combo,38
+Iceland,1999,news5,4,227,evs_combo,38
+Iceland,1999,news5,5,438,evs_combo,38
+Iceland,2009,disc3,1,111.03782457473,evs_combo,38
+Iceland,2009,disc3,2,460.817972406038,evs_combo,38
+Iceland,2009,disc3,3,231.85939254997,evs_combo,38
+Iceland,2009,imp4,1,75.7264426435305,evs_combo,38
+Iceland,2009,imp4,2,299.394080195017,evs_combo,38
+Iceland,2009,imp4,3,321.969711785454,evs_combo,38
+Iceland,2009,imp4,4,97.4611741044564,evs_combo,38
+Iceland,2009,news5,1,12.6144873464375,evs_combo,38
+Iceland,2009,news5,2,48.6987272392392,evs_combo,38
+Iceland,2009,news5,3,69.8603223740759,evs_combo,38
+Iceland,2009,news5,4,167.426881485471,evs_combo,38
+Iceland,2009,news5,5,504.87613818453,evs_combo,38
+Iceland,2017,imp4,1,141.213698201491,evs2017,38
+Iceland,2017,imp4,2,647.37443828725,evs2017,38
+Iceland,2017,imp4,3,644.591052476737,evs2017,38
+Iceland,2017,imp4,4,176.484984393399,evs2017,38
+Latvia,1990,disc3,1,32,evs_combo,38
+Latvia,1990,disc3,2,442,evs_combo,38
+Latvia,1990,disc3,3,413,evs_combo,38
+Latvia,1990,imp4,1,80,evs_combo,38
+Latvia,1990,imp4,2,388,evs_combo,38
+Latvia,1990,imp4,3,280,evs_combo,38
+Latvia,1990,imp4,4,82,evs_combo,38
+Latvia,1996,disc3,1,179,wvs_combo,38
+Latvia,1996,disc3,2,804,wvs_combo,38
+Latvia,1996,disc3,3,210,wvs_combo,38
+Latvia,1996,imp4,1,338,wvs_combo,38
+Latvia,1996,imp4,2,514,wvs_combo,38
+Latvia,1996,imp4,3,251,wvs_combo,38
+Latvia,1996,imp4,4,61,wvs_combo,38
+Latvia,1999,disc3,1,225,evs_combo,38
+Latvia,1999,disc3,2,577,evs_combo,38
+Latvia,1999,disc3,3,192,evs_combo,38
+Latvia,1999,imp4,1,303,evs_combo,38
+Latvia,1999,imp4,2,462,evs_combo,38
+Latvia,1999,imp4,3,178,evs_combo,38
+Latvia,1999,imp4,4,58,evs_combo,38
+Latvia,1999,news5,1,28,evs_combo,38
+Latvia,1999,news5,2,64,evs_combo,38
+Latvia,1999,news5,3,85,evs_combo,38
+Latvia,1999,news5,4,183,evs_combo,38
+Latvia,1999,news5,5,646,evs_combo,38
+Latvia,2008,disc3,1,342.997127750073,evs_combo,38
+Latvia,2008,disc3,2,934.01055655989,evs_combo,38
+Latvia,2008,disc3,3,220.766954726175,evs_combo,38
+Latvia,2008,imp4,1,443.215196092111,evs_combo,38
+Latvia,2008,imp4,2,694.400363074548,evs_combo,38
+Latvia,2008,imp4,3,282.456618188557,evs_combo,38
+Latvia,2008,imp4,4,77.1904929868899,evs_combo,38
+Latvia,2008,news5,1,36.5748843267456,evs_combo,38
+Latvia,2008,news5,2,139.44181211332,evs_combo,38
+Latvia,2008,news5,3,160.405149051277,evs_combo,38
+Latvia,2008,news5,4,385.721258528985,evs_combo,38
+Latvia,2008,news5,5,772.610062981654,evs_combo,38
+Norway,1982,disc3,1,247,evs_combo,37
+Norway,1982,disc3,2,681,evs_combo,37
+Norway,1982,disc3,3,120,evs_combo,37
+Norway,1990,disc3,1,142,evs_combo,37
+Norway,1990,disc3,2,820,evs_combo,37
+Norway,1990,disc3,3,272,evs_combo,37
+Norway,1990,imp4,1,111,evs_combo,37
+Norway,1990,imp4,2,500,evs_combo,37
+Norway,1990,imp4,3,504,evs_combo,37
+Norway,1990,imp4,4,118,evs_combo,37
+Norway,1996,disc3,1,158,wvs_combo,37
+Norway,1996,disc3,2,731,wvs_combo,37
+Norway,1996,disc3,3,237,wvs_combo,37
+Norway,1996,imp4,1,113,wvs_combo,37
+Norway,1996,imp4,2,508,wvs_combo,37
+Norway,1996,imp4,3,438,wvs_combo,37
+Norway,1996,imp4,4,68,wvs_combo,37
+Norway,2007,imp4,1,64,wvs_combo,37
+Norway,2007,imp4,2,364,wvs_combo,37
+Norway,2007,imp4,3,496,wvs_combo,37
+Norway,2007,imp4,4,101,wvs_combo,37
+Norway,2008,disc3,1,129.344259403631,evs_combo,37
+Norway,2008,disc3,2,717.461976321719,evs_combo,37
+Norway,2008,disc3,3,243.19376427465,evs_combo,37
+Norway,2008,imp4,1,60.9139438796771,evs_combo,37
+Norway,2008,imp4,2,387.95381804332,evs_combo,37
+Norway,2008,imp4,3,541.546689371535,evs_combo,37
+Norway,2008,imp4,4,99.5855487054679,evs_combo,37
+Norway,2008,news5,1,13.3169629262303,evs_combo,37
+Norway,2008,news5,2,76.467832820077,evs_combo,37
+Norway,2008,news5,3,130.733223881858,evs_combo,37
+Norway,2008,news5,4,217.250400104287,evs_combo,37
+Norway,2008,news5,5,648.913221242596,evs_combo,37
+Norway,2018,imp4,1,61.6143635420696,evs2017,37
+Norway,2018,imp4,2,289.973055207303,evs2017,37
+Norway,2018,imp4,3,612.501671167297,evs2017,37
+Norway,2018,imp4,4,156.672007525643,evs2017,37
+South Africa,1982,disc3,1,704,wvs_combo,37
+South Africa,1982,disc3,2,714,wvs_combo,37
+South Africa,1982,disc3,3,121,wvs_combo,37
+South Africa,1990,disc3,1,801.100433682073,wvs_combo,37
+South Africa,1990,disc3,2,1288.42259050443,wvs_combo,37
+South Africa,1990,disc3,3,606.410030414314,wvs_combo,37
+South Africa,1990,imp4,1,453.694566355204,wvs_combo,37
+South Africa,1990,imp4,2,627.317985818245,wvs_combo,37
+South Africa,1990,imp4,3,847.209197711266,wvs_combo,37
+South Africa,1990,imp4,4,676.447707062456,wvs_combo,37
+South Africa,1996,disc3,1,1032.89449348072,wvs_combo,37
+South Africa,1996,disc3,2,1494.80719006889,wvs_combo,37
+South Africa,1996,disc3,3,362.956494457601,wvs_combo,37
+South Africa,1996,imp4,1,769.68387101109,wvs_combo,37
+South Africa,1996,imp4,2,774.213640193108,wvs_combo,37
+South Africa,1996,imp4,3,741.902426027841,wvs_combo,37
+South Africa,1996,imp4,4,548.640460926936,wvs_combo,37
+South Africa,2001,disc3,1,1130.52163668938,wvs_combo,37
+South Africa,2001,disc3,2,1500.16829632595,wvs_combo,37
+South Africa,2001,disc3,3,340.539610517492,wvs_combo,37
+South Africa,2001,imp4,1,638.163397455402,wvs_combo,37
+South Africa,2001,imp4,2,833.813593772951,wvs_combo,37
+South Africa,2001,imp4,3,872.188916528216,wvs_combo,37
+South Africa,2001,imp4,4,611.423318281011,wvs_combo,37
+South Africa,2001,news5,1,456.393772858798,wvs_combo,37
+South Africa,2001,news5,2,777.767773200203,wvs_combo,37
+South Africa,2001,news5,3,362.938021125902,wvs_combo,37
+South Africa,2001,news5,4,686.99330839594,wvs_combo,37
+South Africa,2001,news5,5,704.128611268777,wvs_combo,37
+South Africa,2006,imp4,1,677.779280124512,wvs_combo,37
+South Africa,2006,imp4,2,854.534249721695,wvs_combo,37
+South Africa,2006,imp4,3,764.082621904361,wvs_combo,37
+South Africa,2006,imp4,4,648.48673585982,wvs_combo,37
+South Africa,2013,imp4,1,837.231487292754,wvs_combo,37
+South Africa,2013,imp4,2,1020.64254488263,wvs_combo,37
+South Africa,2013,imp4,3,853.698367489243,wvs_combo,37
+South Africa,2013,imp4,4,756.324559605507,wvs_combo,37
+Albania,1998,disc3,1,178,wvs_combo,35
+Albania,1998,disc3,2,612,wvs_combo,35
+Albania,1998,disc3,3,193,wvs_combo,35
+Albania,1998,imp4,1,353,wvs_combo,35
+Albania,1998,imp4,2,399,wvs_combo,35
+Albania,1998,imp4,3,183,wvs_combo,35
+Albania,1998,imp4,4,37,wvs_combo,35
+Albania,2002,disc3,1,221,wvs_combo,35
+Albania,2002,disc3,2,586,wvs_combo,35
+Albania,2002,disc3,3,180,wvs_combo,35
+Albania,2002,imp4,1,346,wvs_combo,35
+Albania,2002,imp4,2,325,wvs_combo,35
+Albania,2002,imp4,3,227,wvs_combo,35
+Albania,2002,imp4,4,81,wvs_combo,35
+Albania,2002,news5,1,75,wvs_combo,35
+Albania,2002,news5,2,210,wvs_combo,35
+Albania,2002,news5,3,152,wvs_combo,35
+Albania,2002,news5,4,245,wvs_combo,35
+Albania,2002,news5,5,312,wvs_combo,35
+Albania,2008,disc3,1,555.195337400985,evs_combo,35
+Albania,2008,disc3,2,756.044874510877,evs_combo,35
+Albania,2008,disc3,3,188.490748222958,evs_combo,35
+Albania,2008,imp4,1,646.796520229905,evs_combo,35
+Albania,2008,imp4,2,513.515223795847,evs_combo,35
+Albania,2008,imp4,3,287.03629920425,evs_combo,35
+Albania,2008,imp4,4,48.9775885652156,evs_combo,35
+Albania,2008,news5,1,160.303431343128,evs_combo,35
+Albania,2008,news5,2,259.766440779061,evs_combo,35
+Albania,2008,news5,3,226.829380912958,evs_combo,35
+Albania,2008,news5,4,325.8853507333,evs_combo,35
+Albania,2008,news5,5,498.960801742441,evs_combo,35
+Albania,2018,imp4,1,770.440186447977,evs2017,35
+Albania,2018,imp4,2,380.838854523132,evs2017,35
+Albania,2018,imp4,3,198.627421790821,evs2017,35
+Albania,2018,imp4,4,77.1353480561019,evs2017,35
+Austria,1990,disc3,1,453.251426122821,evs_combo,35
+Austria,1990,disc3,2,732.795736361445,evs_combo,35
+Austria,1990,disc3,3,266.836417686601,evs_combo,35
+Austria,1990,imp4,1,364.71651624307,evs_combo,35
+Austria,1990,imp4,2,560.330083826562,evs_combo,35
+Austria,1990,imp4,3,398.617263451083,evs_combo,35
+Austria,1990,imp4,4,98.0365033878786,evs_combo,35
+Austria,1999,disc3,1,389.916831428571,evs_combo,35
+Austria,1999,disc3,2,821.787592857143,evs_combo,35
+Austria,1999,disc3,3,298.716417142857,evs_combo,35
+Austria,1999,imp4,1,234.50976,evs_combo,35
+Austria,1999,imp4,2,652.433565714286,evs_combo,35
+Austria,1999,imp4,3,478.727705714286,evs_combo,35
+Austria,1999,imp4,4,147.597037142857,evs_combo,35
+Austria,1999,news5,1,54.9159342857143,evs_combo,35
+Austria,1999,news5,2,154.841757142857,evs_combo,35
+Austria,1999,news5,3,147.123042857143,evs_combo,35
+Austria,1999,news5,4,289.326764285714,evs_combo,35
+Austria,1999,news5,5,870.201325714286,evs_combo,35
+Austria,2008,disc3,1,295.596534345348,evs_combo,35
+Austria,2008,disc3,2,945.405954469949,evs_combo,35
+Austria,2008,disc3,3,263.921743872001,evs_combo,35
+Austria,2008,imp4,1,249.519292525675,evs_combo,35
+Austria,2008,imp4,2,632.286222120179,evs_combo,35
+Austria,2008,imp4,3,454.727398475316,evs_combo,35
+Austria,2008,imp4,4,167.669020257848,evs_combo,35
+Austria,2008,news5,1,48.5019059747904,evs_combo,35
+Austria,2008,news5,2,150.587218658732,evs_combo,35
+Austria,2008,news5,3,198.979455424727,evs_combo,35
+Austria,2008,news5,4,303.642455885492,evs_combo,35
+Austria,2008,news5,5,807.359748514574,evs_combo,35
+Austria,2018,imp4,1,213.179802381176,evs2017,35
+Austria,2018,imp4,2,592.011153185468,evs2017,35
+Austria,2018,imp4,3,642.923481895892,evs2017,35
+Austria,2018,imp4,4,186.968897791891,evs2017,35
+Bosnia & Herzegovina,1998,disc3,1,205,wvs_combo,35
+Bosnia & Herzegovina,1998,disc3,2,738,wvs_combo,35
+Bosnia & Herzegovina,1998,disc3,3,248,wvs_combo,35
+Bosnia & Herzegovina,1998,imp4,1,248,wvs_combo,35
+Bosnia & Herzegovina,1998,imp4,2,358,wvs_combo,35
+Bosnia & Herzegovina,1998,imp4,3,425,wvs_combo,35
+Bosnia & Herzegovina,1998,imp4,4,151,wvs_combo,35
+Bosnia & Herzegovina,2001,disc3,1,321,wvs_combo,35
+Bosnia & Herzegovina,2001,disc3,2,711,wvs_combo,35
+Bosnia & Herzegovina,2001,disc3,3,156,wvs_combo,35
+Bosnia & Herzegovina,2001,imp4,1,342,wvs_combo,35
+Bosnia & Herzegovina,2001,imp4,2,427,wvs_combo,35
+Bosnia & Herzegovina,2001,imp4,3,294,wvs_combo,35
+Bosnia & Herzegovina,2001,imp4,4,131,wvs_combo,35
+Bosnia & Herzegovina,2001,news5,1,95,wvs_combo,35
+Bosnia & Herzegovina,2001,news5,2,270,wvs_combo,35
+Bosnia & Herzegovina,2001,news5,3,156,wvs_combo,35
+Bosnia & Herzegovina,2001,news5,4,315,wvs_combo,35
+Bosnia & Herzegovina,2001,news5,5,361,wvs_combo,35
+Bosnia & Herzegovina,2008,disc3,1,454.944493105215,evs_combo,35
+Bosnia & Herzegovina,2008,disc3,2,834.014753696846,evs_combo,35
+Bosnia & Herzegovina,2008,disc3,3,206.964991015017,evs_combo,35
+Bosnia & Herzegovina,2008,imp4,1,312.971640636281,evs_combo,35
+Bosnia & Herzegovina,2008,imp4,2,654.354322945007,evs_combo,35
+Bosnia & Herzegovina,2008,imp4,3,400.693420934751,evs_combo,35
+Bosnia & Herzegovina,2008,imp4,4,127.653732011617,evs_combo,35
+Bosnia & Herzegovina,2008,news5,1,112.88775951557,evs_combo,35
+Bosnia & Herzegovina,2008,news5,2,492.634124428203,evs_combo,35
+Bosnia & Herzegovina,2008,news5,3,201.610840558673,evs_combo,35
+Bosnia & Herzegovina,2008,news5,4,361.758260882723,evs_combo,35
+Bosnia & Herzegovina,2008,news5,5,334.35729418786,evs_combo,35
+Bosnia & Herzegovina,2019,imp4,1,721.266824619026,evs2017,35
+Bosnia & Herzegovina,2019,imp4,2,568.378124726434,evs2017,35
+Bosnia & Herzegovina,2019,imp4,3,317.301086643752,evs2017,35
+Bosnia & Herzegovina,2019,imp4,4,109.215554099894,evs2017,35
+Croatia,1996,disc3,1,192,wvs_combo,35
+Croatia,1996,disc3,2,780,wvs_combo,35
+Croatia,1996,disc3,3,212,wvs_combo,35
+Croatia,1996,imp4,1,394,wvs_combo,35
+Croatia,1996,imp4,2,477,wvs_combo,35
+Croatia,1996,imp4,3,241,wvs_combo,35
+Croatia,1996,imp4,4,70,wvs_combo,35
+Croatia,1999,disc3,1,202.775083075478,evs_combo,35
+Croatia,1999,disc3,2,608.648063631771,evs_combo,35
+Croatia,1999,disc3,3,185.7111443797,evs_combo,35
+Croatia,1999,imp4,1,198.494387225702,evs_combo,35
+Croatia,1999,imp4,2,496.745614443148,evs_combo,35
+Croatia,1999,imp4,3,244.971965245309,evs_combo,35
+Croatia,1999,imp4,4,44.0509244270182,evs_combo,35
+Croatia,1999,news5,1,18.8920164334881,evs_combo,35
+Croatia,1999,news5,2,117.547295223111,evs_combo,35
+Croatia,1999,news5,3,95.7488824515436,evs_combo,35
+Croatia,1999,news5,4,243.302652614587,evs_combo,35
+Croatia,1999,news5,5,525.038536503867,evs_combo,35
+Croatia,2008,disc3,1,540.731300823933,evs_combo,35
+Croatia,2008,disc3,2,838.32507693146,evs_combo,35
+Croatia,2008,disc3,3,129.349177027534,evs_combo,35
+Croatia,2008,imp4,1,357.864970502972,evs_combo,35
+Croatia,2008,imp4,2,764.378458199052,evs_combo,35
+Croatia,2008,imp4,3,317.487575463381,evs_combo,35
+Croatia,2008,imp4,4,51.6946391643747,evs_combo,35
+Croatia,2008,news5,1,128.543134251957,evs_combo,35
+Croatia,2008,news5,2,420.6162792729,evs_combo,35
+Croatia,2008,news5,3,168.976588029223,evs_combo,35
+Croatia,2008,news5,4,305.806580208475,evs_combo,35
+Croatia,2008,news5,5,488.525691050901,evs_combo,35
+Croatia,2017,imp4,1,475.172237853182,evs2017,35
+Croatia,2017,imp4,2,652.557201988412,evs2017,35
+Croatia,2017,imp4,3,282.236208936631,evs2017,35
+Croatia,2017,imp4,4,52.0669933494626,evs2017,35
+Moldova,1996,disc3,1,236,wvs_combo,35
+Moldova,1996,disc3,2,556,wvs_combo,35
+Moldova,1996,disc3,3,174,wvs_combo,35
+Moldova,1996,imp4,1,266,wvs_combo,35
+Moldova,1996,imp4,2,420,wvs_combo,35
+Moldova,1996,imp4,3,208,wvs_combo,35
+Moldova,1996,imp4,4,65,wvs_combo,35
+Moldova,2002,disc3,1,184.111251281679,wvs_combo,35
+Moldova,2002,disc3,2,546.844950321548,wvs_combo,35
+Moldova,2002,disc3,3,252.990723814451,wvs_combo,35
+Moldova,2002,imp4,1,186.572803455162,wvs_combo,35
+Moldova,2002,imp4,2,440.837745677087,wvs_combo,35
+Moldova,2002,imp4,3,272.411901199771,wvs_combo,35
+Moldova,2002,imp4,4,81.1723232901091,wvs_combo,35
+Moldova,2002,news5,1,23.9692089631479,wvs_combo,35
+Moldova,2002,news5,2,154.148032065134,wvs_combo,35
+Moldova,2002,news5,3,118.018719324712,wvs_combo,35
+Moldova,2002,news5,4,257.368597136012,wvs_combo,35
+Moldova,2002,news5,5,449.452280277649,wvs_combo,35
+Moldova,2006,imp4,1,290,wvs_combo,35
+Moldova,2006,imp4,2,485,wvs_combo,35
+Moldova,2006,imp4,3,220,wvs_combo,35
+Moldova,2006,imp4,4,48,wvs_combo,35
+Moldova,2008,disc3,1,386.605294404267,evs_combo,35
+Moldova,2008,disc3,2,1033.7270772928,evs_combo,35
+Moldova,2008,disc3,3,105.100706569279,evs_combo,35
+Moldova,2008,imp4,1,345.395402015719,evs_combo,35
+Moldova,2008,imp4,2,696.043645969054,evs_combo,35
+Moldova,2008,imp4,3,392.349042090237,evs_combo,35
+Moldova,2008,imp4,4,98.7218114880972,evs_combo,35
+Moldova,2008,news5,1,61.1722065133987,evs_combo,35
+Moldova,2008,news5,2,280.127936651288,evs_combo,35
+Moldova,2008,news5,3,182.344776427232,evs_combo,35
+Moldova,2008,news5,4,362.774887071481,evs_combo,35
+Moldova,2008,news5,5,646.734230257303,evs_combo,35
+Montenegro,1996,disc3,1,68,wvs_combo,35
+Montenegro,1996,disc3,2,141,wvs_combo,35
+Montenegro,1996,disc3,3,25,wvs_combo,35
+Montenegro,1996,imp4,1,78,wvs_combo,35
+Montenegro,1996,imp4,2,87,wvs_combo,35
+Montenegro,1996,imp4,3,57,wvs_combo,35
+Montenegro,1996,imp4,4,11,wvs_combo,35
+Montenegro,2001,disc3,1,207,wvs_combo,35
+Montenegro,2001,disc3,2,619,wvs_combo,35
+Montenegro,2001,disc3,3,148,wvs_combo,35
+Montenegro,2001,imp4,1,244,wvs_combo,35
+Montenegro,2001,imp4,2,510,wvs_combo,35
+Montenegro,2001,imp4,3,231,wvs_combo,35
+Montenegro,2001,imp4,4,63,wvs_combo,35
+Montenegro,2001,news5,1,56,wvs_combo,35
+Montenegro,2001,news5,2,198,wvs_combo,35
+Montenegro,2001,news5,3,161,wvs_combo,35
+Montenegro,2001,news5,4,327,wvs_combo,35
+Montenegro,2001,news5,5,295,wvs_combo,35
+Montenegro,2008,disc3,1,663.60468160089,evs_combo,35
+Montenegro,2008,disc3,2,737.63606295716,evs_combo,35
+Montenegro,2008,disc3,3,92.0651720311777,evs_combo,35
+Montenegro,2008,imp4,1,562.387352732118,evs_combo,35
+Montenegro,2008,imp4,2,630.661401868017,evs_combo,35
+Montenegro,2008,imp4,3,232.789696074174,evs_combo,35
+Montenegro,2008,imp4,4,68.2062345770998,evs_combo,35
+Montenegro,2008,news5,1,228.666537960181,evs_combo,35
+Montenegro,2008,news5,2,493.86934252984,evs_combo,35
+Montenegro,2008,news5,3,177.865226441029,evs_combo,35
+Montenegro,2008,news5,4,243.24714512688,evs_combo,35
+Montenegro,2008,news5,5,348.125529835652,evs_combo,35
+Montenegro,2019,imp4,1,314.720850338228,evs2017,35
+Montenegro,2019,imp4,2,254.041547535015,evs2017,35
+Montenegro,2019,imp4,3,291.954295292021,evs2017,35
+Montenegro,2019,imp4,4,125.941021018352,evs2017,35
+North Macedonia,1998,disc3,1,232,wvs_combo,35
+North Macedonia,1998,disc3,2,587,wvs_combo,35
+North Macedonia,1998,disc3,3,148,wvs_combo,35
+North Macedonia,1998,imp4,1,311,wvs_combo,35
+North Macedonia,1998,imp4,2,339,wvs_combo,35
+North Macedonia,1998,imp4,3,213,wvs_combo,35
+North Macedonia,1998,imp4,4,98,wvs_combo,35
+North Macedonia,2001,disc3,1,210.981799930995,wvs_combo,35
+North Macedonia,2001,disc3,2,537.555238124126,wvs_combo,35
+North Macedonia,2001,disc3,3,301.230342105563,wvs_combo,35
+North Macedonia,2001,imp4,1,288.129692434853,wvs_combo,35
+North Macedonia,2001,imp4,2,375.106022202928,wvs_combo,35
+North Macedonia,2001,imp4,3,231.836879002385,wvs_combo,35
+North Macedonia,2001,imp4,4,146.583555767036,wvs_combo,35
+North Macedonia,2001,news5,1,51.395794865573,wvs_combo,35
+North Macedonia,2001,news5,2,141.2709356244,wvs_combo,35
+North Macedonia,2001,news5,3,56.13641283948,wvs_combo,35
+North Macedonia,2001,news5,4,210.366597598474,wvs_combo,35
+North Macedonia,2001,news5,5,589.774636112364,wvs_combo,35
+North Macedonia,2008,disc3,1,404.084003913283,evs_combo,35
+North Macedonia,2008,disc3,2,801.568213824891,evs_combo,35
+North Macedonia,2008,disc3,3,259.560638932524,evs_combo,35
+North Macedonia,2008,imp4,1,334.906165916381,evs_combo,35
+North Macedonia,2008,imp4,2,416.634392494741,evs_combo,35
+North Macedonia,2008,imp4,3,486.753272276961,evs_combo,35
+North Macedonia,2008,imp4,4,239.222380846264,evs_combo,35
+North Macedonia,2008,news5,1,143.138744635695,evs_combo,35
+North Macedonia,2008,news5,2,432.533114498258,evs_combo,35
+North Macedonia,2008,news5,3,286.571133935922,evs_combo,35
+North Macedonia,2008,news5,4,231.688260613959,evs_combo,35
+North Macedonia,2008,news5,5,389.419994867851,evs_combo,35
+North Macedonia,2019,imp4,1,347.520857394626,evs2017,35
+North Macedonia,2019,imp4,2,359.912974202495,evs2017,35
+North Macedonia,2019,imp4,3,261.966871627829,evs2017,35
+North Macedonia,2019,imp4,4,117.173129720411,evs2017,35
+Portugal,1990,disc3,1,549.707135056426,evs_combo,35
+Portugal,1990,disc3,2,523.996905715327,evs_combo,35
+Portugal,1990,disc3,3,99.1202675646162,evs_combo,35
+Portugal,1990,imp4,1,450.910402257008,evs_combo,35
+Portugal,1990,imp4,2,456.022251547143,evs_combo,35
+Portugal,1990,imp4,3,215.506507098654,evs_combo,35
+Portugal,1990,imp4,4,35.1466599927193,evs_combo,35
+Portugal,1999,disc3,1,489.139268463244,evs_combo,35
+Portugal,1999,disc3,2,393.161331625736,evs_combo,35
+Portugal,1999,disc3,3,114.813404817212,evs_combo,35
+Portugal,1999,imp4,1,355.738095245238,evs_combo,35
+Portugal,1999,imp4,2,365.107879316605,evs_combo,35
+Portugal,1999,imp4,3,221.682923139031,evs_combo,35
+Portugal,1999,imp4,4,44.5437242756687,evs_combo,35
+Portugal,1999,news5,1,120.879094505539,evs_combo,35
+Portugal,1999,news5,2,167.927614523055,evs_combo,35
+Portugal,1999,news5,3,136.805767430195,evs_combo,35
+Portugal,1999,news5,4,205.361550885364,evs_combo,35
+Portugal,1999,news5,5,360.428887270892,evs_combo,35
+Portugal,2008,disc3,1,494.957625621751,evs_combo,35
+Portugal,2008,disc3,2,785.549193769207,evs_combo,35
+Portugal,2008,disc3,3,272.010479942993,evs_combo,35
+Portugal,2008,imp4,1,489.270184651882,evs_combo,35
+Portugal,2008,imp4,2,646.272262382168,evs_combo,35
+Portugal,2008,imp4,3,322.641438990845,evs_combo,35
+Portugal,2008,imp4,4,90.2448158127836,evs_combo,35
+Portugal,2008,news5,1,59.3475531846843,evs_combo,35
+Portugal,2008,news5,2,96.1143728477189,evs_combo,35
+Portugal,2008,news5,3,209.284660215401,evs_combo,35
+Portugal,2008,news5,4,426.969462584421,evs_combo,35
+Portugal,2008,news5,5,754.73843209858,evs_combo,35
+Portugal,2020,imp4,1,356.358449246344,evs2017,35
+Portugal,2020,imp4,2,417.869720420847,evs2017,35
+Portugal,2020,imp4,3,340.099838817071,evs2017,35
+Portugal,2020,imp4,4,98.1959967880027,evs2017,35
+Armenia,1997,disc3,1,433,wvs_combo,34
+Armenia,1997,disc3,2,1088,wvs_combo,34
+Armenia,1997,disc3,3,431,wvs_combo,34
+Armenia,1997,imp4,1,337,wvs_combo,34
+Armenia,1997,imp4,2,634,wvs_combo,34
+Armenia,1997,imp4,3,700,wvs_combo,34
+Armenia,1997,imp4,4,281,wvs_combo,34
+Armenia,2008,disc3,1,463.546238213444,evs_combo,34
+Armenia,2008,disc3,2,734.002425899811,evs_combo,34
+Armenia,2008,disc3,3,294.762596510577,evs_combo,34
+Armenia,2008,imp4,1,214.025713951044,evs_combo,34
+Armenia,2008,imp4,2,528.291089804676,evs_combo,34
+Armenia,2008,imp4,3,503.829711806209,evs_combo,34
+Armenia,2008,imp4,4,241.17671245026,evs_combo,34
+Armenia,2008,news5,1,88.2799804897797,evs_combo,34
+Armenia,2008,news5,2,241.948000489534,evs_combo,34
+Armenia,2008,news5,3,172.96144395658,evs_combo,34
+Armenia,2008,news5,4,331.914196304723,evs_combo,34
+Armenia,2008,news5,5,642.562261886107,evs_combo,34
+Armenia,2011,imp4,1,393.137254902873,wvs_combo,34
+Armenia,2011,imp4,2,332.462985193953,wvs_combo,34
+Armenia,2011,imp4,3,261.224489795677,wvs_combo,34
+Armenia,2011,imp4,4,102.691076430041,wvs_combo,34
+Armenia,2018,imp4,1,453.641784192276,evs2017,34
+Armenia,2018,imp4,2,505.348906621876,evs2017,34
+Armenia,2018,imp4,3,412.557698423718,evs2017,34
+Armenia,2018,imp4,4,112.720961507456,evs2017,34
+Armenia,2021,disc3,1,228.767108163522,wvs_combo,34
+Armenia,2021,disc3,2,445.739787065627,wvs_combo,34
+Armenia,2021,disc3,3,542.82013385498,wvs_combo,34
+Armenia,2021,imp4,1,425.833901320113,wvs_combo,34
+Armenia,2021,imp4,2,353.426454972805,wvs_combo,34
+Armenia,2021,imp4,3,202.265292732808,wvs_combo,34
+Armenia,2021,imp4,4,234.694477819208,wvs_combo,34
+Belgium,1981,disc3,1,615.427672785659,evs_combo,34
+Belgium,1981,disc3,2,431.375200700245,evs_combo,34
+Belgium,1981,disc3,3,59.6704453929356,evs_combo,34
+Belgium,1990,disc3,1,1302.30820300317,evs_combo,34
+Belgium,1990,disc3,2,1205.55295637838,evs_combo,34
+Belgium,1990,disc3,3,251.140667468699,evs_combo,34
+Belgium,1990,imp4,1,1084.43006728156,evs_combo,34
+Belgium,1990,imp4,2,960.725794234285,evs_combo,34
+Belgium,1990,imp4,3,550.690059261241,evs_combo,34
+Belgium,1990,imp4,4,159.579289756272,evs_combo,34
+Belgium,1999,disc3,1,709.476535270568,evs_combo,34
+Belgium,1999,disc3,2,951.995509987115,evs_combo,34
+Belgium,1999,disc3,3,246.467381592347,evs_combo,34
+Belgium,1999,imp4,1,622.473031025974,evs_combo,34
+Belgium,1999,imp4,2,672.032139351788,evs_combo,34
+Belgium,1999,imp4,3,439.523743244497,evs_combo,34
+Belgium,1999,imp4,4,161.855931367503,evs_combo,34
+Belgium,1999,news5,1,243.841548520726,evs_combo,34
+Belgium,1999,news5,2,279.416929975039,evs_combo,34
+Belgium,1999,news5,3,199.185859787935,evs_combo,34
+Belgium,1999,news5,4,297.190201902419,evs_combo,34
+Belgium,1999,news5,5,887.804490493191,evs_combo,34
+Belgium,2009,disc3,1,550.276893303189,evs_combo,34
+Belgium,2009,disc3,2,814.95181768315,evs_combo,34
+Belgium,2009,disc3,3,142.985571588726,evs_combo,34
+Belgium,2009,imp4,1,446.890172940868,evs_combo,34
+Belgium,2009,imp4,2,579.207083910878,evs_combo,34
+Belgium,2009,imp4,3,382.703974100789,evs_combo,34
+Belgium,2009,imp4,4,98.1011286813493,evs_combo,34
+Belgium,2009,news5,1,135.335181484147,evs_combo,34
+Belgium,2009,news5,2,236.64178830698,evs_combo,34
+Belgium,2009,news5,3,148.995141108595,evs_combo,34
+Belgium,2009,news5,4,250.042887713971,evs_combo,34
+Belgium,2009,news5,5,736.999877065751,evs_combo,34
+India,1990,disc3,1,660,wvs_combo,34
+India,1990,disc3,2,1360,wvs_combo,34
+India,1990,disc3,3,453,wvs_combo,34
+India,1990,imp4,1,703,wvs_combo,34
+India,1990,imp4,2,784,wvs_combo,34
+India,1990,imp4,3,660,wvs_combo,34
+India,1990,imp4,4,318,wvs_combo,34
+India,1995,disc3,1,630,wvs_combo,34
+India,1995,disc3,2,1010,wvs_combo,34
+India,1995,disc3,3,236,wvs_combo,34
+India,1995,imp4,1,625,wvs_combo,34
+India,1995,imp4,2,684,wvs_combo,34
+India,1995,imp4,3,445,wvs_combo,34
+India,1995,imp4,4,223,wvs_combo,34
+India,2001,disc3,1,795,wvs_combo,34
+India,2001,disc3,2,777,wvs_combo,34
+India,2001,disc3,3,310,wvs_combo,34
+India,2001,imp4,1,581,wvs_combo,34
+India,2001,imp4,2,534,wvs_combo,34
+India,2001,imp4,3,395,wvs_combo,34
+India,2001,imp4,4,358,wvs_combo,34
+India,2001,news5,1,419,wvs_combo,34
+India,2001,news5,2,266,wvs_combo,34
+India,2001,news5,3,217,wvs_combo,34
+India,2001,news5,4,350,wvs_combo,34
+India,2001,news5,5,649,wvs_combo,34
+India,2006,imp4,1,505,wvs_combo,34
+India,2006,imp4,2,624,wvs_combo,34
+India,2006,imp4,3,456,wvs_combo,34
+India,2006,imp4,4,289,wvs_combo,34
+India,2012,imp4,1,1058,wvs_combo,34
+India,2012,imp4,2,1092,wvs_combo,34
+India,2012,imp4,3,1067,wvs_combo,34
+India,2012,imp4,4,695,wvs_combo,34
+Ireland,1981,disc3,1,583.552698778763,evs_combo,34
+Ireland,1981,disc3,2,518.41455161718,evs_combo,34
+Ireland,1981,disc3,3,101.623631460726,evs_combo,34
+Ireland,1990,disc3,1,416,evs_combo,34
+Ireland,1990,disc3,2,463,evs_combo,34
+Ireland,1990,disc3,3,117,evs_combo,34
+Ireland,1990,imp4,1,296,evs_combo,34
+Ireland,1990,imp4,2,418,evs_combo,34
+Ireland,1990,imp4,3,234,evs_combo,34
+Ireland,1990,imp4,4,47,evs_combo,34
+Ireland,1999,disc3,1,414.770903208359,evs_combo,34
+Ireland,1999,disc3,2,466.815364876902,evs_combo,34
+Ireland,1999,disc3,3,124.328719201987,evs_combo,34
+Ireland,1999,imp4,1,256.948495030068,evs_combo,34
+Ireland,1999,imp4,2,416.397728906858,evs_combo,34
+Ireland,1999,imp4,3,256.083736421083,evs_combo,34
+Ireland,1999,imp4,4,61.6768975717155,evs_combo,34
+Ireland,1999,news5,1,124.006733645224,evs_combo,34
+Ireland,1999,news5,2,218.633437801886,evs_combo,34
+Ireland,1999,news5,3,198.202478438984,evs_combo,34
+Ireland,1999,news5,4,160.146511708785,evs_combo,34
+Ireland,1999,news5,5,306.45361523703,evs_combo,34
+Ireland,2008,disc3,1,407.808098626765,evs_combo,34
+Ireland,2008,disc3,2,473.832216549271,evs_combo,34
+Ireland,2008,disc3,3,121.26874749437,evs_combo,34
+Ireland,2008,imp4,1,256.011920423367,evs_combo,34
+Ireland,2008,imp4,2,361.079098435474,evs_combo,34
+Ireland,2008,imp4,3,282.510617054602,evs_combo,34
+Ireland,2008,imp4,4,102.375655175134,evs_combo,34
+Ireland,2008,news5,1,117.540799986852,evs_combo,34
+Ireland,2008,news5,2,220.388589656762,evs_combo,34
+Ireland,2008,news5,3,162.628337651177,evs_combo,34
+Ireland,2008,news5,4,217.214433733605,evs_combo,34
+Ireland,2008,news5,5,286.870332434621,evs_combo,34
+Malta,1983,disc3,1,179,evs_combo,34
+Malta,1983,disc3,2,175,evs_combo,34
+Malta,1983,disc3,3,80,evs_combo,34
+Malta,1991,disc3,1,177.02535133856,evs_combo,34
+Malta,1991,disc3,2,179.681371613524,evs_combo,34
+Malta,1991,disc3,3,32.1842456812647,evs_combo,34
+Malta,1991,imp4,1,111.749853052313,evs_combo,34
+Malta,1991,imp4,2,145.01810700845,evs_combo,34
+Malta,1991,imp4,3,75.6875777677692,evs_combo,34
+Malta,1991,imp4,4,41.9823204757288,evs_combo,34
+Malta,1999,disc3,1,375.713700368768,evs_combo,34
+Malta,1999,disc3,2,532.708353737146,evs_combo,34
+Malta,1999,disc3,3,91.6653308415698,evs_combo,34
+Malta,1999,imp4,1,228.562505621459,evs_combo,34
+Malta,1999,imp4,2,393.89856390474,evs_combo,34
+Malta,1999,imp4,3,246.356835193828,evs_combo,34
+Malta,1999,imp4,4,129.35686517494,evs_combo,34
+Malta,1999,news5,1,99.4259416567562,evs_combo,34
+Malta,1999,news5,2,194.495927565634,evs_combo,34
+Malta,1999,news5,3,163.984209947733,evs_combo,34
+Malta,1999,news5,4,200.444060242048,evs_combo,34
+Malta,1999,news5,5,343.64986058783,evs_combo,34
+Malta,2008,disc3,1,500.566137651282,evs_combo,34
+Malta,2008,disc3,2,838.794618259712,evs_combo,34
+Malta,2008,disc3,3,151.657729189826,evs_combo,34
+Malta,2008,imp4,1,416.215839015861,evs_combo,34
+Malta,2008,imp4,2,527.034668901793,evs_combo,34
+Malta,2008,imp4,3,374.769629339082,evs_combo,34
+Malta,2008,imp4,4,178.093198438108,evs_combo,34
+Malta,2008,news5,1,113.35117654849,evs_combo,34
+Malta,2008,news5,2,213.883341027088,evs_combo,34
+Malta,2008,news5,3,217.5299280236,evs_combo,34
+Malta,2008,news5,4,462.31200448114,evs_combo,34
+Malta,2008,news5,5,487.304183078679,evs_combo,34
+Northern Ireland,1981,disc3,1,114.132266533316,evs_combo,34
+Northern Ireland,1981,disc3,2,177.490186273284,evs_combo,34
+Northern Ireland,1981,disc3,3,20.3775471933992,evs_combo,34
+Northern Ireland,1990,disc3,1,134,evs_combo,34
+Northern Ireland,1990,disc3,2,144,evs_combo,34
+Northern Ireland,1990,disc3,3,26,evs_combo,34
+Northern Ireland,1990,imp4,1,81,evs_combo,34
+Northern Ireland,1990,imp4,2,136,evs_combo,34
+Northern Ireland,1990,imp4,3,68,evs_combo,34
+Northern Ireland,1990,imp4,4,18,evs_combo,34
+Northern Ireland,1999,disc3,1,332.581227436823,evs_combo,34
+Northern Ireland,1999,disc3,2,513.98916967509,evs_combo,34
+Northern Ireland,1999,disc3,3,142.599277978339,evs_combo,34
+Northern Ireland,1999,imp4,1,194.945848375451,evs_combo,34
+Northern Ireland,1999,imp4,2,442.689530685921,evs_combo,34
+Northern Ireland,1999,imp4,3,268.953068592058,evs_combo,34
+Northern Ireland,1999,imp4,4,81.6787003610108,evs_combo,34
+Northern Ireland,1999,news5,1,112.815884476534,evs_combo,34
+Northern Ireland,1999,news5,2,209.837545126354,evs_combo,34
+Northern Ireland,1999,news5,3,183.212996389892,evs_combo,34
+Northern Ireland,1999,news5,4,162.906137184116,evs_combo,34
+Northern Ireland,1999,news5,5,319.043321299639,evs_combo,34
+Northern Ireland,2008,disc3,1,260.937005072195,evs_combo,34
+Northern Ireland,2008,disc3,2,197.476101719041,evs_combo,34
+Northern Ireland,2008,disc3,3,31.308356161092,evs_combo,34
+Northern Ireland,2008,imp4,1,159.1523035067,evs_combo,34
+Northern Ireland,2008,imp4,2,184.747633419949,evs_combo,34
+Northern Ireland,2008,imp4,3,104.902197628682,evs_combo,34
+Northern Ireland,2008,imp4,4,51.1978654446692,evs_combo,34
+Northern Ireland,2008,news5,1,92.01473962108,evs_combo,34
+Northern Ireland,2008,news5,2,132.95991597763,evs_combo,34
+Northern Ireland,2008,news5,3,87.8848090497893,evs_combo,34
+Northern Ireland,2008,news5,4,77.5691975329007,evs_combo,34
+Northern Ireland,2008,news5,5,108.588469799246,evs_combo,34
+Peru,1996,disc3,1,434,wvs_combo,34
+Peru,1996,disc3,2,629,wvs_combo,34
+Peru,1996,disc3,3,116,wvs_combo,34
+Peru,1996,imp4,1,268,wvs_combo,34
+Peru,1996,imp4,2,441,wvs_combo,34
+Peru,1996,imp4,3,275,wvs_combo,34
+Peru,1996,imp4,4,159,wvs_combo,34
+Peru,2001,disc3,1,345,wvs_combo,34
+Peru,2001,disc3,2,814,wvs_combo,34
+Peru,2001,disc3,3,338,wvs_combo,34
+Peru,2001,imp4,1,285,wvs_combo,34
+Peru,2001,imp4,2,549,wvs_combo,34
+Peru,2001,imp4,3,347,wvs_combo,34
+Peru,2001,imp4,4,309,wvs_combo,34
+Peru,2001,news5,1,24,wvs_combo,34
+Peru,2001,news5,2,117,wvs_combo,34
+Peru,2001,news5,3,177,wvs_combo,34
+Peru,2001,news5,4,311,wvs_combo,34
+Peru,2001,news5,5,869,wvs_combo,34
+Peru,2006,imp4,1,453.938704171775,wvs_combo,34
+Peru,2006,imp4,2,596.848581262618,wvs_combo,34
+Peru,2006,imp4,3,254.595330783722,wvs_combo,34
+Peru,2006,imp4,4,165.698567191786,wvs_combo,34
+Peru,2012,imp4,1,260.640111505908,wvs_combo,34
+Peru,2012,imp4,2,508.685086033343,wvs_combo,34
+Peru,2012,imp4,3,256.075153780781,wvs_combo,34
+Peru,2012,imp4,4,153.733044518789,wvs_combo,34
+Peru,2018,disc3,1,542.6517712218,wvs_combo,34
+Peru,2018,disc3,2,734.105941676253,wvs_combo,34
+Peru,2018,disc3,3,119.720924556663,wvs_combo,34
+Peru,2018,imp4,1,430.377630961738,wvs_combo,34
+Peru,2018,imp4,2,537.111241709353,wvs_combo,34
+Peru,2018,imp4,3,248.487074311057,wvs_combo,34
+Peru,2018,imp4,4,172.138570112894,wvs_combo,34
+Switzerland,1989,disc3,1,189.693712017946,wvs_combo,34
+Switzerland,1989,disc3,2,946.551318503698,wvs_combo,34
+Switzerland,1989,disc3,3,257.982623720412,wvs_combo,34
+Switzerland,1989,imp4,1,310.03681354116,wvs_combo,34
+Switzerland,1989,imp4,2,493.978796201011,wvs_combo,34
+Switzerland,1989,imp4,3,415.711971571241,wvs_combo,34
+Switzerland,1989,imp4,4,148.988366714513,wvs_combo,34
+Switzerland,1996,disc3,1,272.070865772869,wvs_combo,34
+Switzerland,1996,disc3,2,719.41410130497,wvs_combo,34
+Switzerland,1996,disc3,3,218.789954686048,wvs_combo,34
+Switzerland,1996,imp4,1,230.435312528326,wvs_combo,34
+Switzerland,1996,imp4,2,507.909749830786,wvs_combo,34
+Switzerland,1996,imp4,3,380.689908827916,wvs_combo,34
+Switzerland,1996,imp4,4,77.9024768216726,wvs_combo,34
+Switzerland,2007,imp4,1,109.919467271794,wvs_combo,34
+Switzerland,2007,imp4,2,423.726999580793,wvs_combo,34
+Switzerland,2007,imp4,3,545.790507760796,wvs_combo,34
+Switzerland,2007,imp4,4,153.92613218662,wvs_combo,34
+Switzerland,2008,disc3,1,327.347704616587,evs_combo,34
+Switzerland,2008,disc3,2,701.323547660419,evs_combo,34
+Switzerland,2008,disc3,3,237.345049290288,evs_combo,34
+Switzerland,2008,imp4,1,203.308284706923,evs_combo,34
+Switzerland,2008,imp4,2,493.369231596164,evs_combo,34
+Switzerland,2008,imp4,3,406.787653108166,evs_combo,34
+Switzerland,2008,imp4,4,159.498065184088,evs_combo,34
+Switzerland,2008,news5,1,38.4177089311987,evs_combo,34
+Switzerland,2008,news5,2,147.093689490088,evs_combo,34
+Switzerland,2008,news5,3,123.352420950672,evs_combo,34
+Switzerland,2008,news5,4,239.280453310396,evs_combo,34
+Switzerland,2008,news5,5,717.372505730627,evs_combo,34
+Switzerland,2017,imp4,1,261.394786087781,evs2017,34
+Switzerland,2017,imp4,2,1263.94809301136,evs2017,34
+Switzerland,2017,imp4,3,1314.41777775686,evs2017,34
+Switzerland,2017,imp4,4,312.01668598201,evs2017,34
+Canada,1982,disc3,1,761.510485330791,"evs_combo, wvs_combo",33
+Canada,1982,disc3,2,1480.80463894761,"evs_combo, wvs_combo",33
+Canada,1982,disc3,3,251.470427803398,"evs_combo, wvs_combo",33
+Canada,1990,disc3,1,857.916873782552,"evs_combo, wvs_combo",33
+Canada,1990,disc3,2,1934.16969233571,"evs_combo, wvs_combo",33
+Canada,1990,disc3,3,652.406621003146,"evs_combo, wvs_combo",33
+Canada,1990,imp4,1,475.628940987174,"evs_combo, wvs_combo",33
+Canada,1990,imp4,2,1321.88069067009,"evs_combo, wvs_combo",33
+Canada,1990,imp4,3,1135.77895873228,"evs_combo, wvs_combo",33
+Canada,1990,imp4,4,515.086303300189,"evs_combo, wvs_combo",33
+Canada,2000,disc3,1,698.478296893934,wvs_combo,33
+Canada,2000,disc3,2,996.779028098557,wvs_combo,33
+Canada,2000,disc3,3,229.00288442617,wvs_combo,33
+Canada,2000,imp4,1,332.829658322372,wvs_combo,33
+Canada,2000,imp4,2,808.704871935621,wvs_combo,33
+Canada,2000,imp4,3,609.511061282404,wvs_combo,33
+Canada,2000,imp4,4,173.694602964175,wvs_combo,33
+Canada,2000,news5,1,237.162630886663,wvs_combo,33
+Canada,2000,news5,2,379.668202955889,wvs_combo,33
+Canada,2000,news5,3,326.489855312626,wvs_combo,33
+Canada,2000,news5,4,331.729692500492,wvs_combo,33
+Canada,2000,news5,5,655.009647551086,wvs_combo,33
+Canada,2006,imp4,1,306.761924739591,wvs_combo,33
+Canada,2006,imp4,2,789.021151613916,wvs_combo,33
+Canada,2006,imp4,3,806.826088424677,wvs_combo,33
+Canada,2006,imp4,4,253.087773310065,wvs_combo,33
+Canada,2020,disc3,1,884.927953353247,wvs_combo,33
+Canada,2020,disc3,2,2472.2425849988,wvs_combo,33
+Canada,2020,disc3,3,660.829461647953,wvs_combo,33
+Canada,2020,imp4,1,391.831756868292,wvs_combo,33
+Canada,2020,imp4,2,1335.85464754736,wvs_combo,33
+Canada,2020,imp4,3,1801.86526524921,wvs_combo,33
+Canada,2020,imp4,4,488.448330335146,wvs_combo,33
+Nigeria,1990,disc3,1,365,wvs_combo,32
+Nigeria,1990,disc3,2,494,wvs_combo,32
+Nigeria,1990,disc3,3,124,wvs_combo,32
+Nigeria,1990,imp4,1,318,wvs_combo,32
+Nigeria,1990,imp4,2,270,wvs_combo,32
+Nigeria,1990,imp4,3,179,wvs_combo,32
+Nigeria,1990,imp4,4,198,wvs_combo,32
+Nigeria,1995,disc3,1,613.108388189895,wvs_combo,32
+Nigeria,1995,disc3,2,1091.40588054329,wvs_combo,32
+Nigeria,1995,disc3,3,224.372953209266,wvs_combo,32
+Nigeria,1995,imp4,1,464.778618787732,wvs_combo,32
+Nigeria,1995,imp4,2,624.260382882082,wvs_combo,32
+Nigeria,1995,imp4,3,426.948396793098,wvs_combo,32
+Nigeria,1995,imp4,4,426.499767006624,wvs_combo,32
+Nigeria,2000,disc3,1,516,wvs_combo,32
+Nigeria,2000,disc3,2,1148,wvs_combo,32
+Nigeria,2000,disc3,3,343,wvs_combo,32
+Nigeria,2000,imp4,1,412,wvs_combo,32
+Nigeria,2000,imp4,2,552,wvs_combo,32
+Nigeria,2000,imp4,3,478,wvs_combo,32
+Nigeria,2000,imp4,4,561,wvs_combo,32
+Nigeria,2012,imp4,1,306.324269658731,wvs_combo,32
+Nigeria,2012,imp4,2,587.752033655949,wvs_combo,32
+Nigeria,2012,imp4,3,494.855912531192,wvs_combo,32
+Nigeria,2012,imp4,4,369.685584067217,wvs_combo,32
+Nigeria,2018,disc3,1,346.502210953761,wvs_combo,32
+Nigeria,2018,disc3,2,623.896122358165,wvs_combo,32
+Nigeria,2018,disc3,3,259.360982959997,wvs_combo,32
+Nigeria,2018,imp4,1,219.465883248066,wvs_combo,32
+Nigeria,2018,imp4,2,287.836444923757,wvs_combo,32
+Nigeria,2018,imp4,3,286.8968330288,wvs_combo,32
+Nigeria,2018,imp4,4,430.494436280113,wvs_combo,32
+Georgia,1996,disc3,1,550,wvs_combo,31
+Georgia,1996,disc3,2,1140,wvs_combo,31
+Georgia,1996,disc3,3,309,wvs_combo,31
+Georgia,1996,imp4,1,558,wvs_combo,31
+Georgia,1996,imp4,2,516,wvs_combo,31
+Georgia,1996,imp4,3,668,wvs_combo,31
+Georgia,1996,imp4,4,265,wvs_combo,31
+Georgia,2008,disc3,1,140.870502757469,evs_combo,31
+Georgia,2008,disc3,2,662.313732972847,evs_combo,31
+Georgia,2008,disc3,3,688.167188176737,evs_combo,31
+Georgia,2008,imp4,1,136.406591397071,evs_combo,31
+Georgia,2008,imp4,2,412.224958177921,evs_combo,31
+Georgia,2008,imp4,3,568.155501091481,evs_combo,31
+Georgia,2008,imp4,4,369.698429848311,evs_combo,31
+Georgia,2008,news5,1,31.5037603799421,evs_combo,31
+Georgia,2008,news5,2,82.3164019387777,evs_combo,31
+Georgia,2008,news5,3,42.6268377665222,evs_combo,31
+Georgia,2008,news5,4,237.852270014243,evs_combo,31
+Georgia,2008,news5,5,1098.88213460451,evs_combo,31
+Georgia,2009,imp4,1,176,wvs_combo,31
+Georgia,2009,imp4,2,373,wvs_combo,31
+Georgia,2009,imp4,3,658,wvs_combo,31
+Georgia,2009,imp4,4,285,wvs_combo,31
+Georgia,2014,imp4,1,344,wvs_combo,31
+Georgia,2014,imp4,2,316,wvs_combo,31
+Georgia,2014,imp4,3,418,wvs_combo,31
+Georgia,2014,imp4,4,123,wvs_combo,31
+Georgia,2018,imp4,1,653.630095035655,evs2017,31
+Georgia,2018,imp4,2,604.525597588449,evs2017,31
+Georgia,2018,imp4,3,636.586562884408,evs2017,31
+Georgia,2018,imp4,4,285.804522958489,evs2017,31
+Greece,1999,disc3,1,242,evs_combo,31
+Greece,1999,disc3,2,649,evs_combo,31
+Greece,1999,disc3,3,241,evs_combo,31
+Greece,1999,imp4,1,257,evs_combo,31
+Greece,1999,imp4,2,457,evs_combo,31
+Greece,1999,imp4,3,314,evs_combo,31
+Greece,1999,imp4,4,98,evs_combo,31
+Greece,1999,news5,1,39,evs_combo,31
+Greece,1999,news5,2,107,evs_combo,31
+Greece,1999,news5,3,98,evs_combo,31
+Greece,1999,news5,4,292,evs_combo,31
+Greece,1999,news5,5,601,evs_combo,31
+Greece,2008,disc3,1,417.223984481645,evs_combo,31
+Greece,2008,disc3,2,737.133756477909,evs_combo,31
+Greece,2008,disc3,3,337.965402481619,evs_combo,31
+Greece,2008,imp4,1,267.367162738751,evs_combo,31
+Greece,2008,imp4,2,450.15759836927,evs_combo,31
+Greece,2008,imp4,3,573.025975746046,evs_combo,31
+Greece,2008,imp4,4,202.560879036434,evs_combo,31
+Greece,2008,news5,1,54.9610308354977,evs_combo,31
+Greece,2008,news5,2,152.501845143424,evs_combo,31
+Greece,2008,news5,3,126.24806397958,evs_combo,31
+Greece,2008,news5,4,402.786630569191,evs_combo,31
+Greece,2008,news5,5,755.966266696804,evs_combo,31
+Greece,2017,disc3,1,319.347595741664,wvs_combo,31
+Greece,2017,disc3,2,677.038689530305,wvs_combo,31
+Greece,2017,disc3,3,193.341812566091,wvs_combo,31
+Greece,2017,imp4,1,408.82103218577,wvs_combo,31
+Greece,2017,imp4,2,385.588227604655,wvs_combo,31
+Greece,2017,imp4,3,271.859229754044,wvs_combo,31
+Greece,2017,imp4,4,123.833465718535,wvs_combo,31
+Philippines,1996,disc3,1,272,wvs_combo,30
+Philippines,1996,disc3,2,820,wvs_combo,30
+Philippines,1996,disc3,3,80,wvs_combo,30
+Philippines,1996,imp4,1,233,wvs_combo,30
+Philippines,1996,imp4,2,373,wvs_combo,30
+Philippines,1996,imp4,3,408,wvs_combo,30
+Philippines,1996,imp4,4,175,wvs_combo,30
+Philippines,2001,disc3,1,286.261953565488,wvs_combo,30
+Philippines,2001,disc3,2,838.53052163263,wvs_combo,30
+Philippines,2001,disc3,3,73.5198563799641,wvs_combo,30
+Philippines,2001,imp4,1,178.25259956315,wvs_combo,30
+Philippines,2001,imp4,2,359.638943909736,wvs_combo,30
+Philippines,2001,imp4,3,397.096017274004,wvs_combo,30
+Philippines,2001,imp4,4,262.587891646973,wvs_combo,30
+Philippines,2001,news5,1,27.202683800671,wvs_combo,30
+Philippines,2001,news5,2,518.347023586756,wvs_combo,30
+Philippines,2001,news5,3,165.592564398141,wvs_combo,30
+Philippines,2001,news5,4,157.507515376879,wvs_combo,30
+Philippines,2001,news5,5,331.350212837553,wvs_combo,30
+Philippines,2012,imp4,1,188.443930121711,wvs_combo,30
+Philippines,2012,imp4,2,242.454749008161,wvs_combo,30
+Philippines,2012,imp4,3,472.715345126018,wvs_combo,30
+Philippines,2012,imp4,4,291.026407788776,wvs_combo,30
+Philippines,2019,disc3,1,198.448318192663,wvs_combo,30
+Philippines,2019,disc3,2,861.715194557843,wvs_combo,30
+Philippines,2019,disc3,3,139.836487249493,wvs_combo,30
+Philippines,2019,imp4,1,84.4161771886532,wvs_combo,30
+Philippines,2019,imp4,2,189.859539369642,wvs_combo,30
+Philippines,2019,imp4,3,452.219719477649,wvs_combo,30
+Philippines,2019,imp4,4,470.954645171941,wvs_combo,30
+Brazil,1991,disc3,1,782.425552024371,wvs_combo,29
+Brazil,1991,disc3,2,638.900626556588,wvs_combo,29
+Brazil,1991,disc3,3,331.8994762255,wvs_combo,29
+Brazil,1991,imp4,1,621.478938860499,wvs_combo,29
+Brazil,1991,imp4,2,397.751009010718,wvs_combo,29
+Brazil,1991,imp4,3,400.178620710173,wvs_combo,29
+Brazil,1991,imp4,4,341.089723023437,wvs_combo,29
+Brazil,1997,disc3,1,476,wvs_combo,29
+Brazil,1997,disc3,2,516,wvs_combo,29
+Brazil,1997,disc3,3,146,wvs_combo,29
+Brazil,1997,imp4,1,290,wvs_combo,29
+Brazil,1997,imp4,2,253,wvs_combo,29
+Brazil,1997,imp4,3,323,wvs_combo,29
+Brazil,1997,imp4,4,249,wvs_combo,29
+Brazil,2006,imp4,1,277.438693804905,wvs_combo,29
+Brazil,2006,imp4,2,391.067806714576,wvs_combo,29
+Brazil,2006,imp4,3,600.060155995188,wvs_combo,29
+Brazil,2006,imp4,4,218.286450537084,wvs_combo,29
+Brazil,2014,imp4,1,422.063295824907,wvs_combo,29
+Brazil,2014,imp4,2,439.68572061265,wvs_combo,29
+Brazil,2014,imp4,3,428.519941960533,wvs_combo,29
+Brazil,2014,imp4,4,185.220866124802,wvs_combo,29
+Brazil,2018,disc3,1,701.11334068655,wvs_combo,29
+Brazil,2018,disc3,2,828.690930141288,wvs_combo,29
+Brazil,2018,disc3,3,207.078237465821,wvs_combo,29
+Brazil,2018,imp4,1,522.430237797116,wvs_combo,29
+Brazil,2018,imp4,2,428.925755387843,wvs_combo,29
+Brazil,2018,imp4,3,487.46802477664,wvs_combo,29
+Brazil,2018,imp4,4,290.73512112196,wvs_combo,29
+Cyprus,2006,imp4,1,328.029303416013,wvs_combo,27
+Cyprus,2006,imp4,2,354.424152103935,wvs_combo,27
+Cyprus,2006,imp4,3,210.309224867475,wvs_combo,27
+Cyprus,2006,imp4,4,140.125098946386,wvs_combo,27
+Cyprus,2008,disc3,1,553.843816101418,evs_combo,27
+Cyprus,2008,disc3,2,743.798790890251,evs_combo,27
+Cyprus,2008,disc3,3,200.317527695804,evs_combo,27
+Cyprus,2008,imp4,1,346.758803344929,evs_combo,27
+Cyprus,2008,imp4,2,434.536712885913,evs_combo,27
+Cyprus,2008,imp4,3,454.613389431903,evs_combo,27
+Cyprus,2008,imp4,4,234.773356549954,evs_combo,27
+Cyprus,2008,news5,1,145.078603747879,evs_combo,27
+Cyprus,2008,news5,2,191.954880010819,evs_combo,27
+Cyprus,2008,news5,3,151.391827839413,evs_combo,27
+Cyprus,2008,news5,4,399.089977498705,evs_combo,27
+Cyprus,2008,news5,5,605.095990322755,evs_combo,27
+Cyprus,2011,imp4,1,293.695839869937,wvs_combo,27
+Cyprus,2011,imp4,2,319.7931768496,wvs_combo,27
+Cyprus,2011,imp4,3,241.645934643602,wvs_combo,27
+Cyprus,2011,imp4,4,133.363611276521,wvs_combo,27
+Cyprus,2019,disc3,1,306.196898405,wvs_combo,27
+Cyprus,2019,disc3,2,552.358552588999,wvs_combo,27
+Cyprus,2019,disc3,3,133.121240638,wvs_combo,27
+Cyprus,2019,imp4,1,293.515037448,wvs_combo,27
+Cyprus,2019,imp4,2,356.358552589,wvs_combo,27
+Cyprus,2019,imp4,3,243.757518724,wvs_combo,27
+Cyprus,2019,imp4,4,98.0455828709999,wvs_combo,27
+Morocco,2001,disc3,1,820.613390229927,wvs_combo,27
+Morocco,2001,disc3,2,312.367948889194,wvs_combo,27
+Morocco,2001,disc3,3,90.4237245556654,wvs_combo,27
+Morocco,2001,imp4,1,655.561788694343,wvs_combo,27
+Morocco,2001,imp4,2,238.74620371202,wvs_combo,27
+Morocco,2001,imp4,3,178.217757072561,wvs_combo,27
+Morocco,2001,imp4,4,136.207085898349,wvs_combo,27
+Morocco,2001,news5,1,369.440435997389,wvs_combo,27
+Morocco,2001,news5,2,328.889574614552,wvs_combo,27
+Morocco,2001,news5,3,70.1477962139806,wvs_combo,27
+Morocco,2001,news5,4,223.842663569608,wvs_combo,27
+Morocco,2001,news5,5,234.649564726802,wvs_combo,27
+Morocco,2007,imp4,1,377,wvs_combo,27
+Morocco,2007,imp4,2,346,wvs_combo,27
+Morocco,2007,imp4,3,276,wvs_combo,27
+Morocco,2007,imp4,4,124,wvs_combo,27
+Morocco,2011,imp4,1,642,wvs_combo,27
+Morocco,2011,imp4,2,264,wvs_combo,27
+Morocco,2011,imp4,3,112,wvs_combo,27
+Morocco,2011,imp4,4,74,wvs_combo,27
+Morocco,2021,disc3,1,341,wvs_combo,27
+Morocco,2021,disc3,2,663,wvs_combo,27
+Morocco,2021,disc3,3,196,wvs_combo,27
+Morocco,2021,imp4,1,161,wvs_combo,27
+Morocco,2021,imp4,2,363,wvs_combo,27
+Morocco,2021,imp4,3,462,wvs_combo,27
+Morocco,2021,imp4,4,214,wvs_combo,27
+Bangladesh,1996,disc3,1,357,wvs_combo,26
+Bangladesh,1996,disc3,2,956,wvs_combo,26
+Bangladesh,1996,disc3,3,177,wvs_combo,26
+Bangladesh,1996,imp4,1,196,wvs_combo,26
+Bangladesh,1996,imp4,2,559,wvs_combo,26
+Bangladesh,1996,imp4,3,537,wvs_combo,26
+Bangladesh,1996,imp4,4,205,wvs_combo,26
+Bangladesh,2002,disc3,1,382,wvs_combo,26
+Bangladesh,2002,disc3,2,870,wvs_combo,26
+Bangladesh,2002,disc3,3,205,wvs_combo,26
+Bangladesh,2002,imp4,1,181,wvs_combo,26
+Bangladesh,2002,imp4,2,534,wvs_combo,26
+Bangladesh,2002,imp4,3,439,wvs_combo,26
+Bangladesh,2002,imp4,4,295,wvs_combo,26
+Bangladesh,2002,news5,1,154,wvs_combo,26
+Bangladesh,2002,news5,2,337,wvs_combo,26
+Bangladesh,2002,news5,3,186,wvs_combo,26
+Bangladesh,2002,news5,4,292,wvs_combo,26
+Bangladesh,2002,news5,5,521,wvs_combo,26
+Bangladesh,2018,disc3,1,518,wvs_combo,26
+Bangladesh,2018,disc3,2,519,wvs_combo,26
+Bangladesh,2018,disc3,3,122,wvs_combo,26
+Bangladesh,2018,imp4,1,486,wvs_combo,26
+Bangladesh,2018,imp4,2,348,wvs_combo,26
+Bangladesh,2018,imp4,3,267,wvs_combo,26
+Bangladesh,2018,imp4,4,65,wvs_combo,26
+Puerto Rico,1995,disc3,1,618,wvs_combo,26
+Puerto Rico,1995,disc3,2,406,wvs_combo,26
+Puerto Rico,1995,disc3,3,134,wvs_combo,26
+Puerto Rico,1995,imp4,1,288,wvs_combo,26
+Puerto Rico,1995,imp4,2,452,wvs_combo,26
+Puerto Rico,1995,imp4,3,262,wvs_combo,26
+Puerto Rico,1995,imp4,4,150,wvs_combo,26
+Puerto Rico,2001,disc3,1,285,wvs_combo,26
+Puerto Rico,2001,disc3,2,303,wvs_combo,26
+Puerto Rico,2001,disc3,3,129,wvs_combo,26
+Puerto Rico,2001,imp4,1,158,wvs_combo,26
+Puerto Rico,2001,imp4,2,271,wvs_combo,26
+Puerto Rico,2001,imp4,3,175,wvs_combo,26
+Puerto Rico,2001,imp4,4,109,wvs_combo,26
+Puerto Rico,2001,news5,1,81,wvs_combo,26
+Puerto Rico,2001,news5,2,87,wvs_combo,26
+Puerto Rico,2001,news5,3,95,wvs_combo,26
+Puerto Rico,2001,news5,4,123,wvs_combo,26
+Puerto Rico,2001,news5,5,329,wvs_combo,26
+Puerto Rico,2018,disc3,1,636,wvs_combo,26
+Puerto Rico,2018,disc3,2,386,wvs_combo,26
+Puerto Rico,2018,disc3,3,92,wvs_combo,26
+Puerto Rico,2018,imp4,1,445,wvs_combo,26
+Puerto Rico,2018,imp4,2,363,wvs_combo,26
+Puerto Rico,2018,imp4,3,201,wvs_combo,26
+Puerto Rico,2018,imp4,4,108,wvs_combo,26
+Venezuela,1996,disc3,1,554,wvs_combo,26
+Venezuela,1996,disc3,2,492,wvs_combo,26
+Venezuela,1996,disc3,3,137,wvs_combo,26
+Venezuela,1996,imp4,1,615,wvs_combo,26
+Venezuela,1996,imp4,2,248,wvs_combo,26
+Venezuela,1996,imp4,3,172,wvs_combo,26
+Venezuela,1996,imp4,4,152,wvs_combo,26
+Venezuela,2000,disc3,1,525,wvs_combo,26
+Venezuela,2000,disc3,2,484,wvs_combo,26
+Venezuela,2000,disc3,3,187,wvs_combo,26
+Venezuela,2000,imp4,1,476,wvs_combo,26
+Venezuela,2000,imp4,2,308,wvs_combo,26
+Venezuela,2000,imp4,3,225,wvs_combo,26
+Venezuela,2000,imp4,4,187,wvs_combo,26
+Venezuela,2000,news5,1,186,wvs_combo,26
+Venezuela,2000,news5,2,303,wvs_combo,26
+Venezuela,2000,news5,3,121,wvs_combo,26
+Venezuela,2000,news5,4,198,wvs_combo,26
+Venezuela,2000,news5,5,385,wvs_combo,26
+Venezuela,2021,disc3,1,385,wvs_combo,26
+Venezuela,2021,disc3,2,640,wvs_combo,26
+Venezuela,2021,disc3,3,165,wvs_combo,26
+Venezuela,2021,imp4,1,409,wvs_combo,26
+Venezuela,2021,imp4,2,442,wvs_combo,26
+Venezuela,2021,imp4,3,225,wvs_combo,26
+Venezuela,2021,imp4,4,114,wvs_combo,26
+Australia,1981,disc3,1,420.436766629282,wvs_combo,25
+Australia,1981,disc3,2,668.686974531541,wvs_combo,25
+Australia,1981,disc3,3,129.308201969902,wvs_combo,25
+Australia,1995,disc3,1,627.747783854767,wvs_combo,25
+Australia,1995,disc3,2,1102.80267978673,wvs_combo,25
+Australia,1995,disc3,3,316.625892668646,wvs_combo,25
+Australia,1995,imp4,1,287.389366725607,wvs_combo,25
+Australia,1995,imp4,2,732.570656125554,wvs_combo,25
+Australia,1995,imp4,3,703.616454875061,wvs_combo,25
+Australia,1995,imp4,4,307.751835172104,wvs_combo,25
+Australia,2005,imp4,1,136.021866091014,wvs_combo,25
+Australia,2005,imp4,2,576.605464810441,wvs_combo,25
+Australia,2005,imp4,3,541.429016588807,wvs_combo,25
+Australia,2005,imp4,4,135.924095363613,wvs_combo,25
+Australia,2012,imp4,1,160.247320778883,wvs_combo,25
+Australia,2012,imp4,2,607.254486214841,wvs_combo,25
+Australia,2012,imp4,3,523.7314050331,wvs_combo,25
+Australia,2012,imp4,4,115.867400962871,wvs_combo,25
+Australia,2018,disc3,1,456.854282327173,wvs_combo,25
+Australia,2018,disc3,2,1138.07284294052,wvs_combo,25
+Australia,2018,disc3,3,205.00401068059,wvs_combo,25
+Australia,2018,imp4,1,168.516604745375,wvs_combo,25
+Australia,2018,imp4,2,693.178563391089,wvs_combo,25
+Australia,2018,imp4,3,703.180180875874,wvs_combo,25
+Australia,2018,imp4,4,187.425494016968,wvs_combo,25
+Pakistan,1997,disc3,1,316.211018711018,wvs_combo,25
+Pakistan,1997,disc3,2,314.687110187109,wvs_combo,25
+Pakistan,1997,disc3,3,102.101871101871,wvs_combo,25
+Pakistan,1997,imp4,1,412.979209979209,wvs_combo,25
+Pakistan,1997,imp4,2,139.43762993763,wvs_combo,25
+Pakistan,1997,imp4,3,90.672557172557,wvs_combo,25
+Pakistan,1997,imp4,4,56.3846153846153,wvs_combo,25
+Pakistan,2001,disc3,1,823,wvs_combo,25
+Pakistan,2001,disc3,2,907,wvs_combo,25
+Pakistan,2001,disc3,3,178,wvs_combo,25
+Pakistan,2001,imp4,1,866,wvs_combo,25
+Pakistan,2001,imp4,2,793,wvs_combo,25
+Pakistan,2001,imp4,3,167,wvs_combo,25
+Pakistan,2001,imp4,4,105,wvs_combo,25
+Pakistan,2012,imp4,1,363.771622155478,wvs_combo,25
+Pakistan,2012,imp4,2,385.109927561182,wvs_combo,25
+Pakistan,2012,imp4,3,339.298981955742,wvs_combo,25
+Pakistan,2012,imp4,4,103.309041171624,wvs_combo,25
+Pakistan,2018,disc3,1,645,wvs_combo,25
+Pakistan,2018,disc3,2,968,wvs_combo,25
+Pakistan,2018,disc3,3,357,wvs_combo,25
+Pakistan,2018,imp4,1,662,wvs_combo,25
+Pakistan,2018,imp4,2,440,wvs_combo,25
+Pakistan,2018,imp4,3,464,wvs_combo,25
+Pakistan,2018,imp4,4,397,wvs_combo,25
+Luxembourg,1999,disc3,1,370.761812892481,evs_combo,24
+Luxembourg,1999,disc3,2,621.349466092504,evs_combo,24
+Luxembourg,1999,disc3,3,204.303607991969,evs_combo,24
+Luxembourg,1999,imp4,1,259.184056779079,evs_combo,24
+Luxembourg,1999,imp4,2,442.802570983746,evs_combo,24
+Luxembourg,1999,imp4,3,401.145927942416,evs_combo,24
+Luxembourg,1999,imp4,4,91.1724277236632,evs_combo,24
+Luxembourg,1999,news5,1,139.660718013804,evs_combo,24
+Luxembourg,1999,news5,2,198.433078529088,evs_combo,24
+Luxembourg,1999,news5,3,133.122145775515,evs_combo,24
+Luxembourg,1999,news5,4,180.638571975468,evs_combo,24
+Luxembourg,1999,news5,5,545.827312496771,evs_combo,24
+Luxembourg,2008,disc3,1,366.260841944717,evs_combo,24
+Luxembourg,2008,disc3,2,937.938968179041,evs_combo,24
+Luxembourg,2008,disc3,3,300.141609718617,evs_combo,24
+Luxembourg,2008,imp4,1,304.95101332815,evs_combo,24
+Luxembourg,2008,imp4,2,510.027830945232,evs_combo,24
+Luxembourg,2008,imp4,3,624.333266100512,evs_combo,24
+Luxembourg,2008,imp4,4,155.560509617605,evs_combo,24
+Luxembourg,2008,news5,1,125.527197135276,evs_combo,24
+Luxembourg,2008,news5,2,161.567201712313,evs_combo,24
+Luxembourg,2008,news5,3,149.323217236252,evs_combo,24
+Luxembourg,2008,news5,4,244.419680358546,evs_combo,24
+Luxembourg,2008,news5,5,921.067901412636,evs_combo,24
+Kyrgyzstan,2003,disc3,1,255,wvs_combo,23
+Kyrgyzstan,2003,disc3,2,550,wvs_combo,23
+Kyrgyzstan,2003,disc3,3,232,wvs_combo,23
+Kyrgyzstan,2003,imp4,1,154,wvs_combo,23
+Kyrgyzstan,2003,imp4,2,396,wvs_combo,23
+Kyrgyzstan,2003,imp4,3,329,wvs_combo,23
+Kyrgyzstan,2003,imp4,4,159,wvs_combo,23
+Kyrgyzstan,2003,news5,1,30,wvs_combo,23
+Kyrgyzstan,2003,news5,2,124,wvs_combo,23
+Kyrgyzstan,2003,news5,3,150,wvs_combo,23
+Kyrgyzstan,2003,news5,4,261,wvs_combo,23
+Kyrgyzstan,2003,news5,5,478,wvs_combo,23
+Kyrgyzstan,2011,imp4,1,167,wvs_combo,23
+Kyrgyzstan,2011,imp4,2,476,wvs_combo,23
+Kyrgyzstan,2011,imp4,3,673,wvs_combo,23
+Kyrgyzstan,2011,imp4,4,184,wvs_combo,23
+Kyrgyzstan,2020,disc3,1,492.325757807952,wvs_combo,23
+Kyrgyzstan,2020,disc3,2,580.770397761955,wvs_combo,23
+Kyrgyzstan,2020,disc3,3,123.038703869481,wvs_combo,23
+Kyrgyzstan,2020,imp4,1,260.138687021189,wvs_combo,23
+Kyrgyzstan,2020,imp4,2,506.571418350207,wvs_combo,23
+Kyrgyzstan,2020,imp4,3,252.749589310019,wvs_combo,23
+Kyrgyzstan,2020,imp4,4,168.479044596676,wvs_combo,23
+Singapore,2002,disc3,1,613.505757180864,wvs_combo,23
+Singapore,2002,disc3,2,836.935930164066,wvs_combo,23
+Singapore,2002,disc3,3,57.3845796811686,wvs_combo,23
+Singapore,2002,imp4,1,186.154488815896,wvs_combo,23
+Singapore,2002,imp4,2,613.353803309715,wvs_combo,23
+Singapore,2002,imp4,3,552.63023724941,wvs_combo,23
+Singapore,2002,imp4,4,150.521306032098,wvs_combo,23
+Singapore,2002,news5,1,129.74561293893,wvs_combo,23
+Singapore,2002,news5,2,342.6309870218,wvs_combo,23
+Singapore,2002,news5,3,225.074673759753,wvs_combo,23
+Singapore,2002,news5,4,376.777621079317,wvs_combo,23
+Singapore,2002,news5,5,435.001945837873,wvs_combo,23
+Singapore,2012,imp4,1,251.674281013563,wvs_combo,23
+Singapore,2012,imp4,2,659.990747272032,wvs_combo,23
+Singapore,2012,imp4,3,808.099425659785,wvs_combo,23
+Singapore,2012,imp4,4,252.23554605462,wvs_combo,23
+Singapore,2020,disc3,1,758.322062735806,wvs_combo,23
+Singapore,2020,disc3,2,1100.49111384221,wvs_combo,23
+Singapore,2020,disc3,3,142.667420690092,wvs_combo,23
+Singapore,2020,imp4,1,240.075404545051,wvs_combo,23
+Singapore,2020,imp4,2,849.139538365842,wvs_combo,23
+Singapore,2020,imp4,3,738.815520960833,wvs_combo,23
+Singapore,2020,imp4,4,168.059309550531,wvs_combo,23
+Vietnam,2001,disc3,1,241,wvs_combo,23
+Vietnam,2001,disc3,2,533,wvs_combo,23
+Vietnam,2001,disc3,3,204,wvs_combo,23
+Vietnam,2001,imp4,1,13,wvs_combo,23
+Vietnam,2001,imp4,2,202,wvs_combo,23
+Vietnam,2001,imp4,3,380,wvs_combo,23
+Vietnam,2001,imp4,4,375,wvs_combo,23
+Vietnam,2001,news5,1,21,wvs_combo,23
+Vietnam,2001,news5,2,78,wvs_combo,23
+Vietnam,2001,news5,3,104,wvs_combo,23
+Vietnam,2001,news5,4,205,wvs_combo,23
+Vietnam,2001,news5,5,580,wvs_combo,23
+Vietnam,2006,imp4,1,51,wvs_combo,23
+Vietnam,2006,imp4,2,383,wvs_combo,23
+Vietnam,2006,imp4,3,679,wvs_combo,23
+Vietnam,2006,imp4,4,346,wvs_combo,23
+Vietnam,2020,disc3,1,550,wvs_combo,23
+Vietnam,2020,disc3,2,615,wvs_combo,23
+Vietnam,2020,disc3,3,35,wvs_combo,23
+Vietnam,2020,imp4,1,152,wvs_combo,23
+Vietnam,2020,imp4,2,567,wvs_combo,23
+Vietnam,2020,imp4,3,374,wvs_combo,23
+Vietnam,2020,imp4,4,107,wvs_combo,23
+Zimbabwe,2001,disc3,1,512.722960465234,wvs_combo,23
+Zimbabwe,2001,disc3,2,377.485787678755,wvs_combo,23
+Zimbabwe,2001,disc3,3,93.1150253048186,wvs_combo,23
+Zimbabwe,2001,imp4,1,282.124028095247,wvs_combo,23
+Zimbabwe,2001,imp4,2,280.210761078688,wvs_combo,23
+Zimbabwe,2001,imp4,3,261.916855751465,wvs_combo,23
+Zimbabwe,2001,imp4,4,141.18242905918,wvs_combo,23
+Zimbabwe,2001,news5,1,259.887384961458,wvs_combo,23
+Zimbabwe,2001,news5,2,337.15564875455,wvs_combo,23
+Zimbabwe,2001,news5,3,93.3272351077832,wvs_combo,23
+Zimbabwe,2001,news5,4,141.795487933893,wvs_combo,23
+Zimbabwe,2001,news5,5,151.580756401523,wvs_combo,23
+Zimbabwe,2012,imp4,1,321.860370018051,wvs_combo,23
+Zimbabwe,2012,imp4,2,485.145877888973,wvs_combo,23
+Zimbabwe,2012,imp4,3,382.740440355369,wvs_combo,23
+Zimbabwe,2012,imp4,4,310.253311737606,wvs_combo,23
+Zimbabwe,2020,disc3,1,561,wvs_combo,23
+Zimbabwe,2020,disc3,2,544,wvs_combo,23
+Zimbabwe,2020,disc3,3,104,wvs_combo,23
+Zimbabwe,2020,imp4,1,224,wvs_combo,23
+Zimbabwe,2020,imp4,2,272,wvs_combo,23
+Zimbabwe,2020,imp4,3,412,wvs_combo,23
+Zimbabwe,2020,imp4,4,296,wvs_combo,23
+Egypt,2001,disc3,1,1277,wvs_combo,22
+Egypt,2001,disc3,2,1498,wvs_combo,22
+Egypt,2001,disc3,3,225,wvs_combo,22
+Egypt,2001,imp4,1,787,wvs_combo,22
+Egypt,2001,imp4,2,674,wvs_combo,22
+Egypt,2001,imp4,3,1083,wvs_combo,22
+Egypt,2001,imp4,4,379,wvs_combo,22
+Egypt,2008,imp4,1,1074.87398987532,wvs_combo,22
+Egypt,2008,imp4,2,833.877455006441,wvs_combo,22
+Egypt,2008,imp4,3,859.42776309856,wvs_combo,22
+Egypt,2008,imp4,4,278.25395500321,wvs_combo,22
+Egypt,2013,imp4,1,167.043509775381,wvs_combo,22
+Egypt,2013,imp4,2,213.694776070118,wvs_combo,22
+Egypt,2013,imp4,3,670.159181542683,wvs_combo,22
+Egypt,2013,imp4,4,472.102532611818,wvs_combo,22
+Egypt,2018,disc3,1,650,wvs_combo,22
+Egypt,2018,disc3,2,498,wvs_combo,22
+Egypt,2018,disc3,3,45,wvs_combo,22
+Egypt,2018,imp4,1,455,wvs_combo,22
+Egypt,2018,imp4,2,354,wvs_combo,22
+Egypt,2018,imp4,3,264,wvs_combo,22
+Egypt,2018,imp4,4,98,wvs_combo,22
+Iraq,2004,disc3,1,795,wvs_combo,22
+Iraq,2004,disc3,2,974,wvs_combo,22
+Iraq,2004,disc3,3,502,wvs_combo,22
+Iraq,2004,imp4,1,447,wvs_combo,22
+Iraq,2004,imp4,2,557,wvs_combo,22
+Iraq,2004,imp4,3,638,wvs_combo,22
+Iraq,2004,imp4,4,590,wvs_combo,22
+Iraq,2006,imp4,1,400,wvs_combo,22
+Iraq,2006,imp4,2,483,wvs_combo,22
+Iraq,2006,imp4,3,747,wvs_combo,22
+Iraq,2006,imp4,4,959,wvs_combo,22
+Iraq,2013,imp4,1,334,wvs_combo,22
+Iraq,2013,imp4,2,349,wvs_combo,22
+Iraq,2013,imp4,3,359,wvs_combo,22
+Iraq,2013,imp4,4,147,wvs_combo,22
+Iraq,2018,disc3,1,529,wvs_combo,22
+Iraq,2018,disc3,2,512,wvs_combo,22
+Iraq,2018,disc3,3,119,wvs_combo,22
+Iraq,2018,imp4,1,369,wvs_combo,22
+Iraq,2018,imp4,2,333,wvs_combo,22
+Iraq,2018,imp4,3,257,wvs_combo,22
+Iraq,2018,imp4,4,211,wvs_combo,22
+Jordan,2001,disc3,1,604.488156611981,wvs_combo,22
+Jordan,2001,disc3,2,524.71469739017,wvs_combo,22
+Jordan,2001,disc3,3,90.027881872937,wvs_combo,22
+Jordan,2001,imp4,1,340.02869135374,wvs_combo,22
+Jordan,2001,imp4,2,299.413951479631,wvs_combo,22
+Jordan,2001,imp4,3,371.946920507228,wvs_combo,22
+Jordan,2001,imp4,4,194.077884899843,wvs_combo,22
+Jordan,2007,imp4,1,279.595653034942,wvs_combo,22
+Jordan,2007,imp4,2,316.895619111267,wvs_combo,22
+Jordan,2007,imp4,3,349.286761993112,wvs_combo,22
+Jordan,2007,imp4,4,247.364581192048,wvs_combo,22
+Jordan,2014,imp4,1,415,wvs_combo,22
+Jordan,2014,imp4,2,300,wvs_combo,22
+Jordan,2014,imp4,3,306,wvs_combo,22
+Jordan,2014,imp4,4,174,wvs_combo,22
+Jordan,2018,disc3,1,604,wvs_combo,22
+Jordan,2018,disc3,2,445,wvs_combo,22
+Jordan,2018,disc3,3,135,wvs_combo,22
+Jordan,2018,imp4,1,364,wvs_combo,22
+Jordan,2018,imp4,2,263,wvs_combo,22
+Jordan,2018,imp4,3,340,wvs_combo,22
+Jordan,2018,imp4,4,224,wvs_combo,22
+New Zealand,1998,disc3,1,195,wvs_combo,22
+New Zealand,1998,disc3,2,825,wvs_combo,22
+New Zealand,1998,disc3,3,167,wvs_combo,22
+New Zealand,1998,imp4,1,140,wvs_combo,22
+New Zealand,1998,imp4,2,494,wvs_combo,22
+New Zealand,1998,imp4,3,417,wvs_combo,22
+New Zealand,1998,imp4,4,84,wvs_combo,22
+New Zealand,2004,imp4,1,109,wvs_combo,22
+New Zealand,2004,imp4,2,427,wvs_combo,22
+New Zealand,2004,imp4,3,318,wvs_combo,22
+New Zealand,2004,imp4,4,57,wvs_combo,22
+New Zealand,2011,imp4,1,92,wvs_combo,22
+New Zealand,2011,imp4,2,314,wvs_combo,22
+New Zealand,2011,imp4,3,334,wvs_combo,22
+New Zealand,2011,imp4,4,61,wvs_combo,22
+New Zealand,2020,disc3,1,155,wvs_combo,22
+New Zealand,2020,disc3,2,717,wvs_combo,22
+New Zealand,2020,disc3,3,165,wvs_combo,22
+New Zealand,2020,imp4,1,96,wvs_combo,22
+New Zealand,2020,imp4,2,367,wvs_combo,22
+New Zealand,2020,imp4,3,427,wvs_combo,22
+New Zealand,2020,imp4,4,93,wvs_combo,22
+Taiwan,1998,disc3,1,233,wvs_combo,22
+Taiwan,1998,disc3,2,480,wvs_combo,22
+Taiwan,1998,disc3,3,62,wvs_combo,22
+Taiwan,1998,imp4,1,83,wvs_combo,22
+Taiwan,1998,imp4,2,331,wvs_combo,22
+Taiwan,1998,imp4,3,242,wvs_combo,22
+Taiwan,1998,imp4,4,85,wvs_combo,22
+Taiwan,2006,imp4,1,318.861546,wvs_combo,22
+Taiwan,2006,imp4,2,552.76079,wvs_combo,22
+Taiwan,2006,imp4,3,272.933137,wvs_combo,22
+Taiwan,2006,imp4,4,82.444527,wvs_combo,22
+Taiwan,2012,imp4,1,235.416732314472,wvs_combo,22
+Taiwan,2012,imp4,2,602.871809099331,wvs_combo,22
+Taiwan,2012,imp4,3,289.017114989035,wvs_combo,22
+Taiwan,2012,imp4,4,83.1003001458726,wvs_combo,22
+Taiwan,2019,disc3,1,612.453644030495,wvs_combo,22
+Taiwan,2019,disc3,2,556.690068008814,wvs_combo,22
+Taiwan,2019,disc3,3,53.8562879606918,wvs_combo,22
+Taiwan,2019,imp4,1,183.614640057949,wvs_combo,22
+Taiwan,2019,imp4,2,578.217315023691,wvs_combo,22
+Taiwan,2019,imp4,3,340.71651606505,wvs_combo,22
+Taiwan,2019,imp4,4,120.451528853311,wvs_combo,22
+Colombia,1997,imp4,2,1823,wvs_combo,21
+Colombia,1997,imp4,3,965,wvs_combo,21
+Colombia,1997,imp4,4,195,wvs_combo,21
+Colombia,1998,disc3,1,1378,wvs_combo,21
+Colombia,1998,disc3,2,1238,wvs_combo,21
+Colombia,1998,disc3,3,371,wvs_combo,21
+Colombia,1998,imp4,1,1010,wvs_combo,21
+Colombia,1998,imp4,2,1199,wvs_combo,21
+Colombia,1998,imp4,3,403,wvs_combo,21
+Colombia,1998,imp4,4,372,wvs_combo,21
+Colombia,2012,imp4,1,556,wvs_combo,21
+Colombia,2012,imp4,2,578,wvs_combo,21
+Colombia,2012,imp4,3,223,wvs_combo,21
+Colombia,2012,imp4,4,148,wvs_combo,21
+Colombia,2018,disc3,1,794,wvs_combo,21
+Colombia,2018,disc3,2,542,wvs_combo,21
+Colombia,2018,disc3,3,184,wvs_combo,21
+Colombia,2018,imp4,1,458,wvs_combo,21
+Colombia,2018,imp4,2,565,wvs_combo,21
+Colombia,2018,imp4,3,206,wvs_combo,21
+Colombia,2018,imp4,4,291,wvs_combo,21
+Indonesia,2001,disc3,1,309,wvs_combo,18
+Indonesia,2001,disc3,2,568,wvs_combo,18
+Indonesia,2001,disc3,3,103,wvs_combo,18
+Indonesia,2001,imp4,1,91,wvs_combo,18
+Indonesia,2001,imp4,2,466,wvs_combo,18
+Indonesia,2001,imp4,3,266,wvs_combo,18
+Indonesia,2001,imp4,4,95,wvs_combo,18
+Indonesia,2006,imp4,1,340,wvs_combo,18
+Indonesia,2006,imp4,2,829,wvs_combo,18
+Indonesia,2006,imp4,3,578,wvs_combo,18
+Indonesia,2006,imp4,4,215,wvs_combo,18
+Indonesia,2018,disc3,1,1585.24932599724,wvs_combo,18
+Indonesia,2018,disc3,2,1399.60542557973,wvs_combo,18
+Indonesia,2018,disc3,3,214.942028343016,wvs_combo,18
+Indonesia,2018,imp4,1,410.858756703056,wvs_combo,18
+Indonesia,2018,imp4,2,1321.76377291474,wvs_combo,18
+Indonesia,2018,imp4,3,798.557178537926,wvs_combo,18
+Indonesia,2018,imp4,4,615.167958818527,wvs_combo,18
+Iran,2000,disc3,1,729,wvs_combo,18
+Iran,2000,disc3,2,1253,wvs_combo,18
+Iran,2000,disc3,3,401,wvs_combo,18
+Iran,2000,imp4,1,520,wvs_combo,18
+Iran,2000,imp4,2,786,wvs_combo,18
+Iran,2000,imp4,3,612,wvs_combo,18
+Iran,2000,imp4,4,424,wvs_combo,18
+Iran,2007,imp4,1,549,wvs_combo,18
+Iran,2007,imp4,2,780,wvs_combo,18
+Iran,2007,imp4,3,786,wvs_combo,18
+Iran,2007,imp4,4,534,wvs_combo,18
+Iran,2020,disc3,1,499,wvs_combo,18
+Iran,2020,disc3,2,753,wvs_combo,18
+Iran,2020,disc3,3,246,wvs_combo,18
+Iran,2020,imp4,1,333,wvs_combo,18
+Iran,2020,imp4,2,289,wvs_combo,18
+Iran,2020,imp4,3,533,wvs_combo,18
+Iran,2020,imp4,4,339,wvs_combo,18
+Azerbaijan,1997,disc3,1,936,wvs_combo,15
+Azerbaijan,1997,disc3,2,854,wvs_combo,15
+Azerbaijan,1997,disc3,3,181,wvs_combo,15
+Azerbaijan,1997,imp4,1,416,wvs_combo,15
+Azerbaijan,1997,imp4,2,833,wvs_combo,15
+Azerbaijan,1997,imp4,3,547,wvs_combo,15
+Azerbaijan,1997,imp4,4,192,wvs_combo,15
+Azerbaijan,2011,imp4,1,314.401433598373,wvs_combo,15
+Azerbaijan,2011,imp4,2,433.45789926456,wvs_combo,15
+Azerbaijan,2011,imp4,3,177.014126397451,wvs_combo,15
+Azerbaijan,2011,imp4,4,77.1265407396163,wvs_combo,15
+Azerbaijan,2018,imp4,1,475.601621184814,evs2017,15
+Azerbaijan,2018,imp4,2,633.406296861012,evs2017,15
+Azerbaijan,2018,imp4,3,552.17681854809,evs2017,15
+Azerbaijan,2018,imp4,4,77.4113470631244,evs2017,15
+Hong Kong SAR China,2005,imp4,1,100,wvs_combo,15
+Hong Kong SAR China,2005,imp4,2,788,wvs_combo,15
+Hong Kong SAR China,2005,imp4,3,296,wvs_combo,15
+Hong Kong SAR China,2005,imp4,4,46,wvs_combo,15
+Hong Kong SAR China,2014,imp4,1,82,wvs_combo,15
+Hong Kong SAR China,2014,imp4,2,448,wvs_combo,15
+Hong Kong SAR China,2014,imp4,3,375,wvs_combo,15
+Hong Kong SAR China,2014,imp4,4,88,wvs_combo,15
+Hong Kong SAR China,2018,disc3,1,645.573807325223,wvs_combo,15
+Hong Kong SAR China,2018,disc3,2,1324.40360250921,wvs_combo,15
+Hong Kong SAR China,2018,disc3,3,103.167934588469,wvs_combo,15
+Hong Kong SAR China,2018,imp4,1,213.73064126833,wvs_combo,15
+Hong Kong SAR China,2018,imp4,2,960.1701397509,wvs_combo,15
+Hong Kong SAR China,2018,imp4,3,702.594740832246,wvs_combo,15
+Hong Kong SAR China,2018,imp4,4,181.922646716644,wvs_combo,15
+Malaysia,2006,imp4,1,205,wvs_combo,15
+Malaysia,2006,imp4,2,442,wvs_combo,15
+Malaysia,2006,imp4,3,392,wvs_combo,15
+Malaysia,2006,imp4,4,161,wvs_combo,15
+Malaysia,2012,imp4,1,134,wvs_combo,15
+Malaysia,2012,imp4,2,485,wvs_combo,15
+Malaysia,2012,imp4,3,448,wvs_combo,15
+Malaysia,2012,imp4,4,232,wvs_combo,15
+Malaysia,2018,disc3,1,252,wvs_combo,15
+Malaysia,2018,disc3,2,903,wvs_combo,15
+Malaysia,2018,disc3,3,158,wvs_combo,15
+Malaysia,2018,imp4,1,127,wvs_combo,15
+Malaysia,2018,imp4,2,514,wvs_combo,15
+Malaysia,2018,imp4,3,516,wvs_combo,15
+Malaysia,2018,imp4,4,156,wvs_combo,15
+Thailand,2007,imp4,1,67,wvs_combo,15
+Thailand,2007,imp4,2,334,wvs_combo,15
+Thailand,2007,imp4,3,649,wvs_combo,15
+Thailand,2007,imp4,4,475,wvs_combo,15
+Thailand,2013,imp4,1,62.0064455475979,wvs_combo,15
+Thailand,2013,imp4,2,238.077501402928,wvs_combo,15
+Thailand,2013,imp4,3,491.899075840756,wvs_combo,15
+Thailand,2013,imp4,4,384.077466774165,wvs_combo,15
+Thailand,2018,disc3,1,430.854974893165,wvs_combo,15
+Thailand,2018,disc3,2,885.858292720393,wvs_combo,15
+Thailand,2018,disc3,3,175.896107071383,wvs_combo,15
+Thailand,2018,imp4,1,135.012377169763,wvs_combo,15
+Thailand,2018,imp4,2,457.248648730695,wvs_combo,15
+Thailand,2018,imp4,3,619.807466703809,wvs_combo,15
+Thailand,2018,imp4,4,236.532590599451,wvs_combo,15
+Uruguay,1996,disc3,1,466.265928043685,wvs_combo,15
+Uruguay,1996,disc3,2,359.435741045178,wvs_combo,15
+Uruguay,1996,disc3,3,159.042862540084,wvs_combo,15
+Uruguay,1996,imp4,1,311.570564403418,wvs_combo,15
+Uruguay,1996,imp4,2,314.31096765968,wvs_combo,15
+Uruguay,1996,imp4,3,217.459231999586,wvs_combo,15
+Uruguay,1996,imp4,4,138.077657137696,wvs_combo,15
+Uruguay,2006,imp4,1,365,wvs_combo,15
+Uruguay,2006,imp4,2,290,wvs_combo,15
+Uruguay,2006,imp4,3,213,wvs_combo,15
+Uruguay,2006,imp4,4,122,wvs_combo,15
+Uruguay,2011,imp4,1,368,wvs_combo,15
+Uruguay,2011,imp4,2,338,wvs_combo,15
+Uruguay,2011,imp4,3,170,wvs_combo,15
+Uruguay,2011,imp4,4,116,wvs_combo,15
+Kosovo,2008,disc3,1,356.996204964786,evs_combo,12
+Kosovo,2008,disc3,2,1057.1583312176,evs_combo,12
+Kosovo,2008,disc3,3,157.84779888396,evs_combo,12
+Kosovo,2008,imp4,1,166.643412294584,evs_combo,12
+Kosovo,2008,imp4,2,616.115537157417,evs_combo,12
+Kosovo,2008,imp4,3,474.58423164064,evs_combo,12
+Kosovo,2008,imp4,4,302.4834260413,evs_combo,12
+Kosovo,2008,news5,1,72.9860660893993,evs_combo,12
+Kosovo,2008,news5,2,196.73484913101,evs_combo,12
+Kosovo,2008,news5,3,374.540108908818,evs_combo,12
+Kosovo,2008,news5,4,520.891868088001,evs_combo,12
+Kosovo,2008,news5,5,407.118448714289,evs_combo,12
+Tanzania,2001,disc3,1,240,wvs_combo,12
+Tanzania,2001,disc3,2,615,wvs_combo,12
+Tanzania,2001,disc3,3,279,wvs_combo,12
+Tanzania,2001,imp4,1,104,wvs_combo,12
+Tanzania,2001,imp4,2,189,wvs_combo,12
+Tanzania,2001,imp4,3,330,wvs_combo,12
+Tanzania,2001,imp4,4,385,wvs_combo,12
+Tanzania,2001,news5,1,82,wvs_combo,12
+Tanzania,2001,news5,2,370,wvs_combo,12
+Tanzania,2001,news5,3,43,wvs_combo,12
+Tanzania,2001,news5,4,212,wvs_combo,12
+Tanzania,2001,news5,5,443,wvs_combo,12
+Uganda,2001,disc3,1,219.192452202613,wvs_combo,12
+Uganda,2001,disc3,2,597.921370351549,wvs_combo,12
+Uganda,2001,disc3,3,179.745054525407,wvs_combo,12
+Uganda,2001,imp4,1,167.398646487519,wvs_combo,12
+Uganda,2001,imp4,2,276.729438478708,wvs_combo,12
+Uganda,2001,imp4,3,318.241003352826,wvs_combo,12
+Uganda,2001,imp4,4,232.711823212897,wvs_combo,12
+Uganda,2001,news5,1,65.7654476896568,wvs_combo,12
+Uganda,2001,news5,2,309.180645398733,wvs_combo,12
+Uganda,2001,news5,3,104.849548428284,wvs_combo,12
+Uganda,2001,news5,4,229.151443216379,wvs_combo,12
+Uganda,2001,news5,5,286.322151620041,wvs_combo,12
+Algeria,2002,disc3,1,330,wvs_combo,11
+Algeria,2002,disc3,2,815,wvs_combo,11
+Algeria,2002,disc3,3,110,wvs_combo,11
+Algeria,2002,imp4,1,248,wvs_combo,11
+Algeria,2002,imp4,2,338,wvs_combo,11
+Algeria,2002,imp4,3,441,wvs_combo,11
+Algeria,2002,imp4,4,192,wvs_combo,11
+Algeria,2014,imp4,1,396,wvs_combo,11
+Algeria,2014,imp4,2,270,wvs_combo,11
+Algeria,2014,imp4,3,227,wvs_combo,11
+Algeria,2014,imp4,4,244,wvs_combo,11
+Andorra,2005,imp4,1,251.05448669141,wvs_combo,11
+Andorra,2005,imp4,2,427.676090705398,wvs_combo,11
+Andorra,2005,imp4,3,256.722252600803,wvs_combo,11
+Andorra,2005,imp4,4,62.857365904814,wvs_combo,11
+Andorra,2018,disc3,1,298,wvs_combo,11
+Andorra,2018,disc3,2,551,wvs_combo,11
+Andorra,2018,disc3,3,131,wvs_combo,11
+Andorra,2018,imp4,1,325,wvs_combo,11
+Andorra,2018,imp4,2,370,wvs_combo,11
+Andorra,2018,imp4,3,229,wvs_combo,11
+Andorra,2018,imp4,4,78,wvs_combo,11
+Ecuador,2013,imp4,1,283,wvs_combo,11
+Ecuador,2013,imp4,2,351,wvs_combo,11
+Ecuador,2013,imp4,3,314,wvs_combo,11
+Ecuador,2013,imp4,4,254,wvs_combo,11
+Ecuador,2018,disc3,1,618,wvs_combo,11
+Ecuador,2018,disc3,2,463,wvs_combo,11
+Ecuador,2018,disc3,3,114,wvs_combo,11
+Ecuador,2018,imp4,1,317,wvs_combo,11
+Ecuador,2018,imp4,2,452,wvs_combo,11
+Ecuador,2018,imp4,3,214,wvs_combo,11
+Ecuador,2018,imp4,4,202,wvs_combo,11
+Ethiopia,2007,imp4,1,115,wvs_combo,11
+Ethiopia,2007,imp4,2,270,wvs_combo,11
+Ethiopia,2007,imp4,3,552,wvs_combo,11
+Ethiopia,2007,imp4,4,554,wvs_combo,11
+Ethiopia,2020,disc3,1,378,wvs_combo,11
+Ethiopia,2020,disc3,2,712,wvs_combo,11
+Ethiopia,2020,disc3,3,118,wvs_combo,11
+Ethiopia,2020,imp4,1,403,wvs_combo,11
+Ethiopia,2020,imp4,2,273,wvs_combo,11
+Ethiopia,2020,imp4,3,410,wvs_combo,11
+Ethiopia,2020,imp4,4,121,wvs_combo,11
+Guatemala,2004,imp4,1,299.661392511851,wvs_combo,11
+Guatemala,2004,imp4,2,290.855795820047,wvs_combo,11
+Guatemala,2004,imp4,3,207.913520723027,wvs_combo,11
+Guatemala,2004,imp4,4,189.527863366525,wvs_combo,11
+Guatemala,2020,disc3,1,327,wvs_combo,11
+Guatemala,2020,disc3,2,775,wvs_combo,11
+Guatemala,2020,disc3,3,108,wvs_combo,11
+Guatemala,2020,imp4,1,157,wvs_combo,11
+Guatemala,2020,imp4,2,503,wvs_combo,11
+Guatemala,2020,imp4,3,364,wvs_combo,11
+Guatemala,2020,imp4,4,205,wvs_combo,11
+Kazakhstan,2011,imp4,1,204.095101964943,wvs_combo,11
+Kazakhstan,2011,imp4,2,622.230147289544,wvs_combo,11
+Kazakhstan,2011,imp4,3,500.146485118508,wvs_combo,11
+Kazakhstan,2011,imp4,4,173.528265627005,wvs_combo,11
+Kazakhstan,2018,disc3,1,393,wvs_combo,11
+Kazakhstan,2018,disc3,2,745,wvs_combo,11
+Kazakhstan,2018,disc3,3,100,wvs_combo,11
+Kazakhstan,2018,imp4,1,243,wvs_combo,11
+Kazakhstan,2018,imp4,2,455,wvs_combo,11
+Kazakhstan,2018,imp4,3,392,wvs_combo,11
+Kazakhstan,2018,imp4,4,172,wvs_combo,11
+Lebanon,2013,imp4,1,286,wvs_combo,11
+Lebanon,2013,imp4,2,287,wvs_combo,11
+Lebanon,2013,imp4,3,310,wvs_combo,11
+Lebanon,2013,imp4,4,250,wvs_combo,11
+Lebanon,2018,disc3,1,366,wvs_combo,11
+Lebanon,2018,disc3,2,636,wvs_combo,11
+Lebanon,2018,disc3,3,198,wvs_combo,11
+Lebanon,2018,imp4,1,300,wvs_combo,11
+Lebanon,2018,imp4,2,392,wvs_combo,11
+Lebanon,2018,imp4,3,324,wvs_combo,11
+Lebanon,2018,imp4,4,179,wvs_combo,11
+Libya,2014,imp4,1,391.237312244202,wvs_combo,11
+Libya,2014,imp4,2,434.735183043024,wvs_combo,11
+Libya,2014,imp4,3,625.957817965723,wvs_combo,11
+Libya,2014,imp4,4,589.983406811604,wvs_combo,11
+Libya,2022,disc3,1,378,wvs_combo,11
+Libya,2022,disc3,2,570,wvs_combo,11
+Libya,2022,disc3,3,238,wvs_combo,11
+Libya,2022,imp4,1,310,wvs_combo,11
+Libya,2022,imp4,2,289,wvs_combo,11
+Libya,2022,imp4,3,350,wvs_combo,11
+Libya,2022,imp4,4,238,wvs_combo,11
+Tunisia,2013,imp4,1,376,wvs_combo,11
+Tunisia,2013,imp4,2,330,wvs_combo,11
+Tunisia,2013,imp4,3,252,wvs_combo,11
+Tunisia,2013,imp4,4,232,wvs_combo,11
+Tunisia,2019,disc3,1,517,wvs_combo,11
+Tunisia,2019,disc3,2,547,wvs_combo,11
+Tunisia,2019,disc3,3,119,wvs_combo,11
+Tunisia,2019,imp4,1,337,wvs_combo,11
+Tunisia,2019,imp4,2,386,wvs_combo,11
+Tunisia,2019,imp4,3,292,wvs_combo,11
+Tunisia,2019,imp4,4,181,wvs_combo,11
+Ghana,2007,imp4,1,283,wvs_combo,8
+Ghana,2007,imp4,2,498,wvs_combo,8
+Ghana,2007,imp4,3,358,wvs_combo,8
+Ghana,2007,imp4,4,382,wvs_combo,8
+Ghana,2012,imp4,1,342.852296767329,wvs_combo,8
+Ghana,2012,imp4,2,464.414605782435,wvs_combo,8
+Ghana,2012,imp4,3,395.139006074402,wvs_combo,8
+Ghana,2012,imp4,4,349.594091375834,wvs_combo,8
+Israel,2001,disc3,1,168,wvs_combo,8
+Israel,2001,disc3,2,586,wvs_combo,8
+Israel,2001,disc3,3,444,wvs_combo,8
+Israel,2001,news5,1,29,wvs_combo,8
+Israel,2001,news5,2,43,wvs_combo,8
+Israel,2001,news5,3,51,wvs_combo,8
+Israel,2001,news5,4,113,wvs_combo,8
+Israel,2001,news5,5,960,wvs_combo,8
+Rwanda,2007,imp4,1,79,wvs_combo,8
+Rwanda,2007,imp4,2,396,wvs_combo,8
+Rwanda,2007,imp4,3,569,wvs_combo,8
+Rwanda,2007,imp4,4,246,wvs_combo,8
+Rwanda,2012,imp4,1,131,wvs_combo,8
+Rwanda,2012,imp4,2,504,wvs_combo,8
+Rwanda,2012,imp4,3,570,wvs_combo,8
+Rwanda,2012,imp4,4,322,wvs_combo,8
+Trinidad & Tobago,2006,imp4,1,291.235418595332,wvs_combo,8
+Trinidad & Tobago,2006,imp4,2,422.621354645777,wvs_combo,8
+Trinidad & Tobago,2006,imp4,3,164.510802298331,wvs_combo,8
+Trinidad & Tobago,2006,imp4,4,109.768378193888,wvs_combo,8
+Trinidad & Tobago,2010,imp4,1,271,wvs_combo,8
+Trinidad & Tobago,2010,imp4,2,380,wvs_combo,8
+Trinidad & Tobago,2010,imp4,3,188,wvs_combo,8
+Trinidad & Tobago,2010,imp4,4,156,wvs_combo,8
+Bolivia,2017,disc3,1,967,wvs_combo,7
+Bolivia,2017,disc3,2,953,wvs_combo,7
+Bolivia,2017,disc3,3,140,wvs_combo,7
+Bolivia,2017,imp4,1,553,wvs_combo,7
+Bolivia,2017,imp4,2,790,wvs_combo,7
+Bolivia,2017,imp4,3,382,wvs_combo,7
+Bolivia,2017,imp4,4,309,wvs_combo,7
+Dominican Republic,1996,disc3,1,81,wvs_combo,7
+Dominican Republic,1996,disc3,2,240,wvs_combo,7
+Dominican Republic,1996,disc3,3,91,wvs_combo,7
+Dominican Republic,1996,imp4,1,76,wvs_combo,7
+Dominican Republic,1996,imp4,2,163,wvs_combo,7
+Dominican Republic,1996,imp4,3,89,wvs_combo,7
+Dominican Republic,1996,imp4,4,65,wvs_combo,7
+El Salvador,1999,disc3,1,771,wvs_combo,7
+El Salvador,1999,disc3,2,373,wvs_combo,7
+El Salvador,1999,disc3,3,102,wvs_combo,7
+El Salvador,1999,imp4,1,474,wvs_combo,7
+El Salvador,1999,imp4,2,265,wvs_combo,7
+El Salvador,1999,imp4,3,241,wvs_combo,7
+El Salvador,1999,imp4,4,213,wvs_combo,7
+Kenya,2021,disc3,1,359,wvs_combo,7
+Kenya,2021,disc3,2,647,wvs_combo,7
+Kenya,2021,disc3,3,231,wvs_combo,7
+Kenya,2021,imp4,1,298,wvs_combo,7
+Kenya,2021,imp4,2,377,wvs_combo,7
+Kenya,2021,imp4,3,276,wvs_combo,7
+Kenya,2021,imp4,4,296,wvs_combo,7
+Macao SAR China,2020,disc3,1,224,wvs_combo,7
+Macao SAR China,2020,disc3,2,730,wvs_combo,7
+Macao SAR China,2020,disc3,3,67,wvs_combo,7
+Macao SAR China,2020,imp4,1,78,wvs_combo,7
+Macao SAR China,2020,imp4,2,486,wvs_combo,7
+Macao SAR China,2020,imp4,3,357,wvs_combo,7
+Macao SAR China,2020,imp4,4,95,wvs_combo,7
+Mongolia,2020,disc3,1,388.758349564977,wvs_combo,7
+Mongolia,2020,disc3,2,1091.40686603036,wvs_combo,7
+Mongolia,2020,disc3,3,140.454421214682,wvs_combo,7
+Mongolia,2020,imp4,1,142.938028713535,wvs_combo,7
+Mongolia,2020,imp4,2,640.202431693086,wvs_combo,7
+Mongolia,2020,imp4,3,648.944212319568,wvs_combo,7
+Mongolia,2020,imp4,4,205.915327273805,wvs_combo,7
+Myanmar (Burma),2020,disc3,1,550,wvs_combo,7
+Myanmar (Burma),2020,disc3,2,599,wvs_combo,7
+Myanmar (Burma),2020,disc3,3,51,wvs_combo,7
+Myanmar (Burma),2020,imp4,1,122,wvs_combo,7
+Myanmar (Burma),2020,imp4,2,227,wvs_combo,7
+Myanmar (Burma),2020,imp4,3,485,wvs_combo,7
+Myanmar (Burma),2020,imp4,4,366,wvs_combo,7
+Nicaragua,2020,disc3,1,90,wvs_combo,7
+Nicaragua,2020,disc3,2,362,wvs_combo,7
+Nicaragua,2020,disc3,3,748,wvs_combo,7
+Nicaragua,2020,imp4,1,346,wvs_combo,7
+Nicaragua,2020,imp4,2,402,wvs_combo,7
+Nicaragua,2020,imp4,3,227,wvs_combo,7
+Nicaragua,2020,imp4,4,225,wvs_combo,7
+Saudi Arabia,2003,disc3,1,394,wvs_combo,7
+Saudi Arabia,2003,disc3,2,709,wvs_combo,7
+Saudi Arabia,2003,disc3,3,297,wvs_combo,7
+Saudi Arabia,2003,imp4,1,257,wvs_combo,7
+Saudi Arabia,2003,imp4,2,372,wvs_combo,7
+Saudi Arabia,2003,imp4,3,426,wvs_combo,7
+Saudi Arabia,2003,imp4,4,384,wvs_combo,7
+Tajikistan,2020,disc3,1,495,wvs_combo,7
+Tajikistan,2020,disc3,2,583,wvs_combo,7
+Tajikistan,2020,disc3,3,122,wvs_combo,7
+Tajikistan,2020,imp4,1,137,wvs_combo,7
+Tajikistan,2020,imp4,2,447,wvs_combo,7
+Tajikistan,2020,imp4,3,329,wvs_combo,7
+Tajikistan,2020,imp4,4,287,wvs_combo,7
+Burkina Faso,2007,imp4,1,302,wvs_combo,4
+Burkina Faso,2007,imp4,2,435,wvs_combo,4
+Burkina Faso,2007,imp4,3,430,wvs_combo,4
+Burkina Faso,2007,imp4,4,266,wvs_combo,4
+Haiti,2016,imp4,1,474,wvs_combo,4
+Haiti,2016,imp4,2,533,wvs_combo,4
+Haiti,2016,imp4,3,627,wvs_combo,4
+Haiti,2016,imp4,4,344,wvs_combo,4
+Kuwait,2014,imp4,1,191,wvs_combo,4
+Kuwait,2014,imp4,2,268,wvs_combo,4
+Kuwait,2014,imp4,3,359,wvs_combo,4
+Kuwait,2014,imp4,4,407,wvs_combo,4
+Mali,2007,imp4,1,295,wvs_combo,4
+Mali,2007,imp4,2,368,wvs_combo,4
+Mali,2007,imp4,3,413,wvs_combo,4
+Mali,2007,imp4,4,330,wvs_combo,4
+Palestinian Territories,2013,imp4,1,185,wvs_combo,4
+Palestinian Territories,2013,imp4,2,298,wvs_combo,4
+Palestinian Territories,2013,imp4,3,335,wvs_combo,4
+Palestinian Territories,2013,imp4,4,167,wvs_combo,4
+Qatar,2010,imp4,1,129.485920612769,wvs_combo,4
+Qatar,2010,imp4,2,216.217020857625,wvs_combo,4
+Qatar,2010,imp4,3,401.28304183439,wvs_combo,4
+Qatar,2010,imp4,4,308.994421918924,wvs_combo,4
+Uzbekistan,2011,imp4,1,347,wvs_combo,4
+Uzbekistan,2011,imp4,2,468,wvs_combo,4
+Uzbekistan,2011,imp4,3,430,wvs_combo,4
+Uzbekistan,2011,imp4,4,244,wvs_combo,4
+Yemen,2014,imp4,1,284,wvs_combo,4
+Yemen,2014,imp4,2,247,wvs_combo,4
+Yemen,2014,imp4,3,295,wvs_combo,4
+Yemen,2014,imp4,4,143,wvs_combo,4
+Zambia,2007,imp4,1,278,wvs_combo,4
+Zambia,2007,imp4,2,372,wvs_combo,4
+Zambia,2007,imp4,3,479,wvs_combo,4
+Zambia,2007,imp4,4,317,wvs_combo,4
