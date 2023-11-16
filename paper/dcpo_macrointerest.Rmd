@@ -1610,6 +1610,35 @@ saveRDS(MI, here("data", "peterson2022", "peterson_mi.rds"))
 
 ```
 
+```{r peterson-plot, }
+df_peterson2022 <- readRDS(here("data", "peterson2022", "peterson_mi.rds")) |> 
+  rename(year = period,
+         mean = boot_mean,
+         sd = boot_sd) |> 
+  select(year, mean, sd) |> 
+  mutate(method = "Wcalc",
+         mean = 1 / (1 + exp(mean/100 - 1)))
+
+df_dcpo <- filter(c_res, country == "United States") |> 
+  select(year, mean, sd) |> 
+  mutate(method = "DCPO")
+
+df_compare <- bind_rows(df_peterson2022, df_dcpo) |> 
+  mutate(lb = mean - qnorm(0.9) * (sd / sqrt(n())),
+         ub = mean + qnorm(0.9) * (sd / sqrt(n())))
+
+ggplot(data = df_compare, aes(x = year, y = mean, group = method, fill = method)) +
+  labs(y = "Macrointerest") +
+  geom_line() +
+  geom_ribbon(data = df_compare, aes(ymin = lb, ymax = ub), alpha = .5) +
+  plot_annotation(caption = "Shaded areas represent 80% credible intervals.") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(), 
+        legend.title = element_blank(), 
+        legend.position = c(0.9, 0.9))
+
+```
+
 
 # References {.unnumbered}
 
