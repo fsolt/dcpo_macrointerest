@@ -314,12 +314,11 @@ surveys_interest <- read_csv(here::here("data-raw",
                                         "surveys_interest.csv"),
                              col_types = "cccccc")
 
-dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
-                                        datapath = here("..",
-                                                        "data",
-                                                        "dcpo_surveys"),
-                                        file = here("data",
-                                                    "dcpo_input_raw.csv"))
+# dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
+#                                         datapath = here("data",
+#                                                         "dcpo_surveys"),
+#                                         file = here("data",
+#                                                     "dcpo_input_raw.csv"))
 ```
 
 ```{r tb_summary_stats}
@@ -647,34 +646,45 @@ dcpo_output$save_output_files(dir = results_path,
                               random = FALSE)
 ```
 
-```{r dcpo_results}
- if (!exists("results_path")) {
-   latest <- "202304201035"
-   results_path <- here::here("data", "1000", latest)
-   # results_path <- here("data", "dcpo_surveys")
-   
-   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
-   if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
-     dir.create(results_path, showWarnings = FALSE, recursive = TRUE)
-     osf_retrieve_node("9uvdk") %>% 
-       osf_ls_files() %>% 
-       filter(name == latest) %>% 
-       osf_download(path = here::here("data", "1000"))
-   }
-}
- 
+```{r dcpo_results, cache=TRUE}
+
+# if (!exists("results_path")) {
+#   latest <- "202304201035"
+#   results_path <- here::here("data", "1000", latest)
+#   
+#   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
+#   if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
+#     dir.create(results_path,
+#                showWarnings = FALSE,
+#                recursive = TRUE)
+#     osf_retrieve_node("9uvdk") %>%
+#       osf_ls_files() %>%
+#       filter(name == latest) %>%
+#       osf_download(path = here::here("data", "1000"))
+#   }
+# }
+
+results_path <- here("data", "dcpo_surveys")
+
 dcpo_output <- as_cmdstan_fit(here(results_path,
                                    list.files(results_path,
                                               pattern = "csv$")))
 
+saveRDS(dcpo_output, here("data", "dcpo_output.rds"))
 ```
 
 ```{r dcpo_summary}
-#| eval=FALSE
-load(file = here::here("data", "dcpo_input.rda"))
-theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
-                                                   dcpo_output,
-                                                   "theta")
+dcpo_output <- readRDS(here("data", "dcpo_output.rds"))
+
+# load(file = here::here("data", "dcpo_input.rda"))
+# theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
+#                                                    dcpo_output,
+#                                                    "theta")
+# 
+# save(theta_summary, file = here::here("data",
+#                                       "theta_summary.rda"))
+
+load(file = here(here("data", "theta_summary.rda")))
 
 res_cy <- nrow(theta_summary) %>% 
   scales::comma()
@@ -683,19 +693,17 @@ res_c <- theta_summary %>%
   pull(country) %>% 
   unique() %>% 
   length()
-
-save(theta_summary, file = here::here("data",
-                                      "theta_summary.rda"))
 ```
 
 ```{r theta_results}
-#| eval=FALSE
-theta_results <- extract_dcpo_results(dcpo_input,
-                                      dcpo_output,
-                                      par = "theta")
+# theta_results <- extract_dcpo_results(dcpo_input,
+#                                       dcpo_output,
+#                                       par = "theta")
+# 
+# save(theta_results, file = here::here("data",
+#                                       "theta_results.rda"))
 
-save(theta_results, file = here::here("data",
-                                      "theta_results.rda"))
+load(here("data", "theta_results.rda"))
 ```
 
 The model was estimated using the `DCPOtools` package for R [@Solt2019], running four chains for 1,000 iterations each and discarding the first half as warmup, leaving 2,000 samples.
