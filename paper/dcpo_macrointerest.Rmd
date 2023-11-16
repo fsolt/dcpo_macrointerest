@@ -646,7 +646,7 @@ dcpo_output$save_output_files(dir = results_path,
                               random = FALSE)
 ```
 
-```{r dcpo_results, cache=TRUE}
+```{r dcpo_results, eval=FALSE}
 
 # if (!exists("results_path")) {
 #   latest <- "202304201035"
