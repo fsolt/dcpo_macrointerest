@@ -110,6 +110,7 @@ p_load(
   cmdstanr,
   tidyverse,
   here,
+  rio,
   countrycode,
   patchwork,
   ggthemes,
@@ -313,12 +314,11 @@ surveys_interest <- read_csv(here::here("data-raw",
                                         "surveys_interest.csv"),
                              col_types = "cccccc")
 
-dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
-                                        datapath = here("..",
-                                                        "data",
-                                                        "dcpo_surveys"),
-                                        file = here("data",
-                                                    "dcpo_input_raw.csv"))
+# dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
+#                                         datapath = here("data",
+#                                                         "dcpo_surveys"),
+#                                         file = here("data",
+#                                                     "dcpo_input_raw.csv"))
 ```
 
 ```{r tb_summary_stats}
@@ -587,7 +587,7 @@ The @McGann2019 model depends on dense survey data unlike the sparse data on int
 @Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.
 It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country and so makes a poor choice for cross-national data [see @Caughey2019, 686].]
 The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.
-For a comprehensive description of the DCPO model, see Appendix B and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
+For a comprehensive description of the DCPO model, see Appendix\nobreakspace{}\@ref(dcpo) and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
 
 The DCPO model accounts for incomparability using three sets of parameters.
 First, it incorporates the _difficulty_ of each question's responses, that is, how much interest in politics is indicated by a given response. 
@@ -646,34 +646,45 @@ dcpo_output$save_output_files(dir = results_path,
                               random = FALSE)
 ```
 
-```{r dcpo_results}
- if (!exists("results_path")) {
-   latest <- "202304201035"
-   results_path <- here::here("data", "1000", latest)
-   # results_path <- here("data", "dcpo_surveys")
-   
-   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
-   if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
-     dir.create(results_path, showWarnings = FALSE, recursive = TRUE)
-     osf_retrieve_node("9uvdk") %>% 
-       osf_ls_files() %>% 
-       filter(name == latest) %>% 
-       osf_download(path = here::here("data", "1000"))
-   }
-}
- 
+```{r dcpo_results, eval=FALSE}
+
+# if (!exists("results_path")) {
+#   latest <- "202304201035"
+#   results_path <- here::here("data", "1000", latest)
+#   
+#   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
+#   if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
+#     dir.create(results_path,
+#                showWarnings = FALSE,
+#                recursive = TRUE)
+#     osf_retrieve_node("9uvdk") %>%
+#       osf_ls_files() %>%
+#       filter(name == latest) %>%
+#       osf_download(path = here::here("data", "1000"))
+#   }
+# }
+
+results_path <- here("data", "dcpo_surveys")
+
 dcpo_output <- as_cmdstan_fit(here(results_path,
                                    list.files(results_path,
                                               pattern = "csv$")))
 
+saveRDS(dcpo_output, here("data", "dcpo_output.rds"))
 ```
 
 ```{r dcpo_summary}
-#| eval=FALSE
-load(file = here::here("data", "dcpo_input.rda"))
-theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
-                                                   dcpo_output,
-                                                   "theta")
+dcpo_output <- readRDS(here("data", "dcpo_output.rds"))
+
+# load(file = here::here("data", "dcpo_input.rda"))
+# theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
+#                                                    dcpo_output,
+#                                                    "theta")
+# 
+# save(theta_summary, file = here::here("data",
+#                                       "theta_summary.rda"))
+
+load(file = here(here("data", "theta_summary.rda")))
 
 res_cy <- nrow(theta_summary) %>% 
   scales::comma()
@@ -682,19 +693,17 @@ res_c <- theta_summary %>%
   pull(country) %>% 
   unique() %>% 
   length()
-
-save(theta_summary, file = here::here("data",
-                                      "theta_summary.rda"))
 ```
 
 ```{r theta_results}
-#| eval=FALSE
-theta_results <- extract_dcpo_results(dcpo_input,
-                                      dcpo_output,
-                                      par = "theta")
+# theta_results <- extract_dcpo_results(dcpo_input,
+#                                       dcpo_output,
+#                                       par = "theta")
+# 
+# save(theta_results, file = here::here("data",
+#                                       "theta_results.rda"))
 
-save(theta_results, file = here::here("data",
-                                      "theta_results.rda"))
+load(here("data", "theta_results.rda"))
 ```
 
 The model was estimated using the `DCPOtools` package for R [@Solt2019], running four chains for 1,000 iterations each and discarding the first half as warmup, leaving 2,000 samples.
@@ -1332,7 +1341,7 @@ Appendices
 \end{center}
 ```
 
-# Appendix A: Survey Items Used to Estimate Macrointerest
+# Appendix A: Survey Items Used to Estimate Macrointerest {#surveys}
 
 National and cross-national surveys have often included questions tapping interest in politics over the past four decades, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
 In all, I identified `r n_items` such survey items that were asked in no fewer than five country-years in countries surveyed at least twice; these items were drawn from `r n_surveys` different survey datasets.
@@ -1456,7 +1465,7 @@ dcpo_input_raw1 %>%
 \clearpage
 \pagebreak
 
-# Appendix B: The DCPO Model {#surveys}
+# Appendix B: The DCPO Model {#dcpo}
 
 A number of recent studies have developed latent variable models of aggregate survey responses based on cross-national survey data [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
 To estimate macrointerest across countries and over time, we employ the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model elaborated in @Solt2020c.^[
@@ -1508,7 +1517,6 @@ The sum of $\delta_{kq}$ across all countries $k$ is set to zero for each questi
 
 Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of macrointerest, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].
 
-
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
 First, it incorporates the _difficulty_ of each question's responses, that is, how much political interest is indicated by a given response. 
 That each response evinces more or less of our latent trait is most easily seen with regard to the ordinal responses to the same question: indicating that one is "strongly interested" exhibits more political interest than stating one is "fairly interested," which is a more interested response that "not very interested," which in turn is more interested than "not at all."
@@ -1521,6 +1529,116 @@ Together, the model's difficulty and dispersion estimates work to generate compa
 To address the sparsity of the source data---the fact that there are gaps in the time series of each country, and even many observed country-years have only one or few observed items---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of macrointerest over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
+
+# Comparison with @PetersonEtAl2022
+
+```{r peterson, eval=FALSE}
+macroint2 <- import(here("data", "peterson2022","calc2.dta"))
+
+# make the date variable in the right format
+macroint2$date2 <- ISOdate(macroint2$year, macroint2$month, 1)
+
+# Create the macrointerest measure
+
+interestQ <-
+  extract(
+    macroint2$varname,
+    as.Date(macroint2$date2),
+    macroint2$index3,
+    macroint2$ncases,
+    unit = "Q",
+    begindt = ISOdate(1973, 1, 1),
+    enddt = NA
+  ) 
+
+
+source(here("data", "peterson2022", "Extract.r"))
+
+# load data
+
+macroint2 <- import(here("data", "peterson2022", "calc2.dta"))
+
+# make the date variable in the right format
+
+macroint2$date2 <- ISOdate(macroint2$year, macroint2$month, 1)
+
+# bootstrap
+
+set.seed(96345)
+
+n.boot <- 1000  #number of iterations
+
+boot.est <-
+  matrix(NA, nrow = 168, ncol = n.boot) #create the empty matrix that the results will go in.  nrow is the number of final time points
+
+for (i in 1:n.boot) {
+  #make the new "index" which is the input to the calc algorithm.  This is a draw from a random normal with mean and sd based on real results
+  macroint2$index4 <-
+    rnorm(349 , mean = macroint2$index3, sd = sqrt(((macroint2$ncases * macroint2$index) * (1 - macroint2$index) ^ 2 + (macroint2$ncases * (1 - macroint2$index)) * (0 - macroint2$index) ^ 2) / (macroint2$ncases - 1)))
+  #run calc.  Save the outout as "object"
+  object <-
+    extract(
+      macroint2$varname,
+      as.Date(macroint2$date2),
+      macroint2$index4,
+      macroint2$ncases,
+      unit = "Q",
+      begindt = ISOdate(1973, 1, 1),
+      enddt = NA
+    )
+  #add the measure of the macrointerest measure to the appropriate col of the boot.est
+  boot.est[, i] <- object$latent1
+  #read in the data with the surveys by house
+}
+
+##pull out the mean and sd of bootstrapped results
+MI.est <-
+  matrix(NA, nrow = 168, ncol = 4) #create the empty matrix that the results will go in.  nrow is the number of final time points
+MI.est[, 1] <- interestQ$period
+MI.est[, 2] <- interestQ$latent1
+MI.est[, 3] <- apply(boot.est, 1, mean)
+MI.est[, 4] <- apply(boot.est, 1, sd)
+
+MI <- tibble(
+  period = interestQ$period,
+  latent1 = interestQ$latent1,
+  boot_mean = apply(boot.est, 1, mean),
+  boot_sd = apply(boot.est, 1, sd)
+)
+
+saveRDS(MI, here("data", "peterson2022", "peterson_mi.rds"))
+
+```
+
+```{r peterson-plot, }
+df_peterson2022 <- readRDS(here("data", "peterson2022", "peterson_mi.rds")) |> 
+  rename(year = period,
+         mean = boot_mean,
+         sd = boot_sd) |> 
+  select(year, mean, sd) |> 
+  mutate(method = "Wcalc",
+         mean = 1 / (1 + exp(mean/100 - 1)))
+
+df_dcpo <- filter(c_res, country == "United States") |> 
+  select(year, mean, sd) |> 
+  mutate(method = "DCPO")
+
+df_compare <- bind_rows(df_peterson2022, df_dcpo) |> 
+  mutate(lb = mean - qnorm(0.9) * (sd / sqrt(n())),
+         ub = mean + qnorm(0.9) * (sd / sqrt(n())))
+
+ggplot(data = df_compare, aes(x = year, y = mean, group = method, fill = method)) +
+  labs(y = "Macrointerest") +
+  geom_line() +
+  geom_ribbon(data = df_compare, aes(ymin = lb, ymax = ub), alpha = .5) +
+  plot_annotation(caption = "Shaded areas represent 80% credible intervals.") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(), 
+        legend.title = element_blank(), 
+        legend.position = c(0.9, 0.9))
+
+```
+
 
 # References {.unnumbered}
 
