@@ -308,7 +308,7 @@ It shows that these cross-national macrointerest scores perform impressively wel
 Finally, as a demonstration of their utility, the letter presents a new test of theories on the circumstances that induce the public of advanced democracies to take more interest in politics.
 The results support arguments that, in these countries, election campaigns, inclusive institutions, and good times, not bad ones, spur greater political interest.
 
-```{r dcpo_input_raw, include=FALSE}
+```{r dcpo_input_raw, eval=FALSE}
 surveys_interest <- read_csv(here::here("data-raw",
                                         "surveys_interest.csv"),
                              col_types = "cccccc")
@@ -784,7 +784,7 @@ internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
   patchwork::plot_annotation(caption = "Note: Gray whiskers and shading represent 80% credible intervals.")
 ```
 
-```{r ext_val_dat, include=FALSE}
+```{r ext_val_dat, eval=FALSE}
 ext_dat <- read_csv(here("data-raw",
                          "surveys_ext.csv"),
                     col_types = "cccccc") %>% 
