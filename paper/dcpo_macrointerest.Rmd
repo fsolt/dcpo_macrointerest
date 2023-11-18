@@ -1552,9 +1552,13 @@ DCPO additionally implements a logistic function to confine the outcome estimati
 This bounding process can diminish the uncertainty of estimates for countries at the extremes. 
 As highlighted by @LinzerStaton2015[p. 229], "constraining the latent variable might have minimal impact on the scale, yielding more reasonable uncertainty estimates."
 
-
 In Figure \@ref(fig:peterson-plot), we compare the outcome from these two methods.
-On the left panel, we replicate @PetersonEtAl2022's Figure 6
+In the left panel, we replicate @PetersonEtAl2022's Figure 6 of the Wcalc scores of the U.S. macrointerest.
+We then bounded the Wcalc scores to the unit interval via a logistic transformation as DCPO does and calculate the 80% confidence intervals.
+The results is compared with the DCPO outputs in the shared time period (1982--2014) in the right panel of Figure \@ref(fig:peterson-plot). 
+The variance of Wcalc scores become less observable when they are bounded relative to the standard error. 
+DCPO, on the other hand, illustrates a more noticable variance in macriointerst over years and gains a better efficiency based on not only one but multiple countries' data.
+In this sence, DCPO outcome brings stronger evidence for the original proposition of @PetersonEtAl2022.
 
 ```{r peterson, eval=FALSE}
 macroint2 <- import(here("data", "peterson2022","calc2.dta"))
@@ -1654,8 +1658,8 @@ df_compare <- mutate(df_peterson2022, mean = 1 / (1 + exp(mean/100 - 1))) |>
 plot_peterson <- ggplot(data = df_peterson2022, aes(x = year, y = mean)) +
   labs(y = "Macrointerest (Wcalc score)", title = "Peterson et.al. (2022, Figure 6)") +
   geom_line() +
-  geom_ribbon(aes(ymin = mean - qnorm(0.9) * (sd / sqrt(nrow(df_peterson2022))), 
-                  ymax = mean + qnorm(0.9) * (sd / sqrt(nrow(df_peterson2022)))), alpha = .5) +
+  geom_ribbon(aes(ymin = mean - sd, 
+                  ymax = mean + sd), alpha = .5) +
   plot_annotation(caption = "Shaded areas represent 80% credible intervals.") +
   theme_bw() + 
   theme(axis.title.x = element_blank(), 
