@@ -1532,6 +1532,30 @@ These dynamic models smooth the estimates of macrointerest over time and allow e
 
 # Comparison with @PetersonEtAl2022
 
+This study extends the pivotal concept of "macrointerest" from @PetersonEtAl2022, yet diverges methodologically by employing the Dynamic Comparative Public Opinion (DCPO) model instead of the dynamic ratio algorithm, commonly referred to as "Wcalc," as utilized in the original research [-@PetersonEtAl2022, p. 208]. 
+Apart from the primary rationale stated in the main article---that Wcalc is inherently tailored for generating public opinion time series within a single country rather than for cross-national comparison---there are also methodological and operational distinctions between these two approaches.
+
+The dynamic ratio algorithm primarily seeks to uncover shared variance over time among various survey items.
+Its process involves initially pairing these items, subsequently calculating the ratio for each unique pair, and then analyzing the distribution of these ratios. 
+DCPO instead directly models the relationship between the latent variable and survey item responses using a Bayesian Item Response Theory (IRT) approach. 
+This method provides a probabilistic framework, enabling the estimation of response probabilities contingent on both the level of the latent trait and specific characteristics of the survey items.
+
+Additionally, these methods adopt differing strategies for addressing missing data at certain time points. 
+The dynamic ratio algorithm tackles this challenge by estimating values for unobserved series at each time point, basing these estimations on the calculated ratio of missing survey items to those observed in the corresponding period.
+For the same issue, DCPO, on the other hand, employs dynamic linear models at the local level for each country, leveraging random-walk priors. 
+This approach not only smooths the estimates of macrointerest over time but also facilitates estimation in years characterized by limited or absent survey data, and simultaneously providing specific uncertainty estimates.
+
+In application, as @PetersonEtAl2022[p. 210] pointed out, to conduct the dynamic ratio algorithm, researchers have to remove or redistribute the responses of moderate opinions.
+Since modeling the item characteristics directly, DCPO does not need to twist the original item response.
+It can also yield the credible intervals of the estimates from the Bayesian process, rather than relying on the ex post bootstrapping for uncertainty estimation.
+DCPO additionally implements a logistic function to confine the outcome estimation within a unit interval. 
+This bounding process can diminish the uncertainty of estimates for countries at the extremes. 
+As highlighted by @LinzerStaton2015[p. 229], "constraining the latent variable might have minimal impact on the scale, yielding more reasonable uncertainty estimates."
+
+
+In Figure \@ref(fig:peterson-plot), we compare the outcome from these two methods.
+On the left panel, we replicate @PetersonEtAl2022's Figure 6
+
 ```{r peterson, eval=FALSE}
 macroint2 <- import(here("data", "peterson2022","calc2.dta"))
 
@@ -1610,32 +1634,47 @@ saveRDS(MI, here("data", "peterson2022", "peterson_mi.rds"))
 
 ```
 
-```{r peterson-plot, }
+```{r peterson-plot, fig.align='center', fig.cap="Comparison between DCPO and Wcalc"}
 df_peterson2022 <- readRDS(here("data", "peterson2022", "peterson_mi.rds")) |> 
   rename(year = period,
          mean = boot_mean,
          sd = boot_sd) |> 
   select(year, mean, sd) |> 
-  mutate(method = "Wcalc",
-         mean = 1 / (1 + exp(mean/100 - 1)))
+  mutate(method = "Wcalc")
 
 df_dcpo <- filter(c_res, country == "United States") |> 
   select(year, mean, sd) |> 
   mutate(method = "DCPO")
 
-df_compare <- bind_rows(df_peterson2022, df_dcpo) |> 
+df_compare <- mutate(df_peterson2022, mean = 1 / (1 + exp(mean/100 - 1))) |> 
+  bind_rows(df_dcpo) |> 
   mutate(lb = mean - qnorm(0.9) * (sd / sqrt(n())),
          ub = mean + qnorm(0.9) * (sd / sqrt(n())))
 
-ggplot(data = df_compare, aes(x = year, y = mean, group = method, fill = method)) +
-  labs(y = "Macrointerest") +
+plot_peterson <- ggplot(data = df_peterson2022, aes(x = year, y = mean)) +
+  labs(y = "Macrointerest (Wcalc score)", title = "Peterson et.al. (2022, Figure 6)") +
   geom_line() +
+  geom_ribbon(aes(ymin = mean - qnorm(0.9) * (sd / sqrt(nrow(df_peterson2022))), 
+                  ymax = mean + qnorm(0.9) * (sd / sqrt(nrow(df_peterson2022)))), alpha = .5) +
+  plot_annotation(caption = "Shaded areas represent 80% credible intervals.") +
+  theme_bw() + 
+  theme(axis.title.x = element_blank(), 
+        legend.title = element_blank(), 
+        legend.position = c(0.8, 0.9))
+
+
+plot_comparison <- ggplot(data = df_compare, aes(x = year, y = mean, group = method, fill = method)) +
+  labs(y = "Macrointerest", title = "Wcalc vs. DCPO") +
+  coord_cartesian(xlim = c(1982, 2014)) +
   geom_ribbon(data = df_compare, aes(ymin = lb, ymax = ub), alpha = .5) +
+  geom_line() +
   plot_annotation(caption = "Shaded areas represent 80% credible intervals.") +
   theme_bw() +
-  theme(axis.text.x = element_blank(), 
+  theme(axis.title.x = element_blank(), 
         legend.title = element_blank(), 
         legend.position = c(0.9, 0.9))
+
+plot_peterson | plot_comparison
 
 ```
 
