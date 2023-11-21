@@ -21,9 +21,22 @@ title:  Macrointerest Across Countries
 subtitle: Memo to Editor and Reviewers
 ---
 
-We follow R1's suggestion to compare DCPO with other methods, especially, @PetersonEtAl2022's Wcalc in more detail. 
+**Method comparison** We follow R1's suggestion to compare DCPO with other methods, especially, @PetersonEtAl2022's Wcalc in more detail. 
 In the main text (p. XXXX), we state the rationale to use DCPO over Wcalc in this research and direct readers to a special appendix, Appendix XXX.
 In the new appendix, we discuss the methodological and operational differences between DCPO and Wcalc.
 Furthermore, we compare the outcomes from the two methods and point out the advantage of DCPO on yielding more efficient estimation by incorporating information from other countries and scaling. 
+
+**Scaling**. R1 also suggested us to consider employing the cumulative distribution function (CDF) of the normal distribution, as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework.
+We acknowledge and value this suggestion. 
+Both the logistic function and the normal distribution's CDF serve to convert variables into a CDF format. 
+In DCPO, our preference for the logistic function is grounded in its inherent flexibility and enhanced tolerance for deviations from standard assumptions. 
+Pertinently, within the macrointerest context, there is no compelling rationale to presume that the resulting scores are devoid of extreme values or adhere to a symmetric distribution. 
+The logistic transformation exhibits greater leniency under such conditions compared to the normal CDF. 
+On the other hand, we concur with R1 regarding the intuitive interpretability of the normal-based transformation. 
+To address this, we have incorporated a specific annotation (Footnote XXX) in the main manuscript, thereby enlightening readers about alternative transformation methodologies.
+Additionally, the source code for DCPO is comprehensively accessible online, enabling users to modify transformation methods as they see fit. 
+For confidentiality purposes, this detail was omitted in the current draft but will be disclosed subsequent to the research's acceptance for publication.
+  
+
 
 # Reference {-}

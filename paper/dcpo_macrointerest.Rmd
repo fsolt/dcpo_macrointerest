@@ -588,7 +588,11 @@ The @McGann2019 model depends on dense survey data unlike the sparse data on int
 It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country and so makes a poor choice for cross-national data [see @Caughey2019, 686].
 We also conducted a more detailed comparison between DCPO and @Peterson2022's Wcalc in Appendix\nobreakspace{}\@ref(peterson).
 ]
-The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.
+The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.^[
+Several alternative approaches exist for transforming data to the unit interval, e.g., the cumulative distribution function (CDF) of the normal distribution, which facilitates the interpretation of results as percentiles. 
+Each transformation method carries distinct assumptions and conditions. 
+It is imperative for researchers to select a method that aligns optimally with their data characteristics and research objectives.
+]
 For a comprehensive description of the DCPO model, see Appendix\nobreakspace{}\@ref(dcpo) and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
 
 The DCPO model accounts for incomparability using three sets of parameters.
