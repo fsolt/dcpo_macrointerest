@@ -1,0 +1,29 @@
+---
+format:
+  pdf:
+    number-sections: false
+
+bibliography: memo.bib
+tables: true # enable longtable and booktabs
+fontsize: 12pt
+indent: true
+geometry: margin=1in
+linestretch: 1.5 # double spacing using linestretch 1.5
+colorlinks: true
+
+execute:
+  echo: false
+  message: false
+  warning: false
+  dpi: 300
+    
+title:  Macrointerest Across Countries
+subtitle: Memo to Editor and Reviewers
+---
+
+We follow R1's suggestion to compare DCPO with other methods, especially, @PetersonEtAl2022's Wcalc in more detail. 
+In the main text (p. XXXX), we state the rationale to use DCPO over Wcalc in this research and direct readers to a special appendix, Appendix XXX.
+In the new appendix, we discuss the methodological and operational differences between DCPO and Wcalc.
+Furthermore, we compare the outcomes from the two methods and point out the advantage of DCPO on yielding more efficient estimation by incorporating information from other countries and scaling. 
+
+# Reference {-}

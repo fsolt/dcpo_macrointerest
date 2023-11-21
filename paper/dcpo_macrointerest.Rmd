@@ -585,7 +585,9 @@ To estimate the public's interest in politics across countries and over time, th
 @Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
 The @McGann2019 model depends on dense survey data unlike the sparse data on interest in politics described in the preceding section.
 @Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.
-It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country and so makes a poor choice for cross-national data [see @Caughey2019, 686].]
+It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country and so makes a poor choice for cross-national data [see @Caughey2019, 686].
+We also conducted a more detailed comparison between DCPO and @Peterson2022's Wcalc in Appendix\nobreakspace{}\@ref(peterson).
+]
 The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.
 For a comprehensive description of the DCPO model, see Appendix\nobreakspace{}\@ref(dcpo) and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
 
@@ -673,7 +675,7 @@ dcpo_output <- as_cmdstan_fit(here(results_path,
 saveRDS(dcpo_output, here("data", "dcpo_output.rds"))
 ```
 
-```{r dcpo_summary}
+```{r dcpo_summary, cache=TRUE}
 dcpo_output <- readRDS(here("data", "dcpo_output.rds"))
 
 # load(file = here::here("data", "dcpo_input.rda"))
@@ -1360,6 +1362,8 @@ The estimates for country-years with fewer (or no) observed items rely more heav
 \noindent Table A1: Indicators Used in the Latent Variable Model of Macrointerest
 
 ```{r macrointerest_items}
+load(here("data", "dcpo_input.rda"))
+
 alpha_results <- summarize_dcpo_results(dcpo_input,
                                         dcpo_output = dcpo_output,
                                         pars = "alpha") %>% 
@@ -1530,7 +1534,7 @@ To address the sparsity of the source data---the fact that there are gaps in the
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of macrointerest over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
 
-# Comparison with @PetersonEtAl2022
+# Comparison with @PetersonEtAl2022 {#peterson}
 
 This study extends the pivotal concept of "macrointerest" from @PetersonEtAl2022, yet diverges methodologically by employing the Dynamic Comparative Public Opinion (DCPO) model instead of the dynamic ratio algorithm, commonly referred to as "Wcalc," as utilized in the original research [-@PetersonEtAl2022, p. 208]. 
 Apart from the primary rationale stated in the main article---that Wcalc is inherently tailored for generating public opinion time series within a single country rather than for cross-national comparison---there are also methodological and operational distinctions between these two approaches.
@@ -1558,7 +1562,7 @@ We then bounded the Wcalc scores to the unit interval via a logistic transformat
 The results is compared with the DCPO outputs in the shared time period (1982--2014) in the right panel of Figure \@ref(fig:peterson-plot). 
 The variance of Wcalc scores become less observable when they are bounded relative to the standard error. 
 DCPO, on the other hand, illustrates a more noticable variance in macriointerst over years and gains a better efficiency based on not only one but multiple countries' data.
-In this sence, DCPO outcome brings stronger evidence for the original proposition of @PetersonEtAl2022.
+In this sense, DCPO outcome brings stronger evidence for the original proposition of @PetersonEtAl2022.
 
 ```{r peterson, eval=FALSE}
 macroint2 <- import(here("data", "peterson2022","calc2.dta"))
