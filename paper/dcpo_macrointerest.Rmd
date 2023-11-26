@@ -1258,7 +1258,9 @@ The former help account for heteroskedasticity across space due to, e.g., omitte
 The latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
 Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
 The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
-The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis as well [see @Tai2022].
+The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis as well.^[
+We incorporate the measurement uncertainty with the "method of composition,"a technique frequently utilized across numerous studies in political science [e.g., @CaugheyWarshaw2018a; @KastellecEtAl2015; @TaiEtAl2022a].
+See Supplementary Material C of @TaiEtAl2022a for a comprehensive technical exposition of the method's application within the DCPO framework.]
 The model was estimated using the `brms` R package [@Burkner2017].
 
 ```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5.5, fig.width = 7.5}
