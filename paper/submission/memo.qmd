@@ -52,5 +52,8 @@ Later in the theoretical setup, we borrowed R1's framing to indicate the exact r
 
 We further accepted R2's suggestion to revis the summary of the empirical findings about the good/bad (economic) times to prevent overstatment (p. XXXX).
 
+**`DCPOtools`**.
+We adopted R1's suggestion to move the discussion of data cleaning automation to Appendix XXX and provided more details about what the software helps in the data collection and janitor processes.
+
 
 # Reference {-}
