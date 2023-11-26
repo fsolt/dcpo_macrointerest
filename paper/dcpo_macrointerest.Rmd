@@ -2,7 +2,7 @@
 output: 
   bookdown::pdf_document2:
     fig_caption: yes
-    keep_tex: no
+    keep_tex: yes
     toc: no
     number_sections: no
     latex_engine: xelatex
@@ -76,7 +76,7 @@ Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Profes
 
 ```{=tex}
 \begin{abstract}
-The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good times, not bad, that spur publics to greater interest in politics. 
+The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good (economic) times, not bad, that spur publics to greater interest in politics. 
 \end{abstract}
 ```
 \pagebreak
@@ -307,7 +307,7 @@ Although many surveys ask respondents across countries how interested they are i
 This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of aggregate political interest for over a hundred countries over the past four decades.
 It shows that these cross-national macrointerest scores perform impressively well in validation tests.
 Finally, as a demonstration of their utility, the letter presents a new test of theories on the circumstances that induce the public of advanced democracies to take more interest in politics.
-The results support arguments that, in these countries, election campaigns, inclusive institutions, and good times, not bad ones, spur greater political interest.
+The results support arguments that, in these countries, election campaigns, inclusive institutions, and good (economic) times, not bad ones, spur greater political interest.
 
 ```{r dcpo_input_raw, eval=FALSE}
 surveys_interest <- read_csv(here::here("data-raw",
@@ -945,7 +945,7 @@ A final set of theories---each well established---contradicts the third.
 Modernization theory holds that the public's interest in politics will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
 Unemployment has long been argued to not to motivate but rather to depress political interest; @Rosenstone1982 [, 26], for example, argued that "it causes a preoccupation with personal economic well-being, and as a result, the citizen withdraws from such external matters as politics."
 And the relative power theory holds that greater income inequality, by increasingly concentrating political power in the hands of the wealthy, allows them greater power to shape the political agenda in ways that discourage the broader public from taking interest [see, e.g., @Solt2008].
-In each of these circumstances, macrointerest is argued to grow in _good_ times and wither as the context worsens [see also @Stimson2015; @Peterson2022, 206].
+In each of these circumstances, macrointerest is argued to grow along with increasing economic growth ("good" times), not worsening economic growth ("bad" times) [see also @Stimson2015; @Peterson2022, 206].
 
 Data to test these hypotheses regarding the causes of macrointerest are drawn from several sources.
 The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides information about the timing of elections, yielding a dichotomous variable coded one in election years and zero when no election was held.
@@ -1260,7 +1260,7 @@ Further, the 'within-between random effects' specification is employed, meaning 
 The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
 The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis as well.^[
 We incorporate the measurement uncertainty with the "method of composition,"a technique frequently utilized across numerous studies in political science [e.g., @CaugheyWarshaw2018a; @KastellecEtAl2015; @TaiEtAl2022a].
-See Supplementary Material C of @TaiEtAl2022a for a comprehensive technical exposition of the method's application within the DCPO framework.]
+See Supplementary Material C of @TaiEtAl2022a for a comprehensive technical exposition of the method's application within the DCPO framework and ex post estimations.]
 The model was estimated using the `brms` R package [@Burkner2017].
 
 ```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5.5, fig.width = 7.5}
@@ -1305,7 +1305,9 @@ The posterior means for growth in the national economy are positive as well, but
 The findings with regard to unemployment are similar.
 As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
 Year-to-year changes in income inequality are found to make little difference---the influence of the wealthy over the political agenda, it would seem, does not change on such a short time scale, from one perspective, and there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions, from the other.
-Taken as a whole, this evidence indicates that it is good times, not bad ones, that yield higher macrointerest.
+Taken as a whole, evidence moderately supports the notion that absolute economic growth, rather than depression, is associated with increased macrointerest, while the distributional bias in economic growth outcomes consistently diminishes macrointerest.
+
+
 
 # Conclusions
 Macrointerest, despite its theoretical importance, has as yet drawn only limited empirical attention.

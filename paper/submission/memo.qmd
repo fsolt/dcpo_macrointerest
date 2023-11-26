@@ -45,4 +45,12 @@ We used the "Method of Composition" to account for the uncertainty in the ex pos
 This is a method that has been used in a series of latent variable analyses in political science. 
 We listed several other applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
 
+**Good/bad time**.
+We adopted R1's suggestion of using the "good/bad times."
+We gave a clearer definition indicating the goodness specifically refers to economic growth when the first time the phrases are used (p. XXXX).
+Later in the theoretical setup, we borrowed R1's framing to indicate the exact relationship between economic growth and macrointerest (p. XXX).
+
+We further accepted R2's suggestion to revis the summary of the empirical findings about the good/bad (economic) times to prevent overstatment (p. XXXX).
+
+
 # Reference {-}
