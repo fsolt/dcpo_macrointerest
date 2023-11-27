@@ -7,13 +7,14 @@ output:
     number_sections: no
     latex_engine: xelatex
     pandoc_args: --lua-filter=multibib.lua
-    
 title: Macrointerest Across Countries
-
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+
 editor_options: 
   markdown: 
     wrap: sentence
+  chunk_output_type: console
+  
 tables: true # enable longtable and booktabs
 citation_package: natbib
 citeproc: false
@@ -48,12 +49,12 @@ header-includes:
       - \titleformat*{\subsection}{\normalsize\itshape}
       - \usepackage{titling} #use \maketitle repeatedly  
       - \renewcommand{\topfraction}{.85} # Adjust LaTeX placement rules per 
-      - \renewcommand{\bottomfraction}{.7} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
       - \renewcommand{\textfraction}{.15}
       - \renewcommand{\floatpagefraction}{.66}
       - \setcounter{topnumber}{3}
       - \setcounter{bottomnumber}{3}
       - \setcounter{totalnumber}{4}
+      - \renewcommand{\bottomfraction}{.7} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
 ---
 
 \pagenumbering{gobble}
@@ -307,7 +308,7 @@ Data to allow for large-scale cross-sectional time-series assessments, however, 
 Although many surveys ask respondents across countries how interested they are in politics, differences in question wording and in response categories have limited scholars' ability to pool the data together, and even in the absence of these issues, in most countries the questions have not been asked sufficiently frequently to provide annual time series.
 
 This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of aggregate political interest for over a hundred countries over the past four decades.
-It shows that these cross-national macrointerest scores perform impressively well in validation tests.
+It shows that these cross-national macrointerest scores perform well in validation tests.
 Finally, as a demonstration of their utility, the letter presents a new test of theories on the circumstances that induce the public of advanced democracies to take more interest in politics.
 The results support arguments that, in these countries, election campaigns, inclusive institutions, and good (economic) times, not bad ones, spur greater political interest.
 
@@ -586,7 +587,7 @@ To estimate the public's interest in politics across countries and over time, th
 @Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
 The @McGann2019 model depends on dense survey data unlike the sparse data on interest in politics described in the preceding section.
 @Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.
-It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country and so makes a poor choice for cross-national data [see @Caughey2019, 686].
+It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country that is not easy nor efficient to be expanded to cross-national analyses [see @Caughey2019, 686].
 We also conducted a more detailed comparison between DCPO and @Peterson2022's Wcalc in Appendix\nobreakspace{}\@ref(peterson).
 ]
 The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.^[
@@ -1427,6 +1428,7 @@ items_summary <- dcpo_input_raw1 %>%
 
 ```{r tsc_items_table}  
 items_summary %>% 
+  mutate(item = str_replace(item, "_", ".")) |> 
   transmute(`Survey\nItem\nCode` = item,
             `Country-Years` = as.character(n_cy),
             `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
@@ -1450,7 +1452,7 @@ items_summary %>%
 \clearpage
 \pagebreak
 ```{r obs, fig.cap = "Source Data Observations by Country and Year \\label{obs_by_cy}", fig.height = 9}
-dcpo_input_raw1 %>% 
+dcpo_input_plot <- dcpo_input_raw1 %>% 
   mutate(country = str_replace(country, "’", "'"),
          country = if_else(country %in% oecd_countries & country!="Turkey",
                            paste0(country, "*"),
@@ -1460,8 +1462,14 @@ dcpo_input_raw1 %>%
   summarize(n = n(),
             cc_rank = mean(cc_rank)) %>% 
   ungroup() %>% 
-  distinct() %>% 
-  ggplot(aes(x = year, 
+  distinct() |> 
+  mutate(continent = countrycode(country, "country.name", "continent"))
+
+dcpo_input_plot$continent[dcpo_input_plot$country %in% c("Kosovo", "Northern Ireland")] <- "Europe"
+dcpo_input_plot$continent[dcpo_input_plot$continent %in% c("Asia", "Oceania")] <- "Asia-Oceania"
+
+
+ggplot(dcpo_input_plot, aes(x = year, 
              y = forcats::fct_reorder(country, cc_rank),
              fill = n)) + 
   geom_tile() +
@@ -1474,9 +1482,8 @@ dcpo_input_raw1 %>%
   scale_x_continuous(breaks=seq(1982, 2022, 4),
                      sec.axis = dup_axis()) +
   scale_y_discrete(position = "right") +
-  theme(legend.justification=c(0, 0), 
-        legend.position=c(0.01, 0.01),
-        axis.text.y  = element_text(size = 7)) +
+  theme(axis.text.y  = element_text(size = 7)) +
+  facet_wrap(~continent, ncol = 1, scales = "free_y") +
   plot_annotation(caption = "Starred countries are OECD democracies, the sample employed in the analysis of macrointerest presented in the main text.")
 ```
 
@@ -1486,13 +1493,10 @@ dcpo_input_raw1 %>%
 # Appendix B: The DCPO Model {#dcpo}
 
 A number of recent studies have developed latent variable models of aggregate survey responses based on cross-national survey data [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
-To estimate macrointerest across countries and over time, we employ the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model elaborated in @Solt2020c.^[
-@Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
-The @McGann2019 model depends on dense survey data unlike the sparse data on political interest described in the preceding section.
-@Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.]
+To estimate macrointerest across countries and over time, we employ the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model elaborated in @Solt2020c.
 The DCPO model is a population-level two-parameter ordinal logistic item response theory (IRT) model with country-specific item-bias terms.
 
-DCPO models the total number of survey responses expressing at least as much trust in civil servants as response category $r$ to each question $q$ in country $k$ at time $t$, $y_{ktqr}$, out of the total number of respondents surveyed, $n_{ktqr}$, using the beta-binomial distribution:
+DCPO models the total number of survey responses expressing at least as much macrointerest as response category $r$ to each question $q$ in country $k$ at time $t$, $y_{ktqr}$, out of the total number of respondents surveyed, $n_{ktqr}$, using the beta-binomial distribution:
 
 \begin{equation}
 a_{ktqr} = \phi\eta_{ktqr} \label{eq:bb_a}
@@ -1547,6 +1551,39 @@ Together, the model's difficulty and dispersion estimates work to generate compa
 To address the sparsity of the source data---the fact that there are gaps in the time series of each country, and even many observed country-years have only one or few observed items---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of macrointerest over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
+
+
+# Numeric Result of Figure\nobreakspace{}\ref{model}
+
+```{r model-table}
+# Load the necessary library
+library(modelsummary)
+
+df_results <- coef_data |> 
+  filter(.width == 0.95) |> 
+  rename(term = `var_names`,
+         estimate = `std_coef`, 
+         conf.low = `.lower`,
+         conf.high = `.upper`)
+
+
+gof_stats <- data.frame(N = dcpo_input$N, 
+               `Country` = dcpo_input$K, 
+               `Year` = dcpo_input$T - 1)
+
+ls_result <- list(
+  tidy = df_results,
+  glance = gof_stats)
+
+class(ls_result) <- "modelsummary_list"
+
+# Create a modelsummary table with the number of observations included
+modelsummary(
+  ls_result,
+  statistic = "conf.int"
+)
+```
+
 
 # Comparison with @PetersonEtAl2022 {#peterson}
 
