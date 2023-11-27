@@ -1580,7 +1580,8 @@ class(ls_result) <- "modelsummary_list"
 # Create a modelsummary table with the number of observations included
 modelsummary(
   ls_result,
-  statistic = "conf.int"
+  statistic = "conf.int",
+  notes = "Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function."
 )
 ```
 
