@@ -302,8 +302,10 @@ set.seed(324)
 
 The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963].
 In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [@Peterson2022].
-Data to allow such assessments, however, have been unavailable.
+
+Data to allow for large-scale cross-sectional time-series assessments, however, have been unavailable.
 Although many surveys ask respondents across countries how interested they are in politics, differences in question wording and in response categories have limited scholars' ability to pool the data together, and even in the absence of these issues, in most countries the questions have not been asked sufficiently frequently to provide annual time series.
+
 This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of aggregate political interest for over a hundred countries over the past four decades.
 It shows that these cross-national macrointerest scores perform impressively well in validation tests.
 Finally, as a demonstration of their utility, the letter presents a new test of theories on the circumstances that induce the public of advanced democracies to take more interest in politics.
