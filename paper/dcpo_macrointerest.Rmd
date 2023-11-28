@@ -1314,13 +1314,16 @@ Taken as a whole, evidence moderately supports the notion that absolute economic
 
 
 # Conclusions
+
 Macrointerest, despite its theoretical importance, has as yet drawn only limited empirical attention.
 This oversight largely reflects the paucity of available data to measure this important concept.
 The cross-national macrointerest dataset presented here addresses this issue, providing annual time series across more than a hundred countries and allowing more and better tests of the wide range of theories that implicate the public's interest in politics.
 For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] found that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorized.
 And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows just the opposite, that it is _good_ times that lead the public to take interest in politics.
 By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
-The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest.
+Beyond investigating the sources of macrointerest, the novel cross-national measurement also provide opportunity for further examining its relationship with various types of political participation and civil engagements [@Anderson2007;@VerbaEtAl1995a].
+
+<!-- The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest. -->
 
 
 \pagebreak

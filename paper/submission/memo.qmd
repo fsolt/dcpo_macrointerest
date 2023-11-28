@@ -74,12 +74,16 @@ In the discussion, we includes all the potential risk R2 points out and explaine
 We also point out the readers methodological paths (and examples) that can be incorporated to further deal with the data representation issue and explain the strategy of DCPO on it. 
 
 **Validation**.
-
 R2 queried of the validation of the DCPO outcome.
 In the research, we used the validation method that has been applied in publications of  APSR and BJPS [@CaugheyEtAl2019; @WooEtAl2023].
 At the same method, we agree with R2 that it is difficulty to interpret the results of this method without any benchmarks. 
 Therefore, we listed the correlations of an APSR publication using the similar validation method for readers' reference (n. XXX).
 Moreover, we point out to the readers that the correlations can also be affected by other factors.
+
+**Participation**.
+R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
+Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.
+
 
 
 # Reference {-}
