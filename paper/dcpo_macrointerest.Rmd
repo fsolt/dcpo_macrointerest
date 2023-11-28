@@ -301,7 +301,8 @@ set.seed(324)
 
 # Introduction
 
-The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963].
+The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963. Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023]. 
+More than just boosting engagement, political interests critically determine the quality of political decisions and behaviors, influencing factors like time spent, information collection and utilization, and critical thinking against partisan restrictions [@ButlerDeLaO2010;@LaneEtAl2022].].
 In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [@Peterson2022].
 
 Data to allow for large-scale cross-sectional time-series assessments, however, have been unavailable.
@@ -1260,9 +1261,8 @@ The former help account for heteroskedasticity across space due to, e.g., omitte
 The latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
 Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
 The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
-The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis as well.^[
-We incorporate the measurement uncertainty with the "method of composition,"a technique frequently utilized across numerous studies in political science [e.g., @CaugheyWarshaw2018a; @KastellecEtAl2015; @TaiEtAl2022a].
-See Supplementary Material C of @TaiEtAl2022a for a comprehensive technical exposition of the method's application within the DCPO framework and ex post estimations.]
+The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis with the "method of composition," a technique frequently utilized across numerous studies in political science [e.g., @CaugheyWarshaw2018a; @KastellecEtAl2015; @TaiEtAl2022a].
+(See Supplementary Material C of @TaiEtAl2022a for a comprehensive review and application instruments in the DCPO framework.)
 The model was estimated using the `brms` R package [@Burkner2017].
 
 ```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5.5, fig.width = 7.5}
@@ -1581,14 +1581,14 @@ class(ls_result) <- "modelsummary_list"
 modelsummary(
   ls_result,
   statistic = "conf.int",
-  notes = "Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function."
+  notes = "95\% credible intervals are in the parentheses."
 )
 ```
 
 
-# Comparison with @PetersonEtAl2022 {#peterson}
+# Comparison with @Peterson2022 {#peterson}
 
-This study extends the pivotal concept of "macrointerest" from @PetersonEtAl2022, yet diverges methodologically by employing the Dynamic Comparative Public Opinion (DCPO) model instead of the dynamic ratio algorithm, commonly referred to as "Wcalc," as utilized in the original research [-@PetersonEtAl2022, p. 208]. 
+This study extends the pivotal concept of "macrointerest" from @Peterson2022, yet diverges methodologically by employing the Dynamic Comparative Public Opinion (DCPO) model instead of the dynamic ratio algorithm, commonly referred to as "Wcalc," as utilized in the original research [-@Peterson2022, p. 208]. 
 Apart from the primary rationale stated in the main article---that Wcalc is inherently tailored for generating public opinion time series within a single country rather than for cross-national comparison---there are also methodological and operational distinctions between these two approaches.
 
 The dynamic ratio algorithm primarily seeks to uncover shared variance over time among various survey items.
@@ -1601,7 +1601,7 @@ The dynamic ratio algorithm tackles this challenge by estimating values for unob
 For the same issue, DCPO, on the other hand, employs dynamic linear models at the local level for each country, leveraging random-walk priors. 
 This approach not only smooths the estimates of macrointerest over time but also facilitates estimation in years characterized by limited or absent survey data, and simultaneously providing specific uncertainty estimates.
 
-In application, as @PetersonEtAl2022[p. 210] pointed out, to conduct the dynamic ratio algorithm, researchers have to remove or redistribute the responses of moderate opinions.
+In application, as @Peterson2022[p. 210] pointed out, to conduct the dynamic ratio algorithm, researchers have to remove or redistribute the responses of moderate opinions.
 Since modeling the item characteristics directly, DCPO does not need to twist the original item response.
 It can also yield the credible intervals of the estimates from the Bayesian process, rather than relying on the ex post bootstrapping for uncertainty estimation.
 DCPO additionally implements a logistic function to confine the outcome estimation within a unit interval. 
@@ -1609,12 +1609,12 @@ This bounding process can diminish the uncertainty of estimates for countries at
 As highlighted by @LinzerStaton2015[p. 229], "constraining the latent variable might have minimal impact on the scale, yielding more reasonable uncertainty estimates."
 
 In Figure \@ref(fig:peterson-plot), we compare the outcome from these two methods.
-In the left panel, we replicate @PetersonEtAl2022's Figure 6 of the Wcalc scores of the U.S. macrointerest.
+In the left panel, we replicate @Peterson2022's Figure 6 of the Wcalc scores of the U.S. macrointerest.
 We then bounded the Wcalc scores to the unit interval via a logistic transformation as DCPO does and calculate the 80% confidence intervals.
 The results is compared with the DCPO outputs in the shared time period (1982--2014) in the right panel of Figure \@ref(fig:peterson-plot). 
 The variance of Wcalc scores become less observable when they are bounded relative to the standard error. 
 DCPO, on the other hand, illustrates a more noticable variance in macriointerst over years and gains a better efficiency based on not only one but multiple countries' data.
-In this sense, DCPO outcome brings stronger evidence for the original proposition of @PetersonEtAl2022.
+In this sense, DCPO outcome brings stronger evidence for the original proposition of @Peterson2022.
 
 ```{r peterson, eval=FALSE}
 macroint2 <- import(here("data", "peterson2022","calc2.dta"))
