@@ -73,5 +73,13 @@ In this revision, we point out this issue clearly in the main text (n. XXX) and 
 In the discussion, we includes all the potential risk R2 points out and explained what DCPO does for this issue and its limitation. 
 We also point out the readers methodological paths (and examples) that can be incorporated to further deal with the data representation issue and explain the strategy of DCPO on it. 
 
+**Validation**.
+
+R2 queried of the validation of the DCPO outcome.
+In the research, we used the validation method that has been applied in publications of  APSR and BJPS [@CaugheyEtAl2019; @WooEtAl2023].
+At the same method, we agree with R2 that it is difficulty to interpret the results of this method without any benchmarks. 
+Therefore, we listed the correlations of an APSR publication using the similar validation method for readers' reference (n. XXX).
+Moreover, we point out to the readers that the correlations can also be affected by other factors.
+
 
 # Reference {-}

@@ -727,11 +727,13 @@ That estimates can be generated for macrointerest or any other latent variable, 
 As is the case for any new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{external_val} provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\ref{internal_val}, the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 689; @Solt2020c, 10].
+In Figure\nobreakspace{}\ref{internal_val}, the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, p. 686 in which the correlations between the estimated variable and other indicators vary from 0.65 to 0.96.
+Be aware that correlations can be also affect by data richness, survey context, and other factors.].
+
 In the left panel, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
 The middle panel shows responses to the question with the most data-rich cross-section, "How interested would you say you personally are in politics?" in the International Social Survey Program's 2004 module on Citizenship.
 Finally, the right panel evaluates how well the macrointerest scores capture change over time by focusing on the item with the largest number of observations for a single country in the source data, which asked respondents to Germany's ALLBUS, "How interested in politics are you?"
-In all three cases, the correlations, estimated taking into account the uncertainty in the measures, are very strong.
+In all three cases, the correlations, estimated taking into account the uncertainty in the measures, are noticeable.
 
 ```{r internal_val_dat}
 internal_tscs_dat <- dcpo_input_raw1 %>% 

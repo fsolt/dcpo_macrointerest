@@ -8,7 +8,8 @@ dcpo_input_raw |>
   select(year, survey) |>
   distinct() |>
   arrange(survey, year) |>
-  mutate(creator = NA,
+  mutate(name = NA,
+    creator = NA,
          version = NA,
          link = NA) |>
   export(here("data-raw", "survey_info_macrointerest.xlsx"))
