@@ -605,7 +605,7 @@ Here, difficulty is permitted to vary with question wording and the survey proje
 Second, the DCPO model accounts for each question's _dispersion_, its noisiness with regard to our latent trait.
 The lower the dispersion, the better that changes in responses to the question map onto changes in macrointerest.
 Third, to provide for the possibility that translation issues or cultural differences result in the same question being interpreted differently in different countries, the model estimates _country-specific bias_ parameters that shift the difficulty of all responses for a particular question in a particular country.
-Together, the model's difficulty, dispersion, and country-specific bias parameters work to generate comparable estimates of the latent variable of macrointerest from the available but incomparable source data.
+Together, the model's difficulty, dispersion, and country-specific bias parameters work to generate comparable estimates of the latent variable of macrointerest from the available but incomparable source data.^[See a discussion of how other data issues, such as sample representation, may affect the estimated outcome in Appendix\nobreakspace{}\@ref(dcpo).]
 
 To address the sparsity of the source data---the fact that there are gaps in the time series of each country, and that even many observed country-years have only one or two observed items---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
@@ -1552,6 +1552,22 @@ To address the sparsity of the source data---the fact that there are gaps in the
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of macrointerest over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
 
+It is noteworthy that the quality of DCPO estimates partly hinges on the source data's quality. 
+While extensive data input and the Bayesian process might mitigate issues from problematic sources, other Total Survey Error aspects, notably representation errors, can still influence outcomes and lead to comparison errors.
+DCPO addresses measurement scale inconsistencies across surveys; however, variations in population definitions (such as age range, minority inclusion, and territorial exclusions) and sample designs (like probability versus non-probability samples, and older surveys' reliance on quota or random route samples without enumeration) remain a concern. 
+These variations in data collection processes affect representation levels, impacting the estimation of broader interests like macrointerest.
+
+DCPO can adjust for sampling biases using survey weights. 
+However, for unweighted surveys, it doesn't offer a specific solution.
+Methodologically, leveraging census or other population data to correct biases is feasible (as demonstrated by @CaugheyWarshaw2015 in their DGIRT model). 
+The trade-off is much longer time and much higher requirement of calculation power to converge the results. 
+(As @CaugheyWarshaw2015[n. 8] indicated, the run times for the method incorporating census-based correction "ranged between a day and several weeks.")
+Additionally, not all surveys have suitable population data for correction, posing a challenge in balancing information richness against data representation. 
+In this study, we applied weighing to surveys with weights through DCPO but did not specifically adjust for those without.
+
+We urge researchers using DCPO in future projects to pay close attention to the sample design of the source data (e.g., the documentation of Latinobarometro states that some samples cover less than 20% of the given country) and be mindful of the potential risks of Total Survey Errors from including all available data. 
+We also encourage further scholarly examination of our findings' robustness through alternative source data selection strategies.
+
 
 # Numeric Result of Figure\nobreakspace{}\ref{model}
 
@@ -1581,7 +1597,8 @@ class(ls_result) <- "modelsummary_list"
 modelsummary(
   ls_result,
   statistic = "conf.int",
-  notes = "95\% credible intervals are in the parentheses."
+  notes = "95-percent credible intervals are in brackets.",
+  escape = TRUE
 )
 ```
 

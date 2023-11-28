@@ -59,11 +59,19 @@ We adopted R1's suggestion to move the discussion of data cleaning automation to
 **Syntax and framing**.
 We appreciate the reviewers' careful reading and framing suggestions. 
 Following them, we reorganized the introduction into three paragraphs to address the relevance of Macrointerest, the challenges faced by previous research, and the specific contribution and findings.
-We also corrected the syntax errors and framing unclarity as pointed out by the reviewers.
+We also corrected the syntax errors and framing nonclarity as pointed out by the reviewers.
 
 In the appendix, we added more information of the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
 R2 suggested that Figure A1 is hard to read. 
 We split it into several smaller panels according to the continents of the involved countries. 
 We also presented the full, numeric result of the primary analysis as requested.
+
+**Source data representation**.
+We thank R2 to point out the potential Total Survey Error risk due to sample representation.
+With hindsight, this is an important issue for readers and potential users of our method to know yet not sufficiently addressed in the previous version.
+In this revision, we point out this issue clearly in the main text (n. XXX) and lead readers to a more comprehensive discussion in Appendix XXX. 
+In the discussion, we includes all the potential risk R2 points out and explained what DCPO does for this issue and its limitation. 
+We also point out the readers methodological paths (and examples) that can be incorporated to further deal with the data representation issue and explain the strategy of DCPO on it. 
+
 
 # Reference {-}
