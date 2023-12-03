@@ -80,6 +80,25 @@ At the same method, we agree with R2 that it is difficulty to interpret the resu
 Therefore, we listed the correlations of an APSR publication using the similar validation method for readers' reference (n. XXX).
 Moreover, we point out to the readers that the correlations can also be affected by other factors.
 
+**Hypothesis testing**.
+R2 questioned why we tested the theory on OECD countries and "why not just take ESS data, which include most of the OECD countries, and save ourselves all the harmonization effort."
+We added an Appendix (Appendix XXX) to address the this issue:
+
+As stated there, there are specific theoretical and empirical reasons to examine the theoretical inferences about the source of macrointerest on OECD countries. 
+First, most theories about political interests addressed in the letter were built upon the assumption of stable institutions for public political participation. 
+OECD countries are valid cases to examine such theories.
+The both sociopolitical stability and socioecomic and geographic diversity also provide unique conditions fot the hypothesis testing.
+
+Second, while EES also includes a fair amount of data of the European members of OECD, it does not include members out of Europe, which will noticeably diminished the country diversity.
+Note that the primary goal of DCPO is not only to broaden the scope of research beyond the well-surveyed countries but also to enable full-time-rank analysis and more sufficiently adjust country-based variances [@Claassen2020]. 
+DCPO has shown noticeable advantage to fulfill such design than single projects like EES. 
+
+Third, at the end of the Appendix, we welcome future researchers to extend the hypotheses testing in this article on other country cases. 
+They, however, need to be aware that non-OECD countries vary in many dimensions.
+An examination based on them requires more efforts to prevent confounding effects from this variance on the results. 
+This has been beyond the scope of this research.
+
+
 **Participation**.
 R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
 Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.

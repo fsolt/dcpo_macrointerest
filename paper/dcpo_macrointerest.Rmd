@@ -1147,8 +1147,9 @@ swiid_summary <- read_csv(here("data-raw",
 ```
 
 ```{r analysis, include=FALSE}
-if (!file.exists(here::here("data", "results.rda"))) {
-  data_combo <- theta_summary %>% 
+
+# The data is needed for appendix table.
+data_combo <- theta_summary %>% 
     filter(country %in% oecd_countries &
              country!="Turkey") %>% 
     group_by(country) %>% 
@@ -1196,8 +1197,8 @@ if (!file.exists(here::here("data", "results.rda"))) {
            inflation_mean = mean(inflation),
            inflation_diff = inflation - inflation_mean) %>% 
     ungroup()
-  
-  
+
+if (!file.exists(here::here("data", "results.rda"))) {
   m1 <- brm(formula = bf(mean*100 | mi(sd*100) ~ election +
                            parl +
                            federal +
@@ -1574,9 +1575,68 @@ We urge researchers using DCPO in future projects to pay close attention to the 
 We also encourage further scholarly examination of our findings' robustness through alternative source data selection strategies.
 
 
-# Numeric Result of Figure\nobreakspace{}\ref{model}
+# Test the Sources of Macrointerest Variances in OECD countries
 
-```{r model-table}
+After creating the cross-sectional time-series macrointerest, we tested theories of macrointerest formation in thirty-seven democracies of the OECD. 
+Most macrointerest formation-modification theories assume stable and enduring democratic institutions.
+OECD countries are generally characterized by stable political systems and developed economies. 
+This stability provides a consistent backdrop for analyzing how macrointerests form and evolve over time, minimizing the impact of extreme political or economic upheavals that could skew data in less stable contexts.
+While the OECD countries commit to democratic governance and market-based economies, there are also sufficient cultural, political, socioeconomic, and geographic diversities among them.
+This combination of diversity and comparability allows for robust cross-national studies and the testing of theories across different yet relatable settings.
+The high quality political and socioeconomic data of these countries also reduce the influence of measurement error and data sparseness on the analytic outcomes.
+
+While most OECD countries have rich data, they are not always yearly continuous.
+Nor are the datasets are comparable.
+DCPO helps to maximize the useful information from these sparse data and achieve a full time-range cross-sectional examination of the theoretical inferences.
+Figure \@ref(fig:cpOECD) visualize the increment DCPO yields in comparison with one of the largest and oft-used dataset for OECD countries, the European Election Survey (EES).
+The year ranges covered by ESS is marked as the light bars by year, and those DCPO can offer are marked dark.
+DCPO not only fills all the empty years absent from EES but also extend the data availability beyond Europe to the entire rank of OECD countries and from 1982 to 2022.
+
+```{r cpOECD, fig.cap="Data Avaliability: DCPO vs. ESS"}
+library(rvest)
+tb_ess <-
+  read_html("https://www.europeansocialsurvey.org/about/participating-countries") |>
+  html_element(".table-wrapper , td , th") |>
+  html_table()
+
+names(tb_ess)[1] <- "country"
+
+tb_ess_oecd <- filter(tb_ess, country %in% unique(data_combo$country)) |> 
+  mutate(across(-country, \(x) ifelse(x == "", 0, 1))) |> 
+  pivot_longer(cols = -country, 
+               names_to = "year",
+               values_to = "avaliable_ess") |> 
+  mutate(year = sub("R\\d{1}", "", year) |> as.numeric())
+
+tb_dcpo_oecd <- crossing(country = unique(data_combo$country),
+                         year = unique(data_combo$year)) |> 
+  mutate(avaliable_dcpo = 1)
+
+tb_oecd <- left_join(tb_dcpo_oecd, tb_ess_oecd) |> 
+  mutate(avaliable = rowSums(across(c(avaliable_dcpo, avaliable_ess)), na.rm = TRUE),
+         avaliable_fct = factor(avaliable, labels = c("DCPO", "ESS"))) |> 
+  select(country, year, avaliable, avaliable_fct)
+
+ggplot(tb_oecd, aes(x = year, 
+             y = country,
+             fill = avaliable_fct)) + 
+  geom_tile() +
+  labs(x = NULL, y = NULL) +
+  scale_fill_manual(values = hcl.colors(5, "inferno", alpha = 0.6)[c(2, 4)]) +
+  scale_x_continuous(breaks=seq(1982, 2022, 4),
+                     sec.axis = dup_axis()) +
+  scale_y_discrete(position = "right") +
+  theme(axis.text.y  = element_text(size = 7),
+        legend.title = element_blank(),
+        legend.position = "top") 
+```
+
+Table \@ref(tab:modelTB) presents the hypothesis testing result based on this data. 
+The result has been visualized in Figure \@ref(fig:resplot) and discussed in the main text.
+We welcome future researchers to examine our findings on other country cases, especially those not commonly participating in the same survey program or have more sparse data.
+The examination requires more efforts on model specification to address the even larger socioeconomic and political variance among non-OECD countries.
+
+```{r modelTB}
 # Load the necessary library
 library(modelsummary)
 
@@ -1588,9 +1648,9 @@ df_results <- coef_data |>
          conf.high = `.upper`)
 
 
-gof_stats <- data.frame(N = dcpo_input$N, 
-               `Country` = dcpo_input$K, 
-               `Year` = dcpo_input$T - 1)
+gof_stats <- data.frame(N = nrow(data_combo), 
+               `Country` = length(unique(data_combo$country)), 
+               `Year` = length(unique(data_combo$year)))
 
 ls_result <- list(
   tidy = df_results,
@@ -1603,7 +1663,8 @@ modelsummary(
   ls_result,
   statistic = "conf.int",
   notes = "95-percent credible intervals are in brackets.",
-  escape = TRUE
+  title = "Numeric results of Figure 5",
+  booktabs = TRUE
 )
 ```
 
