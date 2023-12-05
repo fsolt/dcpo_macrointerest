@@ -682,7 +682,7 @@ dcpo_output <- as_cmdstan_fit(here(results_path,
 saveRDS(dcpo_output, here("data", "dcpo_output.rds"))
 ```
 
-```{r dcpo_summary, cache=TRUE}
+```{r dcpo_summary, include=FALSE, cache=TRUE}
 dcpo_output <- readRDS(here("data", "dcpo_output.rds"))
 
 # load(file = here::here("data", "dcpo_input.rda"))
@@ -1199,23 +1199,27 @@ data_combo <- theta_summary %>%
     ungroup()
 
 if (!file.exists(here::here("data", "results.rda"))) {
-  m1 <- brm(formula = bf(mean*100 | mi(sd*100) ~ election +
-                           parl +
-                           federal +
-                           lsq_mean + lsq_diff +
-                           gdppc_mean + gdppc_diff +
-                           growth_mean + growth_diff +
-                           unemploy_mean + unemploy_diff +
-                           me(gini_mean, gini_mean_se) +
-                           me(gini_diff, gini_diff_se) +
-                           (1 | country) + (1 | year)),  
-            data = data_combo,
-            backend = "cmdstanr",
-            warmup = 1000, 
-            iter = 2000, 
-            chains = 4, 
-            cores = 4,
-            seed = 324)
+  m1 <- brm(
+    formula = bf(
+      mean * 100 | mi(sd * 100) ~ election +
+        parl +
+        federal +
+        lsq_mean + lsq_diff +
+        gdppc_mean + gdppc_diff +
+        growth_mean + growth_diff +
+        unemploy_mean + unemploy_diff +
+        me(gini_mean, gini_mean_se) +
+        me(gini_diff, gini_diff_se) +
+        (1 | country) + (1 | year)
+    ),
+    data = data_combo,
+    backend = "cmdstanr",
+    warmup = 1000,
+    iter = 2000,
+    chains = 4,
+    cores = parallel::detectCores(),
+    seed = 324
+  )
   
   doubled_sd <- m1$data %>% 
     select(-`mean * 100`, -mean, -sd,
@@ -1251,8 +1255,8 @@ if (!file.exists(here::here("data", "results.rda"))) {
     count(country) %>%
     pull(n) %>%
     summary()
-  
-  save(doubled_sd, coef_data0, cy_summary, file = here::here("data", "results.rda"))
+
+  save(m1, doubled_sd, coef_data0, cy_summary, file = here::here("data", "results.rda"))
 } else {
   load(file = here::here("data", "results.rda"))
 }
@@ -1294,25 +1298,24 @@ coef_data0 %>%
   plot_annotation(caption = "Notes: Dots indicate posterior means; whiskers, from thickest to thinnest, describe 80%,\n90%, and 95% credible intervals; shading depicts the posterior probability density function.")
 ```
 
-Figure\nobreakspace{}\ref{model} displays the results.
-Consistent with the argument that campaigns bring attention-grabbing information to the public, macrointerest in election years is found to be `r get_coef("election", type = "std_coef")` points higher (95% credible interval: `r get_coef("election", type = "ci")` points) than in years without elections.
+
+Figure\nobreakspace{}\ref{model} displays the results.^[See the trajectories of the all available countries in Appendix \@ref(trajectory).]
+Consistent with the argument that campaigns bring attention-grabbing information to the public, the posterior distribution shows a 95% probability that macrointerest in election years is `r get_coef("election", type = "ci")` higher than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
 The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
-Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
-The difference between countries with and without federalism is estimated to be even larger, `r get_coef("federal", type = "std_coef")` points, though only its 90% credible interval (`r get_coef("federal", type = "ci", width = "0.9")`) is bounded away from zero.
-And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index yields a `r get_coef("lsq_diff")` point posterior mean.
+It is a 95% confident that macrointerest is `r get_coef("parl", type = "ci")` points higher in countries with parliamentary systems, according to the posterior probabilities.
+The difference between countries with and without federalism is estimated to be even larger on average (`r get_coef("federal", type = "std_coef")`, cp. `r get_coef("parl", type = "std_coef")` for parliamentarism), though only 90% confidence is bounded away from zero.
+And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index has 95% confidence reducing `r get_coef("lsq_diff", type = "ci")` points of macrointerest.
 
 On the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence from this cross-national analysis falls heavily on the side of the latter.
-Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
-The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "std_coef")` points, but only its 80% credible interval (`r get_coef("federal", type = "ci", width = "0.8")` points) excludes zero.
-The posterior means for growth in the national economy are positive as well, but the posterior distributions do not suggest relationships that are statistically defensible.
+Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff", type = "ci")` points more macrointerest (with 95% credibility).
+The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "ci", width = 0.8)` points but only with 80% confidence.
+The effect for growth in the national economy are positive as well, but there is not enough credibility to distinguish it from zero according to the posterior probabilities.
 The findings with regard to unemployment are similar.
-As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
+Supporting the relative power theory, the posterior distribution indicates 95% credibility that the long-term effects of income inequality may cause `r get_coef("gini_mean", type = "ci")` points macrointerest reduction with every two-standard-deviation difference across countries on average.
 Year-to-year changes in income inequality are found to make little difference---the influence of the wealthy over the political agenda, it would seem, does not change on such a short time scale, from one perspective, and there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions, from the other.
 Taken as a whole, evidence moderately supports the notion that absolute economic growth, rather than depression, is associated with increased macrointerest, while the distributional bias in economic growth outcomes consistently diminishes macrointerest.
-
-
 
 # Conclusions
 
@@ -1496,6 +1499,37 @@ ggplot(dcpo_input_plot, aes(x = year,
 \clearpage
 \pagebreak
 
+
+# Full Country Trajectory Matrix of Macrointerest {#trajectory}
+
+```{r trajectory, fig.align='center', fig.height=9, include=FALSE}
+df_plot_fullCountry <- mutate(theta_summary, continent = countrycode(country, "country.name", "continent"))
+
+df_plot_fullCountry$continent[df_plot_fullCountry$country %in% c("Kosovo", "Northern Ireland")] <- "Europe"
+df_plot_fullCountry$continent[df_plot_fullCountry$continent %in% c("Asia", "Oceania")] <- "Asia-Oceania"
+
+ls_plot_fullCountry <- split(df_plot_fullCountry, df_plot_fullCountry$continent)
+
+plot_fullCountry <- map(ls_plot_fullCountry, \(data){
+  ggplot(data, aes(x = year, y = median, group = country)) +
+    geom_line() +  # Line for median
+    geom_ribbon(aes(ymin = q10, ymax = q90), alpha = 0.2) +  # Shaded area for credible interval
+    labs(
+      title = data$continent,
+      x = "Year",
+      y = "Macrointerest",
+      caption = "Note: Countries are ordered by their median macrointerest score; gray shading represents 80% credible intervals."
+    )
+    facet_wrap(~ country, ncol = 4)  # Creates a separate plot for each country
+})
+
+plot_fullCountry[[1]]
+plot_fullCountry[[2]]
+plot_fullCountry[[3]]
+plot_fullCountry[[4]]
+```
+
+
 # Appendix B: The DCPO Model {#dcpo}
 
 A number of recent studies have developed latent variable models of aggregate survey responses based on cross-national survey data [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
@@ -1636,36 +1670,114 @@ The result has been visualized in Figure \@ref(fig:resplot) and discussed in the
 We welcome future researchers to examine our findings on other country cases, especially those not commonly participating in the same survey program or have more sparse data.
 The examination requires more efforts on model specification to address the even larger socioeconomic and political variance among non-OECD countries.
 
-```{r modelTB}
+```{r modelTB, cache=TRUE}
 # Load the necessary library
 library(modelsummary)
 
-df_results <- coef_data |> 
-  filter(.width == 0.95) |> 
-  rename(term = `var_names`,
-         estimate = `std_coef`, 
-         conf.low = `.lower`,
-         conf.high = `.upper`)
-
-
-gof_stats <- data.frame(N = nrow(data_combo), 
-               `Country` = length(unique(data_combo$country)), 
-               `Year` = length(unique(data_combo$year)))
-
-ls_result <- list(
-  tidy = df_results,
-  glance = gof_stats)
-
-class(ls_result) <- "modelsummary_list"
+vec_coefName <- c(
+  "b_election" = "Election Year",
+  "b_parl" = "Parliamentarism",
+  "b_federal" = "Federalism",
+  "b_lsq_mean" = "Disproportionality, Mean",
+  "b_lsq_diff" = "Disproportionality, Difference",
+  "b_gdppc_mean" = "GDPpc, Mean",
+  "b_gdppc_diff" = "GDPpc, Difference",
+  "b_growth_mean" = "GDP Growth, Mean",
+  "b_growth_diff" = "GDP Growth, Difference",
+  "b_unemploy_mean" = "Unemployment, Mean",
+  "b_unemploy_diff" = "Unemployment, Difference",
+  "bsp_megini_meangini_mean_se" = "Income Inequality, Mean",
+  "bsp_megini_diffgini_diff_se" = "Income Inequality, Difference"
+)
 
 # Create a modelsummary table with the number of observations included
 modelsummary(
-  ls_result,
+  m1,
+  coef_map = vec_coefName,
   statistic = "conf.int",
   notes = "95-percent credible intervals are in brackets.",
   title = "Numeric results of Figure 5",
   booktabs = TRUE
 )
+```
+
+
+```{r ppc, fig.cap="Posterior Predicted Distributions of Macrointerest Given the Good/Bad Time Indicators. The lines indicates the median of `yrep`. The light ribbon represent the 80 percent central intervals, and the dark one represents the 95 central intervals.", fig.height=9, eval=FALSE}
+
+# the convergence has a low bfmi issue, just for the purpose of illustration
+
+if(file.exists(here("data", "result_ppc.rds"))) {
+  ls_plot <- readRDS(here("data", "result_ppc.rds"))
+} else {
+  m1_illustrate <- brm(
+    formula = bf(
+      mean * 100 | mi(sd * 100) ~ election +
+        parl +
+        federal +
+        lsq_mean + lsq_diff +
+        gdppc_mean + gdppc_diff +
+        growth_mean + growth_diff +
+        unemploy_mean + unemploy_diff +
+        mi(gini_mean) +
+        mi(gini_diff) +
+        (1 | country) + (1 | year)
+    ) +
+      bf(gini_mean | mi(gini_mean_se) ~ 1 + (1 | gini_mean)) +
+      bf(gini_diff | mi(gini_diff_se) ~ 1 + (1 | gini_diff)),
+    save_pars = save_pars(all = TRUE),
+    data = data_combo,
+    backend = "cmdstanr",
+    warmup = 1000,
+    iter = 2000,
+    chains = 4,
+    cores = parallel::detectCores(),
+    seed = 324
+  )
+  
+  saveRDS(m1_illustrate, here("data", "result_ill.rds"))
+  
+  ## Plotting the ppd 
+  
+  ls_x <- c(
+    "gdppc_mean",
+    "gdppc_diff",
+    "growth_mean",
+    "growth_diff",
+    "unemploy_mean",
+    "unemploy_diff",
+    "gini_mean",
+    "gini_diff"
+  )
+  ls_x_name <-
+    c(
+      "GDPpc, Mean",
+      "GDPpc, Difference",
+      "GDP Growth, Mean",
+      "GDP Growth, Difference",
+      "Unemployment, Mean",
+      "Unemployment, Difference",
+      "Income Inequality, Mean",
+      "Income Inequality, Difference"
+    )
+  
+  ls_plot <- map2(ls_x, ls_x_name, \(x, xName) {
+    pp_check(
+      m1_illustrate,
+      prefix = "ppd",
+      type = "ribbon",
+      resp = "mean100",
+      x = x,
+      prob = 0.8,
+      prob_outer = 0.95
+    ) +
+      ggplot2::xlab(xName)
+  })
+  
+  saveRDS(ls_plot, here("data", "result_ppc.rds"))
+}
+
+wrap_plots(ls_plot, ncol = 2)
+
 ```
 
 

@@ -22,3 +22,5 @@ data-raw/es_data-v41/*
 data-raw/swiid9_4/*
 data-raw/swiid9_4.zip
 data/dcpo_output.rds
+data/result_ill.rds
+data/result_ppc.rds

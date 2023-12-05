@@ -64,7 +64,6 @@ We also corrected the syntax errors and framing nonclarity as pointed out by the
 In the appendix, we added more information of the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
 R2 suggested that Figure A1 is hard to read. 
 We split it into several smaller panels according to the continents of the involved countries. 
-We also presented the full, numeric result of the primary analysis as requested.
 
 **Source data representation**.
 We thank R2 to point out the potential Total Survey Error risk due to sample representation.
@@ -73,8 +72,14 @@ In this revision, we point out this issue clearly in the main text (n. XXX) and 
 In the discussion, we includes all the potential risk R2 points out and explained what DCPO does for this issue and its limitation. 
 We also point out the readers methodological paths (and examples) that can be incorporated to further deal with the data representation issue and explain the strategy of DCPO on it. 
 
+R2 also queried if "single-country and single-wave projects should be included."
+In this research, we followed the example in publications of solid journals [e.g., @TaiEtAl2022;@Claassen2020] to include survey items asked at least two time points in the history to guarantee information to predict over-period variance of these responses.
+We clarified this data collection decision on p. XXXX.
+We also showed the full matrix of the macrointerest trajectories of every country in Appendix XXX as R2 requested.
+We used a note (n. XXXX) to direct interested readers to this extension. 
+
 **Validation**.
-R2 queried of the validation of the DCPO outcome.
+R2 queried of the validity of the DCPO outcome.
 In the research, we used the validation method that has been applied in publications of  APSR and BJPS [@CaugheyEtAl2019; @WooEtAl2023].
 At the same method, we agree with R2 that it is difficulty to interpret the results of this method without any benchmarks. 
 Therefore, we listed the correlations of an APSR publication using the similar validation method for readers' reference (n. XXX).
@@ -93,7 +98,7 @@ Second, while EES also includes a fair amount of data of the European members of
 Note that the primary goal of DCPO is not only to broaden the scope of research beyond the well-surveyed countries but also to enable full-time-rank analysis and more sufficiently adjust country-based variances [@Claassen2020]. 
 DCPO has shown noticeable advantage to fulfill such design than single projects like EES. 
 
-Third, at the end of the Appendix, we welcome future researchers to extend the hypotheses testing in this article on other country cases. 
+Third, at the end of the Appendix, we presented the numeric results for Figure 5 as R2 required and welcomed future researchers to extend the hypotheses testing in this article on other country cases. 
 They, however, need to be aware that non-OECD countries vary in many dimensions.
 An examination based on them requires more efforts to prevent confounding effects from this variance on the results. 
 This has been beyond the scope of this research.
@@ -103,6 +108,6 @@ This has been beyond the scope of this research.
 R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
 Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.
 
-
+****
 
 # Reference {-}
