@@ -9,12 +9,11 @@ output:
     pandoc_args: --lua-filter=multibib.lua
 title: Macrointerest Across Countries
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-
 editor_options: 
+  
   markdown: 
     wrap: sentence
   chunk_output_type: console
-  
 tables: true # enable longtable and booktabs
 citation_package: natbib
 citeproc: false
@@ -1699,85 +1698,6 @@ modelsummary(
   title = "Numeric results of Figure 5",
   booktabs = TRUE
 )
-```
-
-
-```{r ppc, fig.cap="Posterior Predicted Distributions of Macrointerest Given the Good/Bad Time Indicators. The lines indicates the median of `yrep`. The light ribbon represent the 80 percent central intervals, and the dark one represents the 95 central intervals.", fig.height=9, eval=FALSE}
-
-# the convergence has a low bfmi issue, just for the purpose of illustration
-
-if(file.exists(here("data", "result_ppc.rds"))) {
-  ls_plot <- readRDS(here("data", "result_ppc.rds"))
-} else {
-  m1_illustrate <- brm(
-    formula = bf(
-      mean * 100 | mi(sd * 100) ~ election +
-        parl +
-        federal +
-        lsq_mean + lsq_diff +
-        gdppc_mean + gdppc_diff +
-        growth_mean + growth_diff +
-        unemploy_mean + unemploy_diff +
-        mi(gini_mean) +
-        mi(gini_diff) +
-        (1 | country) + (1 | year)
-    ) +
-      bf(gini_mean | mi(gini_mean_se) ~ 1 + (1 | gini_mean)) +
-      bf(gini_diff | mi(gini_diff_se) ~ 1 + (1 | gini_diff)),
-    save_pars = save_pars(all = TRUE),
-    data = data_combo,
-    backend = "cmdstanr",
-    warmup = 1000,
-    iter = 2000,
-    chains = 4,
-    cores = parallel::detectCores(),
-    seed = 324
-  )
-  
-  saveRDS(m1_illustrate, here("data", "result_ill.rds"))
-  
-  ## Plotting the ppd 
-  
-  ls_x <- c(
-    "gdppc_mean",
-    "gdppc_diff",
-    "growth_mean",
-    "growth_diff",
-    "unemploy_mean",
-    "unemploy_diff",
-    "gini_mean",
-    "gini_diff"
-  )
-  ls_x_name <-
-    c(
-      "GDPpc, Mean",
-      "GDPpc, Difference",
-      "GDP Growth, Mean",
-      "GDP Growth, Difference",
-      "Unemployment, Mean",
-      "Unemployment, Difference",
-      "Income Inequality, Mean",
-      "Income Inequality, Difference"
-    )
-  
-  ls_plot <- map2(ls_x, ls_x_name, \(x, xName) {
-    pp_check(
-      m1_illustrate,
-      prefix = "ppd",
-      type = "ribbon",
-      resp = "mean100",
-      x = x,
-      prob = 0.8,
-      prob_outer = 0.95
-    ) +
-      ggplot2::xlab(xName)
-  })
-  
-  saveRDS(ls_plot, here("data", "result_ppc.rds"))
-}
-
-wrap_plots(ls_plot, ncol = 2)
-
 ```
 
 

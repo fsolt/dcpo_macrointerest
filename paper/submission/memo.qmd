@@ -103,6 +103,8 @@ They, however, need to be aware that non-OECD countries vary in many dimensions.
 An examination based on them requires more efforts to prevent confounding effects from this variance on the results. 
 This has been beyond the scope of this research.
 
+In terms of the results of the hypothesis testing, we adopted R2's suggestion and rewrite the description of the findings from the perspective of posterior probabilities. 
+The credible intervals are kept in the visualization for both Bayesian and frequentist readers to understand the results.
 
 **Participation**.
 R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
