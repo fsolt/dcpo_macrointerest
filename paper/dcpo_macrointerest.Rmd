@@ -1385,8 +1385,6 @@ The number of items observed in the source data for each country-year is plotted
 The macrointerest scores of country-years with more observed items are likely to be estimated more precisely.
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
 
-\pagebreak
-
 ```{r surveyInfo}
 tb_survey <-
   import(here("data-raw", "survey_info_macrointerest.xlsx"), sheet = "combined") |>
@@ -1500,6 +1498,7 @@ items_summary %>%
 
 \clearpage
 \pagebreak
+
 ```{r obs, fig.cap = "Source Data Observations by Country and Year", fig.height = 9}
 dcpo_input_plot <- dcpo_input_raw1 %>% 
   mutate(country = str_replace(country, "’", "'"),
