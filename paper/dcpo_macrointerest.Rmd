@@ -92,6 +92,7 @@ knitr::opts_chunk$set(
   message = FALSE,
   warning = FALSE,
   dpi = 600,
+  cache = TRUE,
   fig.width = 7,
   fig.height = 4,
   plot = function(x, options) {
@@ -886,7 +887,8 @@ This cross-national latent variable of macrointerest performs impressively well 
 # Testing Theories of Macrointerest Cross-Nationally
 
 Macrointerest varies greatly around the world.
-Figure\nobreakspace{}\ref{ts_plots} examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.
+Figure\nobreakspace{}\ref{ts_plots} examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.^[
+Appendix \@ref(trajectory) presents these data for all available countries.]
 While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
 And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
 There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
@@ -956,7 +958,7 @@ Federalism is a third dichotomous variable, coded one in countries with strong f
 The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
 The context of good times and bad was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
 
-```{r des_download}
+```{r des_download, eval=FALSE}
 if (!exists(here("data-raw", "es_data-v41", "es_data-v4_1.csv"))) {
   dir.create(here("data-raw", "es_data-v41"))
   download.file("http://mattgolder.com/files/research/es_v4_codebook.pdf",
@@ -1295,7 +1297,7 @@ coef_data0 %>%
 ```
 
 
-Figure\nobreakspace{}\ref{model} displays the results.^[See the trajectories of the all available countries in Appendix \@ref(trajectory).]
+Figure\nobreakspace{}\ref{model} displays the results.
 Consistent with the argument that campaigns bring attention-grabbing information to the public, the posterior distribution shows a 95% probability that macrointerest in election years is `r get_coef("election", type = "ci")` higher than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
@@ -1532,13 +1534,13 @@ dcpo_input_plot %>%
                     right = FALSE,
                     name = "Observations") +
   labs(x = NULL, y = NULL) +
-  scale_x_continuous(breaks=seq(1982, 2022, 4),
-                     sec.axis = dup_axis()) +
+  scale_x_continuous(breaks=seq(1982, 2022, 4)) +
   scale_y_discrete(position = "right") +
-  theme(axis.text.y  = element_text(size = 7)) +
+  theme(axis.text.y  = element_text(size = 7),
+        strip.background = element_rect(fill = "white", colour = "white")) +
   facet_wrap(~forcats::fct_reorder(continent, mean_cc_rank, .desc = TRUE),
              ncol = 1,
-             scales = "free_y") +
+             scales = "free") +
   plot_annotation(caption = "Starred countries are OECD democracies, the sample employed in the analysis of macrointerest presented in the main text.")
 ```
 
@@ -1559,41 +1561,53 @@ dcpo_input_plot %>%
   scale_x_continuous(breaks=seq(1982, 2022, 4),
                      sec.axis = dup_axis()) +
   scale_y_discrete(position = "right") +
-  theme(axis.text.y  = element_text(size = 7)) +
+  theme(axis.text.y  = element_text(size = 7),
+        strip.background = element_rect(fill = "white", colour = "white")) +
   facet_wrap(~forcats::fct_reorder(continent, mean_cc_rank, .desc = TRUE),
              ncol = 1,
-             scales = "free_y") +
+             scales = "free") +
   plot_annotation(caption = "Starred countries are OECD democracies, the sample employed in the analysis of macrointerest presented in the main text.")
 ```
 
-\clearpage
 \pagebreak
-
-
-# Full Country Trajectory Matrix of Macrointerest {#trajectory}
+# Macrointerest Scores Over Time {#trajectory}
 
 ```{r trajectory, fig.align='center', fig.height=9}
-df_plot_fullCountry <- mutate(theta_summary, continent = countrycode(country, "country.name", "continent"))
-
-df_plot_fullCountry$continent[df_plot_fullCountry$country %in% c("Kosovo", "Northern Ireland")] <- "Europe"
-df_plot_fullCountry$continent[df_plot_fullCountry$continent %in% c("Asia", "Oceania")] <- "Asia-Oceania"
+df_plot_fullCountry <- theta_summary %>%  
+  mutate(continent = countrycode(country, "country.name", "continent",
+                                 warn = FALSE), 
+         continent = case_when(country %in% c("Kosovo", "Northern Ireland") ~
+                                 "Europe",
+                               continent %in% c("Asia", "Oceania") ~
+                                 "Asia-Oceania",
+                               TRUE ~ continent),
+         continent = factor(continent, levels = c("Europe", "Asia-Oceania", "Americas", "Africa")),
+         country = fct_reorder(country, mean, .desc = TRUE))
 
 ls_plot_fullCountry <- split(df_plot_fullCountry, df_plot_fullCountry$continent)
 
 fun_plot <- function(data){
   ggplot(data, aes(x = year, y = median, group = country)) +
+    theme_bw() +
+    coord_cartesian(xlim = c(1982, 2022), ylim = c(0, 1)) +
     geom_line() +  # Line for median
-    geom_ribbon(aes(ymin = q10, ymax = q90), alpha = 0.2) +  # Shaded area for credible interval
+    geom_ribbon(aes(ymin = q10, ymax = q90), alpha = 0.25) +  # Shaded area for credible interval
+    theme(axis.text.x  = element_text(size=7,
+                                    angle = 90,
+                                    vjust = .45,
+                                    hjust = .95),
+        strip.background = element_rect(fill = "white", colour = "white")) +
     labs(
       title = data$continent,
       x = "Year",
       y = "Macrointerest",
       caption = "Note: Countries are ordered by their median macrointerest score; gray shading represents 80% credible intervals."
     ) +
-    facet_wrap(~ country, ncol = 4)  # Creates a separate plot for each country
+    facet_wrap(~ country, ncol = 5)  # Creates a separate plot for each country
 }
 
-plot_fullCountry <- ls_plot_fullCountry |> map(fun_plot)
+plot_fullCountry <- ls_plot_fullCountry |>
+  map(fun_plot)
 
 plot_fullCountry[[1]]
 plot_fullCountry[[2]]
