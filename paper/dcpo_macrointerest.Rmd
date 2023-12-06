@@ -4,16 +4,17 @@ output:
     fig_caption: yes
     keep_tex: yes
     toc: no
-    number_sections: no
+    number_sections: yes
     latex_engine: xelatex
     pandoc_args: --lua-filter=multibib.lua
 title: Macrointerest Across Countries
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+
 editor_options: 
-  
   markdown: 
     wrap: sentence
   chunk_output_type: console
+
 tables: true # enable longtable and booktabs
 citation_package: natbib
 citeproc: false
@@ -90,11 +91,10 @@ knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
   warning = FALSE,
-  cache = TRUE,
   dpi = 600,
   fig.width = 7,
   fig.height = 4,
-  plot = function(x, options)  {
+  plot = function(x, options) {
     hook_plot_tex(x, options)
   }
 )
@@ -571,7 +571,7 @@ if(n_data_poor < 20) {
 (countries_plot + cby_plot) / (ybc_plot)
 ```
 
-In the top left panel of Figure\nobreakspace{}\ref{item_country_plots}, the twelve countries with the most country-year-item observations is displayed.
+In the top left panel of Figure\nobreakspace{}\@ref(fig:item_country_plots), the twelve countries with the most country-year-item observations is displayed.
 Germany, with `r de_obs` observations, is the best represented country in these source data, followed by `r others`.
 At the other end of the scale, there are `r n_data_poorest` countries`r data_poorest`that have only the bare minimum three observations needed to be included in the source dataset at all.
 In the top right panel are the dozen countries with the most observed years; this group is similar to that on the left, but with `r adding` adding to the list and `r dropping` dropping off.
@@ -724,9 +724,9 @@ The result is estimates, in all `r res_cy` country-years spanned by the source d
 
 That estimates can be generated for macrointerest or any other latent variable, however, does not automatically mean that they are suitable for analysis. 
 As is the case for any new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
-Figure\nobreakspace{}\ref{internal_val} and Figure\nobreakspace{}\ref{external_val} provide evidence of this measure's validity with tests of convergent validation and construct validation.
+Figure\nobreakspace{}\@ref(fig:internalval) and Figure\nobreakspace{}\@ref(fig:extval1) provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\ref{internal_val}, the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, p. 686 in which the correlations between the estimated variable and other indicators vary from 0.65 to 0.96.
+In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, p. 686 in which the correlations between the estimated variable and other indicators vary from 0.65 to 0.96.
 Be aware that correlations can be also affect by data richness, survey context, and other factors.].
 
 In the left panel, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
@@ -751,7 +751,7 @@ internal_ts_dat <- dcpo_input_raw1 %>%
          neg = FALSE)
 ```
 
-```{r internalval, fig.height = 3.5, fig.cap = "Internal Convergent Validation: Correlations Between Macrointerest and Individual Source-Data Survey Items \\label{internal_val}"}
+```{r internalval, fig.height = 3.5, fig.cap = "Internal Convergent Validation: Correlations Between Macrointerest and Individual Source-Data Survey Items"}
 load(here("data", "theta_summary.rda"))
 load(here("data", "theta_results.rda"))
 
@@ -835,7 +835,7 @@ ext_wvs_imp_dat <- ext_dat %>%
            neg = FALSE)
 ```
 
-```{r extval1, fig.cap="Construct Validation: Correlations Between Macrointerest and Other Aspects of Political Engagement \\label{external_val}", fig.height=3.5}
+```{r extval1, fig.cap="Construct Validation: Correlations Between Macrointerest and Other Aspects of Political Engagement", fig.height=3.5}
 # Can't run through
 
 ext_wvs_news_plot <- validation_plot(ext_wvs_news_dat,
@@ -884,7 +884,7 @@ ext_wvs_news_plot + ext_wvs_disc_plot + ext_wvs_imp_plot +
 ```
 
 Construct validation, on the other hand, refers to demonstrating, for some _other_ concept believed causally related to the concept a measure seeks to represent, that the measure is empirically associated with measures of that other concept [@Adcock2001, 542].
-Figure\nobreakspace{}\ref{external_val} depicts the relationships between macrointerest and three survey items from the World Values Survey and European Values Survey on other aspects of political engagement that are expected to have causal relationships with political interest [see @Kittilson2010, 995]: in the left panel, following political news on television, radio, and newspapers; in the center panel, discussing politics with friends; and on the right, feeling politics is important to one's life.
+Figure\nobreakspace{}\@ref(fig:extval1) depicts the relationships between macrointerest and three survey items from the World Values Survey and European Values Survey on other aspects of political engagement that are expected to have causal relationships with political interest [see @Kittilson2010, 995]: in the left panel, following political news on television, radio, and newspapers; in the center panel, discussing politics with friends; and on the right, feeling politics is important to one's life.
 These relationships are all positive and are moderate to strong.
 This cross-national latent variable of macrointerest performs impressively well in validation tests.
 
@@ -1324,7 +1324,7 @@ The cross-national macrointerest dataset presented here addresses this issue, pr
 For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] found that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorized.
 And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows just the opposite, that it is _good_ times that lead the public to take interest in politics.
 By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
-Beyond investigating the sources of macrointerest, the novel cross-national measurement also provide opportunity for further examining its relationship with various types of political participation and civil engagements [@Anderson2007;@VerbaEtAl1995a].
+Beyond investigating the sources of macrointerest, the novel cross-national measurement also provide opportunity for further examining its relationship with various types of political participation and civil engagements [@Anderson2007;@VerbaEtAl1995].
 
 <!-- The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest. -->
 
@@ -1337,6 +1337,8 @@ Beyond investigating the sources of macrointerest, the novel cross-national meas
 :::
 
 \pagebreak
+
+# (APPENDIX) Appendix {-} 
 
 ```{=tex}
 \renewcommand{\baselinestretch}{1}
@@ -1353,6 +1355,10 @@ Beyond investigating the sources of macrointerest, the novel cross-national meas
 \renewcommand*{\thefigure}{A\arabic{figure}}
 ```
 ```{=tex}
+\setcounter{table}{0}
+\renewcommand*{\thetable}{A\arabic{table}}
+```
+```{=tex}
 \vspace{-.5in}
 \begin{center}
 \begin{Large}
@@ -1361,7 +1367,7 @@ Appendices
 \end{center}
 ```
 
-# Appendix A: Survey Items Used to Estimate Macrointerest {#surveys}
+# Survey Items Used to Estimate Macrointerest {#surveys}
 
 National and cross-national surveys have often included questions tapping interest in politics over the past four decades, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
 In all, I identified `r n_items` such survey items that were asked in no fewer than five country-years in countries surveyed at least twice; these items were drawn from `r n_surveys` different survey datasets.
@@ -1374,15 +1380,53 @@ In accordance with the advice offered by @Hu2022 to avoid data-entry errors by a
 The current version of the software facilitates the entire practical data generation process, from accessing original survey datasets to their conversion into R-compatible formats, and to restructuring them for analysis with the DCPO model. 
 The primary objective is to limit manual interventions, thereby reducing error potential inherent in human-operated data preparation tasks.
 
-
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
-The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs_by_cy} below.
+The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\@ref(fig:obs) below.
 The macrointerest scores of country-years with more observed items are likely to be estimated more precisely.
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
 
 \pagebreak
 
-\noindent Table A1: Indicators Used in the Latent Variable Model of Macrointerest
+```{r surveyInfo}
+tb_survey <-
+  import(here("data-raw", "survey_info_macrointerest.xlsx"), sheet = "combined") |>
+  mutate(
+    survey = str_remove(survey, "\\d+") |>
+      str_remove(",.*") |>
+      str_remove("_.*"),
+    creator = ifelse(
+      creator == str_to_upper(creator),
+      str_to_title(creator),
+      creator
+    ),
+    version = ifelse(is.na(version), "", str_to_lower(version))
+  ) |>
+  select(-link, -survey) |>
+  filter(!is.na(name)) |> 
+  group_by(name) |>
+  summarise(
+    year = ifelse(
+      min(year) == max(year),
+      as.character(year),
+      paste0(min(year), "-", max(year))
+    ),
+    version = paste(unique(version), collapse = ", "),
+    creator = paste(unique(creator), collapse = "; ")
+  ) |>
+  mutate(creator = stringi::stri_trans_general(creator, "Latin-ASCII")) |> 
+  set_names(c("Survey", "Range", "Version", "Primary Creator/Maintainer"))
+
+
+datasummary_df(tb_survey, 
+               title = "Source Survey Information",
+               longtable = TRUE) |> 
+  kable_styling(latex_options = c("striped", "repeat_header")) |> 
+  column_spec(1, width = "20em") |> 
+  column_spec(2, width = "7em") |> 
+  column_spec(3, width = "6em") |> 
+  column_spec(4, width = "30em") |> 
+  kable_styling(font_size = 7)
+```
 
 ```{r macrointerest_items}
 load(here("data", "dcpo_input.rda"))
@@ -1434,32 +1478,29 @@ items_summary <- dcpo_input_raw1 %>%
   arrange(-n_cy)
 ```
 
-```{r tsc_items_table}  
+```{r itemsTb}  
 items_summary %>% 
   mutate(item = str_replace(item, "_", ".")) |> 
-  transmute(`Survey\nItem\nCode` = item,
-            `Country-Years` = as.character(n_cy),
+  select(-item, -all_surveys) |> 
+  transmute(`Country-Years` = as.character(n_cy),
             `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
             `Response Categories` = response_categories,
             `Dispersion` = dispersion,
-            `Difficulties`= difficulties,
-            `Survey Dataset Codes` = all_surveys) %>% 
-  modelsummary::datasummary_df(output = "kableExtra",
-                               longtable = TRUE) %>% 
-  kableExtra::column_spec(1, width = "7em") %>%
-  kableExtra::column_spec(2, width = "4em") %>%
-  kableExtra::column_spec(3, width = "13em") %>%
-  kableExtra::column_spec(4, width = "16em") %>%
-  kableExtra::column_spec(5, width = "4em") %>%
-  kableExtra::column_spec(c(6, 7), width = "8em") %>% 
-  kableExtra::kable_styling(font_size = 7) %>%
-  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
-  kableExtra::kable_styling(latex_options = "striped")
+            `Difficulties`= difficulties) %>% 
+  datasummary_df(longtable = TRUE, 
+                 title = "Indicators Used in the Latent Variable Model of Macrointerest") %>% 
+  column_spec(1, width = "3em") %>%
+  column_spec(2, width = "24em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "4em") %>%
+  column_spec(5, width = "10em") %>%
+  kable_styling(font_size = 7) %>%
+  kable_styling(latex_options = c("striped", "repeat_header"))
 ```
 
 \clearpage
 \pagebreak
-```{r obs, fig.cap = "Source Data Observations by Country and Year \\label{obs_by_cy}", fig.height = 9}
+```{r obs, fig.cap = "Source Data Observations by Country and Year", fig.height = 9}
 dcpo_input_plot <- dcpo_input_raw1 %>% 
   mutate(country = str_replace(country, "’", "'"),
          country = if_else(country %in% oecd_countries & country!="Turkey",
@@ -1501,7 +1542,7 @@ ggplot(dcpo_input_plot, aes(x = year,
 
 # Full Country Trajectory Matrix of Macrointerest {#trajectory}
 
-```{r trajectory, fig.align='center', fig.height=9, include=FALSE}
+```{r trajectory, fig.align='center', fig.height=9}
 df_plot_fullCountry <- mutate(theta_summary, continent = countrycode(country, "country.name", "continent"))
 
 df_plot_fullCountry$continent[df_plot_fullCountry$country %in% c("Kosovo", "Northern Ireland")] <- "Europe"
@@ -1509,7 +1550,7 @@ df_plot_fullCountry$continent[df_plot_fullCountry$continent %in% c("Asia", "Ocea
 
 ls_plot_fullCountry <- split(df_plot_fullCountry, df_plot_fullCountry$continent)
 
-plot_fullCountry <- map(ls_plot_fullCountry, \(data){
+fun_plot <- function(data){
   ggplot(data, aes(x = year, y = median, group = country)) +
     geom_line() +  # Line for median
     geom_ribbon(aes(ymin = q10, ymax = q90), alpha = 0.2) +  # Shaded area for credible interval
@@ -1518,9 +1559,11 @@ plot_fullCountry <- map(ls_plot_fullCountry, \(data){
       x = "Year",
       y = "Macrointerest",
       caption = "Note: Countries are ordered by their median macrointerest score; gray shading represents 80% credible intervals."
-    )
+    ) +
     facet_wrap(~ country, ncol = 4)  # Creates a separate plot for each country
-})
+}
+
+plot_fullCountry <- ls_plot_fullCountry |> map(fun_plot)
 
 plot_fullCountry[[1]]
 plot_fullCountry[[2]]
@@ -1529,7 +1572,7 @@ plot_fullCountry[[4]]
 ```
 
 
-# Appendix B: The DCPO Model {#dcpo}
+# The DCPO Model {#dcpo}
 
 A number of recent studies have developed latent variable models of aggregate survey responses based on cross-national survey data [see @Claassen2019; @Caughey2019; @McGann2019; @Kolczynska2020].
 To estimate macrointerest across countries and over time, we employ the latest of these methods that is appropriate for data that is not only incomparable but also sparse, the Dynamic Comparative Public Opinion (DCPO) model elaborated in @Solt2020c.
@@ -1625,7 +1668,7 @@ Figure \@ref(fig:cpOECD) visualize the increment DCPO yields in comparison with 
 The year ranges covered by ESS is marked as the light bars by year, and those DCPO can offer are marked dark.
 DCPO not only fills all the empty years absent from EES but also extend the data availability beyond Europe to the entire rank of OECD countries and from 1982 to 2022.
 
-```{r cpOECD, fig.cap="Data Avaliability: DCPO vs. ESS"}
+```{r cpOECD, fig.cap="Data Avaliability: DCPO vs. ESS", fig.height=5}
 library(rvest)
 tb_ess <-
   read_html("https://www.europeansocialsurvey.org/about/participating-countries") |>
@@ -1670,9 +1713,6 @@ We welcome future researchers to examine our findings on other country cases, es
 The examination requires more efforts on model specification to address the even larger socioeconomic and political variance among non-OECD countries.
 
 ```{r modelTB, cache=TRUE}
-# Load the necessary library
-library(modelsummary)
-
 vec_coefName <- c(
   "b_election" = "Election Year",
   "b_parl" = "Parliamentarism",
@@ -1847,12 +1887,14 @@ plot_comparison <- ggplot(data = df_compare, aes(x = year, y = mean, group = met
   theme_bw() +
   theme(axis.title.x = element_blank(), 
         legend.title = element_blank(), 
-        legend.position = c(0.9, 0.9))
+        legend.position = c(0.8, 0.8))
 
 plot_peterson | plot_comparison
 
 ```
 
+\clearpage
+\pagebreak
 
 # References {.unnumbered}
 

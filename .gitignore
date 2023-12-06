@@ -17,6 +17,7 @@ paper/*cache/*
 data/1000/
 data/dcpo_surveys/
 paper/dcpo_macrointerest_files/*
+data-raw/survey_info_macrointerest.xlsx
 data-raw/ElectionIndices.pdf
 data-raw/es_data-v41/*
 data-raw/swiid9_4/*
