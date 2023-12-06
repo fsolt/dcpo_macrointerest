@@ -1526,8 +1526,8 @@ dcpo_input_plot %>%
              y = forcats::fct_reorder(country, cc_rank),
              fill = n)) + 
   geom_tile() +
-  scale_fill_stepsn(colors = rev(hcl.colors(5, "inferno")),
-                    n.breaks = 5,
+  scale_fill_stepsn(colors = rev(hcl.colors(7, "inferno")),
+                    n.breaks = 7,
                     show.limits = TRUE,
                     right = FALSE,
                     name = "Observations") +
@@ -1550,8 +1550,8 @@ dcpo_input_plot %>%
              y = forcats::fct_reorder(country, cc_rank),
              fill = n)) + 
   geom_tile() +
-  scale_fill_stepsn(colors = rev(hcl.colors(5, "inferno")),
-                    n.breaks = 5,
+  scale_fill_stepsn(colors = rev(hcl.colors(7, "inferno")),
+                    limits = c(1, 7),
                     show.limits = TRUE,
                     right = FALSE,
                     name = "Observations") +
