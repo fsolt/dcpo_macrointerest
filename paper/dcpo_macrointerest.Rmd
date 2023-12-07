@@ -1698,7 +1698,7 @@ We also encourage further scholarly examination of our findings' robustness thro
 After creating the cross-sectional time-series macrointerest, we tested theories of macrointerest formation in thirty-seven democracies of the OECD. 
 Most macrointerest formation-modification theories assume stable and enduring democratic institutions.
 OECD countries are generally characterized by stable political systems and developed economies. 
-This stability provides a consistent backdrop for analyzing how macrointerests form and evolve over time, minimizing the impact of extreme political or economic upheavals that could skew data in less stable contexts.
+This stability provides a consistent backdrop for analyzing how macrointerest form and evolve over time, minimizing the impact of extreme political or economic upheavals that could skew data in less stable contexts.
 While the OECD countries commit to democratic governance and market-based economies, there are also sufficient cultural, political, socioeconomic, and geographic diversities among them.
 This combination of diversity and comparability allows for robust cross-national studies and the testing of theories across different yet relatable settings.
 The high quality political and socioeconomic data of these countries also reduce the influence of measurement error and data sparseness on the analytic outcomes.
@@ -1710,7 +1710,7 @@ Figure \@ref(fig:cpOECD) visualize the increment DCPO yields in comparison with 
 The year ranges covered by ESS is marked as the light bars by year, and those DCPO can offer are marked dark.
 DCPO not only fills all the empty years absent from EES but also extend the data availability beyond Europe to the entire rank of OECD countries and from 1982 to 2022.
 
-```{r cpOECD, fig.cap="Data Avaliability: DCPO vs. ESS", fig.height=5}
+```{r cpOECD, fig.cap="Data Availability: DCPO vs. ESS", fig.height=5}
 if (!file.exists(here("data", "tb_ess.rda"))) {
   library(rvest)
   tb_ess <-
@@ -1738,13 +1738,13 @@ tb_dcpo_oecd <- theta_summary %>%
   mutate(available_dcpo = 1)
 
 tb_oecd <- left_join(tb_dcpo_oecd, tb_ess_oecd) |> 
-  mutate(avaliable = rowSums(across(c(available_dcpo, avaliable_ess)), na.rm = TRUE),
-         avaliable_fct = factor(avaliable, labels = c("DCPO", "ESS"))) |> 
-  select(country, year, avaliable, avaliable_fct)
+  mutate(available = rowSums(across(c(available_dcpo, available_ess)), na.rm = TRUE),
+         available_fct = factor(available, labels = c("DCPO", "ESS"))) |> 
+  select(country, year, available, available_fct)
 
 ggplot(tb_oecd, aes(x = year, 
              y = country,
-             fill = avaliable_fct)) + 
+             fill = available_fct)) + 
   geom_tile() +
   labs(x = NULL, y = NULL) +
   scale_fill_manual(values = hcl.colors(5, "inferno", alpha = 0.6)[c(2, 4)]) +
