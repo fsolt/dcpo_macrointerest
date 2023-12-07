@@ -655,7 +655,7 @@ dcpo_output$save_output_files(dir = results_path,
                               random = FALSE)
 ```
 
-```{r dcpo_output}
+```{r dcpo_output, eval=FALSE}
 if (!exists("results_path")) {
   latest <- "202304201035"
   results_path <- here::here("data", "1000", latest)
@@ -672,22 +672,57 @@ if (!exists("results_path")) {
   }
 }
 
+load(file = here::here("data", "dcpo_input.rda"))
 dcpo_output <- as_cmdstan_fit(here::here(results_path,
-                                   list.files(results_path,
-                                              pattern = "csv$")))
+                                         list.files(results_path,
+                                                    pattern = "csv$")))
 
+theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
+                                                   dcpo_output,
+                                                   "theta")
+
+save(theta_summary, file = here::here("data",
+                                      "theta_summary.rda"))
+
+theta_results <- extract_dcpo_results(dcpo_input,
+                                      dcpo_output,
+                                      par = "theta")
+
+save(theta_results, file = here::here("data",
+                                      "theta_results.rda"))
+
+alpha_results <- summarize_dcpo_results(dcpo_input,
+                                        dcpo_output = dcpo_output,
+                                        pars = "alpha") %>% 
+  transmute(item = question,
+            dispersion = mean)
+
+beta_results <- summarize_dcpo_results(dcpo_input,
+                                       dcpo_output,
+                                       "beta") %>% 
+  group_by(question) %>% 
+  summarize(difficulties0 = paste0(sprintf("%.2f", round(mean, 2)),
+                                   collapse = ", ")) %>% 
+  mutate(item = question,
+         cp = if_else(str_detect(item, "threestate"),
+                      2, 
+                      as.numeric(str_extract(item, "\\d+")) - 1),
+         term = str_glue("(( ?-?[0-9].[0-9][0-9]?,?){{{cp}}})"),
+         difficulties = str_extract(difficulties0, 
+                                    term) %>%
+           str_replace(",$", "") %>% 
+           str_trim()) %>% 
+  transmute(item, difficulties)
+
+save(alpha_results,
+     beta_results,
+     file = here::here("data",
+                       "item_results.rda"))
 ```
 
-```{r dcpo_summary, include=FALSE, cache=TRUE}
-# load(file = here::here("data", "dcpo_input.rda"))
-# theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
-#                                                    dcpo_output,
-#                                                    "theta")
-# 
-# save(theta_summary, file = here::here("data",
-#                                       "theta_summary.rda"))
-
+```{r theta_summary}
 load(file = here(here("data", "theta_summary.rda")))
+load(here("data", "theta_results.rda"))
 
 res_cy <- nrow(theta_summary) %>% 
   scales::comma()
@@ -696,17 +731,6 @@ res_c <- theta_summary %>%
   pull(country) %>% 
   unique() %>% 
   length()
-```
-
-```{r theta_results}
-# theta_results <- extract_dcpo_results(dcpo_input,
-#                                       dcpo_output,
-#                                       par = "theta")
-# 
-# save(theta_results, file = here::here("data",
-#                                       "theta_results.rda"))
-
-load(here("data", "theta_results.rda"))
 ```
 
 The model was estimated using the `DCPOtools` package for R [@Solt2019], running four chains for 1,000 iterations each and discarding the first half as warmup, leaving 2,000 samples.
@@ -831,8 +855,6 @@ ext_wvs_imp_dat <- ext_dat %>%
 ```
 
 ```{r extval1, fig.cap="Construct Validation: Correlations Between Macrointerest and Other Aspects of Political Engagement", fig.height=3.5}
-# Can't run through
-
 ext_wvs_news_plot <- validation_plot(ext_wvs_news_dat,
                                      lab_x = .15,
                                      lab_y = 95) +
@@ -895,7 +917,7 @@ There are considerable differences in the extent to which the public professes i
 
 ```{r ts, fig.cap="Macrointerest Scores Over Time Within OECD Democracies \\label{ts_plots}", fig.height=9}
 
-load(here("data", "theta_summary.rda"))
+load(here::here("data", "theta_summary.rda"))
 
 oecd_countries <- c("Australia", "Austria", "Belgium",
                     "Canada", "Chile", "Colombia",
@@ -958,8 +980,8 @@ Federalism is a third dichotomous variable, coded one in countries with strong f
 The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
 The context of good times and bad was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
 
-```{r des_download, eval=FALSE}
-if (!exists(here("data-raw", "es_data-v41", "es_data-v4_1.csv"))) {
+```{r des_download}
+if (!file.exists(here("data-raw", "es_data-v41", "es_data-v4_1.csv"))) {
   dir.create(here("data-raw", "es_data-v41"))
   download.file("http://mattgolder.com/files/research/es_v4_codebook.pdf",
                 here("data-raw", "es_data-v41", "es_v4_codebook.pdf"))
@@ -1323,9 +1345,8 @@ The cross-national macrointerest dataset presented here addresses this issue, pr
 For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] found that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorized.
 And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows just the opposite, that it is _good_ times that lead the public to take interest in politics.
 By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
-Beyond investigating the sources of macrointerest, the novel cross-national measurement also provide opportunity for further examining its relationship with various types of political participation and civil engagements [@Anderson2007;@VerbaEtAl1995].
-
-<!-- The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest. -->
+<!-- Beyond investigating the sources of macrointerest, the novel cross-national measurement also provide opportunity for further examining its relationship with various types of political participation and civil engagements [@Anderson2007;@VerbaEtAl1995]. -->
+The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest as well as its relationships with other aspects of political engagement.
 
 
 \pagebreak
@@ -1429,30 +1450,8 @@ datasummary_df(tb_survey,
 
 ```{r macrointerest_items}
 load(here("data", "dcpo_input.rda"))
+load(here::here("data", "item_results.rda"))
 
-alpha_results <- summarize_dcpo_results(dcpo_input,
-                                        dcpo_output = dcpo_output,
-                                        pars = "alpha") %>% 
-  transmute(item = question,
-            dispersion = mean)
-
-beta_results <- summarize_dcpo_results(dcpo_input,
-                                       dcpo_output,
-                                       "beta") %>% 
-  group_by(question) %>% 
-  summarize(difficulties0 = paste0(sprintf("%.2f", round(mean, 2)),
-                                   collapse = ", ")) %>% 
-  mutate(item = question,
-         cp = if_else(str_detect(item, "threestate"),
-                      2, 
-                      as.numeric(str_extract(item, "\\d+")) - 1),
-         term = str_glue("(( ?-?[0-9].[0-9][0-9]?,?){{{cp}}})"),
-         difficulties = str_extract(difficulties0, 
-                                    term) %>%
-           str_replace(",$", "") %>% 
-           str_trim()) %>% 
-  transmute(item, difficulties)
-                                    
 items_summary <- dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
   distinct() %>%
@@ -1497,8 +1496,7 @@ items_summary %>%
   kable_styling(latex_options = c("striped", "repeat_header"))
 ```
 
-\clearpage
-\pagebreak
+
 ```{r obs, fig.cap = "Source Data Observations by Country and Year", fig.height = 9}
 dcpo_input_plot <- dcpo_input_raw1 %>% 
   mutate(country = str_replace(country, "’", "'"),
@@ -1721,19 +1719,20 @@ tb_ess <-
 
 names(tb_ess)[1] <- "country"
 
-tb_ess_oecd <- filter(tb_ess, country %in% unique(data_combo$country)) |> 
+tb_ess_oecd <- filter(tb_ess, country %in% setdiff(oecd_countries, "Turkey")) |> 
   mutate(across(-country, \(x) ifelse(x == "", 0, 1))) |> 
   pivot_longer(cols = -country, 
                names_to = "year",
                values_to = "avaliable_ess") |> 
   mutate(year = sub("R\\d{1}", "", year) |> as.numeric())
 
-tb_dcpo_oecd <- crossing(country = unique(data_combo$country),
-                         year = unique(data_combo$year)) |> 
-  mutate(avaliable_dcpo = 1)
+tb_dcpo_oecd <- theta_summary %>% 
+  filter(country %in% setdiff(oecd_countries, "Turkey")) %>% 
+  select(country, year) %>%
+  mutate(available_dcpo = 1)
 
 tb_oecd <- left_join(tb_dcpo_oecd, tb_ess_oecd) |> 
-  mutate(avaliable = rowSums(across(c(avaliable_dcpo, avaliable_ess)), na.rm = TRUE),
+  mutate(avaliable = rowSums(across(c(available_dcpo, avaliable_ess)), na.rm = TRUE),
          avaliable_fct = factor(avaliable, labels = c("DCPO", "ESS"))) |> 
   select(country, year, avaliable, avaliable_fct)
 
