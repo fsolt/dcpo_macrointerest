@@ -67,8 +67,6 @@ We further accepted R2's suggestion to revis the summary of the empirical findin
 We adopted R1's suggestion to move the discussion of data cleaning automation to Appendix XXX and provided more details about what the software helps in the data collection and janitor processes.
 
 
-
-
 **Source data representation**.
 We thank R2 to point out the potential Total Survey Error risk due to sample representation.
 With hindsight, this is an important issue for readers and potential users of our method to know yet not sufficiently addressed in the previous version.
@@ -77,10 +75,16 @@ In the discussion, we includes all the potential risk R2 points out and explaine
 We also point out the readers methodological paths (and examples) that can be incorporated to further deal with the data representation issue and explain the strategy of DCPO on it. 
 
 R2 also queried if "single-country and single-wave projects should be included."
-In this research, we followed the example in publications of solid journals [e.g., @TaiEtAl2022;@Claassen2020] to include survey items asked at least two time points in the history to guarantee information to predict over-period variance of these responses.
+In this research, we followed the example in publications of solid journals [e.g., @TaiEtAl2022a;@Claassen2020] to include survey items asked at least two time points in the history to guarantee information to predict over-period variance of these responses.
 We clarified this data collection decision on p. XXXX.
 We also showed the full matrix of the macrointerest trajectories of every country in Appendix XXX as R2 requested.
 We used a note (n. XXXX) to direct interested readers to this extension. 
+
+We also followed R2's suggestion adding more information of the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
+To present the information clearly, we separate the survey and item information to two tables.
+Moreover, R2 suggested that Figure A1 is hard to read. 
+We split it into several smaller panels according to the continents of the involved countries. 
+
 
 **Validation**.
 R2 queried of the validity of the DCPO outcome.
