@@ -912,7 +912,6 @@ This cross-national latent variable of macrointerest performs impressively well 
 Macrointerest varies greatly around the world, even across the relatively similar countries like the advanced democracies.
 Figure\nobreakspace{}\@ref(fig:ts_plots) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.^[
 Appendix \@ref(trajectory) presents these data for all available countries.]
-<!-- (see the trajectories of all the available countries in DCPO in Appendix \@ref(trajectory) and case selection strategy in Appendix \@ref(whyOecd)). -->
 While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
 And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
 There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
@@ -957,7 +956,7 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
 
 What explains these differences?
 One straightforward explanation is that publics grow more interested in politics at election time.
-Campaigns and elections attract media coverage and increase the information available to the public on the issues being contested, leading to increased interest in politics [see, e.g., @Beach2018; @Larsen2022].
+Campaigns and elections attract media coverage and increase the information available to the public on the issues being contested, leading to increased interest in politics [see, e.g., @Larsen2022].
 Macrointerest within each country should be expected to be higher, therefore, in years in which national elections take place than in years without elections.
 
 A second argument is that political institutions that share power, rather than concentrate it, yield politics that are more interesting and engaging.
@@ -965,7 +964,7 @@ Building on @Lijphart1999 and @Powell2000, @Kittilson2010 [, 992] argues that po
 Macrointerest should be higher in countries with parliamentary and federal systems than in those without those features, and it should decline as the disproportionality between votes cast and seats won increases.
 
 A third claim deals with the public's demand for accountability.
-@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success \ldots voters should not waste their energies focusing on the activities of their representatives."
+@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success \ldots voters should not waste their energies."
 If democracy is a principal-agent problem with elected officials acting as self-interested agents and the public as their lazy but vengeful principal, then macrointerest should rise when times are bad and decline as conditions improve.
 
 A final set of theories---each well established---contradicts the third.
