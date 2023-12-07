@@ -301,8 +301,9 @@ set.seed(324)
 
 # Introduction
 
-The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963. Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023]. 
-More than just boosting engagement, political interests critically determine the quality of political decisions and behaviors, influencing factors like time spent, information collection and utilization, and critical thinking against partisan restrictions [@ButlerDeLaO2010;@LaneEtAl2022].].
+The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963]. 
+Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023]. 
+More than just boosting engagement, political interest critically determines the quality of political decisions and behaviors, influencing factors like time spent, information collection and utilization, and critical thinking against partisan restrictions [@ButlerDeLaO2010; @LaneEtAl2022].
 In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [@Peterson2022].
 
 Data to allow for large-scale cross-sectional time-series assessments, however, have been unavailable.
@@ -741,11 +742,11 @@ The result is estimates, in all `r res_cy` country-years spanned by the source d
 
 # Validating Cross-National Macrointerest
 
-That estimates can be generated for macrointerest or any other latent variable, however, does not automatically mean that they are suitable for analysis. 
+That we can generate estimates of macrointerest does not automatically mean that they are suitable for analysis. 
 As is the case for any new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\@ref(fig:internalval) and Figure\nobreakspace{}\@ref(fig:extval1) provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, p. 686 in which the correlations between the estimated variable and other indicators vary from 0.65 to 0.96.
+In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 686, in which the correlations between the estimated variable and other indicators vary from 0.65 to 0.96.
 Be aware that correlations can be also affect by data richness, survey context, and other factors.].
 
 In the left panel, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
@@ -908,13 +909,13 @@ This cross-national latent variable of macrointerest performs impressively well 
 
 # Testing Theories of Macrointerest Cross-Nationally
 
-Macrointerest varies greatly around the world.
-Figure\nobreakspace{}\@ref(fig:ts_plots) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD^[
+Macrointerest varies greatly around the world, even across the relatively similar countries like the advanced democracies.
+Figure\nobreakspace{}\@ref(fig:ts_plots) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.^[
 Appendix \@ref(trajectory) presents these data for all available countries.]
 <!-- (see the trajectories of all the available countries in DCPO in Appendix \@ref(trajectory) and case selection strategy in Appendix \@ref(whyOecd)). -->
 While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
 And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
-There are considerable differences in the extent to which the public professes interest in politics both across countries and over time, even within the advanced democracies.
+There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
 
 ```{r ts, fig.cap="Macrointerest Scores Over Time Within OECD Democracies \\label{ts_plots}", fig.height=9}
 
@@ -1153,9 +1154,9 @@ if (!file.exists(here::here("data-raw", "oecd_data.rda"))) {
 if (!file.exists(here("data-raw",
                       "swiid9_4",
                       "swiid9_4_summary.csv"))) {
-download.file("https://dataverse.harvard.edu/api/access/datafile/6716676", "data-raw/swiid9_4.zip")
-unzip(here("data-raw", "swiid9_4.zip"), exdir = here("data-raw"))
-file.remove("data-raw", "swiid9_4.zip")
+  download.file("https://dataverse.harvard.edu/api/access/datafile/6716676", "data-raw/swiid9_4.zip")
+  unzip(here("data-raw", "swiid9_4.zip"), exdir = here("data-raw"))
+  file.remove("data-raw", "swiid9_4.zip")
 }
 
 swiid_summary <- read_csv(here("data-raw",
@@ -1168,8 +1169,6 @@ swiid_summary <- read_csv(here("data-raw",
 ```
 
 ```{r analysis, include=FALSE}
-
-# The data is needed for appendix table.
 data_combo <- theta_summary %>% 
     filter(country %in% oecd_countries &
              country!="Turkey") %>% 
@@ -1281,9 +1280,19 @@ if (!file.exists(here::here("data", "results.rda"))) {
 } else {
   load(file = here::here("data", "results.rda"))
 }
+
+ess_perc <- ess_perc <- {{dcpo_input_raw1 %>% 
+    filter(country %in% oecd_countries & r==1) %>%
+    count(item) %>%
+    arrange(desc(n)) %>%
+    slice(1) %>%
+    pull(n)} * 100 / nrow(m1$data)} %>% 
+  round()
 ```
 
 The resulting dataset comprises the thirty-seven OECD democracies, each observed in twenty-one (Mexico) to forty (Ireland, Italy, the United Kingdom, and the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years).
+Even among these relatively data-rich countries, our measure of macrointerest provides much more data than would otherwise be available: the richest single survey for these cases, the European Social Survey, covers only `r ess_perc`% of these country-years, and of course excludes entirely the nine OECD members in the Americas and around the Pacific Rim (see Appendix\nobreakspace{}\@ref(whyOecd)).
+
 @Shor2007 demonstrates that such pooled time series are best analyzed using a Bayesian multilevel model including varying intercepts for each country and each year. 
 The former help account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as, in this dataset, parliamentarism and federalism.
 The latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
@@ -1409,8 +1418,8 @@ The macrointerest scores of country-years with more observed items are likely to
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
 
 ```{r surveyInfo}
-tb_survey <-
-  import(here("data-raw", "survey_info_macrointerest.xlsx"), sheet = "combined") |>
+tb_survey <- import(here("data-raw", "survey_info_macrointerest.xlsx"),
+                    sheet = "combined") |>
   mutate(
     survey = str_remove(survey, "\\d+") |>
       str_remove(",.*") |>
@@ -1453,7 +1462,7 @@ datasummary_df(tb_survey,
 ```
 
 ```{r macrointerest_items}
-load(here("data", "dcpo_input.rda"))
+load(here::here("data", "dcpo_input.rda"))
 load(here::here("data", "item_results.rda"))
 
 items_summary <- dcpo_input_raw1 %>%
