@@ -21,6 +21,17 @@ title:  Macrointerest Across Countries
 subtitle: Memo to Editor and Reviewers
 ---
 
+## Introduction
+
+**Syntax and framing**.
+We appreciate the reviewers' careful reading and framing suggestions. 
+Following them, we reorganized the introduction into three paragraphs to address the relevance of Macrointerest, the challenges faced by previous research, and the specific contribution and findings.
+We also corrected the syntax errors and framing nonclarity as pointed out by the reviewers.
+
+In the appendix, we added more information of the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
+R2 suggested that Figure A1 is hard to read. 
+We split it into several smaller panels according to the continents of the involved countries. 
+
 **Method comparison**. 
 We follow R1's suggestion to compare DCPO with other methods, especially, @PetersonEtAl2022's Wcalc in more detail. 
 In the main text (p. XXXX), we state the rationale to use DCPO over Wcalc in this research and direct readers to a special appendix, Appendix XXX.
@@ -56,14 +67,7 @@ We further accepted R2's suggestion to revis the summary of the empirical findin
 We adopted R1's suggestion to move the discussion of data cleaning automation to Appendix XXX and provided more details about what the software helps in the data collection and janitor processes.
 
 
-**Syntax and framing**.
-We appreciate the reviewers' careful reading and framing suggestions. 
-Following them, we reorganized the introduction into three paragraphs to address the relevance of Macrointerest, the challenges faced by previous research, and the specific contribution and findings.
-We also corrected the syntax errors and framing nonclarity as pointed out by the reviewers.
 
-In the appendix, we added more information of the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
-R2 suggested that Figure A1 is hard to read. 
-We split it into several smaller panels according to the continents of the involved countries. 
 
 **Source data representation**.
 We thank R2 to point out the potential Total Survey Error risk due to sample representation.
