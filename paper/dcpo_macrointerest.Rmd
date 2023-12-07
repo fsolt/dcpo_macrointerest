@@ -1711,19 +1711,25 @@ The year ranges covered by ESS is marked as the light bars by year, and those DC
 DCPO not only fills all the empty years absent from EES but also extend the data availability beyond Europe to the entire rank of OECD countries and from 1982 to 2022.
 
 ```{r cpOECD, fig.cap="Data Avaliability: DCPO vs. ESS", fig.height=5}
-library(rvest)
-tb_ess <-
-  read_html("https://www.europeansocialsurvey.org/about/participating-countries") |>
-  html_element(".table-wrapper , td , th") |>
-  html_table()
-
-names(tb_ess)[1] <- "country"
+if (!file.exists(here("data", "tb_ess.rda"))) {
+  library(rvest)
+  tb_ess <-
+    read_html("https://www.europeansocialsurvey.org/about/participating-countries") |>
+    html_element(".table-wrapper , td , th") |>
+    html_table()
+  
+  names(tb_ess)[1] <- "country"
+  
+  save(tb_ess, file = here::here("data", "tb_ess.rda"))
+} else {
+  load(here("data", "tb_ess.rda"))
+}
 
 tb_ess_oecd <- filter(tb_ess, country %in% setdiff(oecd_countries, "Turkey")) |> 
   mutate(across(-country, \(x) ifelse(x == "", 0, 1))) |> 
   pivot_longer(cols = -country, 
                names_to = "year",
-               values_to = "avaliable_ess") |> 
+               values_to = "available_ess") |> 
   mutate(year = sub("R\\d{1}", "", year) |> as.numeric())
 
 tb_dcpo_oecd <- theta_summary %>% 
