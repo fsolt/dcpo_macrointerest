@@ -21,8 +21,7 @@ title:  Macrointerest Across Countries
 subtitle: Memo to Editor and Reviewers
 ---
 
-## Introduction
-
+## Introduction {.unnumbered}
 **Syntax and framing**.
 We appreciate the reviewers' careful reading and framing suggestions. 
 Following them, we reorganized the introduction into three paragraphs to address the relevance of Macrointerest, the challenges faced by previous research, and the specific contribution and findings.
@@ -32,41 +31,8 @@ In the appendix, we added more information of the source surveys in order to giv
 R2 suggested that Figure A1 is hard to read. 
 We split it into several smaller panels according to the continents of the involved countries. 
 
-**Method comparison**. 
-We follow R1's suggestion to compare DCPO with other methods, especially, @PetersonEtAl2022's Wcalc in more detail. 
-In the main text (p. XXXX), we state the rationale to use DCPO over Wcalc in this research and direct readers to a special appendix, Appendix XXX.
-In the new appendix, we discuss the methodological and operational differences between DCPO and Wcalc.
-Furthermore, we compare the outcomes from the two methods and point out the advantage of DCPO on yielding more efficient estimation by incorporating information from other countries and scaling. 
 
-**Scaling**. 
-R1 also suggested us to consider employing the cumulative distribution function (CDF) of the normal distribution, as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework.
-We acknowledge and value this suggestion. 
-Both the logistic function and the normal distribution's CDF serve to convert variables into a CDF format. 
-In DCPO, our preference for the logistic function is grounded in its inherent flexibility and enhanced tolerance for deviations from standard assumptions. 
-Pertinently, within the macrointerest context, there is no compelling rationale to presume that the resulting scores are devoid of extreme values or adhere to a symmetric distribution. 
-The logistic transformation exhibits greater leniency under such conditions compared to the normal CDF. 
-On the other hand, we concur with R1 regarding the intuitive interpretability of the normal-based transformation. 
-To address this, we have incorporated a specific annotation (Footnote XXX) in the main manuscript, thereby enlightening readers about alternative transformation methodologies.
-Additionally, the source code for DCPO is comprehensively accessible online, enabling users to modify transformation methods as they see fit. 
-For confidentiality purposes, this detail was omitted in the current draft but will be disclosed subsequent to the research's acceptance for publication.
-  
-**Uncertainty**. 
-In response to R1's suggestion to provide more details about the uncertainty incorporation, we made a specific discussion in Footnote XXX. 
-We used the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
-This is a method that has been used in a series of latent variable analyses in political science. 
-We listed several other applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
-
-**Good/bad time**.
-We adopted R1's suggestion of using the "good/bad times."
-We gave a clearer definition indicating the goodness specifically refers to economic growth when the first time the phrases are used (p. XXXX).
-Later in the theoretical setup, we borrowed R1's framing to indicate the exact relationship between economic growth and macrointerest (p. XXX).
-
-We further accepted R2's suggestion to revis the summary of the empirical findings about the good/bad (economic) times to prevent overstatment (p. XXXX).
-
-**`DCPOtools`**.
-We adopted R1's suggestion to move the discussion of data cleaning automation to Appendix XXX and provided more details about what the software helps in the data collection and janitor processes.
-
-
+## Cross-National Macrointerest: The Source Data {.unnumbered}
 **Source data representation**.
 We thank R2 to point out the potential Total Survey Error risk due to sample representation.
 With hindsight, this is an important issue for readers and potential users of our method to know yet not sufficiently addressed in the previous version.
@@ -85,13 +51,43 @@ To present the information clearly, we separate the survey and item information 
 Moreover, R2 suggested that Figure A1 is hard to read. 
 We split it into several smaller panels according to the continents of the involved countries. 
 
+**`DCPOtools`**.
+On the recommendation of R1, we expanded and moved our discussion of the automation of the data cleaning process to Appendix A.
 
+
+## Estimating Cross-National Macrointerest {.unnumbered}
+**Method comparison**. 
+We follow R1's suggestion to compare DCPO with other methods, especially, @PetersonEtAl2022's Wcalc in more detail. 
+In the main text (p. XXXX), we state the rationale to use DCPO over Wcalc in this research and direct readers to a special appendix, Appendix XXX.
+In the new appendix, we discuss the methodological and operational differences between DCPO and Wcalc.
+Furthermore, we compare the outcomes from the two methods and point out the advantage of DCPO on yielding more efficient estimation by incorporating information from other countries and scaling. 
+
+**Scaling**. 
+R1 also suggested us to consider employing the cumulative distribution function (CDF) of the normal distribution---that is, the probit transformation---as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework.
+We acknowledge and value this suggestion.
+The preference for the logistic function in the DCPO model is grounded in its inherent flexibility and enhanced tolerance for deviations from standard normal assumptions. 
+Pertinently, within the macrointerest context, we see little reason to presume that the the source data are devoid of extreme values or adhere to a symmetric distribution. 
+The logistic transformation exhibits greater leniency under such conditions compared to the normal CDF. 
+On the other hand, we concur with R1 that the interpretation of the probit transformation is more intuitive.
+We have added a discussion of these points to Appendix B, our summary of the DCPO model.
+Amd as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
+
+
+## Validating Cross-National Macrointerest {.unnumbered}
 **Validation**.
 R2 queried of the validity of the DCPO outcome.
 In the research, we used the validation method that has been applied in publications of  APSR and BJPS [@CaugheyEtAl2019; @WooEtAl2023].
 At the same method, we agree with R2 that it is difficulty to interpret the results of this method without any benchmarks. 
 Therefore, we listed the correlations of an APSR publication using the similar validation method for readers' reference (n. XXX).
 Moreover, we point out to the readers that the correlations can also be affected by other factors.
+
+
+## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
+**Uncertainty**. 
+In response to R1's suggestion to provide more details about the uncertainty incorporation, we made a specific discussion in Footnote XXX. 
+We used the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
+This is a method that has been used in a series of latent variable analyses in political science. 
+We listed several other applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
 
 **Hypothesis testing**.
 R2 questioned why we tested the theory on OECD countries and "why not just take ESS data, which include most of the OECD countries, and save ourselves all the harmonization effort."
@@ -114,10 +110,17 @@ This has been beyond the scope of this research.
 In terms of the results of the hypothesis testing, we adopted R2's suggestion and rewrite the description of the findings from the perspective of posterior probabilities. 
 The credible intervals are kept in the visualization for both Bayesian and frequentist readers to understand the results.
 
+## Conclusions
+**Good and bad times**.
+We adopted R1's suggestion of using the "good/bad times."
+We gave a clearer definition indicating the goodness specifically refers to economic growth when the first time the phrases are used (p. XXXX).
+Later in the theoretical setup, we borrowed R1's framing to indicate the exact relationship between economic growth and macrointerest (p. XXX).
+
+We further accepted R2's suggestion to revise the summary of the empirical findings about the good/bad (economic) times to prevent overstatment (p. XXXX).
+
 **Participation**.
 R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
 Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.
 
-****
 
 # Reference {-}
