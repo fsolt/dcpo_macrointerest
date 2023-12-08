@@ -63,7 +63,9 @@ header-includes:
 
 Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Department of Political Science, Tsinghua University, [yuehu\@tsinghua.edu.cn](mailto:yuehu@tsinghua.edu.cn){.email}
 
-Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
+\vspace{1cm}
+
+\noindent Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
 
 \pagebreak
 
@@ -302,11 +304,11 @@ set.seed(324)
 # Introduction {.unnumbered}
 
 The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963]. 
-Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023]. 
-More than just boosting engagement, political interest critically determines the quality of political decisions and behaviors, influencing factors like time spent, information collection and utilization, and critical thinking against partisan restrictions [@ButlerDeLaO2010; @LaneEtAl2022].
-In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [@Peterson2022].
+<!-- Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023].  -->
+More than just boosting engagement, political interest critically determines the quality of political decisions and behaviors, influencing factors like time spent, information collection and utilization, and critical assessment of partisan claims [see, e.g., @LaneEtAl2022].
+In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [see, e.g., @Foa2016]. 
 
-Data to allow for large-scale cross-sectional time-series assessments, however, have been unavailable.
+A recent contribution, @Peterson2022, measures macrointerest over time in the United States, but similar data allowing for large-scale cross-sectional time-series assessments have as yet been unavailable.
 Although many surveys ask respondents across countries how interested they are in politics, differences in question wording and in response categories have limited scholars' ability to pool the data together, and even in the absence of these issues, in most countries the questions have not been asked sufficiently frequently to provide annual time series.
 
 This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of aggregate political interest for over a hundred countries over the past four decades.
@@ -589,14 +591,9 @@ To estimate the public's interest in politics across countries and over time, th
 @Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
 The @McGann2019 model depends on dense survey data unlike the sparse data on interest in politics described in the preceding section.
 @Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.
-It is perhaps worth noting that the dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a _single_ country that is not easy nor efficient to be expanded to cross-national analyses [see @Caughey2019, 686].
-We also conducted a more detailed comparison between DCPO and @Peterson2022's Wcalc in Appendix\nobreakspace{}\@ref(peterson).
-]
-The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.^[
-Several alternative approaches exist for transforming data to the unit interval, e.g., the cumulative distribution function (CDF) of the normal distribution, which facilitates the interpretation of results as percentiles. 
-Each transformation method carries distinct assumptions and conditions. 
-It is imperative for researchers to select a method that aligns optimally with their data characteristics and research objectives.
-]
+The dyad-ratios model employed in @Peterson2022 generates time series of public opinion in only a single country and so is not suitable for cross-national analyses [see @Caughey2019, 686].
+A comparison of our estimates and the estimates produced in @Peterson2022 is found in Appendix\nobreakspace{}\@ref(peterson).]
+The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.
 For a comprehensive description of the DCPO model, see Appendix\nobreakspace{}\@ref(dcpo) and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
 
 The DCPO model accounts for incomparability using three sets of parameters.
@@ -1628,7 +1625,10 @@ The sum of $\delta_{kq}$ across all countries $k$ is set to zero for each questi
 \sum_{k = 1}^K \delta_{kq} = 0
 \end{equation}
 
-Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of macrointerest, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].
+Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of macrointerest, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].^[
+Alternative approaches exist for transforming data to the unit interval.
+For example, a probit transformation, that is, the cumulative distribution function (CDF) of the normal distribution facilitates the interpretation of the values of the resulting measure as percentiles.
+The advantage of the logistic transformation compared to the probit transformation is its heavier tails, which allow for differences among very low and among very high values to be distinguished more clearly.]
 
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
 First, it incorporates the _difficulty_ of each question's responses, that is, how much political interest is indicated by a given response. 
