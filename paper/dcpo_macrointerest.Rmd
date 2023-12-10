@@ -1319,7 +1319,7 @@ coef_data0 %>%
 ```
 
 
-Figure\nobreakspace{}\@ref(fig:model) displays the results (see the numeric results in Appendix\nobreakspace{}\@ref(whyOecd).
+Figure\nobreakspace{}\@ref(fig:resplot) displays the results (see the numeric results in Appendix\nobreakspace{}\@ref(whyOecd).
 Consistent with the argument that campaigns bring attention-grabbing information to the public, the posterior distribution shows a 95% probability that macrointerest in election years is `r get_coef("election", type = "ci")` higher than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
