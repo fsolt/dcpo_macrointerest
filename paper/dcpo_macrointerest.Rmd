@@ -79,7 +79,7 @@ Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Dep
 
 ```{=tex}
 \begin{abstract}
-The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good (economic) times, not bad, that spur publics to greater interest in politics. 
+The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good economic conditions, not bad times, that spur publics to greater interest in politics. 
 \end{abstract}
 ```
 \pagebreak
@@ -314,7 +314,7 @@ Although many surveys ask respondents across countries how interested they are i
 This letter takes advantage of recent advances in latent-variable modeling of cross-national aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of aggregate political interest for over a hundred countries over the past four decades.
 It shows that these cross-national macrointerest scores perform well in validation tests.
 Finally, as a demonstration of their utility, the letter presents a new test of theories on the circumstances that induce the publics of advanced democracies to take more interest in politics.
-The results support arguments that, in these countries, election campaigns, inclusive institutions, and good economic times, not bad ones, spur greater political interest.
+The results support arguments that, in these countries, election campaigns, inclusive institutions, and good economic conditions, not bad times, spur greater political interest.
 
 ```{r dcpo_input_raw, eval=FALSE}
 surveys_interest <- read_csv(here::here("data-raw",
@@ -977,7 +977,7 @@ The three institutional variables are measured as in @Kittilson2010.
 Data on parliamentarism, a dichotomous variable coded one in pure parliamentary systems and zero otherwise, is also sourced from the DES.
 Federalism is a third dichotomous variable, coded one in countries with strong federal systems [see @Lijphart1999] and zero in all others.
 The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
-The context of good times and bad was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
+The context of good and bad economic conditions was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
 
 ```{r des_download}
 if (!file.exists(here("data-raw", "es_data-v41", "es_data-v4_1.csv"))) {
@@ -1335,7 +1335,7 @@ It is a 95% confident that macrointerest is `r get_coef("parl", type = "ci")` po
 The difference between countries with and without federalism is estimated to be even larger on average (`r get_coef("federal", type = "std_coef")`, cp. `r get_coef("parl", type = "std_coef")` for parliamentarism), though only 90% confidence is bounded away from zero.
 And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index has 95% confidence reducing `r get_coef("lsq_diff", type = "ci")` points of macrointerest.
 
-On the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence from this cross-national analysis falls heavily on the side of the latter.
+On the debate on whether macrointerest is invigorated or instead discouraged by bad economic conditions, the evidence from this cross-national analysis falls heavily on the side of the latter.
 Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff", type = "ci")` points more macrointerest (with 95% credibility).
 The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "ci", width = 0.8)` points but only with 80% confidence.
 The effect for growth in the national economy are positive as well, but there is not enough credibility to distinguish it from zero according to the posterior probabilities.
@@ -1350,7 +1350,7 @@ Macrointerest, despite its theoretical importance, has as yet drawn only limited
 This oversight largely reflects the paucity of available data to measure this important concept.
 The cross-national macrointerest dataset presented here addresses this issue, providing annual time series across more than a hundred countries and allowing more and better tests of the wide range of theories that implicate the public's interest in politics.
 For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] found that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorized.
-And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows just the opposite, that it is _good_ times that lead the public to take interest in politics.
+And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows the opposite, that it is _good_ economic conditions that lead the public to take interest in politics.
 By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
 <!-- Beyond investigating the sources of macrointerest, the novel cross-national measurement also provide opportunity for further examining its relationship with various types of political participation and civil engagements [@Anderson2007;@VerbaEtAl1995]. -->
 The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest as well as its relationships with other aspects of political engagement.
