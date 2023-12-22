@@ -28,6 +28,9 @@ Following this advice, we reorganized the introduction into three paragraphs to 
 Reviewer 1 also specifically suggested that we contrast our work with that of @Peterson2022, and we do that in our second paragraph.
 (We also, at R1's suggestion, included an appendix comparing our estimates of macrointerest for the United States with those presented in that article; see Appendix E.)
 
+One point that both reviewers flagged was the "good times versus bad" framing of the hypotheses regarding the circumstances that prompt higher levels of macrointerest, pointing out that this wording does not correspond very well to the paper's findings.
+Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrase to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
+
 ## Cross-National Macrointerest: The Source Data {.unnumbered}
 **Source data representation**.
 We thank R2 to point out the potential Total Survey Error risk due to sample representation.
@@ -85,7 +88,7 @@ We added an Appendix (Appendix XXX) to address the this issue:
 As stated there, there are specific theoretical and empirical reasons to examine the theoretical inferences about the source of macrointerest on OECD countries. 
 First, most theories about political interests addressed in the letter were built upon the assumption of stable institutions for public political participation. 
 OECD countries are valid cases to examine such theories.
-The both sociopolitical stability and socioecomic and geographic diversity also provide unique conditions fot the hypothesis testing.
+The both sociopolitical stability and socioecomic and geographic diversity also provide unique conditions for hypothesis testing.
 
 Second, while EES also includes a fair amount of data of the European members of OECD, it does not include members out of Europe, which will noticeably diminished the country diversity.
 Note that the primary goal of DCPO is not only to broaden the scope of research beyond the well-surveyed countries but also to enable full-time-rank analysis and more sufficiently adjust country-based variances [@Claassen2020]. 
