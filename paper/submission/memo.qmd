@@ -53,13 +53,8 @@ On the recommendation of R1, we expanded and moved our discussion of the automat
 
 ## Estimating Cross-National Macrointerest {.unnumbered}
 **Method comparison**. 
-We follow R1's suggestion to compare DCPO with other methods, especially, @Peterson2022's Wcalc in more detail. 
-In the main text (p. XXXX), we state the rationale to use DCPO over Wcalc in this research and direct readers to a special appendix, Appendix XXX.
-In the new appendix, we discuss the methodological and operational differences between DCPO and Wcalc.
-Furthermore, we compare the outcomes from the two methods and point out the advantage of DCPO on yielding more efficient estimation by incorporating information from other countries and scaling. 
-
-
-
+R1 suggested that we bring our discussion of the merits of the DCPO approach relative to alternatives from a footnote to the text.
+We have adopted this suggestion at page 4.
 
 ## Validating Cross-National Macrointerest {.unnumbered}
 **Validation**.
