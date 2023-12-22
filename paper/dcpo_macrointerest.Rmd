@@ -1325,7 +1325,7 @@ coef_data0 %>%
 ```
 
 
-Figure\nobreakspace{}\@ref(fig:model) displays the results (see the numeric results in Appendix\nobreakspace{}\@ref(whyOecd).
+Figure\nobreakspace{}\@ref(fig:resplot) displays the results (see the numeric results in Appendix\nobreakspace{}\@ref(whyOecd).
 Consistent with the argument that campaigns bring attention-grabbing information to the public, the posterior distribution shows a 95% probability that macrointerest in election years is `r get_coef("election", type = "ci")` higher than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
@@ -1802,6 +1802,28 @@ plot_fullCountry[[2]]
 plot_fullCountry[[3]]
 plot_fullCountry[[4]]
 ```
+
+```{r presentationPlot, eval=FALSE}
+df_plot_illustrate <- filter(df_plot_fullCountry, country %in% c("China", "Russia", "United States")) 
+
+ggplot(df_plot_illustrate, aes(x = year, y = median, fill = country)) +
+    geom_line() +  # Line for median
+    geom_ribbon(aes(ymin = q10, ymax = q90), alpha = 0.25) +  # Shaded area for credible interval
+  coord_cartesian(xlim = c(1990, 2020)) + 
+  drhutools::scale_fill_gb(palette = "digitMixed", reverse = TRUE) +
+    theme(axis.text.x  = element_text(size=7,
+                                    angle = 90,
+                                    vjust = .45,
+                                    hjust = .95),
+        strip.background = element_rect(fill = "white", colour = "white")) +
+    labs(x = "Year",
+      y = "Macrointerest",
+      caption = "Note: Countries are ordered by their median macrointerest score; gray shading represents 80% credible intervals."
+    )
+
+ggsave(here("output", "macroint_interestURC.png"))
+```
+
 
 # Comparison with @Peterson2022 {#peterson}
 
