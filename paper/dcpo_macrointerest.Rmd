@@ -1406,8 +1406,8 @@ Items have one less difficulty score than the number of response categories.
 
 Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019]; they appear in decreasing order of country-years contributed.
 In accordance with the advice offered by @Hu2022 to avoid data-entry errors by automating data collection, the `DCPOtools` R package [@Solt2019] was used to compile the responses to these questions.
-The current version of the software facilitates the entire practical data generation process, from accessing original survey datasets to their conversion into R-compatible formats, and to restructuring them for analysis with the DCPO model. 
-The primary objective is to limit manual interventions, thereby reducing error potential inherent in human-operated data preparation tasks.
+The current version of the software facilitates the entire practical data generation process: from accessing the original survey datasets and converting them into R standard formats for quick loading; through standardizing country names, identifying survey years, and extracting the desired survey items; to restructuring the resulting data for analysis with the DCPO model. 
+The primary objective is to limit manual interventions, thereby maximizing reproducibility and reducing the error potential inherent in human-operated data preparation tasks.
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\@ref(fig:obs) below.
