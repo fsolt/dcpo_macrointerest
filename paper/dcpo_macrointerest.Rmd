@@ -306,7 +306,7 @@ set.seed(324)
 The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963]. 
 <!-- Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023].  -->
 More than just boosting engagement, political interest critically determines the quality of political decisions and behaviors, influencing factors like time spent, information collection and utilization, and critical assessment of partisan claims [see, e.g., @LaneEtAl2022].
-In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [see, e.g., @Foa2016]. 
+In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [see, e.g., @Foa2016, 10-11]. 
 
 A recent contribution, @Peterson2022, measures macrointerest over time in the United States, but similar data allowing for large-scale cross-sectional time-series assessments have as yet been unavailable.
 Although many surveys ask respondents across countries how interested they are in politics, differences in question wording and in response categories have limited scholars' ability to pool the data together, and even in the absence of these issues, in most countries the questions have not been asked sufficiently frequently to provide annual time series.
@@ -1627,7 +1627,7 @@ The sum of $\delta_{kq}$ across all countries $k$ is set to zero for each questi
 
 Finally, the logistic function is used to transform $\bar{\theta'}_{kt}$ to the unit interval and so give the bounded mean of macrointerest, $\bar{\theta}_{kt}$, which is our parameter of interest here [see @Solt2020c, 3-8].^[
 Alternative approaches exist for transforming data to the unit interval.
-For example, a probit transformation, that is, the cumulative distribution function (CDF) of the normal distribution facilitates the interpretation of the values of the resulting measure as percentiles.
+For example, a probit transformation, that is, the cumulative distribution function (CDF) of the normal distribution is one option, one that facilitates the interpretation of the values of the resulting measure as percentiles.
 The advantage of the logistic transformation compared to the probit transformation is its heavier tails, which allow for differences among very low and among very high values to be distinguished more clearly.]
 
 The DCPO model accounts for the incomparability of different survey questions with two parameters.
@@ -1757,6 +1757,7 @@ modelsummary(
 )
 ```
 
+
 # Macrointerest Scores Over Time {#trajectory}
 
 ```{r trajectory, fig.align='center', fig.height=9}
@@ -1804,36 +1805,38 @@ plot_fullCountry[[4]]
 
 # Comparison with @Peterson2022 {#peterson}
 
-This study extends the pivotal concept of "macrointerest" from @Peterson2022, yet diverges methodologically by employing the Dynamic Comparative Public Opinion (DCPO) model instead of the dynamic ratio algorithm, commonly referred to as "Wcalc," as utilized in the original research [-@Peterson2022, p. 208]. 
-Apart from the primary rationale stated in the main article---that Wcalc is inherently tailored for generating public opinion time series within a single country rather than for cross-national comparison---there are also methodological and operational distinctions between these two approaches.
+This study extends the pivotal concept of "macrointerest" from @Peterson2022, but it is not intended to replicate that paper: both the method and data employed diverge considerably between the two projects.
+Still, a comparison of the macrointerest estimates generated for the United States in both projects is valuable.
+
+Our work diverges methodologically by employing the Dynamic Comparative Public Opinion (DCPO) model instead of the dyad ratio algorithm, commonly referred to as "Wcalc," used by @Peterson2022 [, 208]. 
+Apart from the primary rationale stated in the main text---that Wcalc is inherently tailored for generating public opinion time series within a single country rather than for cross-national comparison---there are also methodological and operational distinctions between these two approaches.
 
 The dynamic ratio algorithm primarily seeks to uncover shared variance over time among various survey items.
 Its process involves initially pairing these items, subsequently calculating the ratio for each unique pair, and then analyzing the distribution of these ratios. 
-DCPO instead directly models the relationship between the latent variable and survey item responses using a Bayesian Item Response Theory (IRT) approach. 
-This method provides a probabilistic framework, enabling the estimation of response probabilities contingent on both the level of the latent trait and specific characteristics of the survey items.
+DCPO instead directly models the relationship between the latent variable and survey item responses using a Bayesian Item Response Theory (IRT) approach (for more on the differences between dyad ratios and IRT, see @McGann2014, which finds that a single-country IRT model provides a better fit to a collection of UK public opinion data meant to capture "policy mood" than the dyad ratio algorithm). 
+The DCPO method provides a probabilistic framework, enabling the estimation of response probabilities contingent on both the level of the latent trait and specific characteristics of the survey items (for more details, see Appendix\nobreakspace{}\@ref(dcpo)).
 
 Additionally, these methods adopt differing strategies for addressing missing data at certain time points. 
 The dynamic ratio algorithm tackles this challenge by estimating values for unobserved series at each time point, basing these estimations on the calculated ratio of missing survey items to those observed in the corresponding period.
 For the same issue, DCPO, on the other hand, employs dynamic linear models at the local level for each country, leveraging random-walk priors. 
-This approach not only smooths the estimates of macrointerest over time but also facilitates estimation in years characterized by limited or absent survey data, and simultaneously providing specific uncertainty estimates.
+This approach not only smooths the estimates of macrointerest over time but also facilitates estimation in years characterized by limited or absent survey data and simultaneously provides specific uncertainty estimates.
 
-In application, as @Peterson2022[p. 210] pointed out, to conduct the dynamic ratio algorithm, researchers have to remove or redistribute the responses of moderate opinions.
-Since modeling the item characteristics directly, DCPO does not need to twist the original item response.
-It can also yield the credible intervals of the estimates from the Bayesian process, rather than relying on the ex post bootstrapping for uncertainty estimation.
-DCPO additionally implements a logistic function to confine the outcome estimation within a unit interval. 
-This bounding process can diminish the uncertainty of estimates for countries at the extremes. 
-As highlighted by @LinzerStaton2015[p. 229], "constraining the latent variable might have minimal impact on the scale, yielding more reasonable uncertainty estimates."
+As @Peterson2022 [, 210] points out, to conduct the dyad ratio algorithm, researchers must first dichotomize each survey question by collapsing responses and (possibly, as in this case) excluding moderate opinions.
+DCPO, on the other hand, incorporates an ordered logistic model and so does require the transformation of any of the original item responses.
+It also produces credible intervals of the estimates from the Bayesian process, rather than relying on ex-post bootstrapping for uncertainty estimation.
+DCPO additionally implements a logistic function to confine the outcome estimates within the unit interval. 
 
-In Figure \@ref(fig:peterson-plot), we compare the outcome from these two methods.
-In the left panel, we replicate @Peterson2022's Figure 6 of the Wcalc scores of the U.S. macrointerest.
-We then bounded the Wcalc scores to the unit interval via a logistic transformation as DCPO does and calculate the 80% confidence intervals.
-The results is compared with the DCPO outputs in the shared time period (1982--2014) in the right panel of Figure \@ref(fig:peterson-plot). 
-The variance of Wcalc scores become less observable when they are bounded relative to the standard error. 
-DCPO, on the other hand, illustrates a more noticable variance in macriointerst over years and gains a better efficiency based on not only one but multiple countries' data.
-In this sense, DCPO outcome brings stronger evidence for the original proposition of @Peterson2022.
+Finally, it is worth noting that the data employed in each paper differs.
+The estimates of @Peterson2022 are based on sixteen series with observations in at least two quarters.
+The data on which our macrointerest estimates for the United States are based on eleven series with at least five country-year observations across all countries.
+These latter data are dated annually, and nearly all of them are drawn from cross-national surveys.
+Only two series, drawn from the American National Election Survey and from surveys by the Pew Research Center, are included in both source-data datasets.
+This is due partly to the minimum of five country-year observations we use, partly to the shorter time span covered by this project (because of the paucity of data for other countries in earlier decades), partly to our practice of using only surveys for which the entire survey dataset rather than only survey marginals is available to ensure survey weights are applied, partly to the omission of cross-national surveys by @Peterson2022, and partly to the combination of these factors.
 
 ```{r peterson, eval=FALSE}
-macroint2 <- import(here("data", "peterson2022","calc2.dta"))
+source(here("data", "peterson2022", "Extract.r"))
+
+macroint2 <- import(here("data", "peterson2022", "calc2.dta"))
 
 # make the date variable in the right format
 macroint2$date2 <- ISOdate(macroint2$year, macroint2$month, 1)
@@ -1849,18 +1852,7 @@ interestQ <-
     unit = "Q",
     begindt = ISOdate(1973, 1, 1),
     enddt = NA
-  ) 
-
-
-source(here("data", "peterson2022", "Extract.r"))
-
-# load data
-
-macroint2 <- import(here("data", "peterson2022", "calc2.dta"))
-
-# make the date variable in the right format
-
-macroint2$date2 <- ISOdate(macroint2$year, macroint2$month, 1)
+  )
 
 # bootstrap
 
@@ -1911,48 +1903,174 @@ saveRDS(MI, here("data", "peterson2022", "peterson_mi.rds"))
 ```
 
 ```{r peterson-plot, fig.align='center', fig.cap="Comparison between DCPO and Wcalc"}
-df_peterson2022 <- readRDS(here("data", "peterson2022", "peterson_mi.rds")) |> 
-  rename(year = period,
-         mean = boot_mean,
-         sd = boot_sd) |> 
-  select(year, mean, sd) |> 
+MI <- readRDS(here("data", "peterson2022", "peterson_mi.rds"))
+
+df_peterson2022 <- MI |> 
+  transmute(quarter = (period - round(period)) * 10,
+            year = round(period) + (2*quarter-1)*.125,
+            mean = boot_mean/100 - .25,
+            se = boot_sd/100,
+            lb = mean - qnorm(0.9) * se,
+            ub = mean + qnorm(0.9) * se) |> 
   mutate(method = "Wcalc")
 
 df_dcpo <- filter(c_res, country == "United States") |> 
-  select(year, mean, sd) |> 
+  select(year, mean, lb = q10, ub = q90, se = sd) |> 
   mutate(method = "DCPO")
 
-df_compare <- mutate(df_peterson2022, mean = 1 / (1 + exp(mean/100 - 1))) |> 
-  bind_rows(df_dcpo) |> 
-  mutate(lb = mean - qnorm(0.9) * (sd / sqrt(n())),
-         ub = mean + qnorm(0.9) * (sd / sqrt(n())))
+df_compare <- df_peterson2022 %>% 
+  bind_rows(df_dcpo)
 
-plot_peterson <- ggplot(data = df_peterson2022, aes(x = year, y = mean)) +
-  labs(y = "Macrointerest (Wcalc score)", title = "Peterson et.al. (2022, Figure 6)") +
-  geom_line() +
-  geom_ribbon(aes(ymin = mean - sd, 
-                  ymax = mean + sd), alpha = .5) +
-  plot_annotation(caption = "Shaded areas represent 80% credible intervals.") +
-  theme_bw() + 
-  theme(axis.title.x = element_blank(), 
-        legend.title = element_blank(), 
-        legend.position = c(0.8, 0.9))
+compare_cor <- c_res %>% 
+  filter(country == "United States") %>% 
+  left_join(df_peterson2022 %>% 
+              mutate(year = floor(year)) %>% 
+              group_by(year) %>% 
+              summarize(mean_wcalc = mean(mean),
+                        se_wcalc = mean(se)),
+            by = "year") %>% 
+  with(cor(mean_wcalc, mean, use = "pairwise.complete.obs")) %>% 
+  round(2) %>% 
+  paste("R =", .)
 
-
-plot_comparison <- ggplot(data = df_compare, aes(x = year, y = mean, group = method, fill = method)) +
+plot_comparison <- ggplot(data = df_compare,
+                          aes(x = year, y = mean, group = method, fill = method)) +
   labs(y = "Macrointerest", title = "Wcalc vs. DCPO") +
   coord_cartesian(xlim = c(1982, 2014)) +
   geom_ribbon(data = df_compare, aes(ymin = lb, ymax = ub), alpha = .5) +
   geom_line() +
   plot_annotation(caption = "Shaded areas represent 80% credible intervals.") +
   theme_bw() +
+  scale_x_continuous(breaks = seq(1982, 2016, by = 4)) +
   theme(axis.title.x = element_blank(), 
         legend.title = element_blank(), 
-        legend.position = c(0.8, 0.8))
+        legend.position = c(0.1, 0.2)) +
+  annotate(geom = "text", 
+           x = 1985,
+           y = .62,
+           label = compare_cor)
 
-plot_peterson | plot_comparison
+plot_comparison
 
 ```
+
+In Figure \@ref(fig:peterson-plot), we compare the outcomes from these two methods during the years they overlap, from 1982 to 2014.
+For the purpose of this comparison, the Wcalc scores of @Peterson2022 are first divided by 100 to place them on the unit interval and then shifted a quarter-point downward, which yields identical scores on both series in their first common year, 1982.
+Neither of these affect the shape of the Wcalc series; they work simply to overlay the two series for more straightforward comparison.
+
+Two points stand out.
+First, the credible intervals of the DCPO series are considerably broader than the bootstrapped intervals for the Wcalc series.
+Whether these latter intervals are overconfident seems worth investigating, perhaps by cross-validation, by future users of this method.
+Second, the two series are positively but not particularly strongly related; the bivariate correlation is just `r compare_cor`.
+The surge in macrointerest after the September 11, 2001 attacks documented in @Peterson2022 [, 217], for example, is brief in the Wcalc series but longer-lasting in the DCPO series.
+Conversely, the sharp upturn in the Wcalc macrointerest series that peaks in late 2013 does not appear in the DCPO series at all---it appears to be an artifact of the rather thin data in the Knowledge Networks series @Peterson2022 employs (see also @Peterson2022, Appendix C, which drops these observations as anomalous).
+
+```{r pmsm}
+pmsm <- haven::read_dta(here("data", 
+                             "peterson2022",
+                             "macrointerest_R.dta")) %>% 
+  mutate(trust_lag = lag(trust),
+         trust_diff = trust - trust_lag,
+         prapp_lag = lag(prapp),
+         prapp_diff = prapp - prapp_lag,
+         ics_lag = lag(ics),
+         ics_diff = ics - ics_lag,
+         interest_lag = lag(interest))
+
+pmsm_annual <- pmsm %>% 
+  group_by(year) %>% 
+  summarize(trust = mean(trust),
+            prapp = mean(prapp),
+            ics = mean(ics),
+            prezcamp = mean(prezcamp),
+            september = max(september),
+            interest = mean(interest)) %>% 
+  left_join(df_dcpo, by = join_by(year)) %>% 
+    mutate(trust_lag = lag(trust),
+         trust_diff = trust - trust_lag,
+         prapp_lag = lag(prapp),
+         prapp_diff = prapp - prapp_lag,
+         ics_lag = lag(ics),
+         ics_diff = ics - ics_lag,
+         interest_lag = lag(interest),
+         dcpo = mean*100,
+         dcpo_lag = lag(dcpo))
+
+m_pmsm <- lm(interest ~ interest_lag +
+               trust_lag +
+               trust_diff +
+               prapp_lag +
+               prapp_diff +
+               ics_lag +
+               ics_diff +
+               prezcamp +
+               september, 
+              data = pmsm %>% filter(between(year, 1983, 2014)))
+
+m_pmsm_ann <- lm(interest ~ interest_lag +
+               trust_lag +
+               trust_diff +
+               prapp_lag +
+               prapp_diff +
+               ics_lag +
+               ics_diff +
+               prezcamp +
+               september, 
+              data = pmsm_annual %>% filter(!is.na(dcpo_lag)))
+
+m_pmsm_dcpo <- lm(dcpo ~ dcpo_lag +
+                    trust_lag +
+                    trust_diff +
+                    prapp_lag +
+                    prapp_diff +
+                    ics_lag +
+                    ics_diff +
+                    prezcamp +
+                    september, 
+                  data = pmsm_annual %>% filter(!is.na(dcpo_lag)))
+
+vec_coefName2 <- c(
+  "interest_lag" = "Macrointerest (Lagged)",
+  "dcpo_lag" = "Macrointerest (Lagged)",
+  "trust_lag" = "Trust (Lagged)",
+  "trust_diff" = "Trust (Difference)",
+  "prapp_lag" = "Presidential Approval (Lagged)",
+  "prapp_diff" = "Presidential Approval (Difference)",
+  "ics_lag" = "Consumer Sentiment (Lagged)",
+  "ics_diff" = "Consumer Sentiment (Difference)",
+  "prezcamp" = "Presidential Election",
+  "september" = "September 11"
+)
+
+gm <- tibble::tribble(
+  ~raw,        ~clean,          ~fmt,
+  "nobs",      "N",             0,
+  "r.squared", "R2", 3,
+  "rmse", "RSME", 2)
+
+# Create a modelsummary table with the number of observations included
+modelsummary(
+  list("Wcalc" = m_pmsm,
+       "Annual Wcalc" = m_pmsm_ann,
+       "DCPO" = m_pmsm_dcpo),
+  coef_map = vec_coefName2,
+  statistic = "std.error",
+  stars = TRUE,
+  gof_map = gm,
+  title = "Replication of Peterson et al. (2022), Table 2, 1983-2014",
+  booktabs = TRUE
+)
+```
+
+The two series are further compared in Table \@ref(tab:pmsm).
+The first column replicates the analysis of @Peterson2022, Table 2, using only the years from 1983 to 2014, that is, the span for which DCPO estimates of macrointerest are also available.
+To preserve degrees of freedom, of the eight scandals and negative events, only the dummy variable for the attacks of September 11, 2001 (the only one to receive support in @Peterson2022) is included.
+The findings of @Peterson2022 are reproduced in this truncated dataset.
+
+In the second column, the @Peterson2022 Wcalc macrointerest data are aggregated to the annual level over the same period, that is, each year's value is the mean of the values of that year's quarters, and the independent variables were similarly annualized.
+Over this time period and at this unit of analysis, macrointerest is predicted only by its lagged value: the coefficients for trust, presidential elections, and September 11 no longer reach statistical significance.
+The DCPO macrointerest series for the United States yields similar results.
+It would appear that it is the unit of analysis---years as opposed to quarters--- rather than the macrointerest series, that yields different conclusions in the @Peterson2022 analysis.
 
 \clearpage
 \pagebreak

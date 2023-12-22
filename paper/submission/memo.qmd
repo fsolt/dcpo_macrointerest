@@ -22,15 +22,11 @@ subtitle: Memo to Editor and Reviewers
 ---
 
 ## Introduction {.unnumbered}
-**Syntax and framing**.
-We appreciate the reviewers' careful reading and framing suggestions. 
-Following them, we reorganized the introduction into three paragraphs to address the relevance of Macrointerest, the challenges faced by previous research, and the specific contribution and findings.
-We also corrected the syntax errors and framing nonclarity as pointed out by the reviewers.
-
-In the appendix, we added more information of the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
-R2 suggested that Figure A1 is hard to read. 
-We split it into several smaller panels according to the continents of the involved countries. 
-
+**Framing**.
+We appreciate the reviewers' careful reading and suggestions for better framing the piece.
+Following this advice, we reorganized the introduction into three paragraphs to address the relevance of Macrointerest, the challenges faced by previous research, and the specific contribution and findings.
+Reviewer 1 also specifically suggested that we contrast our work with that of @Peterson2022, and we do that in our second paragraph.
+(We also, at R1's suggestion, included an appendix comparing our estimates of macrointerest for the United States with those presented in that article; see Appendix E.)
 
 ## Cross-National Macrointerest: The Source Data {.unnumbered}
 **Source data representation**.
@@ -122,5 +118,11 @@ We further accepted R2's suggestion to revise the summary of the empirical findi
 R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
 Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.
 
+## Appendices
+
+In the appendix, we added more information on the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
+
+R2 suggested that Figure A1 is hard to read. 
+We split that figure into several panels by region to allow it to be split across pages and so expanded for legibility. 
 
 # Reference {-}
