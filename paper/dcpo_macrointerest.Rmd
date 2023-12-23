@@ -902,7 +902,7 @@ ext_wvs_news_plot + ext_wvs_disc_plot + ext_wvs_imp_plot +
 Construct validation, on the other hand, refers to demonstrating, for some _other_ concept believed causally related to the concept a measure seeks to represent, that the measure is empirically associated with measures of that other concept [@Adcock2001, 542].
 Figure\nobreakspace{}\@ref(fig:extval1) depicts the relationships between macrointerest and three survey items from the World Values Survey and European Values Survey on other aspects of political engagement that are expected to have causal relationships with political interest [see @Kittilson2010, 995]: in the left panel, following political news on television, radio, and newspapers; in the center panel, discussing politics with friends; and on the right, feeling politics is important to one's life.
 These relationships are all positive and are moderate to strong.
-This cross-national latent variable of macrointerest performs impressively well in validation tests.
+This cross-national latent variable of macrointerest performs well in validation tests.
 
 
 # Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
@@ -1414,6 +1414,61 @@ The number of items observed in the source data for each country-year is plotted
 The macrointerest scores of country-years with more observed items are likely to be estimated more precisely.
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
 
+```{r macrointerest_items}
+load(here::here("data", "dcpo_input.rda"))
+load(here::here("data", "item_results.rda"))
+
+items_summary <- dcpo_input_raw1 %>%
+  dplyr::select(country, year, item, survey) %>%
+  distinct() %>%
+  separate(survey, c("surv1", "surv2", "surv3"), sep=", ", fill = "left") %>%
+  pivot_longer(cols = starts_with("surv"), values_to = "survey") %>%
+  filter(!is.na(survey)) %>% 
+  group_by(item) %>%
+  mutate(
+    survey_stem = str_extract(survey, "^[a-z]*"),
+    item_survey = str_extract(item, "[a-z]*$"),
+    all_surveys = paste0(c(sort(unique(survey %>% str_subset(item_survey))),
+                           sort(unique(survey %>% str_subset(item_survey,
+                                                             negate = TRUE)))),
+                         collapse = ", ")) %>%
+  ungroup() %>%
+  distinct(country, year, item, .keep_all = TRUE) %>% 
+  group_by(item) %>% 
+  mutate(n_cy = n()) %>% 
+  ungroup() %>%
+  distinct(item, n_cy, all_surveys) %>% 
+  left_join(surveys_interest %>%
+              select(item, question_text, response_categories) %>%
+              distinct(item, .keep_all = TRUE),
+            by = "item") %>% 
+  left_join(alpha_results, by = "item") %>% 
+  left_join(beta_results, by = "item") %>% 
+  arrange(-n_cy)
+```
+
+```{r itemsTb}  
+items_summary %>% 
+  transmute(`Survey\nItem\nCode` = item,
+            `Country-Years` = as.character(n_cy),
+            `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
+            `Response Categories` = response_categories,
+            `Dispersion` = dispersion,
+            `Difficulties`= difficulties,
+            `Survey Dataset Codes` = all_surveys) %>% 
+  modelsummary::datasummary_df(output = "kableExtra",
+                               longtable = TRUE) %>% 
+  kableExtra::column_spec(1, width = "7em") %>%
+  kableExtra::column_spec(2, width = "4em") %>%
+  kableExtra::column_spec(3, width = "13em") %>%
+  kableExtra::column_spec(4, width = "16em") %>%
+  kableExtra::column_spec(5, width = "4em") %>%
+  kableExtra::column_spec(c(6, 7), width = "8em") %>% 
+  kableExtra::kable_styling(font_size = 7) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+  kableExtra::kable_styling(latex_options = "striped")
+```
+
 ```{r surveyInfo}
 tb_survey <- import(here("data-raw", "survey_info_macrointerest.xlsx"),
                     sheet = "combined") |>
@@ -1458,53 +1513,6 @@ datasummary_df(tb_survey,
 
 ```
 
-```{r macrointerest_items}
-load(here::here("data", "dcpo_input.rda"))
-load(here::here("data", "item_results.rda"))
-
-items_summary <- dcpo_input_raw1 %>%
-  dplyr::select(country, year, item, survey) %>%
-  distinct() %>%
-  separate(survey, c("surv1", "surv2", "surv3"), sep=", ", fill = "left") %>%
-  pivot_longer(cols = starts_with("surv"), values_to = "survey") %>%
-  filter(!is.na(survey)) %>% 
-  group_by(item) %>% 
-  mutate(survey = str_extract(survey, "^[a-z]*"),
-         all_surveys = paste0(unique(survey), collapse = ", ")) %>% 
-  ungroup() %>% 
-  distinct(country, year, item, .keep_all = TRUE) %>% 
-  group_by(item) %>% 
-  mutate(n_cy = n()) %>% 
-  ungroup() %>%
-  distinct(item, n_cy, all_surveys) %>% 
-  left_join(surveys_interest %>%
-              select(item, question_text, response_categories) %>%
-              distinct(item, .keep_all = TRUE),
-            by = "item") %>% 
-  left_join(alpha_results, by = "item") %>% 
-  left_join(beta_results, by = "item") %>% 
-  arrange(-n_cy)
-```
-
-```{r itemsTb}  
-items_summary %>% 
-  mutate(item = str_replace(item, "_", ".")) |> 
-  select(-item, -all_surveys) |> 
-  transmute(`Country-Years` = as.character(n_cy),
-            `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
-            `Response Categories` = response_categories,
-            `Dispersion` = dispersion,
-            `Difficulties`= difficulties) %>% 
-  datasummary_df(longtable = TRUE, 
-                 title = "Indicators Used in the Latent Variable Model of Macrointerest") %>% 
-  column_spec(1, width = "3em") %>%
-  column_spec(2, width = "24em") %>%
-  column_spec(3, width = "20em") %>%
-  column_spec(4, width = "4em") %>%
-  column_spec(5, width = "10em") %>%
-  kable_styling(font_size = 7) %>%
-  kable_styling(latex_options = c("striped", "repeat_header"))
-```
 
 
 ```{r obs, fig.cap = "Source Data Observations by Country and Year", fig.height = 9}
