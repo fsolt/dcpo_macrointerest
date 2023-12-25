@@ -1426,7 +1426,7 @@ items_summary <- dcpo_input_raw1 %>%
   filter(!is.na(survey)) %>% 
   group_by(item) %>%
   mutate(
-    survey_stem = str_extract(survey, "^[a-z]*"),
+    survey = str_extract(survey, "^[a-z]*"),
     item_survey = str_extract(item, "[a-z]*$"),
     all_surveys = paste0(c(sort(unique(survey %>% str_subset(item_survey))),
                            sort(unique(survey %>% str_subset(item_survey,
@@ -1470,46 +1470,50 @@ items_summary %>%
 ```
 
 ```{r surveyInfo}
-tb_survey <- import(here("data-raw", "survey_info_macrointerest.xlsx"),
-                    sheet = "combined") |>
-  mutate(
-    survey = str_remove(survey, "\\d+") |>
-      str_remove(",.*") |>
-      str_remove("_.*"),
-    creator = ifelse(
-      creator == str_to_upper(creator),
-      str_to_title(creator),
-      creator
-    ),
-    version = ifelse(is.na(version), "", str_to_lower(version))
-  ) |>
-  select(-link, -survey) |>
+tb_survey <- read_csv(here("data-raw", 
+                           "survey_info_macrointerest.csv"),
+                      col_types = "cccccc") |>
+  mutate(survey_code = str_remove(survey, "\\d+") |>
+           str_remove(",.*") |>
+           str_remove("_.*"),
+         creator = ifelse(
+           is.na(creator),
+           "",
+           str_to_title(creator)),
+         version = paste(survey,
+                         ifelse(is.na(version),
+                                "",
+                                str_to_lower(version)))) |>
   filter(!is.na(name)) |> 
-  group_by(name) |>
+  group_by(survey_code) |>
   summarise(
+    name = first(name),
     year = ifelse(
       min(year) == max(year),
       as.character(year),
       paste0(min(year), "-", max(year))
     ),
     version = paste(unique(version), collapse = ", "),
-    creator = paste(unique(creator), collapse = "; ")
+    creator = paste(unique(creator), collapse = "; ") %>% 
+      str_replace("; ;", ";") %>% 
+      str_replace("; $", "")
   ) |>
-  mutate(creator = stringi::stri_trans_general(creator, "Latin-ASCII")) |> 
-  set_names(c("Survey", "Range", "Version", "Primary Creator/Maintainer"))
+  mutate(creator = stringi::stri_trans_general(creator, "Latin-ASCII")) 
 
-names(tb_survey)[3] <- paste0(names(tb_survey)[3], footnote_marker_symbol(1))
-
-datasummary_df(tb_survey, 
-               title = "Source Survey Information",
-               longtable = TRUE) |> 
+tb_survey %>% 
+  transmute(`Survey Dataset Code` = survey_code,
+            `Survey Name` = name,
+            `Datasets and Versions*` = version,
+            `Creator(s)` = creator) %>% 
+  datasummary_df(title = "Source Survey Information",
+                 longtable = TRUE) |> 
   kable_styling(latex_options = c("striped", "repeat_header")) |> 
-  column_spec(1, width = "20em") |> 
-  column_spec(2, width = "7em") |> 
-  column_spec(3, width = "6em") |> 
+  column_spec(1, width = "7em") |> 
+  column_spec(2, width = "14em") |> 
+  column_spec(3, width = "20em") |> 
   column_spec(4, width = "30em") |> 
-  kable_styling(font_size = 7) |> 
-  footnote(symbol = "The abbreviations are given according to the source surveys' naming styles on their editions, including edition (e.), part (p.), round (r.), version (v.), and wave (w.).", threeparttable = T)
+  kable_styling(font_size = 7) %>% 
+  footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 
 ```
 
