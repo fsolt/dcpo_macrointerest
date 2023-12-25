@@ -21,61 +21,61 @@ allbus,"GESIS - Leibniz Institute for the Social Sciences (2020): German General
 allbus2021,"GESIS - Leibniz-Institut fu_r Sozialwissenschaften (2022): Allgemeine Bevšlkerungsumfrage der Sozialwissenschaften ALLBUS 2021. GESIS Datenarchiv, Kšln. ZA5280 Datenfile Version 2.0.0, http://dx.doi.org/10.4232/1.14002 id"
 anes_combo,American National Election Studies. 2018. ANES Time Series Cumulative Data File [dataset and documentation]. December 2018 version. www.electionstudies.org 
 anes2020,"American National Election Studies. 2021. ANES 2020 Time Series Study Preliminary Release: Combined Pre-Election and Post-Election Data [dataset and documentation]. March 24, 2021 version. www.electionstudies.org "
-amb_combo,x
-amb_antigua2016,x
-amb_argentina2010,x
-amb_argentina2012,x
-amb_argentina2014,x
-amb_argentina2016,x
-amb_argentina2018,x
-amb_bolivia2010,x
-amb_bolivia2012,x
-amb_bolivia2014,x
-amb_bolivia2016,x
-amb_bolivia2018,x
-amb_brazil2016,x
-amb_brazil2018,x
-amb_canada2010,x
-amb_canada2012,x
-amb_canada2014,x
-amb_canada2016,x
-amb_canada2018,x
-amb_chile2010,x
-amb_chile2012,x
-amb_chile2014,x
-amb_chile2016,x
-amb_chile2018,x
-amb_colombia2009,x
-amb_colombia2011,x
-amb_colombia2016,x
-amb_costarica2016,x
-amb_costarica2018,x
-amb_dominica2016,x
-amb_ecuador2014,x
-amb_ecuador2018,x
-amb_grenada2016,x
-amb_guyana2016,x
-amb_panama2016,x
-amb_panama2018,x
-amb_stkittsnevis2016,x
-amb_stlucia2016,x
-amb_stvincent2016,x
-amb_suriname2010,x
-amb_suriname2012,x
-amb_trinidad2010,x
-amb_trinidad2012,x
-amb_uruguay2016,x
-amb_uruguay2018,x
-amb_us2010,x
-amb_us2012,x
-amb_us2014,x
-amb_us2016,x
-amb_us2018,x
-amb_us2021,x
-amb_venezuela2010,x
-amb_venezuela2012,x
-amb_venezuela2014,x
-amb_venezuela2016,x
+amb_combo,"LAPOP (2020) 2004-2018 LAPOP AmericasBarometer Merge, v1.0FREE [Dataset]"
+amb_antigua2016,LAPOP (2018) Antigua LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_argentina2010,LAPOP (2020) Argentina LAPOP AmericasBarometer 2010 v3.0 [Dataset]
+amb_argentina2012,LAPOP (2020) Argentina LAPOP AmericasBarometer 2012 rev 1 [Dataset]
+amb_argentina2014,LAPOP (2020) Argentina LAPOP AmericasBarometer 2014 v3.0 [Dataset]
+amb_argentina2016,LAPOP (2018) Argentina LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_argentina2018,LAPOP (2020) Argentina LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_bolivia2010,LAPOP (2020) Bolivia LAPOP AmericasBarometer 2010 v3.0 [Dataset]
+amb_bolivia2012,LAPOP (2020) Bolivia LAPOP AmericasBarometer 2012 rev 1 [Dataset]
+amb_bolivia2014,LAPOP (2020) Bolivia LAPOP AmericasBarometer 2014 v3.0 [Dataset]
+amb_bolivia2016,LAPOP (2018) Bolivia LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_bolivia2018,LAPOP (2020) Bolivia LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_brazil2016,LAPOP (2018) Brazil LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_brazil2018,LAPOP (2020) Brazil LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_canada2010,LAPOP (2020) Canada LAPOP AmericasBarometer 2010 v2.0 [Dataset]
+amb_canada2012,LAPOP (2020) Canada LAPOP AmericasBarometer 2012 rev 1 [Dataset]
+amb_canada2014,LAPOP (2020) Canada LAPOP AmericasBarometer 2014 v3.0 [Dataset]
+amb_canada2016,LAPOP (2018) Canada LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_canada2018,LAPOP (2020) Canada LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_chile2010,LAPOP (2020) Chile LAPOP AmericasBarometer 2010 v4.0 [Dataset]
+amb_chile2012,LAPOP (2020) Chile LAPOP AmericasBarometer 2012 rev 1 [Dataset]
+amb_chile2014,LAPOP (2020) Chile LAPOP AmericasBarometer 2014 v3.0 [Dataset]
+amb_chile2016,LAPOP (2018) Chile LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_chile2018,LAPOP (2020) Chile LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_colombia2009,LAPOP (2020) Colombia LAPOP AmericasBarometer 2009 rev 1.0 [Dataset]
+amb_colombia2011,LAPOP (2020) Colombia LAPOP AmericasBarometer 2011 rev 1.0 [Dataset]
+amb_colombia2016,LAPOP (2018) Colombia LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_costarica2016,LAPOP (2018) Costa Rica LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_costarica2018,LAPOP (2020) Costa Rica LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_dominica2016,LAPOP (2018) Dominica LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_ecuador2014,LAPOP (2020) Ecuador LAPOP AmericasBarometer 2014 v3.0 [Dataset]
+amb_ecuador2018,LAPOP (2020) Ecuador LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_grenada2016,LAPOP (2018) Grenada LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_guyana2016,LAPOP (2018) Guyana LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_panama2016,LAPOP (2018) Panama LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_panama2018,LAPOP (2020) Panama LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_stkittsnevis2016,LAPOP (2018) St Kitts Nevis LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_stlucia2016,LAPOP (2018) St Lucia LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_stvincent2016,LAPOP (2018) St Vincent LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_suriname2010,LAPOP (2020) Surinam LAPOP AmericasBarometer 2010 v1.0 [Dataset]
+amb_suriname2012,LAPOP (2020) Surinam LAPOP AmericasBarometer 2012 v1.0 [Dataset]
+amb_trinidad2010,LAPOP (2020) Trinidad LAPOP AmericasBarometer 2010 v3.0 [Dataset]
+amb_trinidad2012,LAPOP (2020) Trinidad LAPOP AmericasBarometer 2012 v1.0 [Dataset]
+amb_uruguay2016,LAPOP (2018) Uruguay LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_uruguay2018,LAPOP (2020) Uruguay LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_us2010,LAPOP (2020) United States LAPOP AmericasBarometer 2010 v1.0 [Dataset]
+amb_us2012,LAPOP (2022) United States LAPOP AmericasBarometer 2012 rev 1 w2 [Dataset]
+amb_us2014,LAPOP (2022) United States LAPOP AmericasBarometer 2014 rev 1 w2 [Dataset]
+amb_us2016,LAPOP (2018) United States LAPOP AmericasBarometer 2016 v1.0 [Dataset]
+amb_us2018,LAPOP (2020) United States LAPOP AmericasBarometer 2018 v1.0 [Dataset]
+amb_us2021,LAPOP (2022) United States LAPOP AmericasBarometer 2021 v1.2 [Dataset]
+amb_venezuela2010,LAPOP (2020) Venezuela LAPOP AmericasBarometer 2010 v3.0 [Dataset]
+amb_venezuela2012,LAPOP (2020) Venezuela LAPOP AmericasBarometer 2012 rev 1 [Dataset]
+amb_venezuela2014,LAPOP (2020) Venezuela LAPOP AmericasBarometer 2014 v3.0 [Dataset]
+amb_venezuela2016,LAPOP (2018) Venezuela LAPOP AmericasBarometer 2016 v1.0 [Dataset]
 arabb1,x
 arabb2,x
 arabb3,x
