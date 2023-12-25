@@ -182,27 +182,27 @@ eb952,"European Commission, Brussels (2022). Eurobarometer 95.2 (2021).ÊGESIS, C
 eb973,"European Commission and European Parliament, Brussels (2022). Eurobarometer 97.3 (2022).ÊGESIS, Cologne. ZA7888 Data file Version 1.0.0, https://doi.org/10.4232/1.14055."
 ees1989,"Eijk, C. van der, Oppenhuis, E., Schmitt, H. (1993). European Election Study 1989 (EES 1989).ÊGESIS Data Archive, Cologne. ZA2320 Data file Version 1.0.0, https://doi.org/10.4232/1.2320."
 ees1994,"Schmitt, H., Eijk, C. van der, Scholz, E., Klein, M. (1997). European Election Study 1994 (EES 1994).ÊGESIS Data Archive, Cologne. ZA2865 Data file Version 1.0.0, https://doi.org/10.4232/1.2865."
-ees1999,"Egmond, Marcel van, Brug, Wouter van der, Hobolt, Sara, Franklin, Mark, & Sapir, Eliyahu V. (2017). European Parliament Election Study 2009, Voter Study.ÊGESIS Data Archive, Cologne. ZA5055 Data file Version 1.1.1, https://doi.org/10.4232/1.12732."
+ees1999,"Eijk, C. van der, Franklin, M., Schoenbach, K., Schmitt, H. , Semetko, H. , with:, Brug, W. van der , Holmberg, S. , Mannheimer, R., Marsh, M., Thomassen, J., Wessels, B., International Research Group ""European Election Studies"", IPSOS, Hamburg, Germany (primary investigator), 2009, ""European Election Study - 1999"",Êhttps://doi.org/10.17026/dans-z9j-vy6m, DANS Data Station Social Sciences and Humanities, V2, UNF:6:Z+Ab1SDCoGwrx8qL0Ns/RQ== [fileUNF]"
 ees2004,"Schmitt, Hermann, Bartolini, Stefano, Brug, Wouter van der, Eijk, Cees van der, Franklin, Mark, Fuchs, Dieter, Toka, Gabor, Marsh, Michael, & Thomassen, Jacques (2009). European Election Study 2004 (2nd edition).ÊGESIS Data Archive, Cologne. ZA4566 Data file Version 2.0.0, https://doi.org/10.4232/1.10086."
 ees2009,"Egmond, Marcel van, Brug, Wouter van der, Hobolt, Sara, Franklin, Mark, & Sapir, Eliyahu V. (2017). European Parliament Election Study 2009, Voter Study.ÊGESIS Data Archive, Cologne. ZA5055 Data file Version 1.1.1, https://doi.org/10.4232/1.12732."
 ees2019,"Schmitt, Hermann, Hobolt, Sara B., Brug, Wouter van der, & Popa, Sebastian A. (2022). European Parliament Election Study 2019, Voter Study.ÊGESIS, Cologne. ZA7581 Data file Version 2.0.1, https://doi.org/10.4232/1.13846."
-ess1,o
-ess2,o
-ess2_it,o
-ess3,o
-ess3_lv,o
-ess3_ro,o
-ess4,o
-ess4_at,o
-ess4_lt,o
-ess5,o
-ess5_at,o
-ess6,o
-ess7,o
-ess8,o
-ess9,o
-ess9_ro,o
-ess10,o
+ess1,"European Social Survey European Research Infrastructure (ESS ERIC). (2019). ESS1 - integrated file, edition 6.6 [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess1e06_6"
+ess2,"European Social Survey European Research Infrastructure (ESS ERIC). (2012). ESS2 - integrated file, edition 3.6 (Italy not included) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ESS2E03_6"
+ess2_it,European Social Survey European Research Infrastructure (ESS ERIC). (2012). ESS2 - Italy country file from main questionnaire [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess2it
+ess3,"European Social Survey European Research Infrastructure (ESS ERIC). (2018). ESS3 - integrated file, edition 3.7 (Latvia and Romania not included) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ESS3E03_7"
+ess3_lv,European Social Survey European Research Infrastructure (ESS ERIC). (2018). ESS3 - Latvia (no design weights) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess3lv
+ess3_ro,European Social Survey European Research Infrastructure (ESS ERIC). (2018). ESS3 - Romania (no design weights) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess3ro
+ess4,"European Social Survey European Research Infrastructure (ESS ERIC). (2019). ESS4 - integrated file, edition 4.5 (Austria and Lithuania not included) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess4e04_6"
+ess4_at,European Social Survey European Research Infrastructure (ESS ERIC). (2022). ESS4 - Austria (Fieldwork period 01.11.10 to 28.02.11) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess4at
+ess4_lt,European Social Survey European Research Infrastructure (ESS ERIC). (2022). ESS4 - Lithuania (no design weights) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess4lt
+ess5,"European Social Survey European Research Infrastructure (ESS ERIC). (2019). ESS5 - integrated file, edition 3.4 (Austria not included) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess5e03_5"
+ess5_at,European Social Survey European Research Infrastructure (ESS ERIC). (2022). ESS5 - Austria (fieldwork period 24.05.13 to 10.10.13) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess5ate1_1
+ess6,"European Social Survey European Research Infrastructure (ESS ERIC). (2019). ESS6 - integrated file, edition 2.4 [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess6e02_6"
+ess7,"European Social Survey European Research Infrastructure (ESS ERIC). (2018). ESS7 - integrated file, edition 2.3 [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess7e02_3"
+ess8,"European Social Survey European Research Infrastructure (ESS ERIC). (2019). ESS8 - integrated file, edition 2.1 [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess8e02_3"
+ess9,"European Social Survey European Research Infrastructure (ESS ERIC). (2020). ESS9 - integrated file, edition 2.0 [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess9e03_2"
+ess9_ro,European Social Survey European Research Infrastructure (ESS ERIC). (2020). ESS9 - Romania (participating on pilot basis) [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess9roe01
+ess10,"European Social Survey European Research Infrastructure (ESS ERIC). (2023). ESS10 integrated file, edition 3.0 [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research. https://doi.org/10.21338/ess10e03_0"
 evs_combo,"EVS (2015): European Values Study 1981-2008, Longitudinal Data File. GESIS Data Archive, Cologne, Germany, ZA4804 Data File Version 3.0.0 (2015-07-30), doi:10.4232/1.12253. "
 evs1999fin,o
 evs2017,o
@@ -302,7 +302,7 @@ politbarometer_combo,"Forschungsgruppe Wahlen, Mannheim (2017): Politbarometer 1
 ptvs2008,"CIES-IUL. ""Portuguese Deputies in Comparative Perspective: Elections, Leadership and Political Representation"" (2007-2010) (FCT: PTDC/CPO/64469/2006)"
 ptvs2012,"CIES-IUL. ""Elections, Leadership and Accountability: Political Representation in Portugal, in Longitudinal and Comparative Perspective"" (2012-2015) (FCT: PTDC/CPJ-CPO/119307/2010)"
 ptvs2016,"CIES-IUL and IPRI-NOVA. ""Crisis, Political Representation and Democratic Renewal: The Portuguese Case in the Southern European Context"" (FCT: PTDC/IVC-CPO/3098/2014)"
-ress2014,
+ress2014,European Social Survey European Research Infrastructure (ESS ERIC). (2018). ESS7 - Russia [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research.
 sasianb2,x
 snes1988,"Holmberg, S., Gilljam, M., & Statistics Sweden. (1991). Swedish election study 1988 (1.0) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/002512"
 snes1991,"Holmberg, S., Gilljam, M., & Statistics Sweden. (1995). Swedish election study 1991 (1.0) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/002513"
@@ -313,10 +313,10 @@ snes2006,"Holmberg, S., Ekengren Oscarsson, H., & Statistics Sweden. (2012). Swe
 snes2010,"Holmberg, S., & Ekengren Oscarsson, H. (2017). Swedish National Election Study 2010 - Swedish election study 2010 (1.0) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/002905"
 snes2014,"Ekengren Oscarsson, H., Hedberg, P., Oleskog Tryggvason, P., & Berg, L. (2021). Swedish National Election Study 2014 (Version 1) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/qhzg-x011"
 snes2018,"Andersson, D., Hedberg, P., Svensson, R., & Oscarsson, H. (2021). The Swedish National Election Study 2018 - CSES Edition (Version 1) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/p9eq-2883"
-uspew_valcombo,
-uspew2004_typo,
-uspew2007_rls,
-uspew2012_10late,
+uspew_valcombo,"Pew Research Center for the People & the Press. Pew Research Center Poll: 1987 to 2003 Values Merge File, 1987 [Dataset]. Roper #31095812, Version 3. Princeton Survey Research Associates International [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31095812"
+uspew2004_typo,"Pew Research Center for the People & the Press. Pew Research Center Poll:  Typology--Politics/News/Economy/Stem Cell Research/Trade/Taxes/Federal Budget/Iraq/Patriot Act/Internet Use, 2004 [Dataset]. Roper #31095844, Version 2. Princeton Survey Research Associates International [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31095844"
+uspew2007_rls,"Pew Forum on Religion & Public Life. 2007. U.S. Religious Landscape Survey, 2007. https://www.pewresearch.org/religion/dataset/u-s-religious-landscape-survey/"
+uspew2012_10late,"Pew Research Center for the People & the Press. Pew Research Center Poll: Late October 2012 Political Survey, 2012 [Dataset]. Roper #31096114, Version 2. Princeton Survey Research Associates International [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31096114"
 uspew2014_9rel,
 uspew2015_gov,
 uspew2016_3pol,
