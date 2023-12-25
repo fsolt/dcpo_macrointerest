@@ -11,12 +11,12 @@ aes2010,"McAllister, Ian; Bean, Clive; Gibson, Rachel Kay; Pietsch, Juliet, 2017
 aes2013,"Bean, Clive; McAllister, Ian; Pietsch, Juliet; Gibson, Rachel Kay, 2017, ""Australian Election Study, 2013"",Êdoi:10.4225/87/WDBBAS, ADA Dataverse, V3, UNF:6:6gMySFLvbEH1ccG58om4Sg=="
 aes2016,"McAllister, Ian; Makkai, Toni; Bean, Clive; Gibson, Rachel Kay, 2017, ""Australian Election Study, 2016"",Êdoi:10.4225/87/7OZCZA, ADA Dataverse, V2, UNF:6:TNnUHDn0ZNSlIM94TQphWw=="
 aes2019,"McAllister, Ian; Bean, Clive; Gibson, Rachel; Makkai, Toni; Sheppard, Jill; Cameron, Sarah, 2019, ""Australian Election Study, 2019"",Êdoi:10.26193/KMAMMW, ADA Dataverse, V2"
-afrob1,x
-afrob2,x
-afrob3,x
-afrob4,x
-afrob5,x
-afrob6,x
+afrob1,"Afrobarometer, 2004, Afrobarometer Merged Round 1 Data (12 countries) (1999-2001) [Dataset]"
+afrob2,"Afrobarometer, 2006, Afrobarometer Merged Round 2 Data (16 countries) (2004) [Dataset]"
+afrob3,"Afrobarometer, 2008, Afrobarometer Merged Round 3 Data (18 countries) (2005) [Dataset]"
+afrob4,"Afrobarometer, 2010, Afrobarometer Merged Round 4 Data (20 countries) (2008) [Dataset]"
+afrob5,"Afrobarometer, 2015, Afrobarometer Merged Round 5 Data (34 countries) (2011-2013) [Dataset]"
+afrob6,"Afrobarometer, 2016, Afrobarometer Merged Round 6 Data (36 countries) (2016) [Dataset]"
 allbus,"GESIS - Leibniz Institute for the Social Sciences (2020): German General Social Survey (ALLBUS) Ð Cumulation 1980-2018. GESIS Data Archive, Cologne. ZA5276 Data file Version 1.0.0, https://doi.org/10.4232/1.13483 "
 allbus2021,"GESIS - Leibniz-Institut fu_r Sozialwissenschaften (2022): Allgemeine Bevšlkerungsumfrage der Sozialwissenschaften ALLBUS 2021. GESIS Datenarchiv, Kšln. ZA5280 Datenfile Version 2.0.0, http://dx.doi.org/10.4232/1.14002 id"
 anes_combo,American National Election Studies. 2018. ANES Time Series Cumulative Data File [dataset and documentation]. December 2018 version. www.electionstudies.org 
@@ -76,29 +76,29 @@ amb_venezuela2010,LAPOP (2020) Venezuela LAPOP AmericasBarometer 2010 v3.0 [Data
 amb_venezuela2012,LAPOP (2020) Venezuela LAPOP AmericasBarometer 2012 rev 1 [Dataset]
 amb_venezuela2014,LAPOP (2020) Venezuela LAPOP AmericasBarometer 2014 v3.0 [Dataset]
 amb_venezuela2016,LAPOP (2018) Venezuela LAPOP AmericasBarometer 2016 v1.0 [Dataset]
-arabb1,x
-arabb2,x
-arabb3,x
-arabb4,x
-arabb5,x
-arabb7,x
+arabb1,"Arab Barometer, 2019, Arab Barometer Wave 1, 2006-2009 [Dataset]"
+arabb2,"Arab Barometer, 2019, Arab Barometer Wave 2, 2010-2012 [Dataset]"
+arabb3,"Arab Barometer, 2019, Arab Barometer Wave 3, 2012-2014 [Dataset]"
+arabb4,"Arab Barometer, 2019, Arab Barometer Wave 4, 2016-2017 [Dataset]"
+arabb5,"Arab Barometer, 2020, Arab Barometer Wave 5, 2018-2019 [Dataset]"
+arabb7,"Arab Barometer, 2022, Arab Barometer Wave 7, 2021-2022 [Dataset]"
 ases2000,"Inoguchi, Takashi. Asia Europe Survey (ASES): A Multinational Comparative Study in 18 Countries, 2001. ICPSR22324-v1. Ann Arbor, MI: Inter-university Consortium of Political and Social Research [distributor], 2008-06-24. http://doi.org/10.3886/ICPSR22324.v1 "
-asianb1,x
-asianb2,x
-asianb3,x
-asianb4,x
-asianb5_australia,x
-asianb5_india,x
-asianb5_indonesia,x
-asianb5_japan,x
-asianb5_korea,x
-asianb5_malaysia,x
-asianb5_mongolia,x
-asianb5_myanmar,x
-asianb5_philippines,x
-asianb5_taiwan,x
-asianb5_thailand,x
-asianb5_vietnam,x
+asianb1,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 1 Merge [Dataset], September 6, 2017"
+asianb2,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 2 Merge, 3rd Release [Dataset], July 24, 2017"
+asianb3,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 3 Merge [Dataset], August 18, 2017"
+asianb4,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 4 Merge, v1.5 [Dataset], December 11, 2018"
+asianb5_australia,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Australia [Dataset], August 3, 2021"
+asianb5_india,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 India [Dataset], September 5, 2022"
+asianb5_indonesia,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Indonesia [Dataset], September 5, 2022"
+asianb5_japan,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Japan [Dataset], September 5, 2022"
+asianb5_korea,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 South Korea [Dataset], August 8, 2021"
+asianb5_malaysia,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Malaysia [Dataset], August 19, 2021"
+asianb5_mongolia,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Mongolia [Dataset], December 17, 2020"
+asianb5_myanmar,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Myanmar [Dataset], September 5, 2022"
+asianb5_philippines,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Philippines [Dataset], December 23, 2020"
+asianb5_taiwan,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Taiwan [Dataset], August 5, 2019"
+asianb5_thailand,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Thailand [Dataset], August 5, 2021"
+asianb5_vietnam,"Hu Fu Center for East Asian Democratic Studies, Asian Barometer Wave 5 Vietnam [Dataset], December 15, 2020"
 autnes2017,"Wagner, Markus; Aichholzer, Julian; Eberl, Jakob-Moritz; Meyer, Thomas M.; Berk, Nicolai; BŸttner, Nico; Boomgaarden, Hajo; Kritzinger, Sylvia; MŸller, Wolfgang C., 2018, ""AUTNES Online Panel Study 2017 (SUF edition)"",Êhttps://doi.org/10.11587/I7QIYJ, AUSSDA, V4, UNF:6:qXpb3Rjb7GgLHw7J3wNrEA== [fileUNF]"
 belgiumes1999,"Prof.Dr. Marc Swyngedouw, KU Leuven, Departement Sociologie, J. Billiet, KU Leuven, ISPO, A. Frognier, U.C. Louvain, PIOP (primary investigator), 2016, ""Belgium General Election Study 1999"",Êhttps://doi.org/10.17026/dans-z4z-zagc, DANS Data Station Social Sciences and Humanities, V2"
 belgiumes2003,"Swyngedouw, Prof. dr. M. (Institute of Social and Political Opinion Research ISPO - KU Leuven, 2004, ""Belgium General Election Study 2003"",Êhttps://doi.org/10.17026/dans-z2x-hfdx, DANS Data Station Social Sciences and Humanities, V1, UNF:6:6uuZYzZMgXTjZKpmolY2+A== [fileUNF]"
@@ -303,7 +303,7 @@ ptvs2008,"CIES-IUL. ""Portuguese Deputies in Comparative Perspective: Elections,
 ptvs2012,"CIES-IUL. ""Elections, Leadership and Accountability: Political Representation in Portugal, in Longitudinal and Comparative Perspective"" (2012-2015) (FCT: PTDC/CPJ-CPO/119307/2010)"
 ptvs2016,"CIES-IUL and IPRI-NOVA. ""Crisis, Political Representation and Democratic Renewal: The Portuguese Case in the Southern European Context"" (FCT: PTDC/IVC-CPO/3098/2014)"
 ress2014,European Social Survey European Research Infrastructure (ESS ERIC). (2018). ESS7 - Russia [Data set]. Sikt - Norwegian Agency for Shared Services in Education and Research.
-sasianb2,x
+sasianb2,"Hu Fu Center for East Asian Democratic Studies, South Asian Barometer Wave 2 Merge [Dataset], January 4, 2023"
 snes1988,"Holmberg, S., Gilljam, M., & Statistics Sweden. (1991). Swedish election study 1988 (1.0) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/002512"
 snes1991,"Holmberg, S., Gilljam, M., & Statistics Sweden. (1995). Swedish election study 1991 (1.0) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/002513"
 snes1994,"Holmberg, S., Gilljam, M., & Statistics Sweden. (1997). Swedish election study 1994 (1.0) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/002514"
