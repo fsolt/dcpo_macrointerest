@@ -207,7 +207,7 @@ evs_combo,"EVS (2015): European Values Study 1981-2008, Longitudinal Data File. 
 evs1999fin,"EVS (2012). EVS - European Values Study 1999 - Finland. GESIS Data Archive, Cologne. ZA3787 Data file Version 3.0.1, https://doi.org/10.4232/1.11532."
 evs2017,"EVS (2022). European Values Study 2017: Integrated Dataset (EVS 2017). GESIS, Cologne. ZA7500 Data file Version 5.0.0, https://doi.org/10.4232/1.13897."
 evs2017ukr,"Balakireva, Olga (2021). European Values Study 2017: Ukraine (EVS 2017). GESIS Data Archive, Cologne. ZA7539 Data file Version 1.0.0, https://doi.org/10.4232/1.13714."
-feb162,o
+feb162,"Europäische Kommission (2005). Flash Eurobarometer 162 (Post European elections 2004 survey). GESIS Data Archive, Cologne. ZA4186 Data file Version 1.0.0, https://doi.org/10.4232/1.4186."
 fsdeva1996,Centre for Finnish Business and Policy Studies (EVA) & Yhdyskuntatutkimus: EVA Survey on Finnish Values and Attitudes 1996 [dataset]. Version 1 (2001-01-23). Finnish Social Science Data Archive [distributor]. http://urn.fi/urn:nbn:fi:fsd:T-FSD1085
 fsdeva1998,Centre for Finnish Business and Policy Studies (EVA) & Yhdyskuntatutkimus: EVA Survey on Finnish Values and Attitudes 1998 [dataset]. Version 1.0 (2001-01-24). Finnish Social Science Data Archive [distributor]. http://urn.fi/urn:nbn:fi:fsd:T-FSD1086
 fsdeva2000,Centre for Finnish Business and Policy Studies (EVA) & Yhdyskuntatutkimus: EVA Survey on Finnish Values and Attitudes 2000 [dataset]. Version 1.0 (2001-10-12). Finnish Social Science Data Archive [distributor]. http://urn.fi/urn:nbn:fi:fsd:T-FSD1087
@@ -223,23 +223,23 @@ fsdeva2017,Finnish Business and Policy Forum (EVA): EVA Survey on Finnish Values
 fsdeva2018,Finnish Business and Policy Forum (EVA): EVA Survey on Finnish Values and Attitudes Autumn 2018 [dataset]. Version 2.0 (2019-03-06). Finnish Social Science Data Archive [distributor]. http://urn.fi/urn:nbn:fi:fsd:T-FSD3305
 fsdeva2019win,Finnish Business and Policy Forum (EVA): EVA Survey on Finnish Values and Attitudes Winter 2019 [dataset]. Version 1.0 (2020-04-23). Finnish Social Science Data Archive [distributor]. http://urn.fi/urn:nbn:fi:fsd:T-FSD3330
 fsdeva2020fall,Finnish Business and Policy Forum (EVA): EVA Survey on Finnish Values and Attitudes Autumn 2020 [dataset]. Version 1.0 (2021-01-28). Finnish Social Science Data Archive [distributor]. http://urn.fi/urn:nbn:fi:fsd:T-FSD3494
-ges1983,o
-ges1990,o
+ges1983,"Berger, Manfred, Gibowski, Wolfgang G., & Roth, Dieter (2012). Election Study 1983 (Panel). GESIS Data Archive, Cologne. ZA1276 Data file Version 2.0.0, https://doi.org/10.4232/1.11458."
+ges1990,"Forschungsgruppe Wahlen, Mannheim (1991). Election Study 1990 (Trend Investigation). GESIS Data Archive, Cologne. ZA1920 Data file Version 1.0.0, https://doi.org/10.4232/1.1920."
 gles1994,"Falter, Ju_rgen W.; Gabriel, Oscar W.; Rattinger, Hans; Schmitt, Karl (2015): Political Attitudes, Political Participation and Voting Behavior in Reunified Germany 1994 GESIS Data Archive, Cologne. ZA3065 Data file Version 3.0.0, doi:10.4232/1.11973 "
 gles1998,"Falter, Ju_rgen W.; Gabriel, Oscar W.; Rattinger, Hans (2015): Political Attitudes, Political Participation and Voting Behavior in Reunified Germany 1998 GESIS Data Archive, Cologne. ZA3066 Data file Version 4.0.0, doi:10.4232/1.11968 "
 gles2002,"Falter, Ju_rgen W.; Gabriel, Oscar W.; Rattinger, Hans (2015): Political Attitudes, Political Participation and Voting Behavior in Reunified Germany 2002. GESIS Data Archive, Cologne. ZA3861 Data file Version 3.0.0, doi:10.4232/1.11967 "
-gles2009,o
+gles2009,"GLES (2015). Short-term Campaign Panel (GLES 2009). GESIS Data Archive, Cologne. ZA5305 Data file Version 5.0.0, https://doi.org/10.4232/1.12198."
 gles2013,"Rattinger, Hans; Roßteutscher, Sigrid; Schmitt-Beck, Rüdiger; Weßels, Bernhard; Wolf, Christof; Plischke, Thomas; Wiegand, Elena (2016): Short- term Campaign Panel 2013 (GLES). GESIS Data Archive, Cologne. ZA5704 Datafile Version 3.2.0, doi: 10.4232/1.12561. t"
-gles2017,o
-icenes1983,o
-icenes1987,o
-icenes1991,o
-icenes1995,o
-icenes1999,o
-icenes2003,o
-icenes2007,o
-icenes2009,o
-icenes2013,o
+gles2017,"GLES (2019). Short-term Campaign Panel (GLES 2017). GESIS Data Archive, Cologne. ZA6804 Data file Version 7.0.0, https://doi.org/10.4232/1.13323."
+icenes1983,"Har_arson, Ólafur _ór_ur; Félagsvísindastofnun, 2021, ""Íslenska kosningarannsóknin 1983"", https://doi.org/10.34881/1.00001, GAGNÍS (DATICE), V1, UNF:6:krmQ/NST5UWdwbJ3OlWJ8A== [fileUNF]"
+icenes1987,"Har_arson, Ólafur _ór_ur; Félagsvísindastofnun, 2020, ""Íslenska kosningarannsóknin 1987"", https://doi.org/10.34881/1.00002, GAGNÍS (DATICE), V3, UNF:6:QFUhkaIXJfohv9z5T/HpeA== [fileUNF]"
+icenes1991,"Har_arson, Ólafur _ór_ur; Félagsvísindastofnun, 2021, ""Íslenska kosningarannsóknin 1991"", https://doi.org/10.34881/1.00003, GAGNÍS (DATICE), V1, UNF:6:CF1aHW7xsn83iJFjIACP5Q== [fileUNF]"
+icenes1995,"Har_arson, Ólafur _ór_ur; Félagsvísindastofnun, 2021, ""Íslenska kosningarannsóknin 1995"", https://doi.org/10.34881/1.00004, GAGNÍS (DATICE), V1, UNF:6:soAWhg5QnLVM64/ItiByow== [fileUNF]"
+icenes1999,"Har_arson, Ólafur _ór_ur; Félagsvísindastofnun, 2021, ""Íslenska kosningarannsóknin 1999"", https://doi.org/10.34881/1.00005, GAGNÍS (DATICE), V1, UNF:6:yiZ5815qg7DAqc5e2QPVMQ== [fileUNF]"
+icenes2003,"Har_arson, Ólafur _ór_ur; Eva Hei_a Önnudóttir; Einar Mar _ór_arson; Félagsvísindastofnun, 2021, ""Íslenska kosningarannsóknin 2003"", https://doi.org/10.34881/1.00006, GAGNÍS (DATICE), V1, UNF:6:2wWd5vKJmBmyz2NzoDiPQQ== [fileUNF]"
+icenes2007,"Har_arson, Ólafur _ór_ur; Eva Hei_a Önnudóttir; Einar Már _ór_arson; Félagsvísindastofnun, 2021, ""Íslenska kosningarannsóknin 2007"", https://doi.org/10.34881/1.00007, GAGNÍS (DATICE), V1, UNF:6:e2fn43HO5Jo1AYE4ttePGw== [fileUNF]"
+icenes2009,"Har_arson, Ólafur _ór_ur; Önnudóttir, Eva Hei_a; _ór_arsson, Einar Már; Félagsvísindastofnun, 2021, ""Íslenska kosningarannsóknin 2009"", https://doi.org/10.34881/1.00008, GAGNÍS (DATICE), V1, UNF:6:/udEf4H4VtlzK7Qi4e7mwA== [fileUNF]"
+icenes2013,"Har_arson, Ólafur _ór_ur; Hulda _órisdóttir; Eva Hei_a Önnudóttir, 2021, ""Íslenska kosningarannsóknin 2013"", https://doi.org/10.34881/1.00009, GAGNÍS (DATICE), V1, UNF:6:a7ePGbqQoIlklFeypfRa6Q== [fileUNF]"
 issp1990,"ISSP Research Group (1992). International Social Survey Programme: Role of Government II - ISSP 1990. GESIS Data Archive, Cologne. ZA1950 Data file Version 1.0.0, https://doi.org/10.4232/1.1950."
 issp1996,"ISSP Research Group (1999). International Social Survey Programme: Role of Government III - ISSP 1996. GESIS Data Archive, Cologne. ZA2900 Data file Version 1.0.0, https://doi.org/10.4232/1.2900."
 issp2004,"ISSP Research Group (2012): International Social Survey Programme 2004: Citizenship I (ISSP 2004). GESIS Data Archive, Cologne. ZA3950 Data file Version 1.3.0, doi: 10.4232/1.11372 "
@@ -247,16 +247,16 @@ issp2006,"ISSP Research Group (2021). International Social Survey Programme: Rol
 issp2007,"ISSP Research Group (2009). International Social Survey Programme: Leisure Time and Sports - ISSP 2007. GESIS Data Archive, Cologne. ZA4850 Data file Version 2.0.0, https://doi.org/10.4232/1.10079."
 issp2014,"ISSP Research Group (2016): International Social Survey Programme: Citizenship II   ISSP 2014. GESIS Data Archive, Cologne. ZA6670 Data file Version 2.0.0, doi: 10.4232/1.12590"
 issp2016,"ISSP Research Group (2018): International Social Survey Programme: Role of Government V ISSP 2016. GESIS Data Archive, Cologne. ZA6900 Data file Version 2.0.0, doi: 10.4232/1.13052"
-itanes1985,o
-itanes1990,o
-itanes1996,o
-itanes2001,o
-itanes2001_2006_04,o
-itanes2001_2006_06,o
-itanes2008,o
-itanes2011_2013,o
-itanes2013capi,o
-itanes2018,o
+itanes1985,"Istituto Cattaneo, Italian National Election Studies, 1985 [Dataset]"
+itanes1990,"Istituto Cattaneo, Italian National Election Studies, 1990 [Dataset]"
+itanes1996,"Istituto Cattaneo, Italian National Election Studies, 1996 [Dataset]"
+itanes2001,"Istituto Cattaneo, Italian National Election Studies, 2001 [Dataset]"
+itanes2001_2006_04,"Istituto Cattaneo, Italian National Election Studies, 2004 [Dataset]"
+itanes2001_2006_06,"Istituto Cattaneo, Italian National Election Studies, 2006 [Dataset]"
+itanes2008,"Istituto Cattaneo, Italian National Election Studies, 2008 [Dataset]"
+itanes2011_2013,"Istituto Cattaneo, Italian National Election Studies, 2011 [Dataset]"
+itanes2013capi,"Istituto Cattaneo, Italian National Election Studies, 2013 [Dataset]"
+itanes2018,"Istituto Cattaneo, Italian National Election Studies, 2018 [Dataset]"
 kobar1994,"Shin, Doh Chull, 2010, Korea Barometer Survey 1994 [dataset]"
 kobar1996,"Shin, Doh Chull, 2010, Korea Barometer Survey 1996 [dataset]"
 kobar1998,"Shin, Doh Chull, 2010, Korea Barometer Survey 1998 [dataset]"
