@@ -14,36 +14,36 @@
 2013,afrob5,Afrobarometer,Afrobarometer,,https://www.afrobarometer.org/data/data-sets/?select-survey-rs%5B0%5D=survey-r-5&hidden-current-page=1&current-page=2#listing
 2014,afrob6,Afrobarometer,Afrobarometer,,https://www.afrobarometer.org/survey-resource/merged-r-5-data-34-countries-2015/
 2015,afrob6,Afrobarometer,Afrobarometer,,https://www.afrobarometer.org/survey-resource/merged-r-5-data-34-countries-2015/
-2020,anes2020,American National Election Studies,"ANGUS CAMPBELL,PHILIP CONVERSE,WARREN MILLER,DONALD STOKES",v3,https://electionstudies.org/data-center/2020-time-series-study/
-1982,anes_combo,American National Election Studies,WARREN E. MILLER,v3,https://electionstudies.org/data-center/1980-time-series-study/
-1984,anes_combo,American National Election Studies,WARREN E. MILLER,v3,https://electionstudies.org/data-center/1982-time-series-study/
-1986,anes_combo,American National Election Studies,WARREN E. MILLER,v3,https://electionstudies.org/data-center/1984-time-series-study/
-1988,anes_combo,American National Election Studies,WARREN E. MILLER,v3,https://electionstudies.org/data-center/1986-time-series/
-1990,anes_combo,American National Election Studies,"Warren E. Miller,Donald R. Kinder,Steven J. Rosenstone ",v3,https://electionstudies.org/data-center/1988-time-series/
-1992,anes_combo,American National Election Studies,"Warren E. Miller, Donald R. Kinder, Steven J. Rosenstone",v3,https://electionstudies.org/data-center/1990-time-series-study/
-1994,anes_combo,American National Election Studies,"Steven J. Rosenstone, Warren E. Miller, Donald R. Kinder, and the National Election Studies ",v3,https://electionstudies.org/data-center/1992-time-series-study/
-1996,anes_combo,American National Election Studies,Center for Political Studies ,v3,https://electionstudies.org/data-center/1994-time-series-study/
-1998,anes_combo,American National Election Studies,Center for Political Studies,v3,https://electionstudies.org/data-center/1996-time-series-study/
-2000,anes_combo,American National Election Studies,Center for Political Studies,v3,https://electionstudies.org/data-center/1998-time-series-study/
-2002,anes_combo,American National Election Studies,Center for Political Studies ,v3,https://electionstudies.org/data-center/2000-time-series-study/
-2004,anes_combo,American National Election Studies,Center for Political Studies,v3,https://electionstudies.org/data-center/2002-time-series-study/
-2008,anes_combo,American National Election Studies,"Arthur Lupia, Jon A. Krosnick, Pat Luevano, Matthew DeBell, and Darrell Donakowski",v3,https://electionstudies.org/data-center/2004-time-series-study/
-2018,uspew2018_02amtr,American Trends Panel Datasets,Pew Research Center,,https://www.pewresearch.org/american-trends-panel-datasets/
-2019,uspew2019_05amtr,American Trends Panel Datasets,Pew Research Center,,https://www.pewresearch.org/american-trends-panel-datasets/
-2006,arabb1,Arab Barometer,"Middle East Partnership Initiative, Princeton University, University of Michigan",,https://electionstudies.org/data-center/2008-time-series-study/
-2007,arabb1,Arab Barometer,"Middle East Partnership Initiative, Princeton University, University of Michigan",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2009,arabb1,Arab Barometer,"Middle East Partnership Initiative, Princeton University, University of Michigan",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2010,arabb2,Arab Barometer,"International Development Research Centre, United States Institute for Peace, University of Michigan , Princeton University",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2011,arabb2,Arab Barometer,"International Development Research Centre, United States Institute for Peace, University of Michigan , Princeton University",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2012,arabb3,Arab Barometer,"International Development Research Centre, United States Institute for Peace, University of Michigan , Princeton University",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2013,arabb3,Arab Barometer,"International Development Research Centre, United States Institute for Peace, University of Michigan , Princeton University",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2014,arabb3,Arab Barometer,"International Development Research Centre, United States Institute for Peace, University of Michigan , Princeton University",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2016,arabb4,Arab Barometer,"United States Agency for International Development, International Development Research Centre, Qatar National Research Fund, Princeton University, University of Michigan",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2018,arabb5,Arab Barometer,"Middle East Partnership Initiative, BBC Arabic, Qatar National Research Foundation, University, University of Michigan, Harvard University",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2019,arabb5,Arab Barometer,"Middle East Partnership Initiative, BBC Arabic, Qatar National Research Foundation, University, University of Michigan, Harvard University",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2021,arabb7,Arab Barometer,"Middle East Partnership Initiative, Princeton University, University of Michigan, United States Agency for International Development (USAID)",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2022,arabb7,Arab Barometer,"Middle East Partnership Initiative, Princeton University, University of Michigan, United States Agency for International Development (USAID)",,https://www.arabbarometer.org/survey-data/data-downloads/#
-2000,ases2000,Asia/Europe Survey,Takashi Inoguchi,,https://www.icpsr.umich.edu/web/ICPSR/studies/22324
+2020,anes2020,American National Election Studies,American National Election Studies,v3,https://electionstudies.org/data-center/2020-time-series-study/
+1982,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1980-time-series-study/
+1984,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1982-time-series-study/
+1986,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1984-time-series-study/
+1988,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1986-time-series/
+1990,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1988-time-series/
+1992,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1990-time-series-study/
+1994,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1992-time-series-study/
+1996,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1994-time-series-study/
+1998,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1996-time-series-study/
+2000,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/1998-time-series-study/
+2002,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/2000-time-series-study/
+2004,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/2002-time-series-study/
+2008,anes_combo,American National Election Studies,,v3,https://electionstudies.org/data-center/2004-time-series-study/
+2018,uspew2018_02amtr,Pew American Trends Panel,Pew Research Center,,https://www.pewresearch.org/american-trends-panel-datasets/
+2019,uspew2019_05amtr,Pew American Trends Panel,Pew Research Center,,https://www.pewresearch.org/american-trends-panel-datasets/
+2006,arabb1,Arab Barometer,,,
+2007,arabb1,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2009,arabb1,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2010,arabb2,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2011,arabb2,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2012,arabb3,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2013,arabb3,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2014,arabb3,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2016,arabb4,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2018,arabb5,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2019,arabb5,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2021,arabb7,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2022,arabb7,Arab Barometer,,,https://www.arabbarometer.org/survey-data/data-downloads/#
+2000,ases2000,Asia/Europe Survey,"Inoguchi, Takashi",,https://www.icpsr.umich.edu/web/ICPSR/studies/22324
 2001,asianb1,Asian Barometer,Hu Fu Center for East Asia Democratic Studies,,https://www.asianbarometer.org/datar?page=d10
 2002,asianb1,Asian Barometer,Hu Fu Center for East Asia Democratic Studies,,https://www.asianbarometer.org/datar?page=d11
 2003,asianb1,Asian Barometer,Hu Fu Center for East Asia Democratic Studies,,https://www.asianbarometer.org/datar?page=d12
@@ -70,62 +70,59 @@
 2018,asianb5_thailand,Asian Barometer,Hu Fu Center for East Asia Democratic Studies,,https://www.asianbarometer.org/datar?page=d33
 2018,asianb5_vietnam,Asian Barometer,Hu Fu Center for East Asia Democratic Studies,,https://www.asianbarometer.org/datar?page=d34
 1987,aes1987,Australian Election Study,"McAllister, Ian; Mughan, Anthony",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/PQFNYM
-1990,aes1990,Australian Election Study,"McAllister, Ian; Jones, Roger; Papadakis, Elim; Gow, David",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/KPVA0F
-1993,"aes1993, nsss1993",Australian Election Study,"Jones, Roger; McAllister, Ian; Denemark, David; Gow, David",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/ZZ3NOB
-1996,aes1996,Australian Election Study,"Jones, Roger; McAllister, Ian; Gow, David",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/NSDHWM
-1998,aes1998,Australian Election Study,"Bean, Clive; Gow, David; McAllister, Ian",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/FFBWUU
-2001,aes2001,Australian Election Study,"Bean, Clive; Gow, David; McAllister, Ian",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/CALXMK
-2004,aes2004,Australian Election Study,"Bean, Clive; McAllister, Ian; Gibson, Rachel; Gow, David",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/G9ITIO
-2007,aes2007,Australian Election Study,"Bean, Clive; McAllister, Ian; Gow, David",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/ZBUOW0
-2010,aes2010,Australian Election Study,"McAllister, Ian; Bean, Clive; Gibson, Rachel Kay; Pietsch, Juliet",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/CYJNSM
-2013,aes2013,Australian Election Study,"Bean, Clive; McAllister, Ian; Pietsch, Juliet; Gibson, Rachel Kay",V3,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/WDBBAS
-2016,aes2016,Australian Election Study,"McAllister, Ian; Makkai, Toni; Bean, Clive; Gibson, Rachel Kay",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/7OZCZA
-2019,aes2019,Australian Election Study,"McAllister, Ian; Bean, Clive; Gibson, Rachel; Makkai, Toni; Sheppard, Jill; Cameron, Sarah",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/KMAMMW
+1990,aes1990,Australian Election Study,"Jones, Roger; Papadakis, Elim; Gow, David",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/KPVA0F
+1993,aes1993,Australian Election Study,"Denemark, David",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/ZZ3NOB
+1996,aes1996,Australian Election Study,,V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/NSDHWM
+1998,aes1998,Australian Election Study,"Bean, Clive",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/FFBWUU
+2001,aes2001,Australian Election Study,,V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/CALXMK
+2004,aes2004,Australian Election Study,"Gibson, Rachel Kay",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/G9ITIO
+2007,aes2007,Australian Election Study,,V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/ZBUOW0
+2010,aes2010,Australian Election Study,"Pietsch, Juliet",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/CYJNSM
+2013,aes2013,Australian Election Study,,V3,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/WDBBAS
+2016,aes2016,Australian Election Study,"Makkai, Toni",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/7OZCZA
+2019,aes2019,Australian Election Study,"Sheppard, Jill; Cameron, Sarah",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/KMAMMW
 2017,autnes2017,Austrian National Election Study,"Kritzinger, Sylvia; Plescia, Carolina; De Sio, Lorenzo; Paparo, Aldo",v1.0,https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/5XWPKK
-1997,bes1997,British Election Study,"Heath, A. et al.",,https://www.britishelectionstudy.com/data-object/1997-bes-cross-section/
-2001,bes2001,British Election Study,"Clarke, H. et al.",,https://www.britishelectionstudy.com/data-object/2001-bes-cross-section-2/
-2005,"bes2005_post, bes2005_pre",British Election Study,"Clarke, H. et al.",,https://www.britishelectionstudy.com/data-object/2005-bes-post-election-survey/
-2010,bes2010,British Election Study,"Whiteley, P.F. and Sanders, D., ",,https://www.britishelectionstudy.com/data-object/2010-bes-cross-section/
-2015,bes2015,British Election Study,"Fieldhouse, E., Green, J., Evans, G., Schmitt, H., van der Eijk, C., Mellon, J., Prosser, C. ",,https://www.britishelectionstudy.com/data-object/version-3-0-2015-face-to-face-post-election-survey/
-2017,bes2017,British Election Study,"Fieldhouse, E., Green, J., Evans, G., Schmitt, H., van der Eijk, C., Mellon, J., Prosser, C. ",,https://www.britishelectionstudy.com/data-object/2017-face-to-face/
-2019,bes2019,British Election Study,"Fieldhouse, E., Green, J., Evans, G., Prosser, C., de Geus, R., Bailey, J., Schmitt, H., van der Eijk, C., Mellon, J.",,https://www.britishelectionstudy.com/data-object/2019-british-election-study-post-election-random-probability-survey/
-1994,bsa1994,British Social Attitudes,Social and Community Planning Research,e2,https://www.icpsr.umich.edu/web/ICPSR/series/9
-1995,bsa1995,British Social Attitudes,Social and Community Planning Research,e2,https://www.icpsr.umich.edu/web/ICPSR/series/10
-1996,bsa1996,British Social Attitudes,Social and Community Planning Research,e2,https://www.icpsr.umich.edu/web/ICPSR/series/11
-1997,bsa1997,British Social Attitudes,Social and Community Planning Research,e2,https://www.icpsr.umich.edu/web/ICPSR/series/12
-1998,bsa1998,British Social Attitudes,Social and Community Planning Research,e2,https://www.icpsr.umich.edu/web/ICPSR/series/13
-1999,bsa1999,British Social Attitudes,National Centre for Social Research,e1,https://www.icpsr.umich.edu/web/ICPSR/series/14
-2000,bsa2000,British Social Attitudes,National Centre for Social Research,e1,https://www.icpsr.umich.edu/web/ICPSR/series/15
-2001,bsa2001,British Social Attitudes,National Centre for Social Research,e1,https://www.icpsr.umich.edu/web/ICPSR/series/16
-2002,bsa2002,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=4838
-2003,bsa2003,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5235
-2004,bsa2004,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5329
-2005,bsa2005,British Social Attitudes,National Centre for Social Research,e2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5618
-2006,bsa2006,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5823
-2007,bsa2007,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6240
-2008,bsa2008,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6390
-2009,bsa2009,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6695
-2010,bsa2010,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6969
-2011,bsa2011,British Social Attitudes,National Centre for Social Research,e2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7237
-2012,bsa2012,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7476
-2013,bsa2013,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7500
-2014,bsa2014,British Social Attitudes,National Centre for Social Research,e2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7809
-2015,bsa2015,British Social Attitudes,National Centre for Social Research,e3,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8116
-2016,bsa2016,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8252
-2017,bsa2017,British Social Attitudes,National Centre for Social Research,e2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8450
-2018,bsa2018,British Social Attitudes,National Centre for Social Research,e2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8606
-2019,bsa2019,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8772
-2020,bsa2020,British Social Attitudes,National Centre for Social Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=9005
-1986,bsa_combo,British Social Attitudes,Social and Community Planning Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=2197
-1989,bsa_combo,British Social Attitudes,Social and Community Planning Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=2723
-1990,bsa_combo,British Social Attitudes,Social and Community Planning Research,e1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=2840
-1991,bsa_combo,British Social Attitudes,Social and Community Planning Research,e2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=2952
+1997,bes1997,British Election Study,"Heath, Anthony; Jowell, Roger; Curtice, John",,https://www.britishelectionstudy.com/data-object/1997-bes-cross-section/
+2001,bes2001,British Election Study,"Sanders, David; Whiteley, Paul; Clarke, Harold; Stewart, Marianne",,https://www.britishelectionstudy.com/data-object/2001-bes-cross-section-2/
+2005,"bes2005_post, bes2005_pre",British Election Study,,,https://www.britishelectionstudy.com/data-object/2005-bes-post-election-survey/
+2010,bes2010,British Election Study,,,https://www.britishelectionstudy.com/data-object/2010-bes-cross-section/
+2015,bes2015,British Election Study,"Fieldhouse, E.; Green, J.; Evans, G.; Schmitt, H.; van der Eijk, C.; Mellon, J.; Prosser, C. ",,https://www.britishelectionstudy.com/data-object/version-3-0-2015-face-to-face-post-election-survey/
+2017,bes2017,British Election Study,,,https://www.britishelectionstudy.com/data-object/2017-face-to-face/
+2019,bes2019,British Election Study,,,https://www.britishelectionstudy.com/data-object/2019-british-election-study-post-election-random-probability-survey/
+,bsa_combo,British Social Attitudes,Social and Community Planning Research,v2,
+1994,bsa1994,British Social Attitudes,Social and Community Planning Research,v2,
+1995,bsa1995,British Social Attitudes,Social and Community Planning Research,v2,
+1996,bsa1996,British Social Attitudes,Social and Community Planning Research,v2,
+1997,bsa1997,British Social Attitudes,Social and Community Planning Research,v2,
+1998,bsa1998,British Social Attitudes,Social and Community Planning Research,v2,
+1999,bsa1999,British Social Attitudes,National Centre for Social Research,v1,
+2000,bsa2000,British Social Attitudes,National Centre for Social Research,v1,
+2001,bsa2001,British Social Attitudes,National Centre for Social Research,v1,
+2002,bsa2002,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=4838
+2003,bsa2003,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5235
+2004,bsa2004,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5329
+2005,bsa2005,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5618
+2006,bsa2006,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=5823
+2007,bsa2007,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6240
+2008,bsa2008,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6390
+2009,bsa2009,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6695
+2010,bsa2010,British Social Attitudes,National Centre for Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6969
+2011,bsa2011,British Social Attitudes,NatCen Social Research,v2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7237
+2012,bsa2012,British Social Attitudes,NatCen Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7476
+2013,bsa2013,British Social Attitudes,NatCen Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7500
+2014,bsa2014,British Social Attitudes,NatCen Social Research,v2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7809
+2015,bsa2015,British Social Attitudes,NatCen Social Research,v2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8116
+2016,bsa2016,British Social Attitudes,NatCen Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8252
+2017,bsa2017,British Social Attitudes,NatCen Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8450
+2018,bsa2018,British Social Attitudes,NatCen Social Research,v2,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8606
+2019,bsa2019,British Social Attitudes,NatCen Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8772
+2020,bsa2020,British Social Attitudes,NatCen Social Research,v1,https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=9005
 2004,canadianes2004,Canadian Election Study,David A. Northrup,,https://ces-eec.arts.ubc.ca/english-section/surveys/
 2006,canadianes2006,Canadian Election Study,André Blais,,https://ces-eec.arts.ubc.ca/english-section/surveys/
-2008,canadianes2008,Canadian Election Study,"Elisabeth Gidengil,Neil Nevitte, Joanna Everitt), Patrick Fournier",,https://ces-eec.arts.ubc.ca/english-section/surveys/
-2011,canadianes2011,Canadian Election Study,Patrick Fournier; Fred Cutler; Stuart Soroka; Deitland Stolle,,https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/CEUSCP
-2015,canadianes2015,Canadian Election Study,Patrick Fournier; Fred Cutler; Stuart Soroka; Deitland Stolle,,https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/MT9Q6M
-2019,canadianes2019,Canadian Election Study,"Stephenson, Laura B; Harell, Allison; Rubenson, Daniel; Loewen, Peter John",,https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DUS88V
+2008,canadianes2008,Canadian Election Study,"Gidengil, Elisabeth; Nevitte, Neil; Everitt, Joanna; Fournier, Patrick",,https://ces-eec.arts.ubc.ca/english-section/surveys/
+2011,canadianes2011,Canadian Election Study,"Cutler, Fred; Soroka, Stuart; Stolle, Deitland",,https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/CEUSCP
+2015,canadianes2015,Canadian Election Study,,,https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/MT9Q6M
+2019,canadianes2019,Canadian Election Study,,,https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DUS88V
 2021,canadianes2021,Canadian Election Study,"Stephenson, Laura B.; Harrell, Allison; Rubenson, Daniel; Loewen, Peter John",,https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/MMXTFC
 1997,cnes1997,Canadian National Elections Study (CNES) Series,"Andre Blais; Elisabeth Gidengil,Richard Nadeau, Neil Nevitte",v3,https://www.icpsr.umich.edu/web/ICPSR/studies/2593
 2002,cceb20023,Candidate Countries Eurobarometer,the European Commission,v1.0.0,https://www.gesis.org/en/eurobarometer-data-service/survey-series/candidate-countries-eb/study-profiles
@@ -323,16 +320,16 @@
 2009,gles2009,German Longitudinal Election Study,"Hans Rattinger,Harald Schoen",v2.0.0,https://www.mzes.uni-mannheim.de/d7/en/datasets/german-longitudinal-election-study-long-term-panel
 2013,gles2013,German Longitudinal Election Study,"Hans Rattinger,Harald Schoen",v1.1.0,https://www.mzes.uni-mannheim.de/d7/en/datasets/german-longitudinal-election-study-long-term-panel
 2017,gles2017,German Longitudinal Election Study,"Hans Rattinger,Harald Schoen",v1.1.0,https://www.mzes.uni-mannheim.de/d7/en/datasets/german-longitudinal-election-study-long-term-panel
-1987,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-1988,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-1989,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-1990,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-1994,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-1997,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-1999,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-2002,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-2003,uspew_valcombo,Global Indicators,Pew Research Center,,https://www.pewresearch.org/global/database/
-2015,uspew2015_gov,Governance Survey,Pew Research Center,,https://www.pewresearch.org/politics/dataset/2015-governance-survey/
+1987,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+1988,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+1989,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+1990,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+1994,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+1997,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+1999,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+2002,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+2003,uspew_valcombo,Pew Global Attitudes Project,Pew Research Center,,https://www.pewresearch.org/global/database/
+2015,uspew2015_gov,Pew Governance Survey,Pew Research Center,,https://www.pewresearch.org/politics/dataset/2015-governance-survey/
 1983,icenes1983,Icelandic National Election Study,"Harðarson, Ólafur Þórður; Félagsvísindastofnun",V1,https://icenes.hi.is/is/data/post-electoral-voter-survey
 1987,icenes1987,Icelandic National Election Study,"Harðarson, Ólafur Þórður; Félagsvísindastofnun",V3,https://icenes.hi.is/is/data/post-electoral-voter-survey
 1991,icenes1991,Icelandic National Election Study,"Harðarson, Ólafur Þórður; Félagsvísindastofnun",V1,https://icenes.hi.is/is/data/post-electoral-voter-survey
@@ -368,7 +365,7 @@
 2016,issp2016,International Social Survey Programme,"FORS, c/o University of Lausanne, Lausanne, Sw1tzerland; Gonzalez, Ricardo; Mansfeldova, Zdenka",v2.0.0,https://issp.org/data-download/by-year/
 2017,issp2016,International Social Survey Programme,"Muckenhuber, Johanna; Höllinger, Franz; Hadler, Markus",v2.0.0,https://issp.org/data-download/by-year/
 2018,issp2016,International Social Survey Programme,"Muckenhuber, Johanna; Hadler, Markus; Höllinger, Franz",v2.1.0,https://issp.org/data-download/by-year/
-2012,uspew2012_10late,Internet and Tecknology,Pew Research Center,,https://www.pewresearch.org/internet/datasets/
+2012,uspew2012_10late,Pew Internet and Technology Survey,Pew Research Center,,https://www.pewresearch.org/internet/datasets/
 1985,itanes1985,Italian National Election Studies,Istituto Cattaneo,,http://www.itanes.org/wp-json/ebd/file/4031b7bede
 1990,itanes1990,Italian National Election Studies,Istituto Cattaneo,,http://www.itanes.org/wp-json/ebd/file/ca9aff8b2b
 1996,itanes1996,Italian National Election Studies,Istituto Cattaneo,,http://www.itanes.org/wp-json/ebd/file/c9d8c7cebc
@@ -406,18 +403,18 @@
 2014,amb_chile2014,LAPOP AmericasBarometer,Juan Pablo Luna,v15.2.3.2,http://datasets.americasbarometer.org/database/files/553131127Chile%20LAPOP%20AmericasBarometer%202014%20v3.0_W.dta
 2017,amb_chile2016,LAPOP AmericasBarometer,Juan Pablo Luna,v18.0.6.0,http://datasets.americasbarometer.org/database/files/336280178Chile%20LAPOP%20AmericasBarometer%202017%20V1.0_W.dta
 2019,amb_chile2018,LAPOP AmericasBarometer,Elizabeth Zechmeister,v11.1.7.0,http://datasets.americasbarometer.org/database/files/Chile%20LAPOP%20AmericasBarometer%202019%20v1.0_W.dta
-2016,amb_colombia2016,LAPOP AmericasBarometer,Juan Carlos RodrÃ­guez-Raga,v9.0.5.2,http://datasets.americasbarometer.org/database/files/1966987763Colombia%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
-2006,amb_combo,LAPOP AmericasBarometer,"Mitchell A. Seligson Kelly,Juan Carlos Donoso,Ricardo CÃ³rdova，Dinorah Azpuru，Lawrence Lachmansingh，Dominique ZÃ©phyr，Orlando PÃ©rez，Balford Lew1s，Pablo ParÃ¡s，Orlando PÃ©rez，Orlando PÃ©rez，Manuel Orrego，Julio CarriÃ³n，Mitchell A. Seligson，MarÃ­a Fernanda Boidi，Damarys Canache",,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_2/Combination?publish=yes
-2007,amb_combo,LAPOP AmericasBarometer,Juan Carlos RodrÃ­guez-Raga,,无2007年data
-2008,amb_combo,LAPOP AmericasBarometer,German Lodola,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_2/Combination?publish=yes
-2009,amb_combo,LAPOP AmericasBarometer,Juan Carlos RodrÃ­guez-Raga,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_3/Combination?publish=yes
-2010,amb_combo,LAPOP AmericasBarometer,German Lodola,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_4/Combination?publish=yes
-2012,amb_combo,LAPOP AmericasBarometer,German Lodola,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_5/Combination?publish=yes
-2014,amb_combo,LAPOP AmericasBarometer,German Lodola,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_6/Combination?publish=yes
+2016,amb_colombia2016,LAPOP AmericasBarometer,Juan Carlos Rodríguez-Raga,v9.0.5.2,http://datasets.americasbarometer.org/database/files/1966987763Colombia%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
+2006,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_2/Combination?publish=yes
+2007,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,无2007年data
+2008,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_2/Combination?publish=yes
+2009,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_3/Combination?publish=yes
+2010,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_4/Combination?publish=yes
+2012,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_5/Combination?publish=yes
+2014,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_6/Combination?publish=yes
 2016,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_7/Combination?publish=yes
-2017,amb_combo,LAPOP AmericasBarometer,,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_8/Combination?publish=yes
+2017,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_8/Combination?publish=yes
 2018,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_9/Combination?publish=yes
-2019,amb_combo,LAPOP AmericasBarometer,,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_10/Combination?publish=yes
+2019,amb_combo,LAPOP AmericasBarometer,Elizabeth Zechmeister,,https://public.tableau.com/app/profile/lapop.central/viz/LAPOPV3_10/Combination?publish=yes
 2016,amb_costarica2016,LAPOP AmericasBarometer,Jorge Vargas Cullell,v11.0.5.0,http://datasets.americasbarometer.org/database/files/1636511905CostaRica%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
 2018,amb_costarica2018,LAPOP AmericasBarometer,Elizabeth Zechmeister,v9.0.5.1,http://datasets.americasbarometer.org/database/files/CostaRica%20LAPOP%20AmericasBarometer%202018%20v1.0_W.dta
 2016,amb_dominica2016,LAPOP AmericasBarometer,Elizabeth Zechmeister,v14.0.3.2,http://datasets.americasbarometer.org/database/files/534210736Dominica%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
@@ -425,15 +422,15 @@
 2019,amb_ecuador2018,LAPOP AmericasBarometer,Elizabeth Zechmeister,v11.1.3.2,http://datasets.americasbarometer.org/database/files/Ecuador%20LAPOP%20AmericasBarometer%202019%20v1.0_W.dta
 2016,amb_grenada2016,LAPOP AmericasBarometer,Elizabeth Zechmeister,v15.2.4.3,http://datasets.americasbarometer.org/database/files/400479132Grenada%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
 2016,amb_guyana2016,LAPOP AmericasBarometer,Dinorah Azpuru,v15.2.6.0,http://datasets.americasbarometer.org/database/files/823416394Guatemala%20LAPOP%20AmericasBarometer%202017%20V1.0_W.dta
-2017,amb_panama2016,LAPOP AmericasBarometer,Orlando PÃ©rez,v18.0.2.2,http://datasets.americasbarometer.org/database/files/2078678947Panama%20LAPOP%20AmericasBarometer%202017%20V1.0_W.dta
-2019,amb_panama2018,LAPOP AmericasBarometer,,,http://datasets.americasbarometer.org/database/files/Panama%20LAPOP%20AmericasBarometer%202018%20v1.0_W.dta
+2017,amb_panama2016,LAPOP AmericasBarometer,Orlando Pérez,v18.0.2.2,http://datasets.americasbarometer.org/database/files/2078678947Panama%20LAPOP%20AmericasBarometer%202017%20V1.0_W.dta
+2019,amb_panama2018,LAPOP AmericasBarometer,Orlando Pérez,,http://datasets.americasbarometer.org/database/files/Panama%20LAPOP%20AmericasBarometer%202018%20v1.0_W.dta
 2016,amb_stkittsnevis2016,LAPOP AmericasBarometer,Elizabeth Zechmeiste,v15.2.4.2,http://datasets.americasbarometer.org/database/files/1597907601StKittsNevis%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
 2017,amb_stlucia2016,LAPOP AmericasBarometer,Elizabeth Zechmeister,v15.2.4.4,http://datasets.americasbarometer.org/database/files/1241300571StLucia%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
 2016,amb_stvincent2016,LAPOP AmericasBarometer,Elizabeth Zechmeister,v15.2.4.2,http://datasets.americasbarometer.org/database/files/317383160StVincent%20LAPOP%20AmericasBarometer%202016%20V1.0_W.dta
 2012,amb_suriname2012,LAPOP AmericasBarometer,Mitchell A. Seligson,v10.0.2.2,http://datasets.americasbarometer.org/database/files/108630764Suriname%20LAPOP%20AmericasBarometer%202012%20Rev1_W.dta
-2010,amb_trinidad2010,LAPOP AmericasBarometer,Dominique ZÃ©phyr,v8.8,http://datasets.americasbarometer.org/database/files/464873967Trinidad_LAPOP_AmericasBarometer%202010%20data%20set%20%20approved%20V3.dta
+2010,amb_trinidad2010,LAPOP AmericasBarometer,Dominique Zéphyr,v8.8,http://datasets.americasbarometer.org/database/files/464873967Trinidad_LAPOP_AmericasBarometer%202010%20data%20set%20%20approved%20V3.dta
 2012,amb_trinidad2012,LAPOP AmericasBarometer,Mitchell A. Seligson,v10.0.2.2,http://datasets.americasbarometer.org/database/files/1496679067TrinandTob%20LAPOP%20AmericasBarometer%202012%20Rev1_W.dta
-2017,amb_uruguay2016,LAPOP AmericasBarometer,MarÃ­a Fernanda Boidi,v18.0.4.0,http://datasets.americasbarometer.org/database/files/646644681Uruguay%20LAPOP%20AmericasBarometer%202017%20V1.0_W.dta
+2017,amb_uruguay2016,LAPOP AmericasBarometer,Marí­a Fernanda Boidi,v18.0.4.0,http://datasets.americasbarometer.org/database/files/646644681Uruguay%20LAPOP%20AmericasBarometer%202017%20V1.0_W.dta
 2019,amb_uruguay2018,LAPOP AmericasBarometer,Elizabeth Zechmeister,v12.0.3.0 ,http://datasets.americasbarometer.org/database/files/Uruguay%20LAPOP%20AmericasBarometer%202019%20v1.0_W.dta
 2010,amb_us2010,LAPOP AmericasBarometer,Mitchell A. Seligson,v10.2,http://datasets.americasbarometer.org/database/files/1954363083US_LAPOP_AmericasBarometer%202010%20data%20set%20%20original%20V1.dta
 2012,amb_us2012,LAPOP AmericasBarometer,Mitchell A. Seligson,v10.0.1.2,http://datasets.americasbarometer.org/database/files/241473079UnitedStates%20LAPOP%20AmericasBarometer%202012%20Rev1_W.dta
@@ -458,11 +455,12 @@
 2010,lb2010,Latinobarometro,Corporación Latinobarómetro,v20190707,https://www.latinobarometro.org/latContents.jsp
 2013,lb2013,Latinobarometro,Corporación Latinobarómetro,v20190707,https://www.latinobarometro.org/latContents.jsp
 2020,lb2020,Latinobarometro,Corporación Latinobarómetro,v20190707,https://www.latinobarometro.org/latContents.jsp
-1984,nsss1984,National Social Science Survey,"Kelley, Jonathan; Cushing, Robert; Headey, Bruce",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/RDLL0Y
-1987,nsss1987,National Social Science Survey,"Kelley, Jonathan; Bean, Clive; Evans, Mariah D. R.",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/J41IBV
-1989,nsss1989,National Social Science Survey,"Kelley, Jonathan; Bean, Clive; Evans, Mariah, 2017",V1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/R7OO0J
-1994,nsss1994,National Social Science Survey,"Kelley, Jonathan; Bean, Clive; Evans, Mariah D. R.; Zagorski, Krzysztof",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/DDWXI7
-1995,nsss1995,National Social Science Survey,"Kelley, Jonathan; Bean, Clive; Evans, Mariah D. R.",V2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/R70QJY
+1984,nsss1984,"National Social Science Survey, Australia","Kelley, Jonathan; Cushing, Robert; Headey, Bruce",v2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/RDLL0Y
+1987,nsss1987,"National Social Science Survey, Australia","Bean, Clive; Evans, Mariah D. R.",v2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/J41IBV
+1989,nsss1989,"National Social Science Survey, Australia",,v1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/R7OO0J
+1993,nsss1993,"National Social Science Survey, Australia",,v1,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/OHK1J7
+1994,nsss1994,"National Social Science Survey, Australia","Zagorski, Krzysztof",v2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/DDWXI7
+1995,nsss1995,"National Social Science Survey, Australia",,v2,https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.26193/R70QJY
 1992,neb_combo,New Europe Barometer (NEB) Surveys,"The Centre for the Study of Public Policy and the Paul Lazarsfeld Society, Vienna",v2,https://www.cspp.strath.ac.uk/catalog13_0.html
 1993,neb_combo,New Europe Barometer (NEB) Surveys,"The Centre for the Study of Public Policy and the Paul Lazarsfeld Society, Vienna",v3,https://www.cspp.strath.ac.uk/catalog13_0.html
 1995,neb_combo,New Europe Barometer (NEB) Surveys,"The Centre for the Study of Public Policy and the Paul Lazarsfeld Society, Vienna",v4,https://www.cspp.strath.ac.uk/catalog13_0.html
@@ -535,21 +533,21 @@
 2014,politbarometer_combo,Politbarometer,"Forschungsgruppe Wahlen, Mannheim",v15.0.0,https://search.gesis.org/research_data/ZA2391?doi=10.4232/1.13631
 2015,politbarometer_combo,Politbarometer,"Forschungsgruppe Wahlen, Mannheim",v15.0.0,https://search.gesis.org/research_data/ZA2391?doi=10.4232/1.13631
 2016,politbarometer_combo,Politbarometer,"Forschungsgruppe Wahlen, Mannheim",v15.0.0,https://search.gesis.org/research_data/ZA2391?doi=10.4232/1.13631
-2010,amb_argentina2010,Political Culture of Democracy,,v10.1b,http://datasets.americasbarometer.org/database/files/924077670Argentina_LAPOP_AmericasBarometer%202010%20data%20set%20approved%20v3.dta
-2010,amb_bolivia2010,Political Culture of Democracy,Daniel Moreno,v11,http://datasets.americasbarometer.org/database/files/1748144313Bolivia_LAPOP_AmericasBarometer%202010%20data%20set%20%20approved%20v3.dta
-2010,amb_chile2010,Political Culture of Democracy,Juan Pablo Luna,v10.1h ,http://datasets.americasbarometer.org/database/files/1217681709Chile_LAPOP_AmericasBarometer%202010%20data%20set%20approved%20v4.dta
-2009,amb_colombia2009,Political Culture of Democracy,Juan Carlos RodrÃ­guez-Raga,v19,http://datasets.americasbarometer.org/database/files/754888614Colombia2009_Rev1_W.dta
-2011,amb_colombia2011,Political Culture of Democracy,Juan Carlos RodrÃ­guez-Raga,v1,http://datasets.americasbarometer.org/database/files/1329454000Colombia2011_Rev1_W.dta
-2010,amb_suriname2010,Political Culture of Democracy,Dominique ZÃ©phyr,v10.2a I,http://datasets.americasbarometer.org/database/files/132981347Suriname_LAPOP_AmericasBarometer%202010%20data%20set%20%20original%20v1.dta
-2010,amb_venezuela2010,Political Culture of Democracy,Damarys Canache,v10.0,http://datasets.americasbarometer.org/database/files/1451946926Venezuela_LAPOP_AmericasBarometer%202010%20data%20set%20APPROVED%20v3.dta
-2004,uspew2004_typo,Political Typology,Pew Research Center,,https://www.pewresearch.org/politics/dataset/december-2004-political-typology/
-2017,uspew2017_6typo,Political Typology,Pew Research Center,,
-2016,uspew2016_3pol,Politics and Policy,Pew Research Center,,https://www.pewresearch.org/politics/datasets/
+2010,amb_argentina2010,LAPOP AmericasBarometer,German Lodola,v10.1b,http://datasets.americasbarometer.org/database/files/924077670Argentina_LAPOP_AmericasBarometer%202010%20data%20set%20approved%20v3.dta
+2010,amb_bolivia2010,LAPOP AmericasBarometer,Daniel Moreno,v11,http://datasets.americasbarometer.org/database/files/1748144313Bolivia_LAPOP_AmericasBarometer%202010%20data%20set%20%20approved%20v3.dta
+2010,amb_chile2010,LAPOP AmericasBarometer,Juan Pablo Luna,v10.1h ,http://datasets.americasbarometer.org/database/files/1217681709Chile_LAPOP_AmericasBarometer%202010%20data%20set%20approved%20v4.dta
+2009,amb_colombia2009,LAPOP AmericasBarometer,Juan Carlos Rodríguez-Raga,v19,http://datasets.americasbarometer.org/database/files/754888614Colombia2009_Rev1_W.dta
+2011,amb_colombia2011,LAPOP AmericasBarometer,Juan Carlos Rodríguez-Raga,v1,http://datasets.americasbarometer.org/database/files/1329454000Colombia2011_Rev1_W.dta
+2010,amb_suriname2010,LAPOP AmericasBarometer,Dominique Zéphyr,v10.2a I,http://datasets.americasbarometer.org/database/files/132981347Suriname_LAPOP_AmericasBarometer%202010%20data%20set%20%20original%20v1.dta
+2010,amb_venezuela2010,LAPOP AmericasBarometer,Damarys Canache,v10.0,http://datasets.americasbarometer.org/database/files/1451946926Venezuela_LAPOP_AmericasBarometer%202010%20data%20set%20APPROVED%20v3.dta
+2004,uspew2004_typo,Pew Political Typology Survey,Pew Research Center,,https://www.pewresearch.org/politics/dataset/december-2004-political-typology/
+2017,uspew2017_6typo,Pew Political Typology Survey,Pew Research Center,,
+2016,uspew2016_3pol,Pew Politics and Policy Survey,Pew Research Center,,https://www.pewresearch.org/politics/datasets/
 2012,ptvs2012,Portugal Elections and Political Reprsentation,"André Freire, José Manuel Leite Viegas , Ana Maria Belchior, and Marco Lisi",p2,http://er.cies.iscte-iul.pt/sites/default/dfiles/ElectorsSurvey_PT_2012_db_0.sav
 2016,ptvs2016,Portugal Elections and Political Reprsentation,"André Freire, Emmanouil Tsatsanis",p3,http://er.cies.iscte-iul.pt/sites/default/dfiles/ElectorsSurvey_PT_2016-2018_W1-W2_db_0.sav
 2018,ptvs2016,Portugal Elections and Political Reprsentation,"André Freire, Emmanouil Tsatsanis",p3,http://er.cies.iscte-iul.pt/sites/default/dfiles/ElectorsSurvey_PT_2016-2018_W1-W2_db_0.sav
-2014,uspew2014_9rel,Religion Datasets,Pew Research Center,,https://www.pewresearch.org/religion/religion-datasets/
-2007,uspew2007_rls,Religious Landscape Survey,Pew Research Center,,https://www.pewresearch.org/religion/religious-landscape-study/
+2014,uspew2014_9rel,Pew U.S. Religious Landscape Study,Pew Research Center,,https://www.pewresearch.org/religion/religion-datasets/
+2007,uspew2007_rls,Pew U.S. Religious Landscape Study,Pew Research Center,,https://www.pewresearch.org/religion/religious-landscape-study/
 2013,sasianb2,South Asian Barometer Survey,Hu Fu Center for East Asia Democratic Studies,,https://www.asianbarometer.org/datar?page=d10
 1988,snes1988,Swedish National Election Studies (SNES),"Andersson, D., Hedberg, P., Svensson, R., Oscarsson, H. ",v1,https://snd.gu.se/en/catalogue/collection/snes
 1991,snes1991,Swedish National Election Studies (SNES),"Andersson, D., Hedberg, P., Svensson, R., Oscarsson, H. ",v1,https://snd.gu.se/en/catalogue/collection/snes
