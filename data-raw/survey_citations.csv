@@ -315,14 +315,14 @@ snes2014,"Ekengren Oscarsson, H., Hedberg, P., Oleskog Tryggvason, P., & Berg, L
 snes2018,"Andersson, D., Hedberg, P., Svensson, R., & Oscarsson, H. (2021). The Swedish National Election Study 2018 - CSES Edition (Version 1) [Data set]. University of Gothenburg. Available at: https://doi.org/10.5878/p9eq-2883"
 uspew_valcombo,"Pew Research Center for the People & the Press. Pew Research Center Poll: 1987 to 2003 Values Merge File, 1987 [Dataset]. Roper #31095812, Version 3. Princeton Survey Research Associates International [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31095812"
 uspew2004_typo,"Pew Research Center for the People & the Press. Pew Research Center Poll:  Typology--Politics/News/Economy/Stem Cell Research/Trade/Taxes/Federal Budget/Iraq/Patriot Act/Internet Use, 2004 [Dataset]. Roper #31095844, Version 2. Princeton Survey Research Associates International [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31095844"
-uspew2007_rls,"Pew Forum on Religion & Public Life. 2007. U.S. Religious Landscape Survey, 2007. https://www.pewresearch.org/religion/dataset/u-s-religious-landscape-survey/"
+uspew2007_rls,"Pew Forum on Religion & Public Life. 2007. U.S. Religious Landscape Survey, 2007 [Dataset]. https://www.pewresearch.org/religion/dataset/u-s-religious-landscape-survey/"
 uspew2012_10late,"Pew Research Center for the People & the Press. Pew Research Center Poll: Late October 2012 Political Survey, 2012 [Dataset]. Roper #31096114, Version 2. Princeton Survey Research Associates International [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31096114"
-uspew2014_9rel,
-uspew2015_gov,
-uspew2016_3pol,
-uspew2017_6typo,
-uspew2018_02amtr,
-uspew2019_05amtr,
+uspew2014_9rel,"Pew Research Center for the People & the Press. Pew Research Center Poll: September Religion-Politics Survey, 2014 [Dataset]"
+uspew2015_gov,"Pew Research Center for the People & the Press. Pew Research Center Poll: 2015 Governance Survey, 2015 [Dataset]"
+uspew2016_3pol,"Pew Research Center for the People & the Press. Pew Research Center Poll: March Political Survey, 2016 [Dataset]"
+uspew2017_6typo,"Pew Research Center for the People & the Press. Pew Research Center Poll: Political Typology 2017 Survey, 2017 [Dataset]"
+uspew2018_02amtr,"Pew Research Center. Pew Research Center: American Trends Panel Wave 31, 2018 [Dataset]. Roper #31114961, Version 2. GfK [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31114961"
+uspew2019_05amtr,"Pew Research Center for the People & the Press. Pew Research Center: American Trends Panel Wave 53, 2019 [Dataset]. Roper #31116843, Version 2. Ipsos [producer]. Cornell University, Ithaca, NY: Roper Center for Public Opinion Research [distributor]. doi:10.25940/ROPER-31116843"
 vpcpce_czechpublic,"Heywood, P., Miller, W. L., White, S. (2000).ÊValues and Political Change in Post-Communist Europe, 1993-1994. [data collection]. UK Data Service. SN: 4129,ÊDOI: http://doi.org/10.5255/UKDA-SN-4129-1"
 vpcpce_hungarianpublic,"Heywood, P., Miller, W. L., White, S. (2000).ÊValues and Political Change in Post-Communist Europe, 1993-1994. [data collection]. UK Data Service. SN: 4129,ÊDOI: http://doi.org/10.5255/UKDA-SN-4129-1"
 vpcpce_russianpublic,"Heywood, P., Miller, W. L., White, S. (2000).ÊValues and Political Change in Post-Communist Europe, 1993-1994. [data collection]. UK Data Service. SN: 4129,ÊDOI: http://doi.org/10.5255/UKDA-SN-4129-1"
