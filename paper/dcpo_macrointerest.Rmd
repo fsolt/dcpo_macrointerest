@@ -34,6 +34,7 @@ header-includes:
       - \usepackage{graphicx}
       - \usepackage{siunitx}
       - \usepackage{colortbl}
+      - \usepackage{xcolor}
       - \usepackage{multirow}
       - \usepackage{hhline}
       - \usepackage{calc}
@@ -1404,7 +1405,7 @@ Apart from the country-years of each analytic itmes, we also present their dispe
 Lower values of dispersion indicate questions that better identify publics with a higher level of trust from those with lower.
 Items have one less difficulty score than the number of response categories.
 
-Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019]; they appear in decreasing order of country-years contributed.
+Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019].
 In accordance with the advice offered by @Hu2022 to avoid data-entry errors by automating data collection, the `DCPOtools` R package [@Solt2019] was used to compile the responses to these questions.
 The current version of the software facilitates the entire practical data generation process: from facilitating the acquisition of original survey datasets and converting them into R standard format for quicker loading; through standardizing country names, identifying survey years, and extracting the desired survey items; to restructuring the resulting data for analysis with the DCPO model. 
 The primary objective is to limit manual interventions, thereby maximizing reproducibility and reducing the error potential inherent in human-operated data preparation tasks.
@@ -1449,13 +1450,14 @@ items_summary <- dcpo_input_raw1 %>%
 
 ```{r itemsTb}  
 items_summary %>% 
-  transmute(`Survey\nItem\nCode` = item,
+  transmute(`Survey\nItem\nCode` = item %>%
+              str_replace_all(fixed("_"), "\\_"),
             `Country-Years` = as.character(n_cy),
             `Question Text` = str_replace(question_text, "([^(]*)\\(.*", "\\1"),
             `Response Categories` = response_categories,
             `Dispersion` = dispersion,
             `Difficulties`= difficulties,
-            `Survey Dataset Codes` = all_surveys) %>% 
+            `Survey Dataset Codes*` = all_surveys) %>% 
   modelsummary::datasummary_df(output = "kableExtra",
                                longtable = TRUE) %>% 
   kableExtra::column_spec(1, width = "7em") %>%
@@ -1465,55 +1467,29 @@ items_summary %>%
   kableExtra::column_spec(5, width = "4em") %>%
   kableExtra::column_spec(c(6, 7), width = "8em") %>% 
   kableExtra::kable_styling(font_size = 7) %>%
-  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
-  kableExtra::kable_styling(latex_options = "striped")
+  kableExtra::kable_styling(latex_options = "repeat_header") %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 ```
 
 ```{r surveyInfo}
-tb_survey <- read_csv(here("data-raw", 
-                           "survey_info_macrointerest.csv"),
-                      col_types = "cccccc") |>
-  mutate(survey_code = str_remove(survey, "\\d+") |>
-           str_remove(",.*") |>
-           str_remove("_.*"),
-         creator = ifelse(
-           is.na(creator),
-           "",
-           str_to_title(creator)),
-         version = paste(survey,
-                         ifelse(is.na(version),
-                                "",
-                                str_to_lower(version)))) |>
-  filter(!is.na(name)) |> 
-  group_by(survey_code) |>
-  summarise(
-    name = first(name),
-    year = ifelse(
-      min(year) == max(year),
-      as.character(year),
-      paste0(min(year), "-", max(year))
-    ),
-    version = paste(unique(version), collapse = ", "),
-    creator = paste(unique(creator), collapse = "; ") %>% 
-      str_replace("; ;", ";") %>% 
-      str_replace("; $", "")
-  ) |>
-  mutate(creator = stringi::stri_trans_general(creator, "Latin-ASCII")) 
-
-tb_survey %>% 
-  transmute(`Survey Dataset Code` = survey_code,
-            `Survey Name` = name,
-            `Datasets and Versions*` = version,
-            `Creator(s)` = creator) %>% 
+read_csv(here("data-raw",
+              "survey_citations.csv"),
+         col_types = "cc") %>%
+  transmute(`Survey Dataset Code*` = survey %>% 
+              str_replace_all(fixed("_"), "\\_"),
+            `Citation` = citation %>% 
+              str_replace_all("#", "No.") %>% 
+              str_replace_all("&", "and") %>% 
+              str_replace_all(fixed("_"), "\\_")) %>%
   datasummary_df(title = "Source Survey Information",
-                 longtable = TRUE) |> 
-  kable_styling(latex_options = c("striped", "repeat_header")) |> 
-  column_spec(1, width = "7em") |> 
-  column_spec(2, width = "14em") |> 
-  column_spec(3, width = "20em") |> 
-  column_spec(4, width = "30em") |> 
-  kable_styling(font_size = 7) %>% 
-  footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
+                 longtable = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::column_spec(1, width = "10em") %>%
+  kableExtra::column_spec(2, width = "60em") %>%
+  kableExtra::kable_styling(font_size = 7) %>%
+  kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 
 ```
 

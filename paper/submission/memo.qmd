@@ -117,17 +117,19 @@ We further accepted R2's suggestion to revise the summary of the empirical findi
 R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
 Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.
 
+
 ## Appendices
 
-**Table A1**
-R2 asked for additional information in Appendix A on the source data. In the appendix, we added more information on the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
+**Full survey references**
+R2 asked for additional information in Appendix A on the source data,
+requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviwer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
 
 **Figure A1**
-R2 also suggested that Figure A1 is hard to read. 
-We split that figure into several panels by region to allow it to be split across pages and so expanded for legibility. 
+R2 also pointed out that Figure A1 was hard to read. 
+We split that figure into several panels by region to allow it to be split across pages and so expanded for better legibility. 
 
 **Scaling**. 
-R1 also suggested us to consider employing the cumulative distribution function (CDF) of the normal distribution---that is, the probit transformation---as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework or at least discuss the relative merits of the two in the appendix.
+R1 suggested that we consider employing the cumulative distribution function (CDF) of the normal distribution---that is, the probit transformation---as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework or at least discuss the relative merits of the two in the appendix.
 We appreciate the suggestion of the probit transformation.
 The preference for the logistic function in the DCPO model is grounded in its inherent flexibility and enhanced tolerance for deviations from standard normal assumptions. 
 Pertinently, within the macrointerest context, we see little reason to presume that the the source data are devoid of extreme values or adhere to a symmetric distribution. 
