@@ -304,7 +304,7 @@ set.seed(324)
 
 # Introduction {.unnumbered}
 
-The public's interest in politics has long been argued to be fundamental to democracy, the foundation of the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963]. 
+The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963]. 
 <!-- Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023].  -->
 More than just boosting engagement, political interest critically determines the quality of political decisions and behaviors, influencing factors like time spent, information collection and utilization, and critical assessment of partisan claims [see, e.g., @LaneEtAl2022].
 In light of the growing threats to democracy seen in many countries, measuring the levels and trends of aggregate political interest---macrointerest---and understanding their sources is therefore crucially important [see, e.g., @Foa2016, 10-11]. 
