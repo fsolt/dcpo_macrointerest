@@ -38,24 +38,6 @@ Here in the introduction and throughout, we adopted the more accurate "good econ
 
 
 ## Cross-National Macrointerest: The Source Data {.unnumbered}
-**Source data representation**.
-We thank R2 to point out the potential Total Survey Error risk due to sample representation.
-With hindsight, this is an important issue for readers and potential users of our method to know yet not sufficiently addressed in the previous version.
-In this revision, we point out this issue clearly in the main text (n. XXX) and lead readers to a more comprehensive discussion in Appendix XXX. 
-In the discussion, we includes all the potential risk R2 points out and explained what DCPO does for this issue and its limitation. 
-We also point out the readers methodological paths (and examples) that can be incorporated to further deal with the data representation issue and explain the strategy of DCPO on it. 
-
-R2 also queried if "single-country and single-wave projects should be included."
-In this research, we followed the example in publications of solid journals [e.g., @TaiEtAl2022a;@Claassen2020] to include survey items asked at least two time points in the history to guarantee information to predict over-period variance of these responses.
-We clarified this data collection decision on p. XXXX.
-We also showed the full matrix of the macrointerest trajectories of every country in Appendix XXX as R2 requested.
-We used a note (n. XXXX) to direct interested readers to this extension. 
-
-We also followed R2's suggestion adding more information of the source surveys in order to give credit to data creators and enhance data-collection transparency (Appendix XXXX).
-To present the information clearly, we separate the survey and item information to two tables.
-Moreover, R2 suggested that Figure A1 is hard to read. 
-We split it into several smaller panels according to the continents of the involved countries. 
-
 **`DCPOtools`**.
 On the recommendation of R1, we expanded and moved our discussion of the automation of the data cleaning process to Appendix A.
 
@@ -126,15 +108,39 @@ Although there is little room for a more sufficient discussion due to the word l
 
 ## Appendices
 
+### Survey Items Used to Estimate Macrointerest
 **Full survey references**
 R2 asked for additional information in Appendix A on the source data,
 requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviwer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
 
-**Figure A1**
+**Legibility of Figure A1**
 R2 also pointed out that Figure A1 was hard to read. 
 We split that figure into several panels by region to allow it to be split across pages and so expanded for better legibility. 
 
-**Scaling**. 
+**Included projects**
+R2 queried if "single-country and single-wave projects should be included."
+All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2).
+This means that single-wave projects include at least five countries, as exemplified in these data by the survey "Values and Political Change in Post-Communist Europe, 1993-1994."
+Even such small cross-national surveys contain at least some information regarding the differences across countries.
+The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020, 6].
+It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian National Election Studies and the Korea Barometer).
+This provides considerable information about changes over time within those countries, and country-specific item bias is not an issue for data drawn from only a single country.
+
+
+### The DCPO Model
+**Source data representation issues**.
+We thank R2 for pointing out the matter of sample representation.
+We have added a paragraph here discussing the issue here.
+The short of it is that unlike the model employed by @Caughey2019, the DCPO model does not incorporate a poststratification component to correct for this problem, and the result is greater measurement uncertainty in the estimates where data is relatively rich and potential bias in the estimates where data is more sparse.
+
+
+
+In this research, we followed the example in publications of solid journals [e.g., @TaiEtAl2022a;@Claassen2020] to include survey items asked at least two time points in the history to guarantee information to predict over-period variance of these responses.
+We clarified this data collection decision on p. XXXX.
+We also showed the full matrix of the macrointerest trajectories of every country in Appendix XXX as R2 requested.
+We used a note (n. XXXX) to direct interested readers to this extension. 
+
+**Scaling of estimates**. 
 R1 suggested that we consider employing the cumulative distribution function (CDF) of the normal distribution---that is, the probit transformation---as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework or at least discuss the relative merits of the two in the appendix.
 We appreciate the suggestion of the probit transformation.
 The preference for the logistic function in the DCPO model is grounded in its inherent flexibility and enhanced tolerance for deviations from standard normal assumptions. 

@@ -576,7 +576,7 @@ if(n_data_poor < 20) {
 (countries_plot + cby_plot) / (ybc_plot)
 ```
 
-In the top left panel of Figure\nobreakspace{}\@ref(fig:item_country_plots), the twelve countries with the most country-year-item observations is displayed.
+In the top left panel of Figure\nobreakspace{}\@ref(fig:item_country_plots), the twelve countries with the most country-year-item observations are displayed.
 Germany, with `r de_obs` observations, is the best represented country in these source data, followed by `r others`.
 At the other end of the scale, there are `r n_data_poorest` countries`r data_poorest`that have only the bare minimum three observations needed to be included in the source dataset at all.
 In the top right panel are the dozen countries with the most observed years; this group is similar to that on the left, but with `r adding` adding to the list and `r dropping` dropping off.
@@ -1632,22 +1632,11 @@ To address the sparsity of the source data---the fact that there are gaps in the
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of macrointerest over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
 
-It is noteworthy that the quality of DCPO estimates partly hinges on the source data's quality. 
-While extensive data input and the Bayesian process might mitigate issues from problematic sources, other Total Survey Error aspects, notably representation errors, can still influence outcomes and lead to comparison errors.
-DCPO addresses measurement scale inconsistencies across surveys; however, variations in population definitions (such as age range, minority inclusion, and territorial exclusions) and sample designs (like probability versus non-probability samples, and older surveys' reliance on quota or random route samples without enumeration) remain a concern. 
-These variations in data collection processes affect representation levels, impacting the estimation of broader interests like macrointerest.
-
-DCPO can adjust for sampling biases using survey weights. 
-However, for unweighted surveys, it doesn't offer a specific solution.
-Methodologically, leveraging census or other population data to correct biases is feasible (as demonstrated by @CaugheyWarshaw2015 in their DGIRT model). 
-The trade-off is much longer time and much higher requirement of calculation power to converge the results. 
-(As @CaugheyWarshaw2015[n. 8] indicated, the run times for the method incorporating census-based correction "ranged between a day and several weeks.")
-Additionally, not all surveys have suitable population data for correction, posing a challenge in balancing information richness against data representation. 
-In this study, we applied weighing to surveys with weights through DCPO but did not specifically adjust for those without.
-
-We urge researchers using DCPO in future projects to pay close attention to the sample design of the source data (e.g., the documentation of Latinobarometro states that some samples cover less than 20% of the given country) and be mindful of the potential risks of Total Survey Errors from including all available data. 
-We also encourage further scholarly examination of our findings' robustness through alternative source data selection strategies.
-
+It is worth noting that not all sources of incomparability are likely to be fully addressed by the DCPO model.
+To the extent that survey sample representation issues---such as from variations in population definitions (such as age range, minority inclusion, and territorial exclusions) and sample designs (like probability versus non-probability samples, and older surveys' reliance on quota or random route samples without enumeration)---vary across years for a single country and item (as is typically the case, as more recent surveys are more likely to be fully representative), the country-specific item bias terms will not remedy this problem.
+And although survey weights are easily incorporated in the source data (and indeed the `DCPOtools` package does so automatically), not all available weights yield fully representative samples, and some surveys lack weights entirely.
+Unlike the model employed by @Caughey2019, the DCPO model does not incorporate poststratification to correct for these issues.
+While this does increase computational tractability and decrease data demands, the downside is clearly greater measurement uncertainty in the estimates in country-years where the data are relatively rich (via $\phi$) and potential bias in the estimates where data are more sparse.
 
 
 # Case Selection and Data Improvement for the Hypothesis Testing {#whyOecd}
