@@ -24,12 +24,18 @@ subtitle: Memo to Editor and Reviewers
 ## Introduction {.unnumbered}
 **Framing**.
 We appreciate the reviewers' careful reading and their suggestions for better framing the piece.
-Following this advice, we reorganized the introduction into three paragraphs to address the relevance of Macrointerest, the challenges faced by previous research, and the specific contribution and findings.
-Reviewer 1 also specifically suggested that we contrast our work with that of @Peterson2022, and we do that in our second paragraph.
-(We also, at R1's suggestion, included an appendix comparing our estimates of macrointerest for the United States with those presented in that article; see Appendix E.)
+Following Reviewer 1's suggestion, we reorganized the introduction into three paragraphs.
+The first addresses the relevance of macrointerest.
+Reviewer 2 asked us to provide more theoretical discussion on macrointerest, and minding the editor's instruction to limit this to "a bit more," we did so here. 
+The second paragraph reviews the challenges faced by previous research.
+R1 specifically suggested that we contrast our work with that of @Peterson2022, and we added that to this second paragraph.
+(Also at R1's suggestion, we included an appendix comparing our estimates of macrointerest for the United States with those presented in that article; see Appendix E.)
+The third paragraph previews our specific contribution and findings.
+We agree that the original introduction was too brisk, and we see this as a substantial improvement.
 
 One point that both reviewers flagged was the "good times versus bad" framing of the hypotheses regarding the circumstances that prompt higher levels of macrointerest, pointing out that this wording does not correspond very well to the paper's findings.
 Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrase to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
+
 
 ## Cross-National Macrointerest: The Source Data {.unnumbered}
 **Source data representation**.
