@@ -1960,7 +1960,7 @@ Neither of these affect the shape of the Wcalc series; they work simply to overl
 
 Two points stand out.
 First, the credible intervals of the DCPO series are considerably broader than the bootstrapped intervals for the Wcalc series.
-Whether these latter intervals are overconfident seems worth investigating, perhaps by cross-validation, by future users of this method.
+Whether these latter intervals are overconfident seems worth investigating by future users of this method, perhaps by cross-validation [cf. @Solt2020, 11].
 Second, the two series are positively but not particularly strongly related; the bivariate correlation is just `r compare_cor`.
 The surge in macrointerest after the September 11, 2001 attacks documented in @Peterson2022 [, 217], for example, is brief in the Wcalc series but longer-lasting in the DCPO series.
 Conversely, the sharp upturn in the Wcalc macrointerest series that peaks in late 2013 does not appear in the DCPO series at all---it appears to be an artifact of the rather thin data in the Knowledge Networks series @Peterson2022 employs (see also @Peterson2022, Appendix C, which drops these observations as anomalous).

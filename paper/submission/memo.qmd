@@ -124,7 +124,7 @@ This means that single-wave projects include at least five countries, as exempli
 Even such small cross-national surveys contain at least some information regarding the differences across countries.
 The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020, 6].
 It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian National Election Studies and the Korea Barometer).
-This provides considerable information about changes over time within those countries, and country-specific item bias is not an issue for data drawn from only a single country.
+This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
 
 
 ### The DCPO Model
