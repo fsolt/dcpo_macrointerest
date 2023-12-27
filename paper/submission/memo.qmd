@@ -50,7 +50,7 @@ We have adopted this suggestion at page 4.
 ## Validating Cross-National Macrointerest {.unnumbered}
 **Validation**.
 R2 queried of the validity of the DCPO outcome.
-In the research, we used the validation method that has been applied in publications of  APSR and BJPS [@CaugheyEtAl2019; @WooEtAl2023].
+In the research, we used the validation method that has been applied in publications of  APSR and BJPS [@Caughey2019; @WooEtAl2023].
 At the same method, we agree with R2 that it is difficulty to interpret the results of this method without any benchmarks. 
 Therefore, we listed the correlations of an APSR publication using the similar validation method for readers' reference (n. XXX).
 Moreover, we point out to the readers that the correlations can also be affected by other factors.
@@ -94,13 +94,6 @@ The credible intervals are kept in the visualization for both Bayesian and frequ
 
 
 ## Conclusions
-**Good and bad times**.
-We adopted R1's suggestion of using the "good/bad times."
-We gave a clearer definition indicating the goodness specifically refers to economic growth when the first time the phrases are used (p. XXXX).
-Later in the theoretical setup, we borrowed R1's framing to indicate the exact relationship between economic growth and macrointerest (p. XXX).
-
-We further accepted R2's suggestion to revise the summary of the empirical findings about the good/bad (economic) times to prevent overstatment (p. XXXX).
-
 **Participation**.
 R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
 Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.
@@ -111,10 +104,10 @@ Although there is little room for a more sufficient discussion due to the word l
 ### Survey Items Used to Estimate Macrointerest
 **Full survey references**
 R2 asked for additional information in Appendix A on the source data,
-requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviwer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
+requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviewer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
 
 **Legibility of Figure A1**
-R2 also pointed out that Figure A1 was hard to read. 
+R2 also pointed out that Figure A1 was hard to read and suggested splitting it. 
 We split that figure into several panels by region to allow it to be split across pages and so expanded for better legibility. 
 
 **Included projects**
@@ -122,23 +115,17 @@ R2 queried if "single-country and single-wave projects should be included."
 All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2).
 This means that single-wave projects include at least five countries, as exemplified in these data by the survey "Values and Political Change in Post-Communist Europe, 1993-1994."
 Even such small cross-national surveys contain at least some information regarding the differences across countries.
-The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020, 6].
+The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020c, 6].
 It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian National Election Studies and the Korea Barometer).
 This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
 
 
 ### The DCPO Model
-**Source data representation issues**.
+**Source data sample representation**.
 We thank R2 for pointing out the matter of sample representation.
 We have added a paragraph here discussing the issue here.
 The short of it is that unlike the model employed by @Caughey2019, the DCPO model does not incorporate a poststratification component to correct for this problem, and the result is greater measurement uncertainty in the estimates where data is relatively rich and potential bias in the estimates where data is more sparse.
 
-
-
-In this research, we followed the example in publications of solid journals [e.g., @TaiEtAl2022a;@Claassen2020] to include survey items asked at least two time points in the history to guarantee information to predict over-period variance of these responses.
-We clarified this data collection decision on p. XXXX.
-We also showed the full matrix of the macrointerest trajectories of every country in Appendix XXX as R2 requested.
-We used a note (n. XXXX) to direct interested readers to this extension. 
 
 **Scaling of estimates**. 
 R1 suggested that we consider employing the cumulative distribution function (CDF) of the normal distribution---that is, the probit transformation---as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework or at least discuss the relative merits of the two in the appendix.
@@ -148,8 +135,11 @@ Pertinently, within the macrointerest context, we see little reason to presume t
 The logistic transformation exhibits greater leniency under such conditions compared to the normal CDF. 
 On the other hand, we concur with R1 that the interpretation of the probit transformation is more intuitive.
 We have added a discussion of these points to Appendix B, our summary of the DCPO model.
-Amd as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
+And as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
 
+### Macrointerest Scores Over Time
+R2 pointed out that the "appendix should show the trajectories for all countries."
+We have added those plots here. 
 
 
 # Reference {-}
