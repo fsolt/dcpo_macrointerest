@@ -908,9 +908,9 @@ This cross-national latent variable of macrointerest performs well in validation
 
 # Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
 
-Macrointerest varies greatly around the world, even across the relatively similar countries like the advanced democracies.
+Macrointerest varies greatly around the world, even across relatively similar countries like the advanced democracies.
 Figure\nobreakspace{}\@ref(fig:ts_plots) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.^[
-Appendix \@ref(trajectory) presents these data for all available countries.]
+Appendix \@ref(trajectory) presents these macrointerest data for all available countries.]
 While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
 And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
 There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
@@ -956,7 +956,7 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
 What explains these differences?
 One straightforward explanation is that publics grow more interested in politics at election time.
 Campaigns and elections attract media coverage and increase the information available to the public on the issues being contested, leading to increased interest in politics [see, e.g., @Larsen2022].
-Macrointerest within each country should be expected to be higher, therefore, in years in which national elections take place than in years without elections.
+Macrointerest within a country should be expected to be higher, therefore, in years in which national elections take place than in years without elections.
 
 A second argument is that political institutions that share power, rather than concentrate it, yield politics that are more interesting and engaging.
 Building on @Lijphart1999 and @Powell2000, @Kittilson2010 [, 992] argues that power-sharing institutions---parliamentarism, federalism, and proportional electoral rules---"send signals of inclusiveness to citizens, generating greater political engagement" while power-concentrating institutions "may generate perceptions of exclusion and deter involvement."
@@ -1289,7 +1289,7 @@ ess_perc <- ess_perc <- {{dcpo_input_raw1 %>%
 ```
 
 The resulting dataset comprises the thirty-seven OECD democracies, each observed in twenty-one (Mexico) to forty (Ireland, Italy, the United Kingdom, and the United States) consecutive years (mean: `r cy_summary %>% nth(4) %>% round(1)` years, median: `r cy_summary %>% nth(3)` years).
-Even among these relatively data-rich countries, our measure of macrointerest provides much more data than would otherwise be available: the richest single survey for these cases, the European Social Survey, covers only `r ess_perc`% of these country-years, and of course excludes entirely the nine OECD members in the Americas and around the Pacific Rim (see Appendix\nobreakspace{}\@ref(whyOecd)).
+Even among these relatively data-rich countries, our measure of macrointerest provides much more data than would otherwise be available: the richest single survey for these cases, the European Social Survey, covers only `r ess_perc`% of these country-years and of course excludes entirely the nine OECD members in the Americas and around the Pacific Rim (see Appendix\nobreakspace{}\@ref(ESScomparison)).
 
 @Shor2007 demonstrates that such pooled time series are best analyzed using a Bayesian multilevel model including varying intercepts for each country and each year. 
 The former help account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as, in this dataset, parliamentarism and federalism.
@@ -1327,7 +1327,7 @@ coef_data0 %>%
 ```
 
 
-Figure\nobreakspace{}\@ref(fig:resplot) displays the results (see the numeric results in Appendix\nobreakspace{}\@ref(whyOecd).
+Figure\nobreakspace{}\@ref(fig:resplot) displays the results (see the numeric results in Appendix\nobreakspace{}\@ref(ESScomparison).
 Consistent with the argument that campaigns bring attention-grabbing information to the public, the posterior distribution shows a 95% probability that macrointerest in election years is `r get_coef("election", type = "ci")` higher than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
@@ -1396,22 +1396,19 @@ Appendices
 ```
 
 # Survey Items Used to Estimate Macrointerest {#surveys}
-
 National and cross-national surveys have often included questions tapping interest in politics over the past four decades, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
 In all, we identified `r n_items` such survey items that were asked in no fewer than five country-years in countries surveyed at least twice; these items were drawn from `r n_surveys` different survey datasets.
+These items are listed in Table \@ref(tab:itemTb) below, along with the dispersion ($\alpha$) and difficulty ($\beta$) scores estimated for each from the DCPO model.
+Lower values of dispersion indicate questions that better identify publics with a higher level of trust from those with lower. 
+Items have one less difficulty score than the number of response categories. 
 
-The full list of source surveys is presented in Table \@ref(tab:surveyInfo), and the items used from the surveys are also explicitly listed in Table \@ref(tab:itemTb).
-Apart from the country-years of each analytic itmes, we also present their dispersion ($\alpha$) and difficulty ($\beta$) scores estimated from the DCPO model.
-Lower values of dispersion indicate questions that better identify publics with a higher level of trust from those with lower.
-Items have one less difficulty score than the number of response categories.
-
-Survey dataset codes correspond to those used in the `DCPOtools` R package [@Solt2019].
 In accordance with the advice offered by @Hu2022 to avoid data-entry errors by automating data collection, the `DCPOtools` R package [@Solt2019] was used to compile the responses to these questions.
 The current version of the software facilitates the entire practical data generation process: from facilitating the acquisition of original survey datasets and converting them into R standard format for quicker loading; through standardizing country names, identifying survey years, and extracting the desired survey items; to restructuring the resulting data for analysis with the DCPO model. 
 The primary objective is to limit manual interventions, thereby maximizing reproducibility and reducing the error potential inherent in human-operated data preparation tasks.
+The survey dataset codes listed in Table \@ref(tab:itemTb) correspond to those used in that package; Table \@ref(tab:surveyInfo) lists these codes with the citation of each dataset.
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
-The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\@ref(fig:obs) below.
+The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs} below.
 The macrointerest scores of country-years with more observed items are likely to be estimated more precisely.
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
 
@@ -1639,24 +1636,13 @@ Unlike the model employed by @Caughey2019, the DCPO model does not incorporate p
 While this does increase computational tractability and decrease data demands, the downside is clearly greater measurement uncertainty in the estimates in country-years where the data are relatively rich (via $\phi$) and potential bias in the estimates where data are more sparse.
 
 
-# Case Selection and Data Improvement for the Hypothesis Testing {#whyOecd}
+# Comparing Coverage of the DCPO Macrointerest Data and the ESS {#ESScomparison}
+After creating the cross-sectional time-series macrointerest, we tested theories of macrointerest formation in the thirty-seven advanced democracies of the OECD. 
+Figure \@ref(fig:cpOECD) visualizes the advantages of our DCPO macrointerest data over one of the largest and oft-used dataset for studying political attitudes in the advanced democracies, the European Social Survey (ESS).
+The year ranges covered by ESS is marked with the light bars by year, and the additional years the DCPO macrointerest data provide are marked dark.
+Not only does the DCPO macrointerest data allow the comparison to extend to the nine OECD members in the Americas, East Asia, and the Antipodes, it also provides continuous time series in Europe that extend well beyond the available ESS data.
 
-After creating the cross-sectional time-series macrointerest, we tested theories of macrointerest formation in thirty-seven democracies of the OECD. 
-Most macrointerest formation-modification theories assume stable and enduring democratic institutions.
-OECD countries are generally characterized by stable political systems and developed economies. 
-This stability provides a consistent backdrop for analyzing how macrointerest form and evolve over time, minimizing the impact of extreme political or economic upheavals that could skew data in less stable contexts.
-While the OECD countries commit to democratic governance and market-based economies, there are also sufficient cultural, political, socioeconomic, and geographic diversities among them.
-This combination of diversity and comparability allows for robust cross-national studies and the testing of theories across different yet relatable settings.
-The high quality political and socioeconomic data of these countries also reduce the influence of measurement error and data sparseness on the analytic outcomes.
-
-While most OECD countries have rich data, they are not always yearly continuous.
-Nor are the datasets are comparable.
-DCPO helps to maximize the useful information from these sparse data and achieve a full time-range cross-sectional examination of the theoretical inferences.
-Figure \@ref(fig:cpOECD) visualize the increment DCPO yields in comparison with one of the largest and oft-used dataset for OECD countries, the European Election Survey (EES).
-The year ranges covered by ESS is marked as the light bars by year, and those DCPO can offer are marked dark.
-DCPO not only fills all the empty years absent from EES but also extend the data availability beyond Europe to the entire rank of OECD countries and from 1982 to 2022.
-
-```{r cpOECD, fig.cap="Data Availability: DCPO vs. ESS", fig.height=5}
+```{r cpOECD, fig.cap="Data Availability: DCPO Macrointerest vs. ESS", fig.height=5}
 if (!file.exists(here("data", "tb_ess.rda"))) {
   library(rvest)
   tb_ess <-
@@ -1701,40 +1687,6 @@ ggplot(tb_oecd, aes(x = year,
         legend.title = element_blank(),
         legend.position = "top") 
 ```
-
-Table \@ref(tab:modelTB) presents the hypothesis testing result based on this data. 
-The result has been visualized in Figure \@ref(fig:resplot) and discussed in the main text.
-We welcome future researchers to examine our findings on other country cases, especially those not commonly participating in the same survey program or have more sparse data.
-The examination requires more efforts on model specification to address the even larger socioeconomic and political variance among non-OECD countries.
-
-```{r modelTB, cache=TRUE}
-vec_coefName <- c(
-  "b_election" = "Election Year",
-  "b_parl" = "Parliamentarism",
-  "b_federal" = "Federalism",
-  "b_lsq_mean" = "Disproportionality, Mean",
-  "b_lsq_diff" = "Disproportionality, Difference",
-  "b_gdppc_mean" = "GDPpc, Mean",
-  "b_gdppc_diff" = "GDPpc, Difference",
-  "b_growth_mean" = "GDP Growth, Mean",
-  "b_growth_diff" = "GDP Growth, Difference",
-  "b_unemploy_mean" = "Unemployment, Mean",
-  "b_unemploy_diff" = "Unemployment, Difference",
-  "bsp_megini_meangini_mean_se" = "Income Inequality, Mean",
-  "bsp_megini_diffgini_diff_se" = "Income Inequality, Difference"
-)
-
-# Create a modelsummary table with the number of observations included
-modelsummary(
-  m1,
-  coef_map = vec_coefName,
-  statistic = "conf.int",
-  notes = "95-percent credible intervals are in brackets.",
-  title = "Numeric results of Figure 5",
-  booktabs = TRUE
-)
-```
-
 
 # Macrointerest Scores Over Time {#trajectory}
 
@@ -1800,6 +1752,37 @@ ggplot(df_plot_illustrate, aes(x = year, y = median, fill = country)) +
     )
 
 ggsave(here("output", "macroint_interestURC.png"))
+```
+
+
+# Tabular Results of Figure \@ref(fig:resplot)
+
+```{r modelTB, cache=TRUE}
+vec_coefName <- c(
+  "b_election" = "Election Year",
+  "b_parl" = "Parliamentarism",
+  "b_federal" = "Federalism",
+  "b_lsq_mean" = "Disproportionality, Mean",
+  "b_lsq_diff" = "Disproportionality, Difference",
+  "b_gdppc_mean" = "GDPpc, Mean",
+  "b_gdppc_diff" = "GDPpc, Difference",
+  "b_growth_mean" = "GDP Growth, Mean",
+  "b_growth_diff" = "GDP Growth, Difference",
+  "b_unemploy_mean" = "Unemployment, Mean",
+  "b_unemploy_diff" = "Unemployment, Difference",
+  "bsp_megini_meangini_mean_se" = "Income Inequality, Mean",
+  "bsp_megini_diffgini_diff_se" = "Income Inequality, Difference"
+)
+
+# Create a modelsummary table with the number of observations included
+modelsummary(
+  m1,
+  coef_map = vec_coefName,
+  statistic = "conf.int",
+  notes = "95-percent credible intervals are in brackets.",
+  title = "Numeric results of Figure 5",
+  booktabs = TRUE
+)
 ```
 
 
