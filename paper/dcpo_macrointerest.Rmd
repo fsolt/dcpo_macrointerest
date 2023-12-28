@@ -745,8 +745,7 @@ That we can generate estimates of macrointerest does not automatically mean that
 As is the case for any new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\@ref(fig:internalval) and Figure\nobreakspace{}\@ref(fig:extval1) provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 686, in which the correlations between the estimated variable and other indicators vary from 0.65 to 0.96.
-Be aware that correlations can be also affect by data richness, survey context, and other factors.].
+In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 686].
 
 In the left panel, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
 The middle panel shows responses to the question with the most data-rich cross-section, "How interested would you say you personally are in politics?" in the International Social Survey Program's 2004 module on Citizenship.
