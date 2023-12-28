@@ -57,8 +57,21 @@ Moreover, we point out to the readers that the correlations can also be affected
 
 
 ## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
+**Comparison to the ESS**
+R2 asked why we would analyze macrointerest in only the advanced democracies of the OECD when we could simply use the ESS data "and save ourselves all the harmonization effort?"
+This point is two-pronged.
+To address its first part, we examine the advanced democracies because that is where the extant theories of macrointerest apply.
+To our knowledge, political scientists have had relatively little to say regarding, for example, explanations of the public's interest in politics in authoritarian countries.
+We now emphasize that we restrict our sample for theoretical reasons at page 7.
+
+The question of the payoff of our estimates is easily answered, even within this sample of relatively data-rich countries.
+Our macrointerest estimates, by drawing on all of the available survey data on political interest, provide _many_ more country-years to work with than the ESS (which is, as R2 implied, the best alternative).
+The ESS includes only 17.3% of the country-year observations that our macrointerest data make available.
+We review this key advantage in Appendix C.
+
+
 **Two-Step Approach**
-R1 also raised the question whether the analysis "could be achieved in a single step by integrating hierarchical priors into the model."
+R1 raised the question whether the analysis "could be achieved in a single step by integrating hierarchical priors into the model."
 We were somewhat puzzled by this comment, but we guessed the reviewer was referring to combining the measurement and analysis steps into a single model, as in @Claassen2022.
 We prefer to avoid such an approach, because it assumes that the indicators of macrointerest are missing at random with regard to the independent variables, and therefore that the relationship between macrointerest and these variables is the same in the countries when and where macrointerest is poorly observed as in the country-years where macrointerest is well observed, and this assumption is difficult to justify.
 If the reviewer had a different "single step" approach in mind, we apologize for not figuring it out.
@@ -68,29 +81,6 @@ In response to R1's suggestion to provide more details about how we incorporated
 We used the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
 This is a method that has been used in a series of latent variable analyses in political science. 
 We listed several other applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
-
-**Hypothesis testing**.
-R2 questioned why we tested the theory on OECD countries and "why not just take ESS data, which include most of the OECD countries, and save ourselves all the harmonization effort."
-We added an Appendix (Appendix XXX) to address the this issue:
-
-As stated there, there are specific theoretical and empirical reasons to examine the theoretical inferences about the source of macrointerest on OECD countries. 
-First, most theories about political interests addressed in the letter were built upon the assumption of stable institutions for public political participation. 
-OECD countries are valid cases to examine such theories.
-The both sociopolitical stability and socioecomic and geographic diversity also provide unique conditions for hypothesis testing.
-
-Second, while EES also includes a fair amount of data of the European members of OECD, it does not include members out of Europe, which will noticeably diminished the country diversity.
-Note that the primary goal of DCPO is not only to broaden the scope of research beyond the well-surveyed countries but also to enable full-time-rank analysis and more sufficiently adjust country-based variances [@Claassen2020]. 
-DCPO has shown noticeable advantage to fulfill such design than single projects like EES. 
-
-Third, at the end of the Appendix, we presented the numeric results for Figure 5 as R2 required and welcomed future researchers to extend the hypotheses testing in this article on other country cases. 
-They, however, need to be aware that non-OECD countries vary in many dimensions.
-An examination based on them requires more efforts to prevent confounding effects from this variance on the results. 
-This has been beyond the scope of this research.
-
-In terms of the results of the hypothesis testing, we adopted R2's suggestion and rewrite the description of the findings from the perspective of posterior probabilities. 
-The credible intervals are kept in the visualization for both Bayesian and frequentist readers to understand the results.
-
-
 
 
 ## Conclusions

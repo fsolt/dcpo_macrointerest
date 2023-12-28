@@ -907,10 +907,8 @@ This cross-national latent variable of macrointerest performs well in validation
 
 
 # Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
-
-Macrointerest varies greatly around the world, even across relatively similar countries like the advanced democracies.
-Figure\nobreakspace{}\@ref(fig:ts_plots) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD.^[
-Appendix \@ref(trajectory) presents these macrointerest data for all available countries.]
+The best developed theories of macrointerest concern the advanced democracies, and even among these relatively similar countries, macrointerest varies greatly.
+Figure\nobreakspace{}\@ref(fig:ts_plots) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD (Appendix \@ref(trajectory) presents these macrointerest data for all available countries).
 While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
 And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
 There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
@@ -963,7 +961,7 @@ Building on @Lijphart1999 and @Powell2000, @Kittilson2010 [, 992] argues that po
 Macrointerest should be higher in countries with parliamentary and federal systems than in those without those features, and it should decline as the disproportionality between votes cast and seats won increases.
 
 A third claim deals with the public's demand for accountability.
-@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success \ldots voters should not waste their energies."
+@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success\ldots voters should not waste their energies."
 If democracy is a principal-agent problem with elected officials acting as self-interested agents and the public as their lazy but vengeful principal, then macrointerest should rise when times are bad and decline as conditions improve.
 
 A final set of theories---each well established---contradicts the third.
@@ -1636,11 +1634,13 @@ Unlike the model employed by @Caughey2019, the DCPO model does not incorporate p
 While this does increase computational tractability and decrease data demands, the downside is clearly greater measurement uncertainty in the estimates in country-years where the data are relatively rich (via $\phi$) and potential bias in the estimates where data are more sparse.
 
 
-# Comparing Coverage of the DCPO Macrointerest Data and the ESS {#ESScomparison}
-After creating the cross-sectional time-series macrointerest, we tested theories of macrointerest formation in the thirty-seven advanced democracies of the OECD. 
-Figure \@ref(fig:cpOECD) visualizes the advantages of our DCPO macrointerest data over one of the largest and oft-used dataset for studying political attitudes in the advanced democracies, the European Social Survey (ESS).
-The year ranges covered by ESS is marked with the light bars by year, and the additional years the DCPO macrointerest data provide are marked dark.
-Not only does the DCPO macrointerest data allow the comparison to extend to the nine OECD members in the Americas, East Asia, and the Antipodes, it also provides continuous time series in Europe that extend well beyond the available ESS data.
+# Comparing Coverage of the Macrointerest Data and the ESS {#ESScomparison}
+
+After creating the cross-sectional time-series of macrointerest, we tested theories of macrointerest formation in the thirty-seven advanced democracies of the OECD.
+Figure \@ref(fig:cpOECD) visualizes the advantages of our macrointerest data over one of the largest and most-used datasets for studying political attitudes in the advanced democracies, the European Social Survey (ESS).
+The observations covered by ESS are marked with the light rectangles, and the additional country-years the DCPO macrointerest data provide are marked dark.
+By taking advantage of all of the available survey data on political interest, our macrointerest estimates allow the comparison to extend to the nine OECD members in the Americas, East Asia, and the Antipodes, and it also provides continuous time series in Europe that extend well beyond the available ESS data.
+In all, the macrointerest data provide well over _five times_ as many country-years for analysis than are available in the ESS. 
 
 ```{r cpOECD, fig.cap="Data Availability: DCPO Macrointerest vs. ESS", fig.height=5}
 if (!file.exists(here("data", "tb_ess.rda"))) {
