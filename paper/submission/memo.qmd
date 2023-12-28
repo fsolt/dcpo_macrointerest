@@ -36,6 +36,11 @@ We agree that the original introduction was too brisk, and we see this as a subs
 One point that both reviewers flagged was the "good times versus bad" framing of the hypotheses regarding the circumstances that prompt higher levels of macrointerest, pointing out that this wording does not correspond very well to the paper's findings.
 Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrase to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
 
+**Replication materials**
+R2 longed to see replication materials.
+We, as reviewers, have had similar laments.
+We are told by the _BJPS_ editor that making those materials available to reviewers is not presently possible.
+In the final version, we will of course provide full replication materials on the Dataverse as well as the link to the repository with the complete revision history on GitHub.
 
 ## Cross-National Macrointerest: The Source Data {.unnumbered}
 **`DCPOtools`**.
