@@ -322,11 +322,12 @@ surveys_interest <- read_csv(here::here("data-raw",
                                         "surveys_interest.csv"),
                              col_types = "cccccc")
 
-# dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
-#                                         datapath = here("data",
-#                                                         "dcpo_surveys"),
-#                                         file = here("data",
-#                                                     "dcpo_input_raw.csv"))
+dcpo_input_raw <- dcpo_setup(vars = surveys_interest,
+                             datapath = here("..",
+                                             "data",
+                                             "dcpo_surveys"),
+                             file = here("data",
+                                         "dcpo_input_raw.csv"))
 ```
 
 ```{r tb_summary_stats}
@@ -339,10 +340,18 @@ dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
 
 process_dcpo_input_raw <- function(dcpo_input_raw_df) {
   dcpo_input_raw_df %>% 
+    mutate(item = if_else(item == "int5_polit" &
+                            year < 1990,
+                          "int3_polit",
+                          item),
+           r = if_else(item == "int5_polit" &
+                         year < 1990,
+                       r - 2,
+                       r)) %>% 
+    filter(year >= 1982 & n > 0) %>% 
     with_min_yrs(3) %>% 
     with_min_cy(5) %>% 
     with_min_yrs(3) %>%
-    filter(year >= 1982 & n > 0) %>% 
     group_by(country) %>% 
     mutate(cc_rank = n()) %>% 
     ungroup() %>% 
@@ -2056,6 +2065,9 @@ It would appear that it is the unit of analysis---years as opposed to quarters--
 
 \clearpage
 \pagebreak
+
+
+
 
 # References {.unnumbered}
 
