@@ -19,63 +19,89 @@ afrob5,int4_afrob,q14,c(0:3),How interested are you in public affairs?,0 Not at 
 afrob6,int4_afrob,q13,c(0:3),How interested are you in public affairs?,0 Not at all interested / 1 Not very interested / 2 Somewhat interested / 3 Very interested
 allbus,int5_allbus,pa02a,c(5:1),How interested in politics are you? ,1 Very strongly / 2 Strongly / 3 Middling / 4 Very little / 5 Not at all 
 allbus2021,int5_allbus,pa02a,c(5:1),How interested in politics are you? ,1 Very strongly / 2 Strongly / 3 Middling / 4 Very little / 5 Not at all 
-anes_combo,int4_anes,vcf0313,c(1:4),"Some people seem to follow (1964: think about) what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Hardly at all / 2 Now and then / 3 Some of the time / 4 Most of the time
-anes2020,int4a_eb,v202406,c(1:4),How interested are you in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
-amb_combo,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_antigua2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_argentina2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_argentina2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_argentina2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_argentina2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_argentina2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_argentina2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_bahamas2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_belize2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_bolivia2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_bolivia2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_bolivia2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_bolivia2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_bolivia2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_bolivia2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_brazil2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_brazil2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_brazil2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_canada2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_canada2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_canada2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_canada2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_canada2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_canada2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_chile2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_chile2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_chile2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_chile2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_chile2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_chile2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_colombia2009,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_colombia2011,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_colombia2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_colombia2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_combo,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_costarica2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_costarica2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_costarica2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_dominica2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_dominicanrepublic2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_ecuador2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_ecuador2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_ecuador2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_elsalvador2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_grenada2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_grenada2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_guatemala2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_guyana2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_haiti2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_honduras2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_jamaica2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_mexico2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_nicaragua2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_panama2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_panama2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_panama2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_paraguay2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_peru2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_stkittsnevis2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_stlucia2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_stvincent2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_suriname2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_suriname2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_suriname2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_trinidad2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_trinidad2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_trinidad2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_uruguay2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_uruguay2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_uruguay2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_us2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_us2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_us2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_us2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_us2018,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_us2021,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+amb_us2023,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_venezuela2010,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_venezuela2012,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_venezuela2014,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
 amb_venezuela2016,int4_amb,pol1,c(4:1),How interested are you in politics? ,1 A lot / 2 Some / 3 Little / 4 None
+anes_combo,int4_anes,vcf0313,c(1:4),"Some people seem to follow (1964: think about) what's going on in government and public affairs most of the time, whether there's an election going on or not. Others aren't that interested. Would you say you follow what's going on in government and public affairs most of the time, some of the time, only now and then, or hardly at all?",1 Hardly at all / 2 Now and then / 3 Some of the time / 4 Most of the time
+anes2020,int4a_eb,v202406,c(1:4),How interested are you in politics? ,1 Very interested / 2 Fairly interested / 3 Not very interested / 4 Not at all interested
 arabb1,int4_arabb,q215,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Little interested / 4 Not interested
 arabb2,int4_arabb,q404,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Little interested / 4 Not interested
 arabb3,int4_arabb,q404,c(4:1),"Generally speaking, how interested would you say you are in politics? ",1 Very interested / 2 Interested / 3 Little interested / 4 Not interested
@@ -318,11 +344,12 @@ lb2009,int4_lb,p32st,c(4:1),How interested are you in politics?,1 Very intereste
 lb2010,int4_lb,p23st,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
 lb2013,int4_lb,p20stgbs,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
 lb2020,int4_lb,p46stgbs,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+lb2023,int4_lb,p40stgbs,c(4:1),How interested are you in politics?,1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
 neb_combo,int4_neb,a15,c(4:1),How interested are you in politics? ,1 Very interested / 2 Somewhat interested  / 3 Not very interested  / 4 Not at all interested
-npes_combo,int3_npes,v1_4,c(3:1),How interested  are you in politics?,1 Very interested / 2 Fairly interested / 3 Not interested
 nores_combo1,int4_nores,polint1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
 nores_combo2,int4_nores,polint1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
 nores2013,int4_nores,spm1,c(4:1),"In general, how interested are you in politics?",1 Very interested / 2 Fairly interested  / 3 A little interested  / 4 Not at all interested
+npes_combo,int3_npes,v1_4,c(3:1),How interested  are you in politics?,1 Very interested / 2 Fairly interested / 3 Not interested
 nsss1984,int3_nsss,intpol,c(3:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much
 nsss1987,int3_nsss,intpol,c(3:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much
 nsss1989,int4_aes,intpol,c(4:1),How much interest do you usually have in what's going on in politics? ,1 A good deal / 2 Some / 3 Not much / 4 None
