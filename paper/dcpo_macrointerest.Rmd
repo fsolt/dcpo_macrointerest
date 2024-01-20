@@ -124,6 +124,7 @@ p_load(
   osfr,
   tabulizer,
   brms,
+  bayestestR,
   tidybayes,
   repmis,
   rvest,
@@ -651,7 +652,7 @@ results_path <- here::here(file.path("data",
                                   {str_replace_all(Sys.time(),
                                                       "[- :]",
                                                    "") %>%
-                                         str_replace("\\d{2}$",
+                                         str_replace("\\.\\d*$",
                                                      "")}))
 
 dir.create(results_path, 
@@ -666,7 +667,7 @@ dcpo_output$save_output_files(dir = results_path,
 
 ```{r dcpo_output, eval=FALSE}
 if (!exists("results_path")) {
-  latest <- "202304201035"
+  latest <- "20240117135131.6102"
   results_path <- here::here("data", "1000", latest)
 
   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
@@ -916,12 +917,12 @@ This cross-national latent variable of macrointerest performs well in validation
 
 # Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
 The best developed theories of macrointerest concern the advanced democracies, and even among these relatively similar countries, macrointerest varies greatly.
-Figure\nobreakspace{}\@ref(fig:ts_plots) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD (Appendix \@ref(trajectory) presents these macrointerest data for all available countries).
+Figure\nobreakspace{}\@ref(fig:ts) examines levels and trends in macrointerest in advanced democratic countries by displaying the changes of the public's expressed interest in politics over time in the thirty-seven democracies of the OECD (Appendix \@ref(trajectory) presents these macrointerest data for all available countries).
 While macrointerest scores approach and often exceed .6 in countries such as Denmark and Canada, in Chile they scarcely cross .25.
 And although the public's political interest has held fairly steady over decades in many countries, in Czechia it dropped nearly half of the variable's entire theoretical range over the 1990s and 2000s before rebounding slightly since 2010, and increases of roughly a quarter of that range can be seen in, among others, Germany. 
 There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
 
-```{r ts, fig.cap="Macrointerest Scores Over Time Within OECD Democracies \\label{ts_plots}", fig.height=9}
+```{r ts, fig.cap="Macrointerest Scores Over Time Within OECD Democracies \\label{ts}", fig.height=9}
 
 load(here::here("data", "theta_summary.rda"))
 
@@ -1333,23 +1334,25 @@ coef_data0 %>%
 ```
 
 
-Figure\nobreakspace{}\@ref(fig:resplot) displays the results (see the numeric results in Appendix\nobreakspace{}\@ref(ESScomparison).
-Consistent with the argument that campaigns bring attention-grabbing information to the public, the posterior distribution shows a 95% probability that macrointerest in election years is `r get_coef("election", type = "ci")` higher than in years without elections.
+Figure\nobreakspace{}\@ref(fig:resplot) displays the results.^[
+A tabular version of these results can be found in Appendix\nobreakspace{}\@ref(ESScomparison)].
+Consistent with the argument that campaigns bring attention-grabbing information to the public, macrointerest in election years is found to be `r get_coef("election", type = "std_coef")` points higher (95% credible interval: `r get_coef("election", type = "ci")` points) than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
 The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
-It is a 95% confident that macrointerest is `r get_coef("parl", type = "ci")` points higher in countries with parliamentary systems, according to the posterior probabilities.
-The difference between countries with and without federalism is estimated to be even larger on average (`r get_coef("federal", type = "std_coef")`, cp. `r get_coef("parl", type = "std_coef")` for parliamentarism), though only 90% confidence is bounded away from zero.
-And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index has 95% confidence reducing `r get_coef("lsq_diff", type = "ci")` points of macrointerest.
+Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
+The difference between countries with and without federalism is estimated be (`r get_coef("federal", type = "std_coef")` points, with `round(p_direction(m1, parameters = "federal")[[2]]*100, 1)`% of the posterior distribution greater than zero.
+And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index yields a `r get_coef("lsq_diff")` point posterior mean.
 
-On the debate on whether macrointerest is invigorated or instead discouraged by bad economic conditions, the evidence from this cross-national analysis falls heavily on the side of the latter.
-Supporting modernization theory, increases in per capita GDP have a well estimated positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff", type = "ci")` points more macrointerest (with 95% credibility).
-The long-term, historical effect as evidenced by differences in mean levels across countries is found to be larger, `r get_coef("gdppc_mean", type = "ci", width = 0.8)` points but only with 80% confidence.
-The effect for growth in the national economy are positive as well, but there is not enough credibility to distinguish it from zero according to the posterior probabilities.
-The findings with regard to unemployment are similar.
-Supporting the relative power theory, the posterior distribution indicates 95% credibility that the long-term effects of income inequality may cause `r get_coef("gini_mean", type = "ci")` points macrointerest reduction with every two-standard-deviation difference across countries on average.
-Year-to-year changes in income inequality are found to make little difference---the influence of the wealthy over the political agenda, it would seem, does not change on such a short time scale, from one perspective, and there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions, from the other.
-Taken as a whole, evidence moderately supports the notion that absolute economic growth, rather than depression, is associated with increased macrointerest, while the distributional bias in economic growth outcomes consistently diminishes macrointerest.
+Regarding the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence of our cross-national analysis regarding economic conditions falls heavily on the side of the latter.
+Supporting modernization theory, increases in per capita GDP have a positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff", type = "std_coef")` points more macrointerest and `round(p_direction(m1, parameters = "gdppc_diff")[[2]]*100, 1)`% of the posterior distribution greater than zero.
+The long-term, historical effect as evidenced by differences in mean levels across countries is found to be `r get_coef("gdppc_mean", type = "std_coef")` points, albeit with only `round(p_direction(m1, parameters = "gdppc_mean")[[2]]*100, 1)`% of the posterior distribution greater than zero.
+A two-standard-deviation increase in the growth in the national economy is estimated to boost macrointerest by `r get_coef("growth_diff", type = "std_coef")` points, with `round(p_direction(m1, parameters = "growth_diff")[[2]]*100, 1)`% of the posterior taking on positive values.
+On the other hand, only `round(p_direction(m1, parameters = "growth_mean")[[2]]*100, 1)`% of the posterior distribution for the long-run effect of economic growth is positive, and the findings with regard to unemployment do not provide strong evidence of negative or positive effects either.
+As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
+Year-to-year changes in income inequality are found to make little difference---it would seem that, from one perspective, the influence of the wealthy over the political agenda does not change on such a short time scale, and from the other, there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions.
+Taken as a whole, this evidence indicates that at least with regard to economic conditions, it is good times, not bad ones, that yield higher macrointerest.
+
 
 # Conclusions {.unnumbered}
 
@@ -1476,9 +1479,19 @@ items_summary %>%
 ```
 
 ```{r surveyInfo}
-read_csv(here("data-raw",
-              "survey_citations.csv"),
-         col_types = "cc") %>%
+dcpo_input_raw1 %>%
+  dplyr::select(country, year, item, survey) %>%
+  distinct() %>%
+  separate(survey, c("surv1", "surv2", "surv3"), sep=", ", fill = "left") %>%
+  pivot_longer(cols = starts_with("surv"), values_to = "survey") %>%
+  mutate(str_trim(survey)) %>% 
+  filter(!is.na(survey)) %>% 
+  select(survey) %>% 
+  distinct() %>% 
+  left_join(surveys_data %>% 
+              select(survey, citation),
+            by = join_by(survey)) %>%
+  arrange(survey) %>% 
   transmute(`Survey Dataset Code*` = survey %>% 
               str_replace_all(fixed("_"), "\\_"),
             `Citation` = citation %>% 
@@ -1533,7 +1546,8 @@ dcpo_input_plot %>%
                     right = FALSE,
                     name = "Observations") +
   labs(x = NULL, y = NULL) +
-  scale_x_continuous(breaks=seq(1982, 2022, 4)) +
+  scale_x_continuous(breaks=seq(1982, 2022, 4),
+                     sec.axis = dup_axis()) +
   scale_y_discrete(position = "right") +
   theme(axis.text.y  = element_text(size = 7),
         strip.background = element_rect(fill = "white", colour = "white")) +
@@ -1763,7 +1777,7 @@ ggsave(here("output", "macroint_interestURC.png"))
 ```
 
 
-# Tabular Results of Figure \@ref(fig:resplot)
+# Tabular Version of Results Presented in Figure \@ref(fig:resplot)
 
 ```{r modelTB, cache=TRUE}
 vec_coefName <- c(
@@ -1786,14 +1800,15 @@ vec_coefName <- c(
 modelsummary(
   m1,
   coef_map = vec_coefName,
+  gof_omit = "[Mm]arg",
   statistic = "conf.int",
   notes = "95-percent credible intervals are in brackets.",
-  title = "Numeric results of Figure 5",
+  title = "Tabular Version of Results Presented Graphically in Figure 5",
   booktabs = TRUE
 )
 ```
 
-
+\pagebreak
 # Comparison with @Peterson2022 {#peterson}
 
 This study extends the pivotal concept of "macrointerest" from @Peterson2022, but it is not intended to replicate that paper: both the method and data employed diverge considerably between the two projects.
