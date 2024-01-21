@@ -667,25 +667,26 @@ dcpo_output$save_output_files(dir = results_path,
 
 ```{r dcpo_output, eval=FALSE}
 if (!exists("results_path")) {
-  latest <- "20240117135131.6102"
+  latest <- "20240120135634"
   results_path <- here::here("data", "1000", latest)
 
   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
-  if (!file.exists(file.path(results_path, paste0("dcpo-", latest, "-1.csv")))) {
+  if (!file.exists(file.path(results_path, paste0("dcpo-", str_extract(latest, "\\d{12}"), "-1.csv")))) {
     dir.create(results_path,
                showWarnings = FALSE,
                recursive = TRUE)
-    osf_retrieve_node("9uvdk") %>%
+    osf_retrieve_node("9uvdk") %>% # needs updated
       osf_ls_files() %>%
       filter(str_detect(name, latest)) %>%
       osf_download(path = here::here("data", "1000"))
   }
+  
+  dcpo_output <- as_cmdstan_fit(here::here(results_path,
+                                           list.files(results_path,
+                                                      pattern = "csv$")))  
 }
 
 load(file = here::here("data", "dcpo_input.rda"))
-dcpo_output <- as_cmdstan_fit(here::here(results_path,
-                                         list.files(results_path,
-                                                    pattern = "csv$")))
 
 theta_summary <- DCPOtools::summarize_dcpo_results(dcpo_input,
                                                    dcpo_output,
@@ -875,7 +876,7 @@ ext_wvs_news_plot <- validation_plot(ext_wvs_news_dat,
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
   labs(x = "Macrointerest",
-       y = "% Who Follow Politics in Traditional Media\nDaily or Several Times a Week")
+       y = "% Who Follow Politics in Traditional Media\nAt Least Several Times a Week")
 
 ext_wvs_disc_plot <- validation_plot(ext_wvs_disc_dat,
                                     lab_x = .15,
@@ -901,11 +902,10 @@ ext_wvs_imp_plot <- validation_plot(ext_wvs_imp_dat,
         strip.background = element_blank()) +
   coord_cartesian(xlim = c(0,1), ylim = c(0,100)) +
   labs(x = "Macrointerest",
-       y = "% Saying Politics is 'Very' or 'Rather'\nImportant in Their Lives")
+       y = "% Saying Politics is 'Rather' or 'Very'\nImportant in Their Lives")
 
 ext_wvs_news_plot + ext_wvs_disc_plot + ext_wvs_imp_plot +
   plot_annotation(
-    # subtitle = "World Values Study and European Values Study",
     caption = "Note: Gray whiskers and shading represent 80% credible intervals. Survey\nitems sourced from World Values Study and European Values Study.")
 ```
 
@@ -984,7 +984,7 @@ The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides 
 The three institutional variables are measured as in @Kittilson2010.
 Data on parliamentarism, a dichotomous variable coded one in pure parliamentary systems and zero otherwise, is also sourced from the DES.
 Federalism is a third dichotomous variable, coded one in countries with strong federal systems [see @Lijphart1999] and zero in all others.
-The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41].
+The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41; @Gallagher2023].
 The context of good and bad economic conditions was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
 
 ```{r des_download}
@@ -1048,16 +1048,19 @@ gallegher_uk <- extract_text(here("data-raw", "ElectionIndices.pdf"),
          seats = as.numeric(seats)) %>% 
   filter(!is.na(year))
 
-# disp_add <- repmis::source_data(url = "https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
+if (!file.exists(here("data-raw", "Disproportionality.csv"))) {
+  download.file("https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
+}
 
 disp_add <- rio::import(here("data-raw", "Disproportionality.csv")) %>% 
-  filter((country == "Korea, Republic of" & year < 2004) | (country == "Colombia")) %>% 
+  filter((country == "Korea, Republic of" & year < 2000) | (country == "Colombia")) %>% 
   select(country, year, lsq = disproportionality) %>% 
   mutate(country = countrycode(country, "country.name", "country.name"))
 
-gallegher0 <- map_df(5:48, ~ extract_tables(here("data-raw", "ElectionIndices.pdf"),
-                                           pages = c(.x))[[1]] %>% 
-    as_tibble())
+gallegher0 <- map_df(5:48, ~ extract_tables(here("data-raw",
+                                                 "ElectionIndices.pdf"),
+                                            pages = c(.x))[[1]] %>% 
+                       as_tibble())
 
 gallegher <- gallegher0 %>% 
   mutate(V1 = case_when(V1 == "Republic" ~ "Dominican Rep",
@@ -1104,7 +1107,7 @@ gallegher <- gallegher0 %>%
 ```{r oecd}
 if (!file.exists(here::here("data-raw", "oecd_data.rda"))) {
   
-  oecd_growth_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/SNA_TABLE1/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.B1_GE.G/all?startTime=1980&endTime=2022"
+  oecd_growth_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/SNA_TABLE1/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.B1_GE.G/all?startTime=1980&endTime=2023"
   
   oecd_growth <- oecd_growth_link %>% 
     readSDMX() %>% 
@@ -1113,7 +1116,7 @@ if (!file.exists(here::here("data-raw", "oecd_data.rda"))) {
               year = as.numeric(obsTime),
               growth = obsValue)
   
-  oecd_unemployment_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/LFS_SEXAGE_I_R/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.MW.1564.UR.A/all?startTime=1980&endTime=2022"
+  oecd_unemployment_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/LFS_SEXAGE_I_R/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.MW.1564.UR.A/all?startTime=1980&endTime=2023"
   
   oecd_unemp <- oecd_unemployment_link %>% 
     readSDMX() %>% 
@@ -1131,7 +1134,7 @@ if (!file.exists(here::here("data-raw", "oecd_data.rda"))) {
               year = as.numeric(obsTime),
               inflation = obsValue)
   
-  oecd_gdppc_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/SNA_TABLE1/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.B1_GE.HVPVOB/all?startTime=1980&endTime=2022"
+  oecd_gdppc_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/SNA_TABLE1/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.B1_GE.HVPVOB/all?startTime=1980&endTime=2023"
   
   oecd_gdppc <- oecd_gdppc_link %>% 
     readSDMX() %>% 
@@ -1157,16 +1160,17 @@ if (!file.exists(here::here("data-raw", "oecd_data.rda"))) {
 
 ```{r swiid_data}
 if (!file.exists(here("data-raw",
-                      "swiid9_4",
-                      "swiid9_4_summary.csv"))) {
-  download.file("https://dataverse.harvard.edu/api/access/datafile/6716676", "data-raw/swiid9_4.zip")
-  unzip(here("data-raw", "swiid9_4.zip"), exdir = here("data-raw"))
-  file.remove("data-raw", "swiid9_4.zip")
+                      "swiid9_6",
+                      "swiid9_6_summary.csv"))) {
+  download.file("https://dataverse.harvard.edu/api/access/datafile/7878619", "data-raw/swiid9_6.zip")
+  unzip(here("data-raw", "swiid9_6.zip"), exdir = here("data-raw"))
+  file.remove(here("data-raw", "swiid9_6.zip"))
 }
 
 swiid_summary <- read_csv(here("data-raw",
-                               "swiid9_4",
-                               "swiid9_4_summary.csv")) %>% 
+                               "swiid9_6",
+                               "swiid9_6_summary.csv"),
+                          col_types = "cddddddddd") %>% 
   mutate(country = countrycode::countrycode(country,
                                             "country.name",
                                             "country.name")) %>% 
@@ -1185,43 +1189,43 @@ data_combo <- theta_summary %>%
                             year == 3 ~ lead(year, 2) - 2,
                             year == 4 ~ lead(year, 1) - 1,
                             TRUE ~ year)) %>% 
-    left_join(des_data, by = c("country", "year")) %>%
-    mutate(parl = if_else(regime == 0, 1, 0),
-           election = as.numeric(!is.na(regime))) %>% 
-    select(-regime) %>% 
-    fill(parl) %>% 
-    left_join(oecd,
-              by = c("country", "year")) %>% 
-    left_join(swiid_summary,
-              by = c("country", "year")) %>% 
-    left_join(gallegher,
-              by = c("country", "year")) %>% 
-    fill(lsq) %>% 
-    drop_na(mean:lsq) %>% 
-    mutate(federal = as.numeric(country %in% c("Australia", # decentralized = strong
-                                               "Belgium",
-                                               "Canada",
-                                               "Germany",
-                                               "Mexico",
-                                               "Switzerland",
-                                               "United States")),
-           lsq_mean = mean(lsq),
-           lsq_diff = lsq - lsq_mean,
-           gini_mean = mean(gini_disp),
-           gini_mean_se = sqrt(sum(gini_disp_se^2))/
-             length(gini_disp),
-           gini_diff = (gini_disp - gini_mean),
-           gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
-           gdppc_mean = mean(gdppc/1000),
-           gdppc_diff = gdppc/1000 - gdppc_mean,
-           growth_mean = mean(growth),
-           growth_diff = growth - growth_mean,
-           recession = if_else(growth >= 0, 0, 1),
-           unemploy_mean = mean(unemployment),
-           unemploy_diff = unemployment - unemploy_mean,
-           inflation_mean = mean(inflation),
-           inflation_diff = inflation - inflation_mean) %>% 
-    ungroup()
+  left_join(des_data, by = c("country", "year")) %>%
+  left_join(gallegher,
+            by = c("country", "year")) %>% 
+  mutate(parl = if_else(regime == 0, 1, 0),
+         election = as.numeric(!is.na(regime) | !is.na(lsq))) %>% 
+  select(-regime) %>% 
+  fill(parl, .direction = "downup") %>% 
+  left_join(oecd,
+            by = c("country", "year")) %>% 
+  left_join(swiid_summary,
+            by = c("country", "year")) %>% 
+  fill(lsq) %>% 
+  drop_na(mean:lsq) %>% 
+  mutate(federal = as.numeric(country %in% c("Australia", # decentralized = strong
+                                             "Belgium",
+                                             "Canada",
+                                             "Germany",
+                                             "Mexico",
+                                             "Switzerland",
+                                             "United States")),
+         lsq_mean = mean(lsq),
+         lsq_diff = lsq - lsq_mean,
+         gini_mean = mean(gini_disp),
+         gini_mean_se = sqrt(sum(gini_disp_se^2))/
+           length(gini_disp),
+         gini_diff = (gini_disp - gini_mean),
+         gini_diff_se = sqrt(gini_disp_se^2 + gini_mean_se^2)/2,
+         gdppc_mean = mean(gdppc/1000),
+         gdppc_diff = gdppc/1000 - gdppc_mean,
+         growth_mean = mean(growth),
+         growth_diff = growth - growth_mean,
+         recession = if_else(growth >= 0, 0, 1),
+         unemploy_mean = mean(unemployment),
+         unemploy_diff = unemployment - unemploy_mean,
+         inflation_mean = mean(inflation),
+         inflation_diff = inflation - inflation_mean) %>% 
+  ungroup()
 
 if (!file.exists(here::here("data", "results.rda"))) {
   m1 <- brm(
