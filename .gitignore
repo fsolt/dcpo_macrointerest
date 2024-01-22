@@ -21,8 +21,8 @@ paper/dcpo_macrointerest_files/*
 data-raw/survey_info_macrointerest.xlsx
 data-raw/ElectionIndices.pdf
 data-raw/es_data-v41/*
-data-raw/swiid9_4/*
-data-raw/swiid9_4.zip
+data-raw/swiid9_6/*
+data-raw/swiid9_6.zip
 data/dcpo_output.rds
 data/result_ill.rds
 data/result_ppc.rds
