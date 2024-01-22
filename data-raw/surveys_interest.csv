@@ -308,8 +308,6 @@ issp1990,int5_issp,v58,c(5:1),How interested would you say you personally are i
 issp1996,int5_issp,v46,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
 issp2004,int4_issp,v42,c(4:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
 issp2006,int5_issp,v44,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
-issp2006ar,int5_issp,v44,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
-issp2006sk,int4_issp,v44_sk,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
 issp2007,int4_issp,v58,c(4:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
 issp2014,int4_issp,v47,c(4:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
 issp2016,int5_issp,v46,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
