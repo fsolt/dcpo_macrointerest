@@ -675,9 +675,9 @@ if (!exists("results_path")) {
     dir.create(results_path,
                showWarnings = FALSE,
                recursive = TRUE)
-    osf_retrieve_node("9uvdk") %>% # needs updated
+    osf_retrieve_node("9uvdk") %>%
       osf_ls_files() %>%
-      filter(str_detect(name, latest)) %>%
+      filter(str_detect(name, str_extract(latest, "\\d{12}"))) %>%
       osf_download(path = here::here("data", "1000"))
   }
   
@@ -1018,90 +1018,91 @@ des_data <- vroom::vroom(here("data-raw",
   fill() %>% 
   group_by(country, year) %>% 
   summarize(regime = first(regime))
-
-# enpp1 = if_else(max(enpp1, na.rm = TRUE)!=-Inf,
-#                 max(enpp1, na.rm = TRUE),
-#                 NA_real_) %>% 
-#  mutate(enpp1 = if_else(!is.na(enpp1), enpp1, lag(enpp1)))
 ```
 
 ```{r disp}
-if (!file.exists(here("data-raw", "ElectionIndices.pdf"))) {
-  download.file("https://www.tcd.ie/Political_Science/about/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf",
-                here("data-raw", "ElectionIndices.pdf"))
-}
-
-gallegher_uk <- extract_text(here("data-raw", "ElectionIndices.pdf"),
+if (!file.exists(here::here("data-raw", "gallegher_data.rda"))) {
+  if (!file.exists(here("data-raw", "ElectionIndices.pdf"))) {
+    download.file("https://www.tcd.ie/Political_Science/about/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf",
+                  here("data-raw", "ElectionIndices.pdf"))
+  }
+  
+  gallegher_uk <- extract_text(here("data-raw", "ElectionIndices.pdf"),
                                pages = 46,
                                area = list(c(69,
-                                        86, 
-                                        111, 
-                                        424)))[[1]] %>% 
-  as_tibble() %>% 
-  separate_longer_delim(value, " \n") %>% 
-  separate(value, into = c("year", "lsq", "n_v", "n_s", "seats"), sep = "\\s") %>% 
-  mutate(country = "United Kingdom",
-         year = as.numeric(year),
-         lsq = as.numeric(lsq),
-         n_v = as.numeric(n_v), 
-         n_s = as.numeric(n_s),
-         seats = as.numeric(seats)) %>% 
-  filter(!is.na(year))
-
-if (!file.exists(here("data-raw", "Disproportionality.csv"))) {
-  download.file("https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
-}
-
-disp_add <- rio::import(here("data-raw", "Disproportionality.csv")) %>% 
-  filter((country == "Korea, Republic of" & year < 2000) | (country == "Colombia")) %>% 
-  select(country, year, lsq = disproportionality) %>% 
-  mutate(country = countrycode(country, "country.name", "country.name"))
-
-gallegher0 <- map_df(5:48, ~ extract_tables(here("data-raw",
-                                                 "ElectionIndices.pdf"),
-                                            pages = c(.x))[[1]] %>% 
-                       as_tibble())
-
-gallegher <- gallegher0 %>% 
-  mutate(V1 = case_when(V1 == "Republic" ~ "Dominican Rep",
-                        V1 == "Ireland LSq" ~ "Northern Ireland",
-                        V1 == "Kingdom" ~ "United Kingdom",
-                        V1 == "(House)" ~ "United States",
-                        V1 == "Scotland" ~ "Scotland",
-                        TRUE ~ V1),
-         country = countrycode(V1, "country.name", "country.name"),
-         country = case_when(V1 == "elections" ~ "Ireland EP",
-                             V1 == "college)" ~ "U.S. Electoral College",
-                             V1 == "Ireland LSq" ~ "Northern Ireland",
-                             V1 == "Wales" ~ "Wales",
-                             V1 == "Principe" ~ "Principe",
-                              TRUE ~ country),
-         country2 = country) %>% 
-  fill(country) %>% 
-  filter(is.na(country2) & !V1 == "See Notes.") %>% 
-  separate_wider_delim(V1, 
-                       delim = " ", 
-                       names = c("year", "info"),
-                       too_few = "align_start",
-                       too_many = "merge") %>% 
-  mutate(lsq = str_replace_all(info, "[^\\d.]", ""),
-         V2 = if_else(V2 == "", lsq, V2),
-         month = str_extract(info, "[A-Z][a-z]{2}\\b") %>% 
-           match(month.abb)) %>% 
-  filter((is.na(info) | !str_detect(info, "PR|list|SMD|SMP")) ) %>% 
-  transmute(country = country,
-            year = as.numeric(year),
-            lsq = as.numeric(V2),
-            info = info,
-            month = month) %>% 
-  filter(!is.na(lsq)) %>% 
-  bind_rows(gallegher_uk, disp_add) %>% 
-  group_by(country, year) %>% 
-  arrange(country, -year, -month) %>% 
-  distinct(country, year, .keep_all = TRUE) %>% 
-  arrange(country, year) %>% 
-  select(country, year, lsq)
-    
+                                             86, 
+                                             111, 
+                                             424)))[[1]] %>% 
+    as_tibble() %>% 
+    separate_longer_delim(value, " \n") %>% 
+    separate(value, into = c("year", "lsq", "n_v", "n_s", "seats"), sep = "\\s") %>% 
+    mutate(country = "United Kingdom",
+           year = as.numeric(year),
+           lsq = as.numeric(lsq),
+           n_v = as.numeric(n_v), 
+           n_s = as.numeric(n_s),
+           seats = as.numeric(seats)) %>% 
+    filter(!is.na(year))
+  
+  if (!file.exists(here("data-raw", "Disproportionality.csv"))) {
+    download.file("https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
+  }
+  
+  disp_add <- rio::import(here("data-raw", "Disproportionality.csv")) %>% 
+    filter((country == "Korea, Republic of" & year < 2000) | (country == "Colombia")) %>% 
+    select(country, year, lsq = disproportionality) %>% 
+    mutate(country = countrycode(country, "country.name", "country.name"))
+  
+  gallegher0 <- map_df(5:48, ~ extract_tables(here("data-raw",
+                                                   "ElectionIndices.pdf"),
+                                              pages = c(.x))[[1]] %>% 
+                         as_tibble())
+  
+  gallegher <- gallegher0 %>% 
+    mutate(V1 = case_when(V1 == "Republic" ~ "Dominican Rep",
+                          V1 == "Ireland LSq" ~ "Northern Ireland",
+                          V1 == "Kingdom" ~ "United Kingdom",
+                          V1 == "(House)" ~ "United States",
+                          V1 == "Scotland" ~ "Scotland",
+                          TRUE ~ V1),
+           country = countrycode(V1, "country.name", "country.name",
+                                 warn = FALSE),
+           country = case_when(V1 == "elections" ~ "Ireland EP",
+                               V1 == "college)" ~ "U.S. Electoral College",
+                               V1 == "Ireland LSq" ~ "Northern Ireland",
+                               V1 == "Wales" ~ "Wales",
+                               V1 == "Principe" ~ "Principe",
+                               TRUE ~ country),
+           country2 = country) %>% 
+    fill(country) %>% 
+    filter(is.na(country2) & !V1 == "See Notes.") %>% 
+    separate_wider_delim(V1, 
+                         delim = " ", 
+                         names = c("year", "info"),
+                         too_few = "align_start",
+                         too_many = "merge") %>% 
+    mutate(lsq = str_replace_all(info, "[^\\d.]", ""),
+           V2 = if_else(V2 == "", lsq, V2),
+           month = str_extract(info, "[A-Z][a-z]{2}\\b") %>% 
+             match(month.abb)) %>% 
+    filter((is.na(info) | !str_detect(info, "PR|list|SMD|SMP")) ) %>% 
+    transmute(country = country,
+              year = as.numeric(year),
+              lsq = as.numeric(V2),
+              info = info,
+              month = month) %>% 
+    filter(!is.na(lsq)) %>% 
+    bind_rows(gallegher_uk, disp_add) %>% 
+    group_by(country, year) %>% 
+    arrange(country, -year, -month) %>% 
+    distinct(country, year, .keep_all = TRUE) %>% 
+    arrange(country, year) %>% 
+    select(country, year, lsq)
+  
+  rio::export(oecd, here::here("data-raw", "gallegher_data.rda"))
+} else {
+  gallegher <- rio::import(here::here("data-raw", "gallegher_data.rda"))
+}    
 ```
 
 ```{r oecd}
@@ -1201,7 +1202,7 @@ data_combo <- theta_summary %>%
   left_join(swiid_summary,
             by = c("country", "year")) %>% 
   fill(lsq) %>% 
-  drop_na(mean:lsq) %>% 
+  drop_na(mean:gini_disp_se) %>% 
   mutate(federal = as.numeric(country %in% c("Australia", # decentralized = strong
                                              "Belgium",
                                              "Canada",
@@ -1339,22 +1340,21 @@ coef_data0 %>%
 
 
 Figure\nobreakspace{}\@ref(fig:resplot) displays the results.^[
-A tabular version of these results can be found in Appendix\nobreakspace{}\@ref(ESScomparison)].
+A tabular version of these results can be found in Appendix\nobreakspace{}\@ref(ESScomparison).]
 Consistent with the argument that campaigns bring attention-grabbing information to the public, macrointerest in election years is found to be `r get_coef("election", type = "std_coef")` points higher (95% credible interval: `r get_coef("election", type = "ci")` points) than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
 The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
 Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
-The difference between countries with and without federalism is estimated be (`r get_coef("federal", type = "std_coef")` points, with `round(p_direction(m1, parameters = "federal")[[2]]*100, 1)`% of the posterior distribution greater than zero.
+The difference between countries with and without federalism is estimated be `r get_coef("federal", type = "std_coef")` points, with `r round(p_direction(m1, parameters = "federal")[[2]]*100, 1)`% of the posterior distribution greater than zero.
 And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index yields a `r get_coef("lsq_diff")` point posterior mean.
 
-Regarding the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence of our cross-national analysis regarding economic conditions falls heavily on the side of the latter.
-Supporting modernization theory, increases in per capita GDP have a positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff", type = "std_coef")` points more macrointerest and `round(p_direction(m1, parameters = "gdppc_diff")[[2]]*100, 1)`% of the posterior distribution greater than zero.
-The long-term, historical effect as evidenced by differences in mean levels across countries is found to be `r get_coef("gdppc_mean", type = "std_coef")` points, albeit with only `round(p_direction(m1, parameters = "gdppc_mean")[[2]]*100, 1)`% of the posterior distribution greater than zero.
-A two-standard-deviation increase in the growth in the national economy is estimated to boost macrointerest by `r get_coef("growth_diff", type = "std_coef")` points, with `round(p_direction(m1, parameters = "growth_diff")[[2]]*100, 1)`% of the posterior taking on positive values.
-On the other hand, only `round(p_direction(m1, parameters = "growth_mean")[[2]]*100, 1)`% of the posterior distribution for the long-run effect of economic growth is positive, and the findings with regard to unemployment do not provide strong evidence of negative or positive effects either.
+Regarding the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence of our cross-national analysis the impact of economic conditions falls heavily on the side of the latter.
+Supporting modernization theory, increases in per capita GDP have a positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
+The long-term, historical effect as evidenced by differences in mean levels across countries is found to be `r get_coef("gdppc_mean", type = "std_coef")` points, albeit with only `r round(p_direction(m1, parameters = "gdppc_mean")[[2]]*100, 1)`% of the posterior distribution greater than zero.
 As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r abs(get_coef("gini_mean", type = "std_coef"))` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
-Year-to-year changes in income inequality are found to make little difference---it would seem that, from one perspective, the influence of the wealthy over the political agenda does not change on such a short time scale, and from the other, there is no evidence that the public reacts to worsening conditions in the distribution of income with greater interest in its agents' actions.
+Year-to-year changes in income inequality are found to make little difference---it would seem that, from one perspective, the influence of the wealthy over the political agenda does not change on such a short time scale, and from the other, that the public does not react to worsening conditions in the distribution of income with greater interest in its agents' actions.
+The results with regard to growth in the national economy and with regard to unemployment similarly do not provide strong evidence of either negative or positive effects.
 Taken as a whole, this evidence indicates that at least with regard to economic conditions, it is good times, not bad ones, that yield higher macrointerest.
 
 
@@ -1364,9 +1364,8 @@ Macrointerest, despite its theoretical importance, has as yet drawn only limited
 This oversight largely reflects the paucity of available data to measure this important concept.
 The cross-national macrointerest dataset presented here addresses this issue, providing annual time series across more than a hundred countries and allowing more and better tests of the wide range of theories that implicate the public's interest in politics.
 For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] found that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorized.
-And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows the opposite, that it is _good_ economic conditions that lead the public to take interest in politics.
+And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows the opposite, that with regard to economic conditions it is _good_ times that lead the public to take interest in politics.
 By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
-<!-- Beyond investigating the sources of macrointerest, the novel cross-national measurement also provide opportunity for further examining its relationship with various types of political participation and civil engagements [@Anderson2007;@VerbaEtAl1995]. -->
 The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest as well as its relationships with other aspects of political engagement.
 
 
@@ -1411,14 +1410,14 @@ Appendices
 # Survey Items Used to Estimate Macrointerest {#surveys}
 National and cross-national surveys have often included questions tapping interest in politics over the past four decades, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
 In all, we identified `r n_items` such survey items that were asked in no fewer than five country-years in countries surveyed at least twice; these items were drawn from `r n_surveys` different survey datasets.
-These items are listed in Table \@ref(tab:itemTb) below, along with the dispersion ($\alpha$) and difficulty ($\beta$) scores estimated for each from the DCPO model.
+These items are listed in Table \@ref(tab:itemsTb) below, along with the dispersion ($\alpha$) and difficulty ($\beta$) scores estimated for each from the DCPO model.
 Lower values of dispersion indicate questions that better identify publics with a higher level of trust from those with lower. 
 Items have one less difficulty score than the number of response categories. 
 
 In accordance with the advice offered by @Hu2022 to avoid data-entry errors by automating data collection, the `DCPOtools` R package [@Solt2019] was used to compile the responses to these questions.
 The current version of the software facilitates the entire practical data generation process: from facilitating the acquisition of original survey datasets and converting them into R standard format for quicker loading; through standardizing country names, identifying survey years, and extracting the desired survey items; to restructuring the resulting data for analysis with the DCPO model. 
 The primary objective is to limit manual interventions, thereby maximizing reproducibility and reducing the error potential inherent in human-operated data preparation tasks.
-The survey dataset codes listed in Table \@ref(tab:itemTb) correspond to those used in that package; Table \@ref(tab:surveyInfo) lists these codes with the citation of each dataset.
+The survey dataset codes listed in Table \@ref(tab:itemsTb) correspond to those used in that package; Table \@ref(tab:surveyInfo) lists these codes with the citation of each dataset.
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
 The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs} below.
@@ -1481,7 +1480,7 @@ items_summary %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 ```
-
+\pagebreak
 ```{r surveyInfo}
 dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
@@ -1945,7 +1944,7 @@ compare_cor <- c_res %>%
 
 plot_comparison <- ggplot(data = df_compare,
                           aes(x = year, y = mean, group = method, fill = method)) +
-  labs(y = "Macrointerest", title = "Wcalc vs. DCPO") +
+  labs(y = "Macrointerest", title = "Wcalc vs. DCPO in the United States") +
   coord_cartesian(xlim = c(1982, 2014)) +
   geom_ribbon(data = df_compare, aes(ymin = lb, ymax = ub), alpha = .5) +
   geom_line() +
@@ -1954,7 +1953,7 @@ plot_comparison <- ggplot(data = df_compare,
   scale_x_continuous(breaks = seq(1982, 2016, by = 4)) +
   theme(axis.title.x = element_blank(), 
         legend.title = element_blank(), 
-        legend.position = c(0.1, 0.2)) +
+        legend.position = c(0.9, 0.1)) +
   annotate(geom = "text", 
            x = 1985,
            y = .62,
