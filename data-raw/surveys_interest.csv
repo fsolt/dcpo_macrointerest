@@ -304,6 +304,9 @@ icenes2003,int5_icenes,polintr,c(5:1),Do you consider your interest in politics�
 icenes2007,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
 icenes2009,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
 icenes2013,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes2016,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes2017,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
+icenes2021,int5_icenes,polintr,c(5:1),Do you consider your interest in politics…,1 Very great / 2 Great / 3 Some / 4 Little / 5 None
 issp1990,int5_issp,v58,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
 issp1996,int5_issp,v46,c(5:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3  Somewhat interested / 4 Not very interested  / 5 Not at all interested
 issp2004,int4_issp,v42,c(4:1),How interested would you say you personally are in politics?,1 Very interested  / 2  Fairly interested  / 3 Not very interested  / 4 Not at all interested
