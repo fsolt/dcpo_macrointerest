@@ -21,6 +21,11 @@ title:  Macrointerest Across Countries
 subtitle: Memo to Editor and Reviewers
 ---
 
+```{=tex}
+\setcounter{figure}{0}
+\renewcommand*{\thefigure}{M\arabic{figure}}
+```
+
 ## Introduction {.unnumbered}
 **Framing**.
 We appreciate the reviewers' careful reading and their suggestions for better framing the piece.
@@ -36,11 +41,12 @@ We agree that the original introduction was too brisk, and we see this as a subs
 One point that both reviewers flagged was the "good times versus bad" framing of the hypotheses regarding the circumstances that prompt higher levels of macrointerest, pointing out that this wording does not correspond very well to the paper's findings.
 Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrase to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
 
-**Replication materials**
-R2 longed to see replication materials.
-We, as reviewers, have had similar laments.
+**Replication Materials**
+R2 longed to see our replication materials during the review process.
+We, as reviewers, have often made similar wishes.
 We are told by the _BJPS_ editor that making those materials available to reviewers is not presently possible.
-In the final version, we will of course provide full replication materials on the Dataverse as well as the link to the repository with the complete revision history on GitHub.
+In the final version, we will of course provide full replication materials on the Dataverse as well as the link to the Github repository with the paper's complete revision history.
+
 
 ## Cross-National Macrointerest: The Source Data {.unnumbered}
 **`DCPOtools`**.
@@ -48,17 +54,91 @@ On the recommendation of R1, we expanded and moved our discussion of the automat
 
 
 ## Estimating Cross-National Macrointerest {.unnumbered}
-**Method comparison**. 
+**Method Comparison**. 
 R1 suggested that we bring our discussion of the merits of the DCPO approach relative to alternatives from a footnote to the text.
 We have adopted this suggestion at page 4.
 
+
 ## Validating Cross-National Macrointerest {.unnumbered}
 **Validation**.
-R2 queried of the validity of the DCPO outcome.
-In the research, we used the validation method that has been applied in publications of  APSR and BJPS [@Caughey2019; @WooEtAl2023].
-At the same method, we agree with R2 that it is difficulty to interpret the results of this method without any benchmarks. 
-Therefore, we listed the correlations of an APSR publication using the similar validation method for readers' reference (n. XXX).
-Moreover, we point out to the readers that the correlations can also be affected by other factors.
+R2 raised questions about "the validation exercise," pointing to a lack of benchmarks for the "evaluations of the size of the correlation coefficients."
+While any benchmark regarding correlations is bound to be somewhat arbitrary, the correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
+The range of correlations we report on page 8, from .71 to .88, seem to us to be similarly satisfying.
+
+We also investigated the reviewer's speculation that items with more observations would yield higher correlations with the macrointerest estimates and for "small projects with few surveys" the correlation would be smaller in a way that would call into question the utility of the method.
+First, we calculated the mean response for each item in each country-year observed.
+(This is not quite the same procedure as we use in our validation exercises; there, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route yields nicer plots, this one was easier to scale across dozens of items.)
+
+Then, we calculated the correlation for each item across country-years between these mean responses and the macrointerest estimates.
+This correlation was .9 or higher for twenty-seven of our fifty-three items. It was below .7 for just two.
+Finally, we observed the relationship between items' correlations and their number of observations.
+This relationship is nearly nonexistent, as shown in Figure M1 below, and is in the direction contrary to R2's speculative hypothesis.
+
+```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations"}
+library(tidyverse)
+library(DCPOtools)
+
+dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
+                           col_types = "cdcddcd")
+
+load(here::here("data",
+                "theta_summary.rda"))
+
+process_dcpo_input_raw <- function(dcpo_input_raw_df) {
+  dcpo_input_raw_df %>% 
+    mutate(item = if_else(item == "int5_polit" &
+                            year < 1990,
+                          "int3_polit",
+                          item),
+           r = if_else(item == "int5_polit" &
+                         year < 1990,
+                       r - 2,
+                       r)) %>% 
+    filter(year >= 1982 & n > 0) %>% 
+    with_min_yrs(3) %>% 
+    with_min_cy(5) %>% 
+    with_min_yrs(3) %>%
+    group_by(country) %>% 
+    mutate(cc_rank = n()) %>% 
+    ungroup() %>% 
+    arrange(-cc_rank)
+}
+
+dcpo_input_raw1 <- dcpo_input_raw %>% 
+  process_dcpo_input_raw()
+
+item_theta_cor <- dcpo_input_raw1 %>% 
+  group_by(item) %>% 
+  mutate(n_item = sum(r==1)) %>% 
+  ungroup() %>% 
+  group_by(country, year, item) %>% 
+  summarize(mean_item = sum(r*n)/sum(n),
+            se_item = sqrt(sum((r*n - mean_item*n)^2)/{sum(n) - 1})/sqrt(sum(n)),
+            n_item = first(n_item),
+            cc_rank = first(cc_rank)) %>% 
+  left_join(theta_summary %>% select(country, year, theta = mean),
+            by = c("country", "year")) %>% 
+  ungroup() %>% 
+  group_by(item) %>% 
+  summarize(theta_cor = cor(theta, mean_item),
+            n_item = first(n_item))
+
+itcor <- with(item_theta_cor, cor(theta_cor, n_item)) %>% 
+  sprintf("%.2f", .) %>% 
+  paste("R =", .)
+
+item_theta_cor %>% 
+  ggplot(aes(x = n_item, y = theta_cor)) +
+  geom_point() +    # Use hollow circles
+  geom_smooth(method="loess") +  # Add linear regression line 
+  ylim(c(0, 1)) +
+  labs(x = "Item Number of Country-Year Observations",
+    y = "Correlation Between Item Country-Year Means\nand Macrointerest Estimates") +
+  annotate(geom = "text", 
+           x = 265,
+           y = 1,
+           label = itcor)
+```
 
 
 ## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
@@ -66,7 +146,7 @@ Moreover, we point out to the readers that the correlations can also be affected
 R2 asked why we would analyze macrointerest in only the advanced democracies of the OECD when we could simply use the ESS data "and save ourselves all the harmonization effort?"
 This point is two-pronged.
 To address its first part, we examine the advanced democracies because that is where the extant theories of macrointerest apply.
-To our knowledge, political scientists have had relatively little to say regarding, for example, explanations of the public's interest in politics in authoritarian countries.
+To our knowledge, political scientists have as yet had relatively little to say regarding, for example, explanations for the public's interest in politics in authoritarian countries.
 We now emphasize that we restrict our sample for theoretical reasons at page 7.
 
 The question of the payoff of our estimates is easily answered, even within this sample of relatively data-rich countries.
@@ -97,7 +177,7 @@ Although there is little room for a more sufficient discussion due to the word l
 ## Appendices
 
 ### Survey Items Used to Estimate Macrointerest
-**Full survey references**
+**Full Survey References**
 R2 asked for additional information in Appendix A on the source data,
 requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviewer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
 
@@ -134,7 +214,8 @@ And as the DCPO model is published as open source software on CRAN [@Solt2020a],
 
 ### Macrointerest Scores Over Time
 R2 pointed out that the "appendix should show the trajectories for all countries."
-We have added those plots here. 
+We have added those plots here as Appendix D. 
 
 
 # Reference {-}
+
