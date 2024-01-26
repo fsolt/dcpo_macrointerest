@@ -31,6 +31,8 @@ endnote: no
 header-includes:
       - \usepackage{array}
       - \usepackage{caption}
+      - \usepackage{float}
+      - \usepackage{placeins}
       - \usepackage{graphicx}
       - \usepackage{siunitx}
       - \usepackage{colortbl}
@@ -49,13 +51,13 @@ header-includes:
       - \titleformat*{\section}{\normalsize\bfseries}
       - \titleformat*{\subsection}{\normalsize\itshape}
       - \usepackage{titling} #use \maketitle repeatedly  
-      - \renewcommand{\topfraction}{.85} # Adjust LaTeX placement rules per 
+      - \renewcommand{\topfraction}{.85} # Adjust LaTeX placement rules per
       - \renewcommand{\textfraction}{.15}
       - \renewcommand{\floatpagefraction}{.66}
       - \setcounter{topnumber}{3}
       - \setcounter{bottomnumber}{3}
       - \setcounter{totalnumber}{4}
-      - \renewcommand{\bottomfraction}{.7} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
+      - \renewcommand{\bottomfraction}{.80} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
 ---
 
 \pagenumbering{gobble}
@@ -1444,7 +1446,7 @@ The primary objective is to limit manual interventions, thereby maximizing repro
 The survey dataset codes listed in Table \@ref(tab:itemsTb) correspond to those used in that package; Table \@ref(tab:surveyInfo) lists the codes of each individual survey with the citation of each dataset.
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
-The number of items observed in the source data for each country-year is plotted in Figure\nobreakspace{}\ref{obs} below.
+The number of items observed in the source data for each country-year is plotted in Figures\nobreakspace{}\@ref(fig:obs)\nobreakspace{}and\nobreakspace{}\@ref(fig:obs2) below.
 The macrointerest scores of country-years with more observed items are likely to be estimated more precisely.
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
 
@@ -1505,7 +1507,7 @@ items_summary %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 ```
-\pagebreak
+
 ```{r surveyInfo}
 dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
@@ -1530,14 +1532,12 @@ dcpo_input_raw1 %>%
                  longtable = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
-  kableExtra::column_spec(1, width = "10em") %>%
+  kableExtra::column_spec(1, width = "12em") %>%
   kableExtra::column_spec(2, width = "60em") %>%
   kableExtra::kable_styling(font_size = 7) %>%
   kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 
 ```
-
-
 
 ```{r obs, fig.cap = "Source Data Observations by Country and Year", fig.height = 9}
 dcpo_input_plot <- dcpo_input_raw1 %>% 
@@ -1578,7 +1578,8 @@ dcpo_input_plot %>%
                      sec.axis = dup_axis()) +
   scale_y_discrete(position = "right") +
   theme(axis.text.y  = element_text(size = 7),
-        strip.background = element_rect(fill = "white", colour = "white")) +
+        strip.background = element_rect(fill = "white", colour = "white"),
+        strip.placement = "outside") +
   facet_wrap(~forcats::fct_reorder(continent, mean_cc_rank, .desc = TRUE),
              ncol = 1,
              scales = "free") +
@@ -1603,7 +1604,8 @@ dcpo_input_plot %>%
                      sec.axis = dup_axis()) +
   scale_y_discrete(position = "right") +
   theme(axis.text.y  = element_text(size = 7),
-        strip.background = element_rect(fill = "white", colour = "white")) +
+        strip.background = element_rect(fill = "white", colour = "white"),
+        strip.placement = "outside") +
   facet_wrap(~forcats::fct_reorder(continent, mean_cc_rank, .desc = TRUE),
              ncol = 1,
              scales = "free") +
@@ -1683,7 +1685,7 @@ And although survey weights are easily incorporated in the source data (and inde
 Unlike the model employed by @Caughey2019, the DCPO model does not incorporate poststratification to correct for these issues.
 While this does increase computational tractability and decrease data demands, the downside is clearly greater measurement uncertainty in the estimates in country-years where the data are relatively rich (via $\phi$) and potential bias in the estimates where data are more sparse.
 
-
+\pagebreak
 # Comparing Coverage of the Macrointerest Data and the ESS {#ESScomparison}
 
 After creating the cross-sectional time-series of macrointerest, we tested theories of macrointerest formation in the thirty-seven advanced democracies of the OECD.
@@ -1692,7 +1694,7 @@ The observations covered by ESS are marked with the light rectangles, and the ad
 By taking advantage of all of the available survey data on political interest, our macrointerest estimates allow the comparison to extend to the nine OECD members in the Americas, East Asia, and the Antipodes, and it also provides continuous time series in Europe that extend well beyond the available ESS data.
 In all, the macrointerest data provide well over _five times_ as many country-years for analysis than are available in the ESS. 
 
-```{r cpOECD, fig.cap="Data Availability: DCPO Macrointerest vs. ESS", fig.height=5}
+```{r cpOECD, fig.cap="Data Availability: DCPO Macrointerest vs. ESS", fig.height=4.5}
 if (!file.exists(here("data", "tb_ess.rda"))) {
   library(rvest)
   tb_ess <-
@@ -1737,6 +1739,7 @@ ggplot(tb_oecd, aes(x = year,
         legend.title = element_blank(),
         legend.position = "top") 
 ```
+
 
 # Macrointerest Scores Over Time {#trajectory}
 
@@ -1804,9 +1807,10 @@ ggplot(df_plot_illustrate, aes(x = year, y = median, fill = country)) +
 ggsave(here("output", "macroint_interestURC.png"))
 ```
 
+\pagebreak
 
 # Tabular Version of Results Presented in Figure \@ref(fig:resplot)
-
+\FloatBarrier
 ```{r modelTB, cache=TRUE}
 vec_coefName <- c(
   "b_election" = "Election Year",
@@ -1832,9 +1836,10 @@ modelsummary(
   statistic = "conf.int",
   notes = "95-percent credible intervals are in brackets.",
   title = "Tabular Version of Results Presented Graphically in Figure 5",
-  booktabs = TRUE
-)
+  booktabs = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 10)
 ```
+\FloatBarrier
 
 \pagebreak
 # Comparison with @Peterson2022 {#peterson}
@@ -1942,7 +1947,7 @@ MI <- readRDS(here("data", "peterson2022", "peterson_mi.rds"))
 df_peterson2022 <- MI |> 
   transmute(quarter = (period - round(period)) * 10,
             year = round(period) + (2*quarter-1)*.125,
-            mean = boot_mean/100 - .25,
+            mean = boot_mean/100 - .23,
             se = boot_sd/100,
             lb = mean - qnorm(0.9) * se,
             ub = mean + qnorm(0.9) * se) |> 
@@ -1964,7 +1969,7 @@ compare_cor <- c_res %>%
                         se_wcalc = mean(se)),
             by = "year") %>% 
   with(cor(mean_wcalc, mean, use = "pairwise.complete.obs")) %>% 
-  round(2) %>% 
+  sprintf("%.2f", .) %>% 
   paste("R =", .)
 
 plot_comparison <- ggplot(data = df_compare,
@@ -1978,10 +1983,10 @@ plot_comparison <- ggplot(data = df_compare,
   scale_x_continuous(breaks = seq(1982, 2016, by = 4)) +
   theme(axis.title.x = element_blank(), 
         legend.title = element_blank(), 
-        legend.position = c(0.9, 0.1)) +
+        legend.position = c(0.9, 0.2)) +
   annotate(geom = "text", 
-           x = 1985,
-           y = .62,
+           x = 1984,
+           y = .64,
            label = compare_cor)
 
 plot_comparison
@@ -1989,7 +1994,7 @@ plot_comparison
 ```
 
 In Figure \@ref(fig:peterson-plot), we compare the outcomes from these two methods during the years they overlap, from 1982 to 2014.
-For the purpose of this comparison, the Wcalc scores of @Peterson2022 are first divided by 100 to place them on the unit interval and then shifted a quarter-point downward, which yields identical scores on both series in their first common year, 1982.
+For the purpose of this comparison, the Wcalc scores of @Peterson2022 are first divided by 100 to place them on the unit interval and then shifted nearly a quarter-point downward, which yields identical scores on both series in their first common year, 1982.
 Neither of these affect the shape of the Wcalc series; they work simply to overlay the two series for more straightforward comparison.
 
 Two points stand out.
@@ -2104,7 +2109,7 @@ The findings of @Peterson2022 are reproduced in this truncated dataset.
 In the second column, the @Peterson2022 Wcalc macrointerest data are aggregated to the annual level over the same period, that is, each year's value is the mean of the values of that year's quarters, and the independent variables were similarly annualized.
 Over this time period and at this unit of analysis, macrointerest is predicted only by its lagged value: the coefficients for trust, presidential elections, and September 11 no longer reach statistical significance.
 The DCPO macrointerest series for the United States yields similar results.
-It would appear that it is the unit of analysis---years as opposed to quarters--- rather than the macrointerest series, that yields different conclusions in the @Peterson2022 analysis.
+It would appear that it is the unit of analysis---years as opposed to quarters---rather than the macrointerest series, that yields different conclusions in the @Peterson2022 analysis.
 
 \clearpage
 \pagebreak
