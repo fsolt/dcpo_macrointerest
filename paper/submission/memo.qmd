@@ -130,7 +130,7 @@ itcor <- with(item_theta_cor, cor(theta_cor, n_item)) %>%
 item_theta_cor %>% 
   ggplot(aes(x = n_item, y = theta_cor)) +
   geom_point() +    # Use hollow circles
-  geom_smooth(method="loess") +  # Add linear regression line 
+  geom_smooth(method="lm") +  # Add linear regression line 
   ylim(c(0, 1)) +
   labs(x = "Item Number of Country-Year Observations",
     y = "Correlation Between Item Country-Year Means\nand Macrointerest Estimates") +
