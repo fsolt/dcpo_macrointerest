@@ -1317,7 +1317,7 @@ if (!file.exists(here::here("data", "results.rda"))) {
   load(file = here::here("data", "results.rda"))
 }
 
-ess_perc <- ess_perc <- {{dcpo_input_raw1 %>% 
+ess_perc <- {{dcpo_input_raw1 %>% 
     filter(country %in% oecd_countries & r==1) %>%
     count(item) %>%
     arrange(desc(n)) %>%
