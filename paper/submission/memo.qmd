@@ -41,6 +41,7 @@ We agree that the original introduction was too brisk, and we see this as a subs
 One point that both reviewers flagged was the "good times versus bad" framing of the hypotheses regarding the circumstances that prompt higher levels of macrointerest, pointing out that this wording does not correspond very well to the paper's findings.
 Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrasing to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
 
+
 **Replication Materials**
 R2 longed to see our replication materials during the review process.
 We, as reviewers, have often made similar wishes.
@@ -156,7 +157,8 @@ In fact, our proposition here that country-year-level measures should reflect re
 ## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
 **Comparison to the ESS**.
 R2 asked why we would analyze macrointerest in only the advanced democracies of the OECD when we could simply use the ESS data "and save ourselves all the harmonization effort?"
-This point is two-pronged, and we thank the reviewer for bringing it up.
+We thank the reviewer for bringing up this point.
+It is two-pronged.
 To address its first part, we examine the advanced democracies because that is where the extant theories of macrointerest apply.
 To our knowledge, political scientists have as yet had relatively little to say regarding, for example, explanations for the public's interest in politics in authoritarian countries.
 We now emphasize that we restrict our sample for theoretical reasons at page 7.
@@ -169,16 +171,24 @@ We review this key advantage at page 10 and in greater depth in Appendix C.
 
 **Two-Step Approach**
 R1 raised the question whether the analysis "could be achieved in a single step by integrating hierarchical priors into the model."
-We were somewhat puzzled by this comment, but we guessed the reviewer was referring to combining the measurement and analysis steps into a single model, as in @Claassen2022.
-We prefer to avoid such an approach, because it assumes that the indicators of macrointerest are missing at random with regard to the independent variables, and therefore that the relationship between macrointerest and these variables is the same in the countries when and where macrointerest is poorly observed as in the country-years where macrointerest is well observed, and this assumption is difficult to justify.
+We confess we were puzzled by this comment, but we guessed the reviewer was referring to combining the measurement and analysis steps into a single model, as in @Claassen2022.
+We prefer to avoid such an approach, because it assumes that the indicators of macrointerest are missing at random with regard to the independent variables, and therefore that the relationship between macrointerest and these independent variables is the same in the countries when and where macrointerest is poorly observed as in the country-years where macrointerest is well observed.
+This assumption is difficult to justify.
 If the reviewer had a different "single step" approach in mind, we apologize for not figuring it out.
 
 
 **Uncertainty**. 
-In response to R1's suggestion to provide more details about how we incorporated uncertainty in our analysis, we made a specific discussion at page 11. 
-We used the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
-This is a method that has been used in a series of latent variable analyses in political science. 
-We listed several other applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
+R1 suggested that we provide more details about how we incorporated uncertainty in our analysis.
+This is an important point.
+We added an explicit discussion of our approach at page 11. 
+We use the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
+This is a method that has been often employed in latent variable analyses in political science. 
+We now cite several of these applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
+
+
+**Results**
+R2 pointed out some infelicities in wording in our discussion of the results in this section and suggested that speaking in terms of posterior probabilities would help.
+We are grateful for this recommendation and have adopted it at pages 11 and 12.
 
 
 ## Conclusions
@@ -199,9 +209,11 @@ The cost is that country-specific item bias cannot be estimated and so is set to
 It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian  Election Studies and the Korea Barometer).
 This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
 
+
 **Full Survey References**
 R2 asked for additional information in Appendix A on the source data,
 requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviewer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
+
 
 **Legibility of Figure A1**
 R2 also pointed out that Figure A1 was hard to read and suggested splitting it. 
@@ -225,8 +237,9 @@ On the other hand, we concur with R1 that the interpretation of the probit trans
 We have added a discussion of these points to Appendix B, our summary of the DCPO model.
 And as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
 
+
 ### Macrointerest Scores Over Time
-R2 pointed out that the "appendix should show the trajectories for all countries."
+R2 asked that we include "the trajectories for all countries" in an appendix.
 We have added those plots here as Appendix D. 
 
 
