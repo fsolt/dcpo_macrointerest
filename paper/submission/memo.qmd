@@ -39,13 +39,13 @@ The third paragraph previews our specific contribution and findings.
 We agree that the original introduction was too brisk, and we see this as a substantial improvement.
 
 One point that both reviewers flagged was the "good times versus bad" framing of the hypotheses regarding the circumstances that prompt higher levels of macrointerest, pointing out that this wording does not correspond very well to the paper's findings.
-Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrase to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
+Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrasing to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
 
 **Replication Materials**
 R2 longed to see our replication materials during the review process.
 We, as reviewers, have often made similar wishes.
 We are told by the _BJPS_ editor that making those materials available to reviewers is not presently possible.
-In the final version, we will of course provide full replication materials on the Dataverse as well as the link to the Github repository with the paper's complete revision history.
+In the final version, we will of course provide a link to the full replication materials on the Dataverse as well as the link to the Github repository with the paper's complete revision history.
 
 
 ## Cross-National Macrointerest: The Source Data {.unnumbered}
@@ -61,20 +61,18 @@ We have adopted this suggestion at page 4.
 
 ## Validating Cross-National Macrointerest {.unnumbered}
 **Validation**.
-R2 raised questions about "the validation exercise," pointing to a lack of benchmarks for the "evaluations of the size of the correlation coefficients."
-While any benchmark regarding correlations is bound to be somewhat arbitrary, the correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
+R2 raised questions about "the validation exercise," pointing to a "lack of benchmarks" for the "evaluations of the size of the correlation coefficients."
+Any benchmark regarding correlations is bound to be somewhat arbitrary, but
+comparisons to the correlations found in prior similar research are at least the best place to start.
+The correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
 The range of correlations we report on page 8, from .71 to .88, seem to us to be similarly satisfying.
+The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" as we do in the text is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
 
-We also investigated the reviewer's speculation that items with more observations would yield higher correlations with the macrointerest estimates and for "small projects with few surveys" the correlation would be smaller in a way that would call into question the utility of the method.
-First, we calculated the mean response for each item in each country-year observed.
-(This is not quite the same procedure as we use in our validation exercises; there, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route yields nicer plots, this one was easier to scale across dozens of items.)
+We also investigated the reviewer's speculation with regard to internal convergent validation that items with more observations would yield higher correlations with the macrointerest estimates and that for "small projects with few surveys" the correlation would be smaller in a way that would call into question the utility of the method.
+First we calculated the mean response for each item in each country-year observed.
+(This is not quite the same aggregation procedure that we use in the text; there, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route yields more intuitive plots, this one is better suited to scaling across dozens of items.)
 
-Then, we calculated the correlation for each item across country-years between these mean responses and the macrointerest estimates.
-This correlation was .9 or higher for twenty-seven of our fifty-three items. It was below .7 for just two.
-Finally, we observed the relationship between items' correlations and their number of observations.
-This relationship is nearly nonexistent, as shown in Figure M1 below, and is in the direction contrary to R2's speculative hypothesis.
-
-```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations"}
+```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=4}
 library(tidyverse)
 library(DCPOtools)
 
@@ -140,9 +138,23 @@ item_theta_cor %>%
            label = itcor)
 ```
 
+Then we calculated the correlation for each item across country-years between these mean responses and the macrointerest estimates.
+This correlation was .9 or higher for twenty-seven of our fifty-three items; it was below .7 for just two.
+Finally, we observed the correlation between, on the one hand, each item's correlations with the macrointerest estimates, and, on the other, the number of observations it provides.
+This relationship is weak, as shown in Figure M1 above, and is in the direction contrary to R2's speculation.
+
+In short, Figure 2 does not represent a particularly lucky walk through the garden of forking paths---or worse, one intentionally chosen to flatter the method.
+The particularly data-rich items it depicts correlate well with the macrointerest estimates, but so do nearly all of the items.
+
+R2 also raised the issue of whether we should expect that established individual-level relationships (such as between political interest and news consumption) translate to the macro level as we do in Figure 3.
+Moving between levels of analysis is admittedly notoriously fraught.
+But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the ecological fallacy---not the reverse.
+In fact, our proposition here that country-year-level measures should reflect relationships shown in individual-level studies closely follows the recommendation that "analyses of system-level data ought first to look carefully at individual-level association" [@Seligson2002, 288].
+(We note that the analysis we offer in Figure 5 draws exclusively---with the arguable exception of unemployment---on macro-level variables and so does not run afoul of this stricture.)
+
 
 ## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
-**Comparison to the ESS**
+**Comparison to the ESS**.
 R2 asked why we would analyze macrointerest in only the advanced democracies of the OECD when we could simply use the ESS data "and save ourselves all the harmonization effort?"
 This point is two-pronged.
 To address its first part, we examine the advanced democracies because that is where the extant theories of macrointerest apply.
@@ -177,32 +189,32 @@ Although there is little room for a more sufficient discussion due to the word l
 ## Appendices
 
 ### Survey Items Used to Estimate Macrointerest
+**Included Projects**
+R2 queried if "single-country and single-wave projects should be included."
+All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2 of the text).
+This means that single-wave projects include at least five countries, as exemplified in these data by the survey "Values and Political Change in Post-Communist Europe, 1993-1994."
+Even such small cross-national surveys contain at least some information regarding the differences across the countries surveyed.
+The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020c, 6].
+It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian  Election Studies and the Korea Barometer).
+This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
+
 **Full Survey References**
 R2 asked for additional information in Appendix A on the source data,
 requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviewer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
 
 **Legibility of Figure A1**
 R2 also pointed out that Figure A1 was hard to read and suggested splitting it. 
-We split that figure into several panels by region to allow it to be split across pages and so expanded for better legibility. 
-
-**Included projects**
-R2 queried if "single-country and single-wave projects should be included."
-All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2).
-This means that single-wave projects include at least five countries, as exemplified in these data by the survey "Values and Political Change in Post-Communist Europe, 1993-1994."
-Even such small cross-national surveys contain at least some information regarding the differences across countries.
-The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020c, 6].
-It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian National Election Studies and the Korea Barometer).
-This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
+We have split that figure into several panels by region to allow it to be displayed across pages and so enlarged for better legibility. 
 
 
 ### The DCPO Model
-**Source data sample representation**.
-We thank R2 for pointing out the matter of sample representation.
-We have added a paragraph here discussing the issue here.
+**Source Data Sample Representation**.
+R2 pointed out the matter of sample representation.
+We have added a paragraph discussing the issue here.
 The short of it is that unlike the model employed by @Caughey2019, the DCPO model does not incorporate a poststratification component to correct for this problem, and the result is greater measurement uncertainty in the estimates where data is relatively rich and potential bias in the estimates where data is more sparse.
 
 
-**Scaling of estimates**. 
+**Scaling of Estimates**. 
 R1 suggested that we consider employing the cumulative distribution function (CDF) of the normal distribution---that is, the probit transformation---as an alternative to the logistic transformation, for scaling responses on the unit interval within the DCPO framework or at least discuss the relative merits of the two in the appendix.
 We appreciate the suggestion of the probit transformation.
 The preference for the logistic function in the DCPO model is grounded in its inherent flexibility and enhanced tolerance for deviations from standard normal assumptions. 
