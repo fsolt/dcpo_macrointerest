@@ -366,7 +366,7 @@ process_dcpo_input_raw <- function(dcpo_input_raw_df) {
                          year < 1990,
                        r - 2,
                        r)) %>% 
-    filter(year >= 1982 & n > 0) %>% 
+    filter(year >= 1982 & n > 0 & !country=="Northern Ireland") %>% 
     with_min_yrs(3) %>% 
     with_min_cy(5) %>% 
     with_min_yrs(3) %>%
@@ -439,7 +439,7 @@ Compared to this hypothetical complete set of country-year-items, the available 
 More optimistically, there are `r n_cy` country-years in which there is at least _some_ information about the public's interest in politics, that is, some `r round(covered_share)`% of the `r spanned_cy` country-years spanned by these data.
 Still, the multitude of different survey items makes these data incomparable and difficult to use together.
 
-```{r itemcountry, fig.cap="Countries and Years with the Most Observations in the Source Data \\label{item_country_plots}", fig.height=3.5, fig.pos='h', cache=FALSE}
+```{r itemcountry, fig.cap="Countries and Years with the Most Observations in the Source Data", fig.height=3.5, fig.pos='h', cache=FALSE}
 items_plot <- dcpo_input_raw1 %>%
   distinct(country, year, item) %>%
   count(item) %>%
@@ -603,7 +603,7 @@ if(n_data_poor < 20) {
 (countries_plot + cby_plot) / (ybc_plot)
 ```
 
-In the top left panel of Figure\nobreakspace{}\@ref(fig:item_country_plots), the twelve countries with the most country-year-item observations are displayed.
+In the top left panel of Figure\nobreakspace{}\@ref(fig:itemcountry), the twelve countries with the most country-year-item observations are displayed.
 Germany, with `r de_obs` observations, is the best represented country in these source data, followed by `r others`.
 At the other end of the scale, there are `r n_data_poorest` countries`r data_poorest`that have only the bare minimum three observations needed to be included in the source dataset at all.
 In the top right panel are the dozen countries with the most observed years; this group is similar to that on the left, but with `r adding` adding to the list and `r dropping` dropping off.
@@ -684,7 +684,7 @@ dcpo_output$save_output_files(dir = results_path,
 
 ```{r dcpo_output, eval=FALSE}
 if (!exists("results_path")) {
-  latest <- "20240120135634"
+  latest <- "20240127152338"
   results_path <- here::here("data", "1000", latest)
 
   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
@@ -802,7 +802,7 @@ load(here("data", "theta_summary.rda"))
 load(here("data", "theta_results.rda"))
 
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
-                                lab_x = .1,
+                                lab_x = .15,
                                 lab_y = 95) +
   theme_bw() +
   theme(legend.position="none",
@@ -815,7 +815,7 @@ internal_tscs_plot <- validation_plot(internal_tscs_dat,
        y = "% 'Very' or 'Quite' Interested in Politics")
 
 internal_cs_plot <- validation_plot(internal_cs_dat,
-                                lab_x = .1,
+                                lab_x = .15,
                                 lab_y = 95) +
   theme_bw() +
   theme(legend.position="none",
@@ -1334,7 +1334,7 @@ The former help account for heteroskedasticity across space due to, e.g., omitte
 The latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
 Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
 The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
-The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis with the "method of composition," a technique frequently utilized across numerous studies in political science [e.g., @KastellecEtAl2015; @CaugheyWarshaw2018a; @Tai2024].^[
+The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis with the "method of composition," a technique frequently utilized in political science for this purpose [e.g., @KastellecEtAl2015; @CaugheyWarshaw2018a; @Tai2024].^[
 See @Tai2024 [, Supplementary Material C] for a comprehensive review and application of the method of composition in a similar context of cross-national time-series of public opinion.]
 The model was estimated using the `brms` R package [@Burkner2017].
 
@@ -1366,18 +1366,18 @@ coef_data0 %>%
 
 
 Figure\nobreakspace{}\@ref(fig:resplot) displays the results.^[
-A tabular version of these results can be found in Appendix\nobreakspace{}\@ref(ESScomparison).]
+A tabular version of these results can be found in Appendix\nobreakspace{}\@ref(resultstable).]
 Consistent with the argument that campaigns bring attention-grabbing information to the public, macrointerest in election years is found to be `r get_coef("election", type = "std_coef")` points (95% credible interval: `r get_coef("election", type = "ci")` points) higher than in years without elections.
 This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
 The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
 Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
-The difference between countries with and without federalism is estimated be `r get_coef("federal", type = "std_coef")` points, with `r round(p_direction(m1, parameters = "federal")[[2]]*100, 1)`% of the posterior distribution greater than zero.
+The point estimate for the difference in macrointerest between countries with and without federalism is estimated be `r get_coef("federal", type = "std_coef")` points, with `r round(p_direction(m1, parameters = "federal")[[2]]*100, 1)`% of the posterior distribution greater than zero.
 And although disproportionality is not estimated to have long-run effects that consistently distinguish countries with more or less proportional electoral results, _changes_ in disproportionality appear to have an immediate negative effect: a two-standard-deviation increase in the Gallagher index yields `r get_coef("lsq_diff", type = "std_coef", abs = TRUE)` points less macrointerest (95% c.i.: `r get_coef("lsq_diff", type = "ci")`).
 
 Regarding the debate on whether macrointerest is invigorated or instead discouraged by bad times, the evidence of our cross-national analysis of the impact of economic conditions falls on the side of the latter.
 Supporting modernization theory, increases in per capita GDP have a positive short-term effect on aggregate political interest, with a two-standard-deviation increase associated with `r get_coef("gdppc_diff")` points more macrointerest.
-The long-term, historical effect as evidenced by differences in mean levels across countries is found to be `r get_coef("gdppc_mean", type = "std_coef")` points, albeit with only `r round(p_direction(m1, parameters = "gdppc_mean")[[2]]*100, 1)`% of the posterior distribution greater than zero.
+The point estimate for the long-term, historical effect as evidenced by differences in mean levels across countries is found to be `r get_coef("gdppc_mean", type = "std_coef")` points, albeit with only `r round(p_direction(m1, parameters = "gdppc_mean")[[2]]*100, 1)`% of the posterior distribution greater than zero.
 As predicted by relative power theory, the long-term effects of income inequality are strongly negative, with a two-standard-deviation difference across countries associated with `r get_coef("gini_mean", type = "std_coef", abs = TRUE)` points less macrointerest (95% c.i.: `r get_coef("gini_mean", type = "ci")` points).
 Year-to-year changes in income inequality are found to make little difference---it would seem that, from one perspective, the influence of the wealthy over the political agenda does not change on such a short time scale, and from the other, that the public does not react to worsening conditions in the distribution of income with greater interest in its agents' actions.
 The results with regard to growth in the national economy and with regard to unemployment similarly do not provide strong evidence of either negative or positive effects.
@@ -1390,7 +1390,7 @@ Macrointerest, despite its theoretical importance, has as yet drawn only limited
 This oversight largely reflects the paucity of available data to measure this important concept.
 The cross-national macrointerest dataset presented here addresses this issue, providing annual time series across more than a hundred countries and allowing more and better tests of the wide range of theories that implicate the public's interest in politics.
 For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] finds that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorizes.
-And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows the opposite, that with regard to economic conditions it is _good_ times that lead the public to take interest in politics.
+And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows the opposite, that at least with regard to economy it is _good_ conditions that lead the public to take interest in politics.
 By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
 The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest as well as its relationships with other aspects of political engagement.
 
@@ -1809,7 +1809,7 @@ ggsave(here("output", "macroint_interestURC.png"))
 
 \pagebreak
 
-# Tabular Version of Results Presented in Figure \@ref(fig:resplot)
+# Tabular Version of Results Presented in Figure \@ref(fig:resplot) {#resultstable}
 \FloatBarrier
 ```{r modelTB, cache=TRUE}
 vec_coefName <- c(
