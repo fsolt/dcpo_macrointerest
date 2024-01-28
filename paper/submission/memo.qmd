@@ -59,6 +59,13 @@ On the recommendation of R1, we expanded and moved our discussion of the automat
 R1 suggested that we bring our discussion of the merits of the DCPO approach relative to alternatives from a footnote to the text.
 We have adopted this suggestion at page 4.
 
+**Northern Ireland**.
+R2 asked why we have estimates for Northern Ireland.
+The answer is that several surveys---for our purposes here, the EVS, one wave of the European Election Survey, and one wave of ISSP data---include respondents from Northern Ireland but no weights to incorporate them along with British respondents to generate information about the entire United Kingdom.
+From the perspective of UK estimates, the inclusion or exclusion of Northern Ireland of course generally matters very little.
+But given that we have these data, we had chosen to use it to make estimates just as we do for other subnational territories such as Puerto Rico and Hong Kong---even though, unlike those other territories, if we were truly interested in Northern Ireland, we would also break it out of the UK in other surveys like the Eurobarometer (something we did not do).
+Given the sparsity of the source data from Northern Ireland, its inclusion or exclusion does not appreciably affect other macrointerest estimates either.
+Nevertheless, in light of R2's apparent skepticism, we now exclude Northern Ireland from the source data.
 
 ## Validating Cross-National Macrointerest {.unnumbered}
 **Validation**.
@@ -67,7 +74,7 @@ Any benchmark regarding correlations is bound to be somewhat arbitrary, but
 comparisons to the correlations found in prior similar research are at least the best place to start.
 The correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
 The range of correlations we report on page 8, from .71 to .88, seem to us to be similarly satisfying.
-The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" as we do in the text is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
+The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .61---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" as we do at page 6 is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
 
 We also investigated the reviewer's speculation with regard to internal convergent validation that items with more observations would yield higher correlations with the macrointerest estimates and that for "small projects with few surveys" the correlation would be smaller in a way that would call into question the utility of the method.
 First we calculated the mean response for each item in each country-year observed.
@@ -93,7 +100,7 @@ process_dcpo_input_raw <- function(dcpo_input_raw_df) {
                          year < 1990,
                        r - 2,
                        r)) %>% 
-    filter(year >= 1982 & n > 0) %>% 
+    filter(year >= 1982 & n > 0 & !country=="Northern Ireland") %>% 
     with_min_yrs(3) %>% 
     with_min_cy(5) %>% 
     with_min_yrs(3) %>%
@@ -147,11 +154,11 @@ This relationship is weak, as shown in Figure M1 above, and is in the direction 
 In short, Figure 2 does not represent a particularly lucky walk through the garden of forking paths---or worse, one intentionally chosen to flatter the method.
 The particularly data-rich items it depicts correlate well with the macrointerest estimates, but so do nearly all of the items.
 
-R2 also raised the issue of whether we should expect that established individual-level relationships (such as between political interest and news consumption) translate to the macro level as we do in Figure 3.
-Moving between levels of analysis is admittedly notoriously fraught.
-But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the ecological fallacy---not the reverse.
+Also under this heading, R2 raised the issue of whether we should expect that established individual-level relationships (such as between political interest and news consumption) translate to the macro level as we do in the construct validation presented in Figure 3.
+Moving between levels of analysis is admittedly and notoriously fraught.
+But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the classic ecological fallacy---not the reverse.
 In fact, our proposition here that country-year-level measures should reflect relationships shown in individual-level studies closely follows the recommendation that "analyses of system-level data ought first to look carefully at individual-level association" [@Seligson2002, 288].
-(We note that the analysis we offer in Figure 5 draws exclusively---with the arguable exception of unemployment---on macro-level variables and so does not run afoul of this stricture.)
+(We note that the analysis we offer in Figure 5 draws exclusively---with the possible and arguable exception of unemployment---on macro-level variables and so does not run afoul of this stricture.)
 
 
 ## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
@@ -174,7 +181,7 @@ R1 raised the question whether the analysis "could be achieved in a single step 
 We confess we were puzzled by this comment, but we guessed the reviewer was referring to combining the measurement and analysis steps into a single model, as in @Claassen2022.
 We prefer to avoid such an approach, because it assumes that the indicators of macrointerest are missing at random with regard to the independent variables, and therefore that the relationship between macrointerest and these independent variables is the same in the countries when and where macrointerest is poorly observed as in the country-years where macrointerest is well observed.
 This assumption is difficult to justify.
-If the reviewer had a different "single step" approach in mind, we apologize for not figuring it out.
+If the reviewer had a different "single step" approach in mind, we apologize for not being able to figure it out.
 
 
 **Uncertainty**. 
@@ -193,8 +200,8 @@ We are grateful for this recommendation and have adopted it at pages 11 and 12.
 
 ## Conclusions
 **Participation**.
-R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of participation/engagements. 
-Although there is little room for a more sufficient discussion due to the word limit, we pointed out this insight to the readers and direct them to relative literature for further comparison.
+R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of political engagement and participation. 
+Although there is little room for a more complete discussion due to the word limit, we pointed out this insight to the readers and direct them to relevant literature for further comparison.
 
 
 ## Appendices
@@ -240,7 +247,7 @@ And as the DCPO model is published as open source software on CRAN [@Solt2020a],
 
 ### Macrointerest Scores Over Time
 R2 asked that we include "the trajectories for all countries" in an appendix.
-We have added those plots here as Appendix D. 
+We have added those plots here as Appendix D.
 
 
 # Reference {-}
