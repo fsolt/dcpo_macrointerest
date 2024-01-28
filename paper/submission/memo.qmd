@@ -158,10 +158,18 @@ Also under this heading, R2 raised the issue of whether we should expect that es
 Moving between levels of analysis is admittedly and notoriously fraught.
 But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the classic ecological fallacy---not the reverse.
 In fact, our proposition here that country-year-level measures should reflect relationships shown in individual-level studies closely follows the recommendation that "analyses of system-level data ought first to look carefully at individual-level association" [@Seligson2002, 288].
-(We note that the analysis we offer in Figure 5 draws exclusively---with the possible and arguable exception of unemployment---on macro-level variables and so does not run afoul of this stricture.)
+(We note that the analysis we offer in Figure 5 draws exclusively on macro-level contextual variables---acknowledging but not accepting the possible argument against characterizing unemployment as contextual---and so does not run afoul of this stricture.  We now highlight the contextual nature of the theories we address at pages 7-9.)
 
 
 ## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
+**Interest vs Engagement**.
+R2 writes, "The application tests theories of political participation and how they explain macrointerest. To me this looks like an attempt to check whether macrointerest is similar or different from other forms of participation/engagement. I would have liked to see this discussed in the conclusions."
+This is a reasonable supposition---interest is an important aspect of engagement---but this is not our intent, which is simply to understand better what drives differences in macrointerest (as noted just above, we have expanded our introduction to these theories to make this point more clearly).
+All of the works whose theories we summarize examine how contextual factors influence political interest in particular (albeit sometimes within broader studies of engagement), and as _contextual_ arguments specifically implicate the overall level of interest in the public, that is, macrointerest.
+We are reluctant to opine on the extent to which macrointerest is similar or different from other forms of political engagement without actually examining these other activities, and that is really beyond the scope of this piece.
+But we wholeheartedly endorse the reviewer's underlying point that these are interesting questions that our macrointerest data open to further investigation, and so in our conclusion we encourage their use to explore macrointerest's relationships with other aspects of political engagement in future research.
+
+
 **Comparison to the ESS**.
 R2 asked why we would analyze macrointerest in only the advanced democracies of the OECD when we could simply use the ESS data "and save ourselves all the harmonization effort?"
 We thank the reviewer for bringing up this point.
@@ -186,8 +194,7 @@ If the reviewer had a different "single step" approach in mind, we apologize for
 
 **Uncertainty**. 
 R1 suggested that we provide more details about how we incorporated uncertainty in our analysis.
-This is an important point.
-We added an explicit discussion of our approach at page 11. 
+This is an important point, and we have added a discussion of our approach at page 11. 
 We use the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
 This is a method that has been often employed in latent variable analyses in political science. 
 We now cite several of these applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.

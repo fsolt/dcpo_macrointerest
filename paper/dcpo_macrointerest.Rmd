@@ -977,8 +977,9 @@ ggplot(data = c_res, aes(x = year, y = mean)) +
   plot_annotation(caption = "Note: Countries are ordered by their median macrointerest score; gray shading represents 80% credible intervals.")
 ```
 
-What explains these differences?
-One straightforward explanation is that publics grow more interested in politics at election time.
+What accounts for these differences?
+The literature offers a range of arguments for how the political context may influence the public's interest in politics.
+Perhaps the most straightforward is that publics grow more interested in politics at election time.
 Campaigns and elections attract media coverage and increase the information available to the public on the issues being contested, leading to increased interest in politics [see, e.g., @Larsen2022].
 Macrointerest within a country should be expected to be higher, therefore, in years in which national elections take place than in years without elections.
 
@@ -1338,7 +1339,7 @@ The measurement uncertainty in the data for both macrointerest and income inequa
 See @Tai2024 [, Supplementary Material C] for a comprehensive review and application of the method of composition in a similar context of cross-national time-series of public opinion.]
 The model was estimated using the `brms` R package [@Burkner2017].
 
-```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5.5, fig.width = 7.5}
+```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5, fig.width = 7.5}
 
 ordered <- doubled_sd %>%
   pull(var_names) %>% 
@@ -1694,7 +1695,7 @@ The observations covered by ESS are marked with the light rectangles, and the ad
 By taking advantage of all of the available survey data on political interest, our macrointerest estimates allow the comparison to extend to the nine OECD members in the Americas, East Asia, and the Antipodes, and it also provides continuous time series in Europe that extend well beyond the available ESS data.
 In all, the macrointerest data provide well over _five times_ as many country-years for analysis than are available in the ESS. 
 
-```{r cpOECD, fig.cap="Data Availability: DCPO Macrointerest vs. ESS", fig.height=4.5}
+```{r cpOECD, fig.cap="Data Availability: DCPO Macrointerest vs. ESS", fig.height=4}
 if (!file.exists(here("data", "tb_ess.rda"))) {
   library(rvest)
   tb_ess <-
@@ -1740,7 +1741,7 @@ ggplot(tb_oecd, aes(x = year,
         legend.position = "top") 
 ```
 
-
+\vspace{-1in}
 # Macrointerest Scores Over Time {#trajectory}
 
 ```{r trajectory, fig.align='center', fig.height=9}
