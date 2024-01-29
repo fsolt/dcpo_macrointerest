@@ -1448,10 +1448,9 @@ The primary objective is to limit manual interventions, thereby maximizing repro
 The survey dataset codes listed in Table \@ref(tab:itemsTb) correspond to those used in that package; Table \@ref(tab:surveyInfo) lists the codes of each individual survey with the citation of each dataset.
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.^[
-Some surveys, such as  `ees1989`, `issp1990`, `evs_combo`, include Northern Ireland but do not provide a sampling weight to include those respondents in the UK as a whole. 
+A few surveys, such as  `ees1989`, `issp1990`, `evs_combo`, include Northern Ireland but do not provide a sampling weight to include those respondents in the United Kingdom as a whole. 
 For clarity, we removed them from the estimation. 
-The estimated trends and conclusions do not change by including or excluding this tiny amount of data.
-]
+The estimated trends and conclusions do not change by including or excluding the small amount of data on Northern Ireland.]
 The number of items observed in the source data for each country-year is plotted in Figures\nobreakspace{}\@ref(fig:obs)\nobreakspace{}and\nobreakspace{}\@ref(fig:obs2) below.
 The macrointerest scores of country-years with more observed items are likely to be estimated more precisely.
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
@@ -1515,8 +1514,6 @@ items_summary %>%
 ```
 
 ```{r surveyInfo}
-surveys_data <- import(here("data-raw", "survey_citations.csv"))
-
 dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
   distinct() %>%
@@ -1860,7 +1857,7 @@ Apart from the primary rationale stated in the main text---that Wcalc is inheren
 
 The dynamic ratio algorithm primarily seeks to uncover shared variance over time among various survey items.
 Its process involves initially pairing these items, subsequently calculating the ratio for each unique pair, and then analyzing the distribution of these ratios. 
-DCPO instead directly models the relationship between the latent variable and survey item responses using a Bayesian Item Response Theory (IRT) approach (for more on the differences between dyad ratios and IRT, see @McGann2014, which finds that a single-country IRT model provides a better fit to a collection of UK public opinion data meant to capture "policy mood" than the dyad ratio algorithm). 
+DCPO instead directly models the relationship between the latent variable and survey item responses using a Bayesian Item Response Theory (IRT) approach (for more on the differences between dyad ratios and IRT, see @McGann2014, which finds that a single-country IRT model provides a better fit to a collection of U.K. public opinion data meant to capture "policy mood" than the dyad ratio algorithm). 
 The DCPO method provides a probabilistic framework, enabling the estimation of response probabilities contingent on both the level of the latent trait and specific characteristics of the survey items (for more details, see Appendix\nobreakspace{}\@ref(dcpo)).
 
 Additionally, these methods adopt differing strategies for addressing missing data at certain time points. 
