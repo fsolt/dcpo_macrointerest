@@ -330,3 +330,67 @@ vpcpce_slovakianpublic,"Heywood, P., Miller, W. L., White, S. (2000). Values and
 vpcpce_ukrainianpublic,"Heywood, P., Miller, W. L., White, S. (2000). Values and Political Change in Post-Communist Europe, 1993-1994. [data collection]. UK Data Service. SN: 4129, DOI: http://doi.org/10.5255/UKDA-SN-4129-1"
 wvs_combo,"Inglehart, R., C. Haerpfer, A. Moreno, C. Welzel, K. Kizilova, J. Diez-Medrano, M. Lagos, P. Norris, E. Ponarin & B. Puranen (eds.). 2022. World Values Survey: All Rounds - Country-Pooled Datafile. Madrid, Spain & Vienna, Austria: JD Systems Institute & WVSA Secretariat. Dataset Version 3.0.0. doi:10.14281/18241.17"
 wvs7,"Haerpfer, C., Inglehart, R., Moreno, A., Welzel, C., Kizilova, K., Diez-Medrano J., M. Lagos, P. Norris, E. Ponarin & B. Puranen (eds.). 2022. World Values Survey: Round Seven - Country-Pooled Datafile Version 5.0. Madrid, Spain & Vienna, Austria: JD Systems Institute & WVSA Secretariat. doi:10.14281/18241.20"
+amb_argentina2023,LAPOP (2023) Argentina LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_belize2023,LAPOP (2023) Belize LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_bolivia2023,LAPOP (2023) Bolivia LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_brazil2023,LAPOP (2023) Brazil LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_canada2023,LAPOP (2023) Canada LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_chile2023,LAPOP (2023) Chile LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_colombia2023,LAPOP (2023) Colombia LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_costarica2023,LAPOP (2023) Costarica LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_dominicanrepublic2023,LAPOP (2023) Dominican Republic LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_ecuador2023,LAPOP (2023) Ecuador LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_elsalvador2023,LAPOP (2023) El Salvador LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_guatemala2023,LAPOP (2023) Guatemala LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_haiti2023,LAPOP (2023) Haiti LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_honduras2023,LAPOP (2023) Honduras LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_jamaica2023,LAPOP (2023) Jamaica LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_mexico2023,LAPOP (2023) Mexico LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_nicaragua2023,LAPOP (2023) Nicaragua LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_panama2023,LAPOP (2023) Panama LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_paraguay2023,LAPOP (2023) Paraguay LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_peru2023,LAPOP (2023) Peru LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_suriname2023,LAPOP (2023) Suriname LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_trinidad2023,LAPOP (2023) Trinidad and Tobago LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_uruguay2023,LAPOP (2023) Uruguay LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+amb_us2023,LAPOP (2023) US LAPOP AmericasBarometer 2023 v1.0 [Dataset]
+bsa1994,"Social and Community Planning Research. British Social Attitudes Survey, 1994. Inter-university Consortium for Political and Social Research [distributor], United Kingdom Data Archive [distributor], 2005-07-22. https://doi.org/10.3886/ICPSR03097.v2"
+bsa1995,"Social and Community Planning Research. British Social Attitudes Survey, 1995. [distributor], 2006-07-26. https://doi.org/10.3886/ICPSR03098.v2"
+bsa1996,"Social and Community Planning Research. British Social Attitudes Survey, 1996. [distributor], 2006-07-26. https://doi.org/10.3886/ICPSR03099.v2"
+bsa1997,"Social and Community Planning Research. British Social Attitudes Survey, 1997. [distributor], 2006-07-26. https://doi.org/10.3886/ICPSR03100.v2"
+bsa1998,"Social and Community Planning Research. British Social Attitudes Survey, 1998. Inter-university Consortium for Political and Social Research [distributor], UK Data Archive [distributor], 2006-07-26. https://doi.org/10.3886/ICPSR03101.v2"
+bsa1999,"National Centre for Social Research. British Social Attitudes Survey, 1999  . [distributor], 2004-07-14. https://doi.org/10.3886/ICPSR03898.v1"
+bsa2000,"National Centre for Social Research. British Social Attitudes Survey, 2000  . [distributor], 2004-08-06. https://doi.org/10.3886/ICPSR03899.v1"
+bsa2001,"National Centre for Social Research. British Social Attitudes Survey, 2001. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2006-01-18. https://doi.org/10.3886/ICPSR03900.v1"
+bsa2002,"National Centre for Social Research. (2004). British Social Attitudes Survey, 2002. [data collection]. UK Data Service. SN: 4838, DOI: http://doi.org/10.5255/UKDA-SN-4838-1"
+bsa2003,"National Centre for Social Research. (2005). British Social Attitudes Survey, 2003. [data collection]. UK Data Service. SN: 5235, DOI: http://doi.org/10.5255/UKDA-SN-5235-1"
+bsa2004,"National Centre for Social Research. (2006). British Social Attitudes Survey, 2004. [data collection]. UK Data Service. SN: 5329, DOI: http://doi.org/10.5255/UKDA-SN-5329-1"
+bsa2005,"National Centre for Social Research. (2007). British Social Attitudes Survey, 2005. [data collection]. UK Data Service. SN: 5618, DOI: http://doi.org/10.5255/UKDA-SN-5618-1"
+bsa2006,"National Centre for Social Research. (2008). British Social Attitudes Survey, 2006. [data collection]. UK Data Service. SN: 5823, DOI: http://doi.org/10.5255/UKDA-SN-5823-1"
+bsa2007,"National Centre for Social Research. (2009). British Social Attitudes Survey, 2007. [data collection]. UK Data Service. SN: 6240, DOI: http://doi.org/10.5255/UKDA-SN-6240-1"
+bsa2008,"National Centre for Social Research. (2010). British Social Attitudes Survey, 2008. [data collection]. UK Data Service. SN: 6390, DOI: http://doi.org/10.5255/UKDA-SN-6390-1"
+bsa2009,"National Centre for Social Research. (2011). British Social Attitudes Survey, 2009. [data collection]. UK Data Service. SN: 6695, DOI: http://doi.org/10.5255/UKDA-SN-6695-1"
+bsa2010,"National Centre for Social Research. (2012). British Social Attitudes Survey, 2010. [data collection]. UK Data Service. SN: 6969, DOI: http://doi.org/10.5255/UKDA-SN-6969-1"
+bsa2011,"National Centre for Social Research. (2013). British Social Attitudes Survey, 2011. [data collection]. UK Data Service. SN: 7237, DOI: http://doi.org/10.5255/UKDA-SN-7237-1"
+bsa2012,"National Centre for Social Research. (2014). British Social Attitudes Survey, 2012. [data collection]. UK Data Service. SN: 7476, DOI: http://doi.org/10.5255/UKDA-SN-7476-1"
+bsa2013,"National Centre for Social Research. (2015). British Social Attitudes Survey, 2013. [data collection]. UK Data Service. SN: 7500, DOI: http://doi.org/10.5255/UKDA-SN-7500-1"
+bsa2014,"National Centre for Social Research. (2016). British Social Attitudes Survey, 2014. [data collection]. UK Data Service. SN: 7809, DOI: http://doi.org/10.5255/UKDA-SN-7809-1"
+bsa2015,"National Centre for Social Research. (2017). British Social Attitudes Survey, 2015. [data collection]. UK Data Service. SN: 8116, DOI: http://doi.org/10.5255/UKDA-SN-8116-1"
+bsa2016,"National Centre for Social Research. (2018). British Social Attitudes Survey, 2016. [data collection]. UK Data Service. SN: 8252, DOI: http://doi.org/10.5255/UKDA-SN-8252-1"
+bsa2017,"National Centre for Social Research. (2019). British Social Attitudes Survey, 2017. [data collection]. UK Data Service. SN: 8450, DOI: http://doi.org/10.5255/UKDA-SN-8450-1"
+bsa2018,"National Centre for Social Research. (2020). British Social Attitudes Survey, 2018. [data collection]. UK Data Service. SN: 8606, DOI: http://doi.org/10.5255/UKDA-SN-8606-1"
+bsa2019,"National Centre for Social Research. (2021). British Social Attitudes Survey, 2019. [data collection]. UK Data Service. SN: 8772, DOI: http://doi.org/10.5255/UKDA-SN-8772-1"
+bsa2020,"National Centre for Social Research. (2022). British Social Attitudes Survey, 2020. [data collection]. UK Data Service. SN: 9005, DOI: http://doi.org/10.5255/UKDA-SN-9005-1"
+bsa_combo,"Social and Community Planning Research. British Social Attitudes Survey, 1983-1991: [Cumulative File]. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2008-01-23. https://doi.org/10.3886/ICPSR03095.v2"
+icenes2016,"Önnudóttir, Eva Heiða; Harðarson, Ólafur Þórður; Þórisdóttir, Hulda; Helgason, Agnar Freyr, 2021, ""Íslenska kosningarannsóknin 2016"", https://doi.org/10.34881/1.00010, GAGNÍS (DATICE), V1"
+icenes2017,"Önnudóttir, Eva Heiða; Harðarson, Ólafur Þórður; Þórisdóttir, Hulda; Helgason, Agnar Freyr, 2021, ""Íslenska kosningarannsóknin 2017"", https://doi.org/10.34881/1.00011, GAGNÍS (DATICE), V1"
+icenes2021,"Önnudóttir, Eva Heiða; Helgason, Agnar Freyr; Þórisdóttir, Hulda; Ólafsson, Jón Gunnar; Harðarson, Ólafur Þórður, 2023, ""Íslenska kosningarannsóknin 2021"", https://doi.org/10.34881/0ERQOZ, GAGNÍS (DATICE), V1"
+lb2023,"Corporación Latinobarómetro. Latinobarómetro 2023. Augest 1, 2023"
+pew2017_mpwe,"Pew Research Center, 2017,Media and Politics in Western Europe "
+uspew1998_09pol,Princeton Survey Research Associates. 1998. Pew Research Center Poll: Early September 1998 Political Poll
+uspew2000_typo,Princeton Survey Research Associates. 2000. Pew Research Center Poll: Campaign 2000 Typology
+uspew2001_rel,Princeton Survey Research Associates. 2001. Pew Research Center Poll: 2001 Religion and Public Life Survey
+uspew2002_08int,Princeton Survey Research Associates. 2002. Pew Research Center Poll: January 2002 Internet Use and Decision Making
+uspew2006_elec,Princeton Survey Research Associates. 2006. Pew Research Center Poll: Electoral Competition
+uspew2010_09pi,"Pew Research Center for the People & the Press. Pew Research Center Poll: September 2010 Political-Independents, 2010 [Dataset]. Roper #31095992, Version 2."
+uspew2011_09gen,"Pew Research Center for the People & the Press. Pew Research Center Poll: September 2011 Generations Survey, 2011 [Dataset]. Roper #31096044, Version 2."
