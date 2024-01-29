@@ -158,7 +158,7 @@ validation_plot <- function(v_data_raw,
       mutate(v_val = str_extract(item0, "\\d+") %>% 
                as.numeric() %>% 
                median_val(.) %>%
-               `+`(if_else(str_detect(item0, "disc3"), .1, .6)) %>% 
+               `+`(if_else(str_detect(item0, "int5_allbus"), 0, .6)) %>% 
                round())
     
     validation_summarized <- v_data_raw %>% 
@@ -359,11 +359,10 @@ dcpo_input_raw <- read_csv(here::here("data", "dcpo_input_raw.csv"),
 process_dcpo_input_raw <- function(dcpo_input_raw_df) {
   dcpo_input_raw_df %>% 
     mutate(item = if_else(item == "int5_polit" &
-                            year < 1990,
+                            (year < 1990 | year == 1991),
                           "int3_polit",
                           item),
-           r = if_else(item == "int5_polit" &
-                         year < 1990,
+           r = if_else(item == "int3_polit",
                        r - 2,
                        r)) %>% 
     filter(year >= 1982 & n > 0 & !country=="Northern Ireland") %>% 
@@ -684,7 +683,7 @@ dcpo_output$save_output_files(dir = results_path,
 
 ```{r dcpo_output, eval=FALSE}
 if (!exists("results_path")) {
-  latest <- "20240127152338"
+  latest <- "20240129125552"
   results_path <- here::here("data", "1000", latest)
 
   # Define OSF_PAT in .Renviron: https://docs.ropensci.org/osfr/articles/auth
@@ -840,9 +839,9 @@ internal_ts_plot <- validation_plot(internal_ts_dat,
   coord_cartesian(ylim = c(0,1)) +
   labs(x = "Year",
        y = "Score") +
-  annotate("text", x = 1995, y = .22, size = 2,
+  annotate("text", x = 1990, y = .84, size = 2,
            label = 'ALLBUS') +
-  annotate("text", x = 2008, y = .7, size = 2,
+  annotate("text", x = 2000, y = .38, size = 2,
            label = "Macrointerest")
 
 internal_tscs_plot + internal_cs_plot + internal_ts_plot  +
