@@ -42,7 +42,7 @@ One point that both reviewers flagged was the "good times versus bad" framing of
 Here in the introduction and throughout, we adopted the more accurate "good economic conditions" phrasing to better reflect the higher mean levels and positive change in GDP per capita plus lower mean levels of income inequality that we found to be associated with higher macrointerest in our analysis.
 
 
-**Replication Materials**
+**Replication Materials**.
 R2 longed to see our replication materials during the review process.
 We, as reviewers, have often made similar wishes.
 We are told by the _BJPS_ editor that making those materials available to reviewers is not presently possible.
@@ -57,28 +57,29 @@ On the recommendation of R1, we expanded and moved our discussion of the automat
 ## Estimating Cross-National Macrointerest {.unnumbered}
 **Method Comparison**. 
 R1 suggested that we bring our discussion of the merits of the DCPO approach relative to alternatives from a footnote to the text.
-We have adopted this suggestion at page 4.
+We have adopted this suggestion at pages 3 and 4.
 
 **Northern Ireland**.
 R2 asked why we have estimates for Northern Ireland.
 The answer is that several surveys---for our purposes here, the EVS, one wave of the European Election Survey, and one wave of ISSP data---include respondents from Northern Ireland but no weights to incorporate them along with British respondents to generate information about the entire United Kingdom.
 From the perspective of UK estimates, the inclusion or exclusion of Northern Ireland of course generally matters very little.
-But given that we have these data, we had chosen to use it to make estimates just as we do for other subnational territories such as Puerto Rico and Hong Kong---even though, unlike those other territories, if we were truly interested in Northern Ireland, we would also break it out of the UK in other surveys like the Eurobarometer (something we did not do).
+But given that we have these data, we had chosen to use it to make estimates just as we do for other subnational territories such as Puerto Rico and Hong Kong---even though, unlike those other territories, if we were truly interested in Northern Ireland, we could also break it out of the UK in other surveys like the Eurobarometer (something we did not do).
 Given the sparsity of the source data from Northern Ireland, its inclusion or exclusion does not appreciably affect other macrointerest estimates either.
 Nevertheless, in light of R2's apparent skepticism, we now exclude Northern Ireland from the source data.
 
 ## Validating Cross-National Macrointerest {.unnumbered}
-**Validation**.
+**Correlation Magnitudes**.
 R2 raised questions about "the validation exercise," pointing to a "lack of benchmarks" for the "evaluations of the size of the correlation coefficients."
-Any benchmark regarding correlations is bound to be somewhat arbitrary, but
-comparisons to the correlations found in prior similar research are at least the best place to start.
+Any benchmark regarding correlation magnitudes is bound to be somewhat arbitrary, but comparisons to the correlations found in prior similar research are at least the best place to start.
 The correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
-The range of correlations we report on page 8, from .71 to .88, seem to us to be similarly satisfying.
-The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .61---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" as we do at page 6 is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
+The range of correlations we report on in Figure 2 on page 6, from .72 to .88, seem to us to be similarly satisfying.
+The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" (as we do at page 7) is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
 
-We also investigated the reviewer's speculation with regard to internal convergent validation that items with more observations would yield higher correlations with the macrointerest estimates and that for "small projects with few surveys" the correlation would be smaller in a way that would call into question the utility of the method.
-First we calculated the mean response for each item in each country-year observed.
-(This is not quite the same aggregation procedure that we use in the text; there, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route yields more intuitive plots, this one is better suited to scaling across dozens of items.)
+**Large vs Small Projects**.
+With regard to internal convergent validation, R2 offered the speculation that items with more observations would yield higher correlations with the macrointerest estimates and that for "small projects with few surveys" the correlation would be smaller in a way that would call into question the utility of the method.
+To investigate this possibility, we first calculated the mean response for each item in each country-year observed.
+(This is not quite the same aggregation procedure that we use in the plots in the text.
+There, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route facilitates plotting by yielding results on the unit interval---but it is not without shortcomings, as seen in the next subsection---this one is better suited to scaling across dozens of items.)
 
 ```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=4}
 library(tidyverse)
@@ -135,7 +136,7 @@ itcor <- with(item_theta_cor, cor(theta_cor, n_item)) %>%
 
 item_theta_cor %>% 
   ggplot(aes(x = n_item, y = theta_cor)) +
-  geom_point() +    # Use hollow circles
+  geom_point() +
   geom_smooth(method="lm") +  # Add linear regression line 
   ylim(c(0, 1)) +
   labs(x = "Item Number of Country-Year Observations",
@@ -147,18 +148,75 @@ item_theta_cor %>%
 ```
 
 Then we calculated the correlation for each item across country-years between these mean responses and the macrointerest estimates.
-This correlation was .9 or higher for twenty-seven of our fifty-three items; it was below .7 for just two.
+This correlation was .9 or higher for twenty-six of our fifty-three items; it was below .7 for just three.
 Finally, we observed the correlation between, on the one hand, each item's correlations with the macrointerest estimates, and, on the other, the number of observations it provides.
-This relationship is weak, as shown in Figure M1 above, and is in the direction contrary to R2's speculation.
+This relationship is weak, as shown in Figure M1, and is in the direction contrary to R2's hypothesis.
 
 In short, Figure 2 does not represent a particularly lucky walk through the garden of forking paths---or worse, one intentionally chosen to flatter the method.
-The particularly data-rich items it depicts correlate well with the macrointerest estimates, but so do nearly all of the items.
+The particularly data-rich items it depicts do correlate well with the macrointerest estimates, but that is also true for nearly all of the items.
 
-Also under this heading, R2 raised the issue of whether we should expect that established individual-level relationships (such as between political interest and news consumption) translate to the macro level as we do in the construct validation presented in Figure 3.
+**ALLBUS**.
+Pointing to our longitudinal internal convergent validation test in the right panel of Figure 2, R2 noted that "the time series of Allbus and Macrointerest don't actually seem to covary very well," specifically around the year 2000, when there is a sharp dip in the macrointerest estimates that is absent in the ALLBUS series displayed.
+The reviewer observed that, this was "concerning": if anything, the macrointerest estimates should be _more_ smooth than the underlying survey data, not less.
+She or he suggested we investigate and explain the divergence.
+
+We thank R2 for raising the issue and took this advice.
+We discovered that the apparent divergence was really just an artifact of the way we had dichotomized the ALLBUS data in the original figure.
+There, we took the percentage of respondents who said that they were 'strongly' or 'very strongly' interested in politics, that is, those who answered at least a 4 on the item's five-point scale.
+In Figure M2, we plot the percentage of ALLBUS respondents who give a response at least as high as each of this scale's four higher values (of course, 100% of respondents give a response at least as high as the lowest value).
+It shows that, for this item, the real action from 1998 to 2000 occurred in the percentage of people giving a response at least in the median category of 'middling' (the solid orange series labeled '3+' that varies around .75 in Figure M2), and to a lesser degree, the percentage expressing at least 'very little' interest (the solid yellow '2+' series).
+As can be seen in the lighter shades in the plot, the five-point Politbarometer item (the other long-running German survey series) shows this decline in political interest from 1999 to 2000 more consistently across its response categories, with the rebounds in 2001 stronger in the 4+ and 5 responses.
+
+```{r dets, fig.align='center', fig.cap="Time Series on Political Interest in Germany", fig.height=4}
+load(here::here("data", "dcpo_input.rda"))
+
+dcpo_input_de <- dcpo_input$data %>% 
+  filter(country == "Germany" &
+           str_detect(item, "5_polit|allbus")) %>% 
+  group_by(item) %>% 
+  transmute(year,
+            item,
+            survey = str_extract(item, "polit|allbus") %>% 
+              str_replace("polit", "Politbarometer") %>% 
+              str_replace("allbus", "ALLBUS"),
+            point = str_extract(item, "\\b\\d"),
+            point = if_else(point < 5, paste0(point, "+"), point),
+            perc = y_r/n_r,
+            perc_n = perc/(mean(perc)))
+  
+
+ggplot(dcpo_input_de,
+       aes(year, perc, 
+           group = item, 
+           color = point,
+           linetype = survey,
+           alpha = survey)) +
+  geom_point() + 
+  geom_line() + 
+  xlab("Year") +
+  ylab("% Expressing Political Interest\nby Minimum Response Category") +
+  scale_color_manual(values = rev(hcl.colors(4, "inferno")),
+                     name="Response Category") +
+  scale_alpha_discrete(range = c(1, .4),
+                       name = "Survey") +
+  scale_linetype_discrete(name = "Survey")
+
+```
+
+So what to do?
+We could show the mean values of the ALLBUS data in Figure 2.
+These means show the dip at the millennium; their correlation with the macrointerest estimates is $r = $`r item_theta_cor %>% filter(item == "int5_allbus") %>% pull(theta_cor) %>% round(2)`.
+But this would require adding a second y-axis---the means are about 3 and so do not fit on the unit interval---and, like [Hadley Wickham](https://stackoverflow.com/questions/3099219/ggplot-with-2-y-axes-on-each-side-and-different-scales/3101876#3101876) and others, we prefer to avoid using second axes.
+We opted to show instead the 'percentage of respondents expressing middling or more political interest' series (that is, the now-familiar '3+' orange line in Figure M2).
+This provides a pretty plot, possibly slightly understates the correlation between the ALLBUS and the macrointerest estimates, and avoids prompting unnecessary concern.
+
+**Levels of Analysis**
+With regard to the construct validation tests presented in Figure 3, R2 raised the issue of whether we should expect that established individual-level relationships (such as between political interest and news consumption) to translate to the macro level.
 Moving between levels of analysis is admittedly and notoriously fraught.
 But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the classic ecological fallacy---not the reverse.
 In fact, our proposition here that country-year-level measures should reflect relationships shown in individual-level studies closely follows the recommendation that "analyses of system-level data ought first to look carefully at individual-level association" [@Seligson2002, 288].
-(We note that the analysis we offer in Figure 5 draws exclusively on macro-level contextual variables---acknowledging but not accepting the possible argument against characterizing unemployment as contextual---and so does not run afoul of this stricture.  We now highlight the contextual nature of the theories we address at pages 7-9.)
+(We note that the analysis we offer in Figure 5 draws exclusively on macro-level contextual variables---acknowledging but not accepting the possible argument against characterizing unemployment as contextual---and so does not run afoul of this stricture.
+On this parenthetical point, we now highlight the contextual nature of the theories we address at pages 7-9.)
 
 
 ## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
