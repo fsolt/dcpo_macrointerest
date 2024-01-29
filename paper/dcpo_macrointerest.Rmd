@@ -1115,7 +1115,7 @@ if (!file.exists(here::here("data", "Gallagher_data.rda"))) {
     arrange(country, year) %>% 
     select(country, year, lsq)
   
-  rio::export(oecd, here::here("data", "gallagher_data.rda"))
+  rio::export(gallagher, here::here("data", "gallagher_data.rda"))
 } else {
   gallagher <- rio::import(here::here("data", "gallagher_data.rda"))
 }    
