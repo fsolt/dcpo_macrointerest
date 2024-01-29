@@ -26,7 +26,7 @@ subtitle: Memo to Editor and Reviewers
 \renewcommand*{\thefigure}{M\arabic{figure}}
 ```
 
-## Introduction {.unnumbered}
+## Introduction
 **Framing**.
 We appreciate the reviewers' careful reading and their suggestions for better framing the piece.
 Following Reviewer 1's suggestion, we reorganized the introduction into three paragraphs.
@@ -49,12 +49,12 @@ We are told by the _BJPS_ editor that making those materials available to review
 In the final version, we will of course provide a link to the full replication materials on the Dataverse as well as the link to the Github repository with the paper's complete revision history.
 
 
-## Cross-National Macrointerest: The Source Data {.unnumbered}
+## Cross-National Macrointerest: The Source Data
 **`DCPOtools`**.
 On the recommendation of R1, we expanded and moved our discussion of the automation of the data cleaning process to Appendix A.
 
 
-## Estimating Cross-National Macrointerest {.unnumbered}
+## Estimating Cross-National Macrointerest 
 **Method Comparison**. 
 R1 suggested that we bring our discussion of the merits of the DCPO approach relative to alternatives from a footnote to the text.
 We have adopted this suggestion at page 4.
@@ -67,7 +67,7 @@ But given that we have these data, we had chosen to use it to make estimates jus
 Given the sparsity of the source data from Northern Ireland, its inclusion or exclusion does not appreciably affect other macrointerest estimates either.
 Nevertheless, in light of R2's apparent skepticism, we now exclude Northern Ireland from the source data.
 
-## Validating Cross-National Macrointerest {.unnumbered}
+## Validating Cross-National Macrointerest 
 **Validation**.
 R2 raised questions about "the validation exercise," pointing to a "lack of benchmarks" for the "evaluations of the size of the correlation coefficients."
 Any benchmark regarding correlations is bound to be somewhat arbitrary, but
@@ -161,7 +161,8 @@ In fact, our proposition here that country-year-level measures should reflect re
 (We note that the analysis we offer in Figure 5 draws exclusively on macro-level contextual variables---acknowledging but not accepting the possible argument against characterizing unemployment as contextual---and so does not run afoul of this stricture.  We now highlight the contextual nature of the theories we address at pages 7-9.)
 
 
-## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
+## Testing Theories of Macrointerest Cross-Nationally
+
 **Interest vs Engagement**.
 R2 writes, "The application tests theories of political participation and how they explain macrointerest. To me this looks like an attempt to check whether macrointerest is similar or different from other forms of participation/engagement. I would have liked to see this discussed in the conclusions."
 This is a reasonable supposition---interest is an important aspect of engagement---but this is not our intent, which is simply to understand better what drives differences in macrointerest (as noted just above, we have expanded our introduction to these theories to make this point more clearly).
@@ -253,9 +254,17 @@ And as the DCPO model is published as open source software on CRAN [@Solt2020a],
 
 
 ### Macrointerest Scores Over Time
+
 R2 asked that we include "the trajectories for all countries" in an appendix.
 We have added those plots here as Appendix D.
 
+We appreciate R2 pointing out the separation of Northern Ireland (NI) from the U.K. in Figure A1. 
+The only reason for this was that some surveys (e.g., `ees1989`, `issp1990`, `evs_combo`) include Northern Ireland but do not provide a sampling weight to include those respondents in the UK as a whole. 
+Our initial intention was to include as much data as possible, leading us to set separate source estimates for Britain and NI, respectively. 
+However, we acknowledge the potential confusion this approach might create, as indicated by your comment. 
+Therefore, we decided to remove the incompatible NI data from this version. 
+As reviewers will observe, since the NI data was minimal, its exclusion does not substantively alter the results. 
+We have also included a footnote on p. XXXX to specify this operation, ensuring transparency.
 
 # Reference {-}
 
