@@ -158,7 +158,10 @@ validation_plot <- function(v_data_raw,
       mutate(v_val = str_extract(item0, "\\d+") %>% 
                as.numeric() %>% 
                median_val(.) %>%
-               `+`(if_else(str_detect(item0, "int5_allbus"), 0, .6)) %>% 
+               `+`(if_else(str_detect(item0, "disc3"), .1,
+                           if_else(str_detect(item0, "int5_allbus"),
+                                   0,
+                                   .6))) %>% 
                round())
     
     validation_summarized <- v_data_raw %>% 
