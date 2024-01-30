@@ -26,7 +26,9 @@ subtitle: Memo to Editor and Reviewers
 \renewcommand*{\thefigure}{M\arabic{figure}}
 ```
 
-## Introduction
+Thank you for the opportunity to revise and resubmit this manuscript; we are grateful to the reviewers for their very helpful comments.  They all helped us to improve the paper.  We detail our responses to each of these comments below.
+
+## Introduction {.unnumbered}
 **Framing**.
 We appreciate the reviewers' careful reading and their suggestions for better framing the piece.
 Following Reviewer 1's suggestion, we reorganized the introduction into three paragraphs.
@@ -46,18 +48,19 @@ Here in the introduction and throughout, we adopted the more accurate "good econ
 R2 longed to see our replication materials during the review process.
 We, as reviewers, have often made similar wishes.
 We are told by the _BJPS_ editor that making those materials available to reviewers is not presently possible.
-In the final version, we will of course provide a link to the full replication materials on the Dataverse as well as the link to the Github repository with the paper's complete revision history.
+In the final version, we will of course provide a link to the full replication materials on the Dataverse as well as the link to the GitHub repository with the paper's complete revision history.
 
 
-## Cross-National Macrointerest: The Source Data
+## Cross-National Macrointerest: The Source Data {.unnumbered}
 **`DCPOtools`**.
 On the recommendation of R1, we expanded and moved our discussion of the automation of the data cleaning process to Appendix A.
 
 
-## Estimating Cross-National Macrointerest 
+## Estimating Cross-National Macrointerest {.unnumbered}
 **Method Comparison**. 
 R1 suggested that we bring our discussion of the merits of the DCPO approach relative to alternatives from a footnote to the text.
 We have adopted this suggestion at pages 3 and 4.
+
 
 **Northern Ireland**.
 R2 asked why we have estimates for Northern Ireland.
@@ -66,25 +69,22 @@ From the perspective of UK estimates, the inclusion or exclusion of Northern Ire
 But given that we have these data, we had chosen to use it to make estimates just as we do for other subnational territories such as Puerto Rico and Hong Kong---even though, unlike those other territories, if we were truly interested in Northern Ireland, we could also break it out of the UK in other surveys like the Eurobarometer (something we did not do).
 Given the sparsity of the source data from Northern Ireland, its inclusion or exclusion does not appreciably affect other macrointerest estimates either.
 Nevertheless, in light of R2's apparent skepticism, we now exclude Northern Ireland from the source data.
+For transparency, we include a footnote to this effect in the appendix at page A1.
 
-<<<<<<< HEAD
 ## Validating Cross-National Macrointerest {.unnumbered}
 **Correlation Magnitudes**.
-=======
-## Validating Cross-National Macrointerest 
-**Validation**.
->>>>>>> b1f59995b6a73db19e4d452e703f22b894440517
 R2 raised questions about "the validation exercise," pointing to a "lack of benchmarks" for the "evaluations of the size of the correlation coefficients."
 Any benchmark regarding correlation magnitudes is bound to be somewhat arbitrary, but comparisons to the correlations found in prior similar research are at least the best place to start.
 The correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
 The range of correlations we report on in Figure 2 on page 6, from .72 to .88, seem to us to be similarly satisfying.
-The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" (as we do at page 7) is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
+The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" (as we do at page 6) is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
+
 
 **Large vs Small Projects**.
 With regard to internal convergent validation, R2 offered the speculation that items with more observations would yield higher correlations with the macrointerest estimates and that for "small projects with few surveys" the correlation would be smaller in a way that would call into question the utility of the method.
 To investigate this possibility, we first calculated the mean response for each item in each country-year observed.
 (This is not quite the same aggregation procedure that we use in the plots in the text.
-There, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route facilitates plotting by yielding results on the unit interval---but it is not without shortcomings, as seen in the next subsection---this one is better suited to scaling across dozens of items.)
+There, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route---despite shortcomings seen under the next subheading---facilitates plotting by yielding results on the unit interval, this one is better suited to scaling across dozens of items.)
 
 ```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=4}
 library(tidyverse)
@@ -153,12 +153,13 @@ item_theta_cor %>%
 ```
 
 Then we calculated the correlation for each item across country-years between these mean responses and the macrointerest estimates.
-This correlation was .9 or higher for twenty-six of our fifty-three items; it was below .7 for just three.
-Finally, we observed the correlation between, on the one hand, each item's correlations with the macrointerest estimates, and, on the other, the number of observations it provides.
+This correlation was .9 or higher for twenty-seven of our fifty-four items; it was below .7 for just three.
+Finally, we observed the relationship between, on the one hand, each item's correlations with the macrointerest estimates, and, on the other, the number of observations it provides.
 This relationship is weak, as shown in Figure M1, and is in the direction contrary to R2's hypothesis.
 
 In short, Figure 2 does not represent a particularly lucky walk through the garden of forking paths---or worse, one intentionally chosen to flatter the method.
 The particularly data-rich items it depicts do correlate well with the macrointerest estimates, but that is also true for nearly all of the items.
+
 
 **ALLBUS**.
 Pointing to our longitudinal internal convergent validation test in the right panel of Figure 2, R2 noted that "the time series of Allbus and Macrointerest don't actually seem to covary very well," specifically around the year 2000, when there is a sharp dip in the macrointerest estimates that is absent in the ALLBUS series displayed.
@@ -210,22 +211,22 @@ ggplot(dcpo_input_de,
 
 So what to do?
 We could show the mean values of the ALLBUS data in Figure 2.
-These means show the dip at the millennium; their correlation with the macrointerest estimates is $r = $`r item_theta_cor %>% filter(item == "int5_allbus") %>% pull(theta_cor) %>% round(2)`.
-But this would require adding a second y-axis---the means are about 3 and so do not fit on the unit interval---and, like [Hadley Wickham](https://stackoverflow.com/questions/3099219/ggplot-with-2-y-axes-on-each-side-and-different-scales/3101876#3101876) and others, we prefer to avoid using second axes.
+These means show the dip at the millennium; their correlation with the macrointerest estimates is _r_\nobreakspace{}=\nobreakspace{}`r item_theta_cor %>% filter(item == "int5_allbus") %>% pull(theta_cor) %>% round(2)`.
+But this would require adding a second y-axis to facilitate comparison---the means are typically about 3 and so do not fit on the unit interval---and, like [Hadley Wickham](https://stackoverflow.com/questions/3099219/ggplot-with-2-y-axes-on-each-side-and-different-scales/3101876#3101876) and others, we prefer to avoid using second axes.
 We opted to show instead the 'percentage of respondents expressing middling or more political interest' series (that is, the now-familiar '3+' orange line in Figure M2).
-This provides a pretty plot, possibly slightly understates the correlation between the ALLBUS and the macrointerest estimates, and avoids prompting unnecessary concern.
+This provides a pretty plot, possibly slightly understates the correlation between the ALLBUS and the macrointerest estimates in a pleasingly conservative fashion, and avoids prompting unnecessary concern.
 
-**Levels of Analysis**
+
+**Levels of Analysis**.
 With regard to the construct validation tests presented in Figure 3, R2 raised the issue of whether we should expect that established individual-level relationships (such as between political interest and news consumption) to translate to the macro level.
 Moving between levels of analysis is admittedly and notoriously fraught.
 But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the classic ecological fallacy---not the reverse.
 In fact, our proposition here that country-year-level measures should reflect relationships shown in individual-level studies closely follows the recommendation that "analyses of system-level data ought first to look carefully at individual-level association" [@Seligson2002, 288].
 (We note that the analysis we offer in Figure 5 draws exclusively on macro-level contextual variables---acknowledging but not accepting the possible argument against characterizing unemployment as contextual---and so does not run afoul of this stricture.
-On this parenthetical point, we now highlight the contextual nature of the theories we address at pages 7-9.)
+On this parenthetical point, we now highlight the contextual nature of the theories we address at page 9.)
 
 
-## Testing Theories of Macrointerest Cross-Nationally
-
+## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
 **Interest vs Engagement**.
 R2 writes, "The application tests theories of political participation and how they explain macrointerest. To me this looks like an attempt to check whether macrointerest is similar or different from other forms of participation/engagement. I would have liked to see this discussed in the conclusions."
 This is a reasonable supposition---interest is an important aspect of engagement---but this is not our intent, which is simply to understand better what drives differences in macrointerest (as noted just above, we have expanded our introduction to these theories to make this point more clearly).
@@ -236,7 +237,7 @@ But we wholeheartedly endorse the reviewer's underlying point that these are int
 
 **Comparison to the ESS**.
 R2 asked why we would analyze macrointerest in only the advanced democracies of the OECD when we could simply use the ESS data "and save ourselves all the harmonization effort?"
-We thank the reviewer for bringing up this point.
+We thank the reviewer for bringing up this point because it would likely cross the minds of many readers.
 It is two-pronged.
 To address its first part, we examine the advanced democracies because that is where the extant theories of macrointerest apply.
 To our knowledge, political scientists have as yet had relatively little to say regarding, for example, explanations for the public's interest in politics in authoritarian countries.
@@ -248,12 +249,12 @@ The ESS includes only 18% of the country-year observations that our macrointeres
 We review this key advantage at page 10 and in greater depth in Appendix C.
 
 
-**Two-Step Approach**
+**Two-Step Approach**.
 R1 raised the question whether the analysis "could be achieved in a single step by integrating hierarchical priors into the model."
 We confess we were puzzled by this comment, but we guessed the reviewer was referring to combining the measurement and analysis steps into a single model, as in @Claassen2022.
-We prefer to avoid such an approach, because it assumes that the indicators of macrointerest are missing at random with regard to the independent variables, and therefore that the relationship between macrointerest and these independent variables is the same in the countries when and where macrointerest is poorly observed as in the country-years where macrointerest is well observed.
+We prefer to avoid such an approach, because it assumes that the indicators of macrointerest are missing at random with regard to the independent variables, and therefore that the relationship between macrointerest and these independent variables is the same in the country-years when and where macrointerest is poorly observed as in the country-years where macrointerest is well observed.
 This assumption is difficult to justify.
-If the reviewer had a different "single step" approach in mind, we apologize for not being able to figure it out.
+If the reviewer had a different "single step" analysis in mind, we apologize for not being able to figure it out.
 
 
 **Uncertainty**. 
@@ -264,21 +265,15 @@ This is a method that has been often employed in latent variable analyses in pol
 We now cite several of these applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
 
 
-**Results**
+**Results**.
 R2 pointed out some infelicities in wording in our discussion of the results in this section and suggested that speaking in terms of posterior probabilities would help.
 We are grateful for this recommendation and have adopted it at pages 11 and 12.
 
 
-## Conclusions
-**Participation**.
-R2 provides an intriguing insight for the theoretical implication of the theory test section of our research that the findings suggest the distinctiveness of macrointerest with other types of political engagement and participation. 
-Although there is little room for a more complete discussion due to the word limit, we pointed out this insight to the readers and direct them to relevant literature for further comparison.
+## Appendices {.unnumbered}
 
-
-## Appendices
-
-### Survey Items Used to Estimate Macrointerest
-**Included Projects**
+### Survey Items Used to Estimate Macrointerest {.unnumbered}
+**Included Projects**.
 R2 queried if "single-country and single-wave projects should be included."
 All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2 of the text).
 This means that single-wave projects include at least five countries, as exemplified in these data by the survey "Values and Political Change in Post-Communist Europe, 1993-1994."
@@ -288,17 +283,17 @@ It also means that single-country projects incorporate at least five years (in f
 This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
 
 
-**Full Survey References**
+**Full Survey References**.
 R2 asked for additional information in Appendix A on the source data,
 requesting "references to all survey datasets used in the analysis."  We now provide citations to all of the surveys in Table A2. As the reviewer anticipated, this did indeed "take many pages," but we agree that it is a valuable addition.
 
 
-**Legibility of Figure A1**
+**Legibility of Figure A1**.
 R2 also pointed out that Figure A1 was hard to read and suggested splitting it. 
 We have split that figure into several panels by region to allow it to be displayed across pages and so enlarged for better legibility. 
 
 
-### The DCPO Model
+### The DCPO Model {.unnumbered}
 **Source Data Sample Representation**.
 R2 pointed out the matter of sample representation.
 We have added a paragraph discussing the issue here.
@@ -316,18 +311,15 @@ We have added a discussion of these points to Appendix B, our summary of the DCP
 And as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
 
 
-### Macrointerest Scores Over Time
+### Macrointerest Scores Over Time {.unnumbered}
 
 R2 asked that we include "the trajectories for all countries" in an appendix.
 We have added those plots here as Appendix D.
 
-We appreciate R2 pointing out the separation of Northern Ireland (NI) from the U.K. in Figure A1. 
-The only reason for this was that some surveys (e.g., `ees1989`, `issp1990`, `evs_combo`) include Northern Ireland but do not provide a sampling weight to include those respondents in the UK as a whole. 
-Our initial intention was to include as much data as possible, leading us to set separate source estimates for Britain and NI, respectively. 
-However, we acknowledge the potential confusion this approach might create, as indicated by your comment. 
-Therefore, we decided to remove the incompatible NI data from this version. 
-As reviewers will observe, since the NI data was minimal, its exclusion does not substantively alter the results. 
-We have also included a footnote on p. XXXX to specify this operation, ensuring transparency.
+\vspace{.75in}
 
-# Reference {-}
+Thanks again for the opportunity to revise this work.
+We hope you will agree that it now will be a valuable contribution to the _BJPS_.
+
+# References {-} 
 
