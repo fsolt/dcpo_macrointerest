@@ -773,7 +773,7 @@ That we can generate estimates of macrointerest does not automatically mean that
 As is the case for any new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
 Figure\nobreakspace{}\@ref(fig:internalval) and Figure\nobreakspace{}\@ref(fig:extval1) provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [see, e.g., @Caughey2019, 686].
+In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [for an example in a similar context, see @Caughey2019, 686].
 
 In the left panel, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
 The middle panel shows responses to the question with the most data-rich cross-section, "How interested would you say you personally are in politics?" in the International Social Survey Program's 2004 module on Citizenship.
@@ -1448,7 +1448,7 @@ The primary objective is to limit manual interventions, thereby maximizing repro
 The survey dataset codes listed in Table \@ref(tab:itemsTb) correspond to those used in that package; Table \@ref(tab:surveyInfo) lists the codes of each individual survey with the citation of each dataset.
 
 Together, the survey items in the source data were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.^[
-A few surveys, such as  `ees1989`, `issp1990`, `evs_combo`, include Northern Ireland but do not provide a sampling weight to include those respondents in the United Kingdom as a whole. 
+A few surveys---`ees1989`, `issp1990`, and `evs_combo`---include Northern Ireland but do not provide a sampling weight to include those respondents in the United Kingdom as a whole. 
 For clarity, we removed them from the estimation. 
 The estimated trends and conclusions do not change by including or excluding the small amount of data on Northern Ireland.]
 The number of items observed in the source data for each country-year is plotted in Figures\nobreakspace{}\@ref(fig:obs)\nobreakspace{}and\nobreakspace{}\@ref(fig:obs2) below.
