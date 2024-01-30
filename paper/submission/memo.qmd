@@ -5,10 +5,10 @@ format:
 
 bibliography: memo.bib
 tables: true # enable longtable and booktabs
-fontsize: 12pt
+fontsize: 10pt
 indent: true
 geometry: margin=1in
-linestretch: 1.5 # double spacing using linestretch 1.5
+linestretch: 1 # double spacing using linestretch 1.5
 colorlinks: true
 
 execute:
@@ -26,9 +26,15 @@ subtitle: Memo to Editor and Reviewers
 \renewcommand*{\thefigure}{M\arabic{figure}}
 ```
 
-Thank you for the opportunity to revise and resubmit this manuscript; we are grateful to the reviewers for their very helpful comments.  They all helped us to improve the paper.  We detail our responses to each of these comments below.
+```{r setup, include=FALSE}
+options(cache = TRUE)
+```
 
-## Introduction {.unnumbered}
+\vspace{-.75in}
+
+Thank you for the opportunity to revise and resubmit this manuscript. We detail our responses to each of the reviewers' helpful comments below.
+
+### Introduction {.unnumbered}
 **Framing**.
 We appreciate the reviewers' careful reading and their suggestions for better framing the piece.
 Following Reviewer 1's suggestion, we reorganized the introduction into three paragraphs.
@@ -51,12 +57,12 @@ We are told by the _BJPS_ editor that making those materials available to review
 In the final version, we will of course provide a link to the full replication materials on the Dataverse as well as the link to the GitHub repository with the paper's complete revision history.
 
 
-## Cross-National Macrointerest: The Source Data {.unnumbered}
+### Cross-National Macrointerest: The Source Data {.unnumbered}
 **`DCPOtools`**.
 On the recommendation of R1, we expanded and moved our discussion of the automation of the data cleaning process to Appendix A.
 
 
-## Estimating Cross-National Macrointerest {.unnumbered}
+### Estimating Cross-National Macrointerest {.unnumbered}
 **Method Comparison**. 
 R1 suggested that we bring our discussion of the merits of the DCPO approach relative to alternatives from a footnote to the text.
 We have adopted this suggestion at pages 3 and 4.
@@ -71,7 +77,7 @@ Given the sparsity of the source data from Northern Ireland, its inclusion or ex
 Nevertheless, in light of R2's apparent skepticism, we now exclude Northern Ireland from the source data.
 For transparency, we include a footnote to this effect in the appendix at page A1.
 
-## Validating Cross-National Macrointerest {.unnumbered}
+### Validating Cross-National Macrointerest {.unnumbered}
 **Correlation Magnitudes**.
 R2 raised questions about "the validation exercise," pointing to a "lack of benchmarks" for the "evaluations of the size of the correlation coefficients."
 Any benchmark regarding correlation magnitudes is bound to be somewhat arbitrary, but comparisons to the correlations found in prior similar research are at least the best place to start.
@@ -86,7 +92,7 @@ To investigate this possibility, we first calculated the mean response for each 
 (This is not quite the same aggregation procedure that we use in the plots in the text.
 There, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route---despite shortcomings seen under the next subheading---facilitates plotting by yielding results on the unit interval, this one is better suited to scaling across dozens of items.)
 
-```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=4}
+```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=3}
 library(tidyverse)
 library(DCPOtools)
 
@@ -145,7 +151,7 @@ item_theta_cor %>%
   geom_smooth(method="lm") +  # Add linear regression line 
   ylim(c(0, 1)) +
   labs(x = "Item Number of Country-Year Observations",
-    y = "Correlation Between Item Country-Year Means\nand Macrointerest Estimates") +
+    y = "Correlation Between\nItem Country-Year Means\nand Macrointerest Estimates") +
   annotate(geom = "text", 
            x = 265,
            y = 1,
@@ -173,7 +179,7 @@ In Figure M2, we plot the percentage of ALLBUS respondents who give a response a
 It shows that, for this item, the real action from 1998 to 2000 occurred in the percentage of people giving a response at least in the median category of 'middling' (the solid orange series labeled '3+' that varies around .75 in Figure M2), and to a lesser degree, the percentage expressing at least 'very little' interest (the solid yellow '2+' series).
 As can be seen in the lighter shades in the plot, the five-point Politbarometer item (the other long-running German survey series) shows this decline in political interest from 1999 to 2000 more consistently across its response categories, with the rebounds in 2001 stronger in the 4+ and 5 responses.
 
-```{r dets, fig.align='center', fig.cap="Time Series on Political Interest in Germany", fig.height=4}
+```{r dets, fig.align='center', fig.cap="Time Series on Political Interest in Germany", fig.height=3}
 load(here::here("data", "dcpo_input.rda"))
 
 dcpo_input_de <- dcpo_input$data %>% 
@@ -226,7 +232,7 @@ In fact, our proposition here that country-year-level measures should reflect re
 On this parenthetical point, we now highlight the contextual nature of the theories we address at page 9.)
 
 
-## Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
+### Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
 **Interest vs Engagement**.
 R2 writes, "The application tests theories of political participation and how they explain macrointerest. To me this looks like an attempt to check whether macrointerest is similar or different from other forms of participation/engagement. I would have liked to see this discussed in the conclusions."
 This is a reasonable supposition---interest is an important aspect of engagement---but this is not our intent, which is simply to understand better what drives differences in macrointerest (as noted just above, we have expanded our introduction to these theories to make this point more clearly).
@@ -270,9 +276,9 @@ R2 pointed out some infelicities in wording in our discussion of the results in 
 We are grateful for this recommendation and have adopted it at pages 11 and 12.
 
 
-## Appendices {.unnumbered}
+### Appendices {.unnumbered}
 
-### Survey Items Used to Estimate Macrointerest {.unnumbered}
+##### Survey Items Used to Estimate Macrointerest {.unnumbered}
 **Included Projects**.
 R2 queried if "single-country and single-wave projects should be included."
 All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2 of the text).
@@ -293,7 +299,7 @@ R2 also pointed out that Figure A1 was hard to read and suggested splitting it.
 We have split that figure into several panels by region to allow it to be displayed across pages and so enlarged for better legibility. 
 
 
-### The DCPO Model {.unnumbered}
+##### The DCPO Model {.unnumbered}
 **Source Data Sample Representation**.
 R2 pointed out the matter of sample representation.
 We have added a paragraph discussing the issue here.
@@ -311,12 +317,12 @@ We have added a discussion of these points to Appendix B, our summary of the DCP
 And as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
 
 
-### Macrointerest Scores Over Time {.unnumbered}
+##### Macrointerest Scores Over Time {.unnumbered}
 
 R2 asked that we include "the trajectories for all countries" in an appendix.
 We have added those plots here as Appendix D.
 
-\vspace{.75in}
+\vspace{12pt}
 
 Thanks again for the opportunity to revise this work.
 We hope you will agree that, in light of the improvements the reviewers have facilitated, it now would make a valuable contribution to the _BJPS_.
