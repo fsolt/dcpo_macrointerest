@@ -92,7 +92,7 @@ To investigate this possibility, we first calculated the mean response for each 
 (This is not quite the same aggregation procedure that we use in the plots in the text.
 There, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route---despite shortcomings seen under the next subheading---facilitates plotting by yielding results on the unit interval, this one is better suited to scaling across dozens of items.)
 
-```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=3}
+```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=2.5}
 library(tidyverse)
 library(DCPOtools)
 
@@ -169,7 +169,7 @@ The particularly data-rich items it depicts do correlate well with the macrointe
 
 **ALLBUS**.
 Pointing to our longitudinal internal convergent validation test in the right panel of Figure 2, R2 noted that "the time series of Allbus and Macrointerest don't actually seem to covary very well," specifically around the year 2000, when there is a sharp dip in the macrointerest estimates that is absent in the ALLBUS series displayed.
-The reviewer observed that, this was "concerning": if anything, the macrointerest estimates should be _more_ smooth than the underlying survey data, not less.
+The reviewer observed that this was "concerning": if anything, the macrointerest estimates should be _more_ smooth than the underlying survey data, not less.
 She or he suggested we investigate and explain the divergence.
 
 We thank R2 for raising the issue and took this advice.
@@ -179,7 +179,7 @@ In Figure M2, we plot the percentage of ALLBUS respondents who give a response a
 It shows that, for this item, the real action from 1998 to 2000 occurred in the percentage of people giving a response at least in the median category of 'middling' (the solid orange series labeled '3+' that varies around .75 in Figure M2), and to a lesser degree, the percentage expressing at least 'very little' interest (the solid yellow '2+' series).
 As can be seen in the lighter shades in the plot, the five-point Politbarometer item (the other long-running German survey series) shows this decline in political interest from 1999 to 2000 more consistently across its response categories, with the rebounds in 2001 stronger in the 4+ and 5 responses.
 
-```{r dets, fig.align='center', fig.cap="Time Series on Political Interest in Germany", fig.height=3}
+```{r dets, fig.align='center', fig.cap="Time Series on Political Interest in Germany", fig.height=2.5}
 load(here::here("data", "dcpo_input.rda"))
 
 dcpo_input_de <- dcpo_input$data %>% 
@@ -206,7 +206,7 @@ ggplot(dcpo_input_de,
   geom_point() + 
   geom_line() + 
   xlab("Year") +
-  ylab("% Expressing Political Interest\nby Minimum Response Category") +
+  ylab("% Expressing Political Interest\nby Response Category") +
   scale_color_manual(values = rev(hcl.colors(4, "inferno")),
                      name="Response Category") +
   scale_alpha_discrete(range = c(1, .4),
@@ -278,15 +278,15 @@ We are grateful for this recommendation and have adopted it at pages 11 and 12.
 
 ### Appendices {.unnumbered}
 
-##### Survey Items Used to Estimate Macrointerest {.unnumbered}
+### Survey Items Used to Estimate Macrointerest {.unnumbered}
 **Included Projects**.
 R2 queried if "single-country and single-wave projects should be included."
 All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2 of the text).
 This means that single-wave projects include at least five countries, as exemplified in these data by the survey "Values and Political Change in Post-Communist Europe, 1993-1994."
-Even such small cross-national surveys contain at least some information regarding the differences across the countries surveyed.
-The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020c, 6].
+Even such small cross-national surveys contain at least some information regarding the differences across countries; the cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error.
 It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian  Election Studies and the Korea Barometer).
 This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
+We discuss this issue in a footnote in the next appendix.
 
 
 **Full Survey References**.
@@ -299,7 +299,7 @@ R2 also pointed out that Figure A1 was hard to read and suggested splitting it.
 We have split that figure into several panels by region to allow it to be displayed across pages and so enlarged for better legibility. 
 
 
-##### The DCPO Model {.unnumbered}
+### The DCPO Model {.unnumbered}
 **Source Data Sample Representation**.
 R2 pointed out the matter of sample representation.
 We have added a paragraph discussing the issue here.
@@ -317,15 +317,10 @@ We have added a discussion of these points to Appendix B, our summary of the DCP
 And as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
 
 
-##### Macrointerest Scores Over Time {.unnumbered}
+### Macrointerest Scores Over Time {.unnumbered}
 
 R2 asked that we include "the trajectories for all countries" in an appendix.
 We have added those plots here as Appendix D.
 
-\vspace{12pt}
-
-Thanks again for the opportunity to revise this work.
-We hope you will agree that, in light of the improvements the reviewers have facilitated, it now would make a valuable contribution to the _BJPS_.
-
-# References {-} 
+## References {-} 
 
