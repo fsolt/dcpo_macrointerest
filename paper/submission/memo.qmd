@@ -265,10 +265,9 @@ If the reviewer had a different "single step" analysis in mind, we apologize for
 
 **Uncertainty**. 
 R1 suggested that we provide more details about how we incorporated uncertainty in our analysis.
-This is an important point, and we have added a discussion of our approach at page 11. 
-We use the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
-This is a method that has been often employed in latent variable analyses in political science. 
-We now cite several of these applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
+This is an important point.
+Because this is a Bayesian analysis, it is straightforward to incorporate the measurement error---as @McElreath2016 [, 425] explains, "All you have to do is state your information about the error\ldots [l]ogic does the rest"---and `brms` makes this particularly easy.
+We now point this out at page 11.
 
 
 **Results**.
