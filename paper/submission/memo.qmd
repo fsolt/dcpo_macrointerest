@@ -83,7 +83,7 @@ R2 raised questions about "the validation exercise," pointing to a "lack of benc
 Any benchmark regarding correlation magnitudes is bound to be somewhat arbitrary, but comparisons to the correlations found in prior similar research are at least the best place to start.
 The correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
 The range of correlations we report on in Figure 2 on page 6, from .72 to .88, seem to us to be similarly satisfying.
-The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" (as we do at page 6) is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
+The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" (as we do at page 7) is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
 
 
 **Large vs Small Projects**.
@@ -211,7 +211,8 @@ ggplot(dcpo_input_de,
                      name="Response Category") +
   scale_alpha_discrete(range = c(1, .4),
                        name = "Survey") +
-  scale_linetype_discrete(name = "Survey")
+  scale_linetype_discrete(name = "Survey") +
+  theme(legend.margin = margin(-0.25,0,0,0, unit="cm"))
 
 ```
 
@@ -229,7 +230,7 @@ Moving between levels of analysis is admittedly and notoriously fraught.
 But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the classic ecological fallacy---not the reverse.
 In fact, our proposition here that country-year-level measures should reflect relationships shown in individual-level studies closely follows the recommendation that "analyses of system-level data ought first to look carefully at individual-level association" [@Seligson2002, 288].
 (We note that the analysis we offer in Figure 5 draws exclusively on macro-level contextual variables---acknowledging but not accepting the possible argument against characterizing unemployment as contextual---and so does not run afoul of this stricture.
-On this parenthetical point, we now highlight the contextual nature of the theories we address at page 9.)
+On this parenthetical point, we now highlight the contextual nature of the theories we address at page 7.)
 
 
 ### Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
@@ -266,13 +267,13 @@ If the reviewer had a different "single step" analysis in mind, we apologize for
 **Uncertainty**. 
 R1 suggested that we provide more details about how we incorporated uncertainty in our analysis.
 This is an important point.
-Because this is a Bayesian analysis, it is straightforward to incorporate the measurement error---as @McElreath2016 [, 425] explains, "All you have to do is state your information about the error\ldots [l]ogic does the rest"---and `brms` makes this particularly easy.
+Because this is a Bayesian analysis, it is straightforward to incorporate this measurement error---as @McElreath2016 [, 425] explains, "All you have to do is state your information about the error\ldots [l]ogic does the rest"---and `brms` makes do so particularly easy.
 We now point this out at page 11.
 
 
 **Results**.
 R2 pointed out some infelicities in wording in our discussion of the results in this section and suggested that speaking in terms of posterior probabilities would help.
-We are grateful for this recommendation and have adopted it at pages 11 and 12.
+We are grateful for this recommendation and have adopted it at page 12.
 
 
 ### Appendices {.unnumbered}
@@ -285,7 +286,7 @@ This means that single-wave projects include at least five countries, as exempli
 Even such small cross-national surveys contain at least some information regarding the differences across countries; the cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error.
 It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian  Election Studies and the Korea Barometer).
 This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
-We discuss this issue in a footnote in the next appendix.
+We now discuss this issue in a footnote in Appendix B.
 
 
 **Full Survey References**.
