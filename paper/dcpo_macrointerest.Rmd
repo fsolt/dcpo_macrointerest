@@ -3,6 +3,7 @@ output:
   bookdown::pdf_document2:
     fig_caption: yes
     keep_tex: yes
+    keep_md: yes
     toc: no
     number_sections: yes
     latex_engine: xelatex
@@ -56,6 +57,8 @@ header-includes:
       - \setcounter{bottomnumber}{3}
       - \setcounter{totalnumber}{4}
       - \renewcommand{\bottomfraction}{.80} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
+      - \usepackage{tabularray}
+      - \usepackage{siunitx}
 ---
 
 \pagenumbering{gobble}
@@ -104,9 +107,26 @@ knitr::opts_chunk$set(
 )
 
 # If `DCPOtools` is not yet installed:
-# remotes::install_github("fsolt/DCPOtools")
+
+if (!require(gesisdata))
+  remotes::install_github("fsolt/gesisdata")
+
+if (!require(psych)) install.packages("psych")
+
+if (!require(cmdstanr)) install.packages("cmdstanr", repos = c('https://stan-dev.r-universe.dev', getOption("repos")))
+
+if (!require(DCPOtools))  remotes::install_github("fsolt/DCPOtools")
+
+# if (!require(tabulizer)) devtools::install_github("ropensci/tabulizer", verbose = TRUE)
+
+if(!require(rstan)) install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
+
+if(!require(mvtnorm)) install.packages("mvtnorm", dependencies = TRUE)
+
+if(!require(brms)) install.packages("brms", dependencies = TRUE)
 
 if (!require(pacman)) install.packages("pacman")
+
 library(pacman)
 # load all the packages you will use below 
 p_load(
@@ -122,17 +142,29 @@ p_load(
   imputeTS,
   rsdmx,
   osfr,
-  tabulizer,
+  tabulapdf,
   brms,
   bayestestR,
   tidybayes,
   repmis,
   rvest,
   vroom,
-  modelsummary,
-  kableExtra
+  tinytable,
+  kableExtra,
+  modelsummary
 ) 
 ```
+
+```{r loadData}
+load(here("data", "theta_summary.rda"))
+load(here("data", "theta_results.rda")) # theta_summary
+load(here("data", "theta_summary.rda"))
+load(here("data", "theta_results.rda")) #internalval
+load(here("data", "theta_summary.rda")) # ts
+load(here("data", "results.rda")) # analysis
+
+```
+
 
 ```{r define_funs}
 # define functions
@@ -167,7 +199,8 @@ validation_plot <- function(v_data_raw,
                              scale_cp = 1) %>% # but they don't matter
       pluck("data") %>% 
       mutate(item0 = str_remove(item, " \\d or higher")) %>% 
-      right_join(v_vars, by = "item0") %>%
+      # right_join(v_vars, by = "item0") %>%
+      right_join(v_vars) %>%
       arrange(title) %>% 
       mutate(title = factor(title, 
                             levels = v_data_raw %>%
@@ -320,8 +353,6 @@ by2sd <- function(var) {
 set.seed(324)
 ```
 
-
-# Introduction {.unnumbered}
 
 The public's interest in politics has long been argued to be fundamental to democracy, the foundation for the widespread civic engagement needed to hold elected officials accountable to citizen demands [see, e.g., @Almond1963]. 
 <!-- Recent research highlights the substantial influence of political interests in shaping how people process political information, develop attitudes, and respond to political inquiries [@MillerEtAl2023].  -->
@@ -619,8 +650,8 @@ To estimate the public's interest in politics across countries and over time, th
 @Solt2020c demonstrates that the DCPO model provides a better fit to survey data than the models put forward by @Claassen2019 or @Caughey2019.
 The @McGann2019 model depends on dense survey data unlike the sparse data on interest in politics described in the preceding section.
 @Kolczynska2020 is the very most recent of these five works and builds on each of the others, but the MRP approach developed in that piece is suitable not only when the available survey data are dense but also when ancillary data on population characteristics are available, so it is similarly inappropriate to this application.
-The dyad ratio algorithm employed in @Peterson2022, of course, leverages only over time variation within a single country and not variation across countries, making it a poor choice for generating cross-national estimates [see @Caughey2019, 686].^[
-A comparison of our estimates for the United States and the estimates presented in @Peterson2022 is found in Appendix\nobreakspace{}\@ref(peterson).]
+The dyad ratio algorithm employed in @Peterson2022, of course, leverages only over time variation within a single country and not variation across countries, making it a poor choice for generating cross-national estimates [see @Caughey2019, p. 686].^[
+Appendix\nobreakspace{}\@ref(peterson) compares our estimates for the United States with the estimates presented in @Peterson2022.]
 The DCPO model is a population-level two-parameter ordinal logistic item response theory model with country-specific item-bias terms.
 For a comprehensive description of the DCPO model, see Appendix\nobreakspace{}\@ref(dcpo) and @Solt2020c [, 3-8]; the focus here is on how it deals with the two principal issues raised by the source data, incomparability and sparsity.
 
@@ -632,9 +663,9 @@ Second, the DCPO model accounts for each question's _dispersion_, its noisiness 
 The lower the dispersion, the better that changes in responses to the question map onto changes in macrointerest.
 Third, to provide for the possibility that translation issues or cultural differences result in the same question being interpreted differently in different countries, the model estimates _country-specific bias_ parameters that shift the difficulty of all responses for a particular question in a particular country.
 Together, the model's difficulty, dispersion, and country-specific bias parameters work to generate comparable estimates of the latent variable of macrointerest from the available but incomparable source data.^[
-See a discussion of how other data issues, such as sample representation, may affect the estimated outcome in Appendix\nobreakspace{}\@ref(dcpo).]
+For how other data issues, such as sample representation, may affect the estimated outcome, see Appendix\nobreakspace{}\@ref(dcpo).]
 
-To address the sparsity of the source data---the fact that there are gaps in the time series of each country, and that even many observed country-years have only one or two observed items---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
+To address sparsity in the source data---unpolled or thinly surveyed years in each country---DCPO uses simple local-level dynamic linear models, i.e., random-walk priors, for each country.
 That is, within each country, each year's value of macrointerest is modeled as the previous year's estimate plus a random shock.
 These dynamic models smooth the estimates of macrointerest over time and allow estimation even in years for which little or no survey data is available, albeit at the expense of greater measurement uncertainty.
 
@@ -749,9 +780,6 @@ save(alpha_results,
 ```
 
 ```{r theta_summary}
-load(file = here(here("data", "theta_summary.rda")))
-load(here("data", "theta_results.rda"))
-
 res_cy <- nrow(theta_summary) %>% 
   scales::comma()
 
@@ -771,14 +799,9 @@ The result is estimates, in all `r res_cy` country-years spanned by the source d
 
 That we can generate estimates of macrointerest does not automatically mean that they are suitable for analysis. 
 As is the case for any new measure, validation tests of cross-national latent variables are crucially important [see, e.g., @Hu2023].
-Figure\nobreakspace{}\@ref(fig:internalval) and Figure\nobreakspace{}\@ref(fig:extval1) provide evidence of this measure's validity with tests of convergent validation and construct validation.
+Figures\nobreakspace{}\@ref(fig:internalval)\nobreakspace{} and\nobreakspace{}\@ref(fig:extval1) provide evidence of this measure's validity with tests of convergent validation and construct validation.
 Convergent validation refers to tests of whether a measure is empirically associated with alternative indicators of the same concept [@Adcock2001, 540].
-In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [for an example in a similar context, see @Caughey2019, 686].
-
-In the left panel, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
-The middle panel shows responses to the question with the most data-rich cross-section, "How interested would you say you personally are in politics?" in the International Social Survey Program's 2004 module on Citizenship.
-Finally, the right panel evaluates how well the macrointerest scores capture change over time by focusing on the item with the largest number of observations for a single country in the source data, which asked respondents to Germany's ALLBUS, "How interested in politics are you?"
-In all three cases, the correlations, estimated taking into account the uncertainty in the measures, are strong.
+In Figure\nobreakspace{}\@ref(fig:internalval), the macrointerest scores are compared to responses to individual source-data survey items that were used to generate them; this provides an 'internal' convergent validation test [for an example in a similar context, see @Caughey2019, p. 686].
 
 ```{r internal_val_dat}
 internal_tscs_dat <- dcpo_input_raw1 %>% 
@@ -798,9 +821,6 @@ internal_ts_dat <- dcpo_input_raw1 %>%
 ```
 
 ```{r internalval, fig.height = 3.5, fig.cap = "Internal Convergent Validation: Correlations Between Macrointerest and Individual Source-Data Survey Items"}
-load(here("data", "theta_summary.rda"))
-load(here("data", "theta_results.rda"))
-
 internal_tscs_plot <- validation_plot(internal_tscs_dat,
                                 lab_x = .15,
                                 lab_y = 95) +
@@ -926,8 +946,13 @@ ext_wvs_news_plot + ext_wvs_disc_plot + ext_wvs_imp_plot +
     caption = "Note: Gray whiskers and shading represent 80% credible intervals. Survey\nitems sourced from World Values Study and European Values Study.")
 ```
 
-Construct validation, on the other hand, refers to demonstrating, for some _other_ concept believed causally related to the concept a measure seeks to represent, that the measure is empirically associated with measures of that other concept [@Adcock2001, 542].
-Figure\nobreakspace{}\@ref(fig:extval1) depicts the relationships between macrointerest and three survey items from the World Values Survey and European Values Survey on other aspects of political engagement that are expected to have causal relationships with political interest [see @Kittilson2010, 995]: in the left panel, following political news on television, radio, and newspapers; in the center panel, discussing politics with friends; and on the right, feeling politics is important to one's life.
+On the left, macrointerest scores are plotted against the percentage of respondents across all country-years who offered the two most interested responses on the European Social Survey's four-point item, "How interested are you in politics?"
+The middle panel shows responses to the question with the most data-rich cross-section, "How interested would you say you personally are in politics?" in the ISSP's 2004 Citizenship module.
+Finally, the right panel evaluates how well the macrointerest scores capture change over time by focusing on the item with the largest number of observations for a single country in the source data, which asked respondents to Germany's ALLBUS, "How interested in politics are you?"
+In all three cases, the correlations, estimated taking into account the uncertainty in the measures, are strong.
+
+Construct validation refers to demonstrating, for some _other_ concept believed causally related to the concept a measure seeks to represent, that the measure is empirically associated with measures of that other concept [@Adcock2001, 542].
+Figure\nobreakspace{}\@ref(fig:extval1) depicts the relationships between macrointerest and three survey items from the WVS and EVS on other aspects of political engagement that are expected to have causal relationships with political interest [see @Kittilson2010, 995]: in the left panel, following political news on television, radio, and newspapers; in the center panel, discussing politics with friends; and on the right, feeling politics is important to one's life.
 These relationships are all positive and are moderate to strong.
 This cross-national latent variable of macrointerest performs well in validation tests.
 
@@ -940,9 +965,6 @@ And although the public's political interest has held fairly steady over decades
 There are considerable differences in the extent to which the public professes interest in politics both across countries and over time.
 
 ```{r ts, fig.cap="Macrointerest Scores Over Time Within OECD Democracies \\label{ts}", fig.height=9}
-
-load(here::here("data", "theta_summary.rda"))
-
 oecd_countries <- c("Australia", "Austria", "Belgium",
                     "Canada", "Chile", "Colombia",
                     "Costa Rica", "Czechia", "Denmark",
@@ -988,21 +1010,21 @@ Building on @Lijphart1999 and @Powell2000, @Kittilson2010 [, 992] argues that po
 Macrointerest should be higher in countries with parliamentary and federal systems than in those without those features, and it should decline as the disproportionality between votes cast and seats won increases.
 
 A third claim deals with the public's demand for accountability.
-@Peterson2022 [, 203] advances this argument: "when there is information that something has gone wrong \ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success\ldots voters should not waste their energies."
+@Peterson2022 [, 203] argues "when there is information that something has gone wrong\ldots then voters should be more likely to attend to the actions of elected officials," but when "there is evidence of success\ldots voters should not waste their energies."
 If democracy is a principal-agent problem with elected officials acting as self-interested agents and the public as their lazy but vengeful principal, then macrointerest should rise when times are bad and decline as conditions improve.
 
 A final set of theories---each well established---contradicts the third.
-Modernization theory holds that the public's interest in politics will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
-Unemployment has long been argued to not to motivate but rather to depress political interest [see, e.g., @Rosenstone1982, 26].
+Modernization theory holds that the public's interest will increase as the national economy grows and household incomes expand [see, e.g., @Inglehart2005].
+Unemployment has long been argued to not to motivate but to depress political interest [see, e.g., @Rosenstone1982, 26].
 And the relative power theory holds that greater income inequality, by increasingly concentrating political power in the hands of the wealthy, allows them greater power to shape the political agenda in ways that discourage the broader public from taking interest [see, e.g., @Solt2008].
 In each of these circumstances, macrointerest is argued to increase in good, not bad, economic conditions [see also @Stimson2015; @Peterson2022, 206].
 
-Data to test these hypotheses regarding the causes of macrointerest are drawn from several sources.
+Data to test these hypotheses are drawn from several sources.
 The Democratic Electoral Systems (DES) dataset updated in @Bormann2022 provides information about the timing of elections, yielding a dichotomous variable coded one in election years and zero when no election was held.
 The three institutional variables are measured as in @Kittilson2010.
-Data on parliamentarism, a dichotomous variable coded one in pure parliamentary systems and zero otherwise, is also sourced from the DES.
-Federalism is a third dichotomous variable, coded one in countries with strong federal systems [see @Lijphart1999] and zero in all others.
-The proportionality of the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41; @Gallagher2023].
+Data on parliamentarism, a dichotomous variable coded one in pure parliamentary systems and zero otherwise, is sourced from the DES.
+Federalism is likewise dichotomous, coded one in countries with strong federal systems [see @Lijphart1999] and zero in all others.
+Proportionality in the electoral system is measured using the Gallagher least-squares index of disproportionality, which measures the disparity between parties' vote shares and their seat shares [@Gallagher1991, 40-41; @Gallagher2023].
 The context of good and bad economic conditions was measured with data on GDP per capita, national GDP growth, and unemployment from OECD.Stat [@OECD2023] and on the Gini index of disposable income inequality from the Standardized World Income Inequality Database [@Solt2020].
 
 ```{r des_download}
@@ -1039,7 +1061,7 @@ des_data <- vroom::vroom(here("data-raw",
 ```
 
 ```{r disp}
-if (!file.exists(here::here("data", "Gallagher_data.rda"))) {
+if (!file.exists(here::here("data", "gallagher_data.rda"))) {
   if (!file.exists(here("data-raw", "ElectionIndices.pdf"))) {
     download.file("https://www.tcd.ie/Political_Science/about/people/michael_gallagher/ElSystems/Docts/ElectionIndices.pdf",
                   here("data-raw", "ElectionIndices.pdf"))
@@ -1255,7 +1277,7 @@ data_combo <- theta_summary %>%
 ```
 
 ```{r analysis, include=FALSE}
-if (!file.exists(here::here("data", "results.rda"))) {
+if (!file.exists(here("data", "results.rda"))) {
   m1 <- brm(
     formula = bf(
       mean * 100 | mi(sd * 100) ~ election +
@@ -1315,7 +1337,7 @@ if (!file.exists(here::here("data", "results.rda"))) {
 
   save(m1, doubled_sd, coef_data0, cy_summary, file = here::here("data", "results.rda"))
 } else {
-  load(file = here::here("data", "results.rda"))
+  load(here("data", "results.rda"))
 }
 
 ess_perc <- {{dcpo_input_raw1 %>% 
@@ -1331,12 +1353,11 @@ The resulting dataset comprises the thirty-seven OECD democracies, each observed
 Even among these relatively data-rich countries, our measure of macrointerest provides much more data than would otherwise be available: the richest single survey for these cases, the European Social Survey, covers only `r ess_perc`% of these country-years, does not provide annual data, and of course excludes entirely the nine OECD members in the Americas and around the Pacific Rim (see Appendix\nobreakspace{}\@ref(ESScomparison)).
 
 @Shor2007 demonstrates that such pooled time series are best analyzed using a Bayesian multilevel model including varying intercepts for each country and each year. 
-The former help account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as, in this dataset, parliamentarism and federalism.
+The former help account for heteroskedasticity across space due to, e.g., omitted variable bias, while permitting the inclusion of time-invariant predictors such as parliamentarism and federalism.
 The latter take into account 'time shocks' that operate on all countries simultaneously [@Shor2007, 171-172].
-Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification has been shown superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [see @Bell2015].
+Further, the 'within-between random effects' specification is employed, meaning each of the time-varying predictors is decomposed into its time-invariant country mean and the difference between each country-year value and this country mean; this specification is superior to fixed effects and other commonly used TSCS specifications for addressing omitted variable bias and endogeneity [@Bell2015].
 The time-varying difference variables capture the short-term effects of the predictors, while the time-invariant country-mean variables reflect their---often different---long-run, "historical" effects [@Bell2015, 137].
-The measurement uncertainty in the data for both macrointerest and income inequality was incorporated into the analysis with the "method of composition," a technique frequently utilized in political science for this purpose [e.g., @KastellecEtAl2015; @CaugheyWarshaw2018a; @Tai2024].^[
-See @Tai2024 [, Supplementary Material C] for a comprehensive review and application of the method of composition in a similar context of cross-national time-series of public opinion.]
+Moreover, as we employ a Bayesian analysis, it is straightforward to incorporate the measurement uncertainty in the data for both macrointerest and income inequality directly into the model, with the estimated values of these variables treated as random draws from distributions with unknown true means but known standard deviations [@McElreath2016, 425-431; see also @Kurz2023, 15.1.2].
 The model was estimated using the `brms` R package [@Burkner2017].
 
 ```{r resplot, fig.cap="Predicting Macrointerest in OECD Democracies \\label{model}", fig.height = 5, fig.width = 7.5}
@@ -1367,9 +1388,9 @@ coef_data0 %>%
 
 
 Figure\nobreakspace{}\@ref(fig:resplot) displays the results.^[
-A tabular version of these results can be found in Appendix\nobreakspace{}\@ref(resultstable).]
+Appendix\nobreakspace{}\@ref(resultstable) provides a tabular version.]
 Consistent with the argument that campaigns bring attention-grabbing information to the public, macrointerest in election years is found to be `r get_coef("election", type = "std_coef")` points (95% credible interval: `r get_coef("election", type = "ci")` points) higher than in years without elections.
-This is in line with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
+This accords with previous research finding small but well-estimated increases in political interest in election years [see, e.g., @Larsen2022].
 
 The hypothesis that power-sharing institutions yield more public interest in politics is also supported.
 Macrointerest is estimated to be `r get_coef("parl")` points higher in countries with parliamentary systems.
@@ -1390,7 +1411,7 @@ Still, taken as a whole, this evidence indicates that at least with regard to ec
 Macrointerest, despite its theoretical importance, has as yet drawn only limited empirical attention.
 This oversight largely reflects the paucity of available data to measure this important concept.
 The cross-national macrointerest dataset presented here addresses this issue, providing annual time series across more than a hundred countries and allowing more and better tests of the wide range of theories that implicate the public's interest in politics.
-For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] finds that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as @Kittilson2010 theorizes.
+For example, while the cross-sectional analysis in @Kittilson2010 [, 997-999] finds that, among the three inclusive institutions it considered, only the disproportionality of electoral results influenced political interest and engagement, the pooled time-series analysis presented here indicates parliamentarism, federalism, and proportionality all yield greater macrointerest as that work theorizes.
 And although the single-country study in @Peterson2022 [, 219] concludes that bad times prompt increased macrointerest, this evidence shows the opposite, that at least with regard to economy it is _good_ conditions that lead the public to take interest in politics.
 By drawing on information about _both_ differences across countries _and_ change over time, it appears these data on cross-national macrointerest provide a firmer basis for drawing sound conclusions.
 The cross-national macrointerest dataset is available on the Harvard Dataverse for use in the further investigation of these and other theories on the causes and consequences of aggregate political interest as well as its relationships with other aspects of political engagement.
@@ -1405,7 +1426,7 @@ The cross-national macrointerest dataset is available on the Harvard Dataverse f
 
 \pagebreak
 
-# (APPENDIX) Appendix {-} 
+# (APPENDIX) Supplementary material {-} 
 
 ```{=tex}
 \renewcommand{\baselinestretch}{1}
@@ -1434,6 +1455,12 @@ Appendices
 \end{center}
 ```
 
+```{r loadData_app}
+load(here::here("data", "dcpo_input.rda"))
+load(here::here("data", "item_results.rda")) # macrointerest_items
+load(here("data", "tb_ess.rda")) #cpOECD
+```
+
 # Survey Items Used to Estimate Macrointerest {#surveys}
 
 National and cross-national surveys have often included questions tapping interest in politics over the past four decades, but the resulting data are both sparse, that is, unavailable for many countries and years, and incomparable, generated by many different survey items.
@@ -1456,9 +1483,6 @@ The macrointerest scores of country-years with more observed items are likely to
 The estimates for country-years with fewer (or no) observed items rely more heavily (or entirely) on the random-walk prior and are therefore less certain.
 
 ```{r macrointerest_items}
-load(here::here("data", "dcpo_input.rda"))
-load(here::here("data", "item_results.rda"))
-
 items_summary <- dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
   distinct() %>%
@@ -1513,7 +1537,7 @@ items_summary %>%
   kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 ```
 
-```{r surveyInfo}
+```{r surveyInfo, eval=FALSE}
 dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
   distinct() %>%
@@ -1816,7 +1840,7 @@ ggsave(here("output", "macroint_interestURC.png"))
 
 # Tabular Version of Results Presented in Figure \@ref(fig:resplot) {#resultstable}
 \FloatBarrier
-```{r modelTB, cache=TRUE}
+```{r modelTB}
 vec_coefName <- c(
   "b_election" = "Election Year",
   "b_parl" = "Parliamentarism",
@@ -1841,9 +1865,12 @@ modelsummary(
   statistic = "conf.int",
   notes = "95-percent credible intervals are in brackets.",
   title = "Tabular Version of Results Presented Graphically in Figure 5",
-  booktabs = TRUE) %>% 
-  kableExtra::kable_styling(font_size = 10)
+  booktabs = TRUE,
+  output = "kableExtra",
+  metrics = "RMSE") 
 ```
+
+
 \FloatBarrier
 
 \pagebreak
@@ -2102,7 +2129,8 @@ modelsummary(
   stars = TRUE,
   gof_map = gm,
   title = "Replication of Peterson et al. (2022), Table 2, 1983-2014",
-  booktabs = TRUE
+  booktabs = TRUE,
+  output = "gt"
 )
 ```
 
@@ -2126,3 +2154,8 @@ It would appear that it is the unit of analysis---years as opposed to quarters--
 
 ::: {#refs-app}
 :::
+
+
+# Data availability statement  {.unnumbered}
+
+Replication data for this paper can be found at [reference].

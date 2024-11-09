@@ -83,7 +83,7 @@ R2 raised questions about "the validation exercise," pointing to a "lack of benc
 Any benchmark regarding correlation magnitudes is bound to be somewhat arbitrary, but comparisons to the correlations found in prior similar research are at least the best place to start.
 The correlations for the similar internal convergent validation tests in @Caughey2019 [, 686, Figure 6, columns 1 and 3], which we cited in this regard (now at page 5), range in absolute value from .73 to .92.
 The range of correlations we report on in Figure 2 on page 6, from .72 to .88, seem to us to be similarly satisfying.
-The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" (as we do at page 6) is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
+The range of the three correlations we present as evidence of construct validation, that is, of effects expected by theory---.47, .51, and .62---dips somewhat lower than that of the two correlations presented as evidence of construct validation in that paper, .60 and .80 [see @Caughey2019, 688], but we note here that characterizing these relationships as "as moderate to strong" (as we do at page 7) is in line with textbook prescriptions: @Cohen1988 [, 78-79], for example, considers $r = .3$ to be evidence of a "medium effect size" and $r = .5$ to evince a "large effect size."
 
 
 **Large vs Small Projects**.
@@ -92,7 +92,7 @@ To investigate this possibility, we first calculated the mean response for each 
 (This is not quite the same aggregation procedure that we use in the plots in the text.
 There, we dichotomize the items and take the percentage of respondents giving higher responses, but while that route---despite shortcomings seen under the next subheading---facilitates plotting by yielding results on the unit interval, this one is better suited to scaling across dozens of items.)
 
-```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=3}
+```{r itcor, fig.align='center', fig.cap="Relationship Between Items' Correlations with Macrointerest and Their Number of Observations", fig.height=2.5}
 library(tidyverse)
 library(DCPOtools)
 
@@ -169,7 +169,7 @@ The particularly data-rich items it depicts do correlate well with the macrointe
 
 **ALLBUS**.
 Pointing to our longitudinal internal convergent validation test in the right panel of Figure 2, R2 noted that "the time series of Allbus and Macrointerest don't actually seem to covary very well," specifically around the year 2000, when there is a sharp dip in the macrointerest estimates that is absent in the ALLBUS series displayed.
-The reviewer observed that, this was "concerning": if anything, the macrointerest estimates should be _more_ smooth than the underlying survey data, not less.
+The reviewer observed that this was "concerning": if anything, the macrointerest estimates should be _more_ smooth than the underlying survey data, not less.
 She or he suggested we investigate and explain the divergence.
 
 We thank R2 for raising the issue and took this advice.
@@ -179,7 +179,7 @@ In Figure M2, we plot the percentage of ALLBUS respondents who give a response a
 It shows that, for this item, the real action from 1998 to 2000 occurred in the percentage of people giving a response at least in the median category of 'middling' (the solid orange series labeled '3+' that varies around .75 in Figure M2), and to a lesser degree, the percentage expressing at least 'very little' interest (the solid yellow '2+' series).
 As can be seen in the lighter shades in the plot, the five-point Politbarometer item (the other long-running German survey series) shows this decline in political interest from 1999 to 2000 more consistently across its response categories, with the rebounds in 2001 stronger in the 4+ and 5 responses.
 
-```{r dets, fig.align='center', fig.cap="Time Series on Political Interest in Germany", fig.height=3}
+```{r dets, fig.align='center', fig.cap="Time Series on Political Interest in Germany", fig.height=2.5}
 load(here::here("data", "dcpo_input.rda"))
 
 dcpo_input_de <- dcpo_input$data %>% 
@@ -206,12 +206,13 @@ ggplot(dcpo_input_de,
   geom_point() + 
   geom_line() + 
   xlab("Year") +
-  ylab("% Expressing Political Interest\nby Minimum Response Category") +
+  ylab("% Expressing Political Interest\nby Response Category") +
   scale_color_manual(values = rev(hcl.colors(4, "inferno")),
                      name="Response Category") +
   scale_alpha_discrete(range = c(1, .4),
                        name = "Survey") +
-  scale_linetype_discrete(name = "Survey")
+  scale_linetype_discrete(name = "Survey") +
+  theme(legend.margin = margin(-0.25,0,0,0, unit="cm"))
 
 ```
 
@@ -229,7 +230,7 @@ Moving between levels of analysis is admittedly and notoriously fraught.
 But the difficulty lies in attributing relationships found at the macro level to the individual level---that is the classic ecological fallacy---not the reverse.
 In fact, our proposition here that country-year-level measures should reflect relationships shown in individual-level studies closely follows the recommendation that "analyses of system-level data ought first to look carefully at individual-level association" [@Seligson2002, 288].
 (We note that the analysis we offer in Figure 5 draws exclusively on macro-level contextual variables---acknowledging but not accepting the possible argument against characterizing unemployment as contextual---and so does not run afoul of this stricture.
-On this parenthetical point, we now highlight the contextual nature of the theories we address at page 9.)
+On this parenthetical point, we now highlight the contextual nature of the theories we address at page 7.)
 
 
 ### Testing Theories of Macrointerest Cross-Nationally {.unnumbered}
@@ -265,28 +266,27 @@ If the reviewer had a different "single step" analysis in mind, we apologize for
 
 **Uncertainty**. 
 R1 suggested that we provide more details about how we incorporated uncertainty in our analysis.
-This is an important point, and we have added a discussion of our approach at page 11. 
-We use the "Method of Composition" to account for the uncertainty in the ex post analysis based on the estimated latent variable together with others. 
-This is a method that has been often employed in latent variable analyses in political science. 
-We now cite several of these applications and also direct readers to a more detailed technical note of how the method is incorporated in the DCPO framework.
+This is an important point.
+Because this is a Bayesian analysis, it is straightforward to incorporate this measurement error---as @McElreath2016 [, 425] explains, "All you have to do is state your information about the error\ldots [l]ogic does the rest"---and `brms` makes do so particularly easy.
+We now point this out at page 11.
 
 
 **Results**.
 R2 pointed out some infelicities in wording in our discussion of the results in this section and suggested that speaking in terms of posterior probabilities would help.
-We are grateful for this recommendation and have adopted it at pages 11 and 12.
+We are grateful for this recommendation and have adopted it at page 12.
 
 
 ### Appendices {.unnumbered}
 
-##### Survey Items Used to Estimate Macrointerest {.unnumbered}
+### Survey Items Used to Estimate Macrointerest {.unnumbered}
 **Included Projects**.
 R2 queried if "single-country and single-wave projects should be included."
 All of the survey items we employ include at least five country-years of data (a point we now make explicit at page 2 of the text).
 This means that single-wave projects include at least five countries, as exemplified in these data by the survey "Values and Political Change in Post-Communist Europe, 1993-1994."
-Even such small cross-national surveys contain at least some information regarding the differences across the countries surveyed.
-The cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error [see @Solt2020c, 6].
+Even such small cross-national surveys contain at least some information regarding the differences across countries; the cost is that country-specific item bias cannot be estimated and so is set to zero, potentially resulting in additional measurement error.
 It also means that single-country projects incorporate at least five years (in fact, the minimum in this dataset is seven, in both the Canadian  Election Studies and the Korea Barometer).
 This provides considerable information about changes over time within those countries, and country-specific item bias is of course not an issue for data drawn from only a single country.
+We now discuss this issue in a footnote in Appendix B.
 
 
 **Full Survey References**.
@@ -299,7 +299,7 @@ R2 also pointed out that Figure A1 was hard to read and suggested splitting it.
 We have split that figure into several panels by region to allow it to be displayed across pages and so enlarged for better legibility. 
 
 
-##### The DCPO Model {.unnumbered}
+### The DCPO Model {.unnumbered}
 **Source Data Sample Representation**.
 R2 pointed out the matter of sample representation.
 We have added a paragraph discussing the issue here.
@@ -317,15 +317,10 @@ We have added a discussion of these points to Appendix B, our summary of the DCP
 And as the DCPO model is published as open source software on CRAN [@Solt2020a], future researchers have the option of modifying the transformation method if they see fit. 
 
 
-##### Macrointerest Scores Over Time {.unnumbered}
+### Macrointerest Scores Over Time {.unnumbered}
 
 R2 asked that we include "the trajectories for all countries" in an appendix.
 We have added those plots here as Appendix D.
 
-\vspace{12pt}
-
-Thanks again for the opportunity to revise this work.
-We hope you will agree that, in light of the improvements the reviewers have facilitated, it now would make a valuable contribution to the _BJPS_.
-
-# References {-} 
+## References {-} 
 
