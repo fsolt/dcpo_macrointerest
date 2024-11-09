@@ -28,3 +28,4 @@ data/dcpo_output.rds
 data/result_ill.rds
 data/result_ppc.rds
 BJPOLS*
+replication/

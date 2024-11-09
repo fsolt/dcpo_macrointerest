@@ -157,10 +157,7 @@ p_load(
 
 ```{r loadData}
 load(here("data", "theta_summary.rda"))
-load(here("data", "theta_results.rda")) # theta_summary
-load(here("data", "theta_summary.rda"))
-load(here("data", "theta_results.rda")) #internalval
-load(here("data", "theta_summary.rda")) # ts
+load(here("data", "theta_results.rda")) # theta_summary & internalval & ts
 load(here("data", "results.rda")) # analysis
 
 ```
@@ -1450,14 +1447,14 @@ The cross-national macrointerest dataset is available on the Harvard Dataverse f
 \vspace{-.5in}
 \begin{center}
 \begin{Large}
-Appendices
+Supplementary material
 \end{Large}
 \end{center}
 ```
 
 ```{r loadData_app}
-load(here::here("data", "dcpo_input.rda"))
-load(here::here("data", "item_results.rda")) # macrointerest_items
+load(here("data", "dcpo_input.rda"))
+load(here("data", "item_results.rda")) # macrointerest_items
 load(here("data", "tb_ess.rda")) #cpOECD
 ```
 

@@ -335,7 +335,7 @@ The cross-national macrointerest dataset is available on the Harvard Dataverse f
 \vspace{-.5in}
 \begin{center}
 \begin{Large}
-Appendices
+Supplementary material
 \end{Large}
 \end{center}
 ```
