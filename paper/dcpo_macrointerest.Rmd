@@ -3,7 +3,7 @@ output:
   bookdown::pdf_document2:
     fig_caption: yes
     keep_tex: yes
-    keep_md: yes
+    keep_md: no
     toc: no
     number_sections: yes
     latex_engine: xelatex
