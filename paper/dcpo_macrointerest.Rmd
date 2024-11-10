@@ -23,7 +23,7 @@ linestretch: 1.5 # double spacing using linestretch 1.5
 bibliography:
   text: dcpo-macrointerest.bib
   app: dcpo-macrointerest-app.bib
-biblio-style: apsr
+biblio-style: bjps
 citecolor: black
 linkcolor: black
 endnote: no
@@ -59,6 +59,7 @@ header-includes:
       - \renewcommand{\bottomfraction}{.80} # https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
       - \usepackage{tabularray}
       - \usepackage{siunitx}
+
 ---
 
 \pagenumbering{gobble}
@@ -83,8 +84,11 @@ Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Dep
 
 ```{=tex}
 \begin{abstract}
-The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good economic conditions, not bad times, that spur publics to greater interest in politics. 
+The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good economic conditions, not bad times, that spur publics to greater interest in politics. //
+
+\textbf{Keywords:} Political interest, dynamic comparative public opinion (DCPO), cross-national time-series analysis, public survey, democracy, OECD.
 \end{abstract}
+
 ```
 \pagebreak
 
@@ -1766,7 +1770,8 @@ ggplot(tb_oecd, aes(x = year,
         legend.position = "top") 
 ```
 
-\vspace{-1in}
+<!-- \vspace{-1in} -->
+
 # Macrointerest Scores Over Time {#trajectory}
 
 ```{r trajectory, fig.align='center', fig.height=9}
@@ -2155,4 +2160,14 @@ It would appear that it is the unit of analysis---years as opposed to quarters--
 
 # Data availability statement  {.unnumbered}
 
-Replication data for this paper can be found at [reference].
+Replication data for this paper can be found at  [https://doi.org/10.7910/DVN/TWPM9X](https://doi.org/10.7910/DVN/TWPM9X).
+
+# Financial Support {.unnumbered}
+
+Yue Hu appreciate the funding support from National Natural Science Foundation of China (grant number: 72374116) and Tsinghua University Initiative Scientific Research Program (grant number: 20245080038).
+
+# Competing interests {.unnumbered}
+
+None.
+
+
