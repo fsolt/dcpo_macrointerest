@@ -2164,7 +2164,7 @@ Replication data for this paper can be found at  [https://doi.org/10.7910/DVN/TW
 
 # Financial Support {.unnumbered}
 
-Yue Hu appreciate the funding support from National Natural Science Foundation of China (grant number: 72374116) and Tsinghua University Initiative Scientific Research Program (grant number: 20245080038).
+Yue Hu appreciate the funding support from National Natural Science Foundation of China (grant number: 72374116) and Tsinghua University Initiative Scientific Research Program (grant number: 2024THZWJC01).
 
 # Competing interests {.unnumbered}
 
