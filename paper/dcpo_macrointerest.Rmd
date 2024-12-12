@@ -70,7 +70,7 @@ Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Dep
 
 \vspace{1cm}
 
-\noindent Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Associate Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
+\noindent Frederick Solt, ORCID: <https://orcid.org/0000-0002-3154-6132>, Professor, Department of Political Science, University of Iowa, [frederick-solt\@uiowa.edu](mailto:frederick-solt@uiowa.edu){.email}
 
 \pagebreak
 
@@ -84,7 +84,7 @@ Yue Hu, ORCID: <https://orcid.org/0000-0002-2829-3971>, Associate Professor, Dep
 
 ```{=tex}
 \begin{abstract}
-The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good economic conditions, not bad times, that spur publics to greater interest in politics. //
+The extent to which the public takes an interest in politics has long been argued to be foundational to democracy, but the want of appropriate data has prevented cross-national and longitudinal analysis. This letter takes advantage of recent advances in latent-variable modeling of aggregate survey responses and a comprehensive collection of survey data to generate dynamic comparative estimates of macrointerest, that is, aggregate political interest, for over a hundred countries over the past four decades. These macrointerest scores are validated with other aggregate measures of political interest and of other types of political engagement. A cross-national and longitudinal analysis of macrointerest in advanced democracies reveals that along with election campaigns and inclusive institutions, it is good economic conditions, not bad times, that spur publics to greater interest in politics.
 
 \textbf{Keywords:} Political interest, dynamic comparative public opinion (DCPO), cross-national time-series analysis, public survey, democracy, OECD.
 \end{abstract}
@@ -121,8 +121,6 @@ if (!require(cmdstanr)) install.packages("cmdstanr", repos = c('https://stan-dev
 
 if (!require(DCPOtools))  remotes::install_github("fsolt/DCPOtools")
 
-# if (!require(tabulizer)) devtools::install_github("ropensci/tabulizer", verbose = TRUE)
-
 if(!require(rstan)) install.packages("rstan", repos = "https://cloud.r-project.org/", dependencies = TRUE)
 
 if(!require(mvtnorm)) install.packages("mvtnorm", dependencies = TRUE)
@@ -154,6 +152,7 @@ p_load(
   rvest,
   vroom,
   tinytable,
+  gt,
   kableExtra,
   modelsummary
 ) 
@@ -163,7 +162,6 @@ p_load(
 load(here("data", "theta_summary.rda"))
 load(here("data", "theta_results.rda")) # theta_summary & internalval & ts
 load(here("data", "results.rda")) # analysis
-
 ```
 
 
@@ -1538,7 +1536,7 @@ items_summary %>%
   kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
 ```
 
-```{r surveyInfo, eval=FALSE}
+```{r surveyInfo}
 dcpo_input_raw1 %>%
   dplyr::select(country, year, item, survey) %>%
   distinct() %>%
@@ -1558,15 +1556,15 @@ dcpo_input_raw1 %>%
               str_replace_all("#", "No.") %>% 
               str_replace_all("&", "and") %>% 
               str_replace_all(fixed("_"), "\\_")) %>%
-  datasummary_df(title = "Source Survey Information",
-                 longtable = TRUE) %>%
-  kableExtra::kable_styling(latex_options = c("repeat_header")) %>%
+  modelsummary::datasummary_df(output = "kableExtra",
+                               longtable = TRUE,
+                               title = "Source Survey Information") %>%
+  kableExtra::kable_styling(latex_options = "repeat_header") %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::column_spec(1, width = "12em") %>%
   kableExtra::column_spec(2, width = "60em") %>%
   kableExtra::kable_styling(font_size = 7) %>%
   kableExtra::footnote(symbol = "Survey dataset codes correspond to those used in the DCPOtools R package (Solt, Hu, and Tai 2019).")
-
 ```
 
 ```{r obs, fig.cap = "Source Data Observations by Country and Year", fig.height = 9}
