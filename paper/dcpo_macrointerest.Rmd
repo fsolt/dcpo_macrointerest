@@ -1423,6 +1423,24 @@ The cross-national macrointerest dataset is available on the Harvard Dataverse f
 ::: {#refs-text}
 :::
 
+# Supplementary Material {.unnumbered}
+
+The supplementary material for this article can be found at [link tbd].
+
+# Data Availability Statement {.unnumbered}
+
+Replication data for this paper can be found at  [https://doi.org/10.7910/DVN/TWPM9X](https://doi.org/10.7910/DVN/TWPM9X).
+
+# Financial Support {.unnumbered}
+
+Yue Hu appreciate the funding support from National Natural Science Foundation of China (grant number: 72374116) and Tsinghua University Initiative Scientific Research Program (grant number: 2024THZWJC01).
+
+# Competing interests {.unnumbered}
+
+None.
+
+
+
 \pagebreak
 
 # (APPENDIX) Supplementary material {-} 
@@ -2156,16 +2174,6 @@ It would appear that it is the unit of analysis---years as opposed to quarters--
 :::
 
 
-# Data availability statement  {.unnumbered}
 
-Replication data for this paper can be found at  [https://doi.org/10.7910/DVN/TWPM9X](https://doi.org/10.7910/DVN/TWPM9X).
-
-# Financial Support {.unnumbered}
-
-Yue Hu appreciate the funding support from National Natural Science Foundation of China (grant number: 72374116) and Tsinghua University Initiative Scientific Research Program (grant number: 2024THZWJC01).
-
-# Competing interests {.unnumbered}
-
-None.
 
 
