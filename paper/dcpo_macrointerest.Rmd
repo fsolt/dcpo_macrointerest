@@ -17,7 +17,7 @@ editor_options:
 tables: true # enable longtable and booktabs
 citation_package: natbib
 citeproc: false
-fontsize: 12pt
+fontsize: 10pt
 indent: true
 linestretch: 1.5 # double spacing using linestretch 1.5
 bibliography:
@@ -101,7 +101,8 @@ knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
   warning = FALSE,
-  dpi = 600,
+  dev = "png",
+  dpi = 800,
   cache = TRUE,
   fig.width = 7,
   fig.height = 4,
@@ -1430,10 +1431,12 @@ The supplementary material for this article can be found at [link tbd].
 # Data Availability Statement {.unnumbered}
 
 Replication data for this paper can be found at  [https://doi.org/10.7910/DVN/TWPM9X](https://doi.org/10.7910/DVN/TWPM9X).
+The Cross-National Macrointerest dataset can be found at https://dcpo.org/data/cnm.
 
 # Financial Support {.unnumbered}
 
-Yue Hu appreciate the funding support from National Natural Science Foundation of China (grant number: 72374116) and Tsinghua University Initiative Scientific Research Program (grant number: 2024THZWJC01).
+Yue Hu appreciates the funding support from National Natural Science Foundation of China (grant number: 72374116) and Tsinghua University Initiative Scientific Research Program (grant number: 2024THZWJC01).
+Frederick Solt thanks the Office of the Provost, University of Iowa, and the Cluster of Excellence Politics of Inequality, University of Konstanz, for supporting this research.
 
 # Competing interests {.unnumbered}
 
